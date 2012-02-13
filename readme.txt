@@ -20,7 +20,7 @@ Note:
 1. If you find any bugs, please report in the following page, so that it will be fixed as quick as possible.
 2. If you think any feature adding to this plugin can improve, then please recommend it in the following link.
 
-Donations
+= Donations =
 
 Hello guys,I spent most of my free time creating, updating, maintaining and supporting these plugins, 
 if you really love my plugins and could spare me a couple of bucks, I will really appericiate it. To donate visit
@@ -43,7 +43,7 @@ d. Use 'Manage polls' to edit and delete polls.
 
 Important Note: It is mandatory to save all the mandatory field options in this plugin.
 
-Creating archive poll page.
+= Creating archive poll page =
 1. Go to WP-Admin -> Pages -> Add New.
 2. Type any title you like in the post's title area and paste the following shortcode in the page content.
 [cardoza_wp_poll_archive]
