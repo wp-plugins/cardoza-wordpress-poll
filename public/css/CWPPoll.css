@@ -75,6 +75,7 @@ form select{
 #widget-poll{
     margin-bottom: 5px;
     padding: 3px;
+	text-align: left;
 }
 #widget-poll-question{
     font-weight: bold;
