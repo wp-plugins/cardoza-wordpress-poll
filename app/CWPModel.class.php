@@ -12,17 +12,19 @@ class CWPModel {
             'answer_type' => $vars['answer_type'] ,
             'no_of_answers' => $vars['no_of_answers'],
             'start_date' => $vars['s_date'],
-            'end_date' => $vars['e_date']
+            'end_date' => $vars['e_date'],
+			'total_votes' => 0
         ));
         
         $poll_id = $wpdb->get_results("SELECT max(id) as 'maxid' FROM ".$wpdb->prefix."cwp_poll");
         $pollid = $poll_id[0]->maxid;
-        
+
         $table = $wpdb->prefix.'cwp_poll_answers'; 
         foreach($answers as $answer){
             $insert_poll_answer = $wpdb->insert($table, array(
                 'pollid' => $pollid,
-                'answer' => $answer
+                'answer' => $answer,
+				'votes' =>0
             )); 
         }
     }
