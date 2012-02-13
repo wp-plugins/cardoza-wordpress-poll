@@ -14,9 +14,7 @@ define('CWP_PGN_DIR', plugin_dir_url(__FILE__));
 require_once 'app/CWPController.class.php';
 
 wp_enqueue_style('cwpcss', CWP_PGN_DIR.'public/css/CWPPoll.css');
-wp_enqueue_style('uicss', CWP_PGN_DIR.'public/css/ui-lightness/jquery-ui-1.8.16.custom.css');
 wp_enqueue_script('cwp-main', CWP_PGN_DIR.'public/js/CWPPoll.js', array('jquery'));
-wp_enqueue_script('cwp-jquery-ui', CWP_PGN_DIR.'public/js/jquery-ui.js');
 
 add_action('plugins_loaded', 'trigger_init');
 
