@@ -16,9 +16,9 @@ This poll is developed using MVC framework which uses both ajax and jquery.
 
 If you have any suggestions or feedback, please post it in the following link.
 
-Note: 
+= Note =
 1. If you find any bugs, please report in the following page, so that it will be fixed as quick as possible.
-2. If you think any feature adding to this plugin can improve, then please recommend it in the following link.
+2. If you think any feature adding to this plugin can improve its features, please recommend it in the following link.
 
 = Donations =
 
@@ -66,3 +66,9 @@ Uninstalling is as simple as deactivating the plugin.
 4. screenshot-4.gif
 5. screenshot-5.gif
 6. screenshot-6.gif
+
+== Change Log ==
+= Version 0.2 (released 15-02-2012) =
+* Pagination on the archive poll page validated.
+* A seperate function file created to manipulated the front end functions.
+
