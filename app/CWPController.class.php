@@ -40,10 +40,7 @@ class CWPController {
         add_action('wp_ajax_save_poll_options', array(&$this, 'savePollOptions'));
         add_action('wp_ajax_nopriv_poll_options', array(&$this, 'savePollOptions'));
         add_action('wp_ajax_submit_vote', array(&$this, 'saveVote'));
-        add_action('wp_ajax_nopriv_submit_vote', array(&$this, 'saveVote'));
-        add_action('wp_ajax_cancel_vote', array(&$this, 'cancelVote'));
-        add_action('wp_ajax_nopriv_cancel_vote', array(&$this, 'cancelVote'));
-        
+        add_action('wp_ajax_nopriv_submit_vote', array(&$this, 'saveVote'));        
     }
     
     public function init(){
