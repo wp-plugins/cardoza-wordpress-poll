@@ -2,7 +2,7 @@
 
 /*
 Plugin Name: Cardoza Wordpress Poll
-Plugin URI: http://fingerfish.com/cardoza-wp-poll
+Plugin URI: http://fingerfish.com/cardoza-wordpress-poll
 Description: Cardoza Wordpress Poll is completely ajax powered polling system. This poll plugin supports both single and multiple selection of answers.
 Version: 0.1
 Author: Vinoj Cardoza
