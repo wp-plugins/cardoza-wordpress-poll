@@ -120,16 +120,14 @@ add_shortcode("cardoza_wp_poll_archive", "cwp_poll_archive");
 function cwp_poll_archive($atts){
     $cwp = new CWPController();
     $option_value = $cwp->cwpp_options();
-    if(isset($_GET['poll_archive_page_no'])) $polls = $cwp->retrieveArchivePoll($option_value['no_of_polls_to_display_archive'], $_GET['poll_archive_page_no']);
-    else $polls = $cwp->retrieveArchivePoll($option_value['no_of_polls_to_display_archive']);
-    
-    if(isset($_GET['poll_archive_page_no'])) $next_polls = $cwp->retrieveArchivePoll($option_value['no_of_polls_to_display_archive'], $_GET['poll_archive_page_no']+1);
-    
     if(isset($_GET['poll_archive_page_no'])) {
-        $page_no = $_GET['poll_archive_page_no'];
-    }
-    else {
-        $page_no = 1;
+		$polls = $cwp->retrieveArchivePoll($option_value['no_of_polls_to_display_archive'], $_GET['poll_archive_page_no']);
+		$next_polls = $cwp->retrieveArchivePoll($option_value['no_of_polls_to_display_archive'], $_GET['poll_archive_page_no']+1);
+		$page_no = $_GET['poll_archive_page_no'];
+	}
+    else{
+		$polls = $cwp->retrieveArchivePoll($option_value['no_of_polls_to_display_archive']);
+    	$page_no = 1;
     }
      
     if($page_no != 1) $previous_page = $page_no -1;
