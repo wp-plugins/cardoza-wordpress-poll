@@ -15,7 +15,7 @@ function displayPollResults($vars){
         $votes = $answer->votes;
         
         if($total!=0) $width = ($votes/$total)*100;
-        else $width = 1;
+        else $width = 0;
         
         print $answer->answer." (".$answer->votes." votes, ".intval($width)."%)";
         
