@@ -4,7 +4,7 @@
 Plugin Name: Cardoza Wordpress Poll
 Plugin URI: http://fingerfish.com/cardoza-wordpress-poll
 Description: Cardoza Wordpress Poll is completely ajax powered polling system. This poll plugin supports both single and multiple selection of answers.
-Version: 0.1
+Version: 0.2
 Author: Vinoj Cardoza
 Author URI: http://fingerfish.com/about-me/
 License: GPL2
@@ -16,13 +16,10 @@ require_once 'app/CWPController.class.php';
 wp_enqueue_style('cwpcss', CWP_PGN_DIR.'public/css/CWPPoll.css');
 wp_enqueue_script('cwp-main', CWP_PGN_DIR.'public/js/CWPPoll.js', array('jquery'));
 
+add_action('wp_head','pluginname_ajaxurl');
 add_action('plugins_loaded', 'trigger_init');
 
 register_activation_hook  ( __FILE__, 'CWP_Install' );
-
-
-add_action('wp_head','pluginname_ajaxurl');
-
 
 function pluginname_ajaxurl() {
 ?>
@@ -41,18 +38,26 @@ function trigger_init(){
     register_sidebar_widget(__('Cardoza Wordpress Poll'), 'widget_cardoza_wp_poll');
 }
 
+require_once 'cardozawppollFrontEndFunctions.php';
+
 function widget_cardoza_wp_poll($args){
     
     $cwp = new CWPController();
     
     $option_value = $cwp->cwpp_options();
     
+    $vars = array();
+    $vars['option_value'] = $option_value;
+    
     extract($args);
     echo $before_widget;
     echo $before_title;
+    
     if(empty($option_value['title'])) $option_value['title'] = "Poll";
     echo $option_value['title'];
+    
     echo $after_title;
+    
     $polls = $cwp->retrievePoll();
     $count = 1;
     foreach($polls as $poll){
@@ -66,107 +71,37 @@ function widget_cardoza_wp_poll($args){
                 <form id="poll<?php print $poll->id;?>">
                 
                 <?php
+                
                 $poll_answers = $cwp->getPollAnswers($poll->id);
-                $option = 1;
+                
+                $vars['poll_answers'] = $poll_answers;
+                $vars['total_votes'] = $poll->total_votes;
+                $vars['poll_id'] = $poll->id;
+                $vars['poll'] = $poll;
+                $vars['exp_time'] = $exp_time;
                 
                 if(isset($_COOKIE['cwppoll'.$poll->id])){?>
-                    <div id="show-results<?php echo $poll->id;?>">
-                    <?php
-                        print "<b>Total Votes: </b>".$poll->total_votes."<br/>";
-                        foreach($poll_answers as $answer){
-                            
-                            $total = $poll->total_votes;
-                            $votes = $answer->votes;
-                            $width = ($votes/$total)*100;
-                            print $answer->answer." (".$answer->votes." votes, ".intval($width)."%)";
-                            ?>
-                            <br/>
-                            <div style="
-                            height:<?php if(!empty($option_value['bar_height'])) echo $option_value['bar_height'];
-                            else echo "10";?>px;
-                            width:<?php echo $width?>%;background-color:#<?php if(!empty($option_value['bar_color'])) echo $option_value['bar_color'];
-                            else echo "ECF1EF";?>"></div>
-                            <?php
-                        }
-                    ?>
-                    <!--<input type="hidden" value="<?php print $poll->id;?>" name="poll_id" />
-                    <input type="hidden" value="<?php print $poll->answer_type;?>" name="answertype"/>
-                    <input type="hidden" value="cancel_vote" name="action"/>
-                    <center><input type="button" value="Cancel my vote" onclick="javascript:cancel_vote_poll(<?php print $poll->id;?>)" /></center>-->
+                    <div id="show-results<?php $poll->id;?>">
+                        <?php displayPollResults($vars);?>
                     </div>
-                    
                 <?php
-                }else{
+                }
+                else{
                     if($option_value['poll_access']=='loggedin'){
-                        if(is_user_logged_in()){?>
-                            <div id="show-form<?php echo $poll->id;?>" >
-                            <?php
-                            foreach($poll_answers as $answer){
-                                if($poll->answer_type == "one"){?>
-                                    <input type="radio" name="<?php print $poll->id;?>" value="<?php print $answer->id;?>"><?php print $answer->answer;?><br/>
-                                <?php
-                                }
-                                if($poll->answer_type == "multiple"){?>
-                                    <input type="checkbox" name="option<?php print $option;?>" value="<?php print $answer->id;?>"><?php print $answer->answer;?><br/>
-                                <?php
-                                }
-                                $option++;
-                            }?>
-                            <input type="hidden" value="<?php print $poll->id;?>" name="poll_id" />
-                            <input type="hidden" value="<?php print $exp_time;?>" name="expiry" />
-                            <input type="hidden" value="<?php print $poll->answer_type;?>" name="answertype"/>
-                            <input type="hidden" value="submit_vote" name="action"/>
-                            <center><input type="button" value="Vote" onclick="javascript:vote_poll(<?php print $poll->id;?>)" /></center>                
-                            </div><?php
-                        }
+                        
+                        if(is_user_logged_in()) showPollForm($vars);
+                        
                         else{?>
-                            <div id="show-results<?php echo $poll->id;?>">
-                            <?php
-                                print "<b>Total Votes: </b>".$poll->total_votes."<br/>";
-                                foreach($poll_answers as $answer){
-                                    
-                                    $total = $poll->total_votes;
-                                    $votes = $answer->votes;
-                                    $width = ($votes/$total)*100;
-                                    print $answer->answer." (".$answer->votes." votes, ".intval($width)."%)";
-                                    ?>
-                                    <br/>
-                                    <div style="
-                                    height:<?php if(!empty($option_value['bar_height'])) echo $option_value['bar_height'];
-                                    else echo "10";?>px;
-                                    width:<?php echo $width?>%;background-color:#<?php if(!empty($option_value['bar_color'])) echo $option_value['bar_color'];
-                                    else echo "ECF1EF";?>"></div>
-                                    <?php
-                                }
-                            ?>
-                            </div><?php
-                        }
-                    }
-                    else{?>
-                        <div id="show-form<?php echo $poll->id;?>" >
-                            <?php
-                            foreach($poll_answers as $answer){
-                                if($poll->answer_type == "one"){?>
-                                    <input type="radio" name="<?php print $poll->id;?>" value="<?php print $answer->id;?>"><?php print $answer->answer;?><br/>
-                                <?php
-                                }
-                                if($poll->answer_type == "multiple"){?>
-                                    <input type="checkbox" name="option<?php print $option;?>" value="<?php print $answer->id;?>"><?php print $answer->answer;?><br/>
-                                <?php
-                                }
-                                $option++;
-                            }?>
-                            <input type="hidden" value="<?php print $poll->id;?>" name="poll_id" />
-                            <input type="hidden" value="<?php print $exp_time;?>" name="expiry" />
-                            <input type="hidden" value="<?php print $poll->answer_type;?>" name="answertype"/>
-                            <input type="hidden" value="submit_vote" name="action"/>
-                            <center><input type="button" value="Vote" onclick="javascript:vote_poll(<?php print $poll->id;?>)" /></center>                
+                    
+                            <div id="show-results<?php $poll->id;?>">
+                                <?php displayPollResults($vars);?>
                             </div>
                         <?php
-                            
                         }
-                    }?>
+                    }
                     
+                    else showPollForm($vars);
+                    }?>
                     
                 </form>
             </div>
@@ -174,19 +109,11 @@ function widget_cardoza_wp_poll($args){
         <?php 
         }
         $count++;
-    }?>
-    <div style="margin-top:10px;margin-bottom:10px;width:100%; border-bottom: 1px #000 dashed"></div>
-    <?php
-    if($option_value['archive']=='yes'){
-        $archive_url = $option_value['archive_url'];
-        $url = explode('?', $archive_url);
-        if(sizeof($url)>1) echo '<a href="'.$option_value['archive_url'].'&poll_archive_page_no=1">See previous polls</a>';
-       else echo '<a href="'.$option_value['archive_url'].'?poll_archive_page_no=1">See previous polls</a>';
-	}
-    ?>
-    <?php
+    }
+    previousPollsLink($vars);
     echo $after_widget;
 }
+
 add_shortcode("cardoza_wp_poll_archive", "cwp_poll_archive");
 
 //function to display the poll archive shortcode
@@ -195,6 +122,8 @@ function cwp_poll_archive($atts){
     $option_value = $cwp->cwpp_options();
     if(isset($_GET['poll_archive_page_no'])) $polls = $cwp->retrieveArchivePoll($option_value['no_of_polls_to_display_archive'], $_GET['poll_archive_page_no']);
     else $polls = $cwp->retrieveArchivePoll($option_value['no_of_polls_to_display_archive']);
+    
+    if(isset($_GET['poll_archive_page_no'])) $next_polls = $cwp->retrieveArchivePoll($option_value['no_of_polls_to_display_archive'], $_GET['poll_archive_page_no']+1);
     
     if(isset($_GET['poll_archive_page_no'])) {
         $page_no = $_GET['poll_archive_page_no'];
@@ -211,16 +140,26 @@ function cwp_poll_archive($atts){
     $archive_url = $option_value['archive_url'];
     $url = explode('?', $archive_url);
     if(sizeof($url)>1){
-    ?>
-        <a id="previous-page" href="<?php echo $option_value['archive_url'].'&poll_archive_page_no='.$previous_page;?>">Previous Page</a>
-        &nbsp;&nbsp;<a id="next-page" href="<?php echo $option_value['archive_url'].'&poll_archive_page_no='.$next_page;?>">Next Page</a>
-    <?php
+        if($_GET['poll_archive_page_no']!=1) {?>
+            <a style="margin-right:10px;" id="previous-page" href="<?php echo $option_value['archive_url'].'&poll_archive_page_no='.$previous_page;?>">Previous Page</a>
+        <?php
+        }
+        if(sizeof($next_polls)>0){
+        ?>
+            <a id="next-page" href="<?php echo $option_value['archive_url'].'&poll_archive_page_no='.$next_page;?>">Next Page</a>
+        <?php
+        }   
     }
     else{
-    ?>
+        if($_GET['poll_archive_page_no']!=1) {?>
         <a id="previous-page" href="<?php echo $option_value['archive_url'].'?poll_archive_page_no='.$previous_page;?>">Previous Page</a>
-        &nbsp;&nbsp;<a id="next-page" href="<?php echo $option_value['archive_url'].'?poll_archive_page_no='.$next_page;?>">Next Page</a>
+        <?php
+        }
+        if(sizeof($next_polls)>0){
+        ?>
+            <a id="next-page" href="<?php echo $option_value['archive_url'].'?poll_archive_page_no='.$next_page;?>">Next Page</a>
     <?php
+        }
     }
     ?>
     <?php
@@ -232,27 +171,13 @@ function cwp_poll_archive($atts){
             <div id="widget-poll">
                 <div id="widget-poll-question"><?php print $poll->question;?></div>
                 <?php
-                $poll_answers = $cwp->getPollAnswers($poll->id);
-                $option = 1;
-                
-                print "<b>Total Votes: </b>".$poll->total_votes."<br/>";
-                foreach($poll_answers as $answer){
-                    $total = $poll->total_votes;
-                    $votes = $answer->votes;
-                    if($total!=0) $width = ($votes/$total)*100;
-                    else $width = 1;
-                    print $answer->answer." (".$answer->votes." votes, ".intval($width)."%)";
-                    ?>
-                    <br/>
-                    <div style="
-                    height:<?php if(!empty($option_value['bar_height'])) echo $option_value['bar_height'];
-                    else echo "10";?>px;
-                    width:<?php print $width;?>%;background-color:#<?php if(!empty($option_value['bar_color'])) echo $option_value['bar_color'];
-                    else echo "ECF1EF";?>"></div>
-                    <?php
-                }
-            ?>
-            <div style="margin-top:10px;margin-bottom:10px;width:100%; border-bottom: 1px #000 dashed"></div>
+                $poll_answers = $cwp->getPollAnswers($poll->id);         
+                $vars['poll_answers'] = $poll_answers;
+                $vars['total_votes'] = $poll->total_votes;
+                $vars['option_value'] = $option_value;
+                $vars['poll_id'] = $poll->id;
+                displayPollResults($vars);
+                ?>
             </div>
     <?php 
         
