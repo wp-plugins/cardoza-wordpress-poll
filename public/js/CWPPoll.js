@@ -110,10 +110,24 @@ function validateAddNewPollForm(){
 
 function vote_poll(pollid){
     jQuery('#show-form'+pollid).fadeOut(500);
-    jQuery('#show-results'+pollid).css('display', 'block');
-    jQuery.post(ajaxurl, jQuery('#poll'+pollid).serialize(),  
+    jQuery('#show-results'+pollid).css('display', 'none');
+    data = jQuery('#poll'+pollid).serialize();
+    jQuery.post(ajaxurl, data,  
         function(response){
             jQuery('#poll'+pollid).html(response);
+            jQuery('#pollsc'+pollid).html(response);
+        }
+    );
+}
+function vote_poll_sc(pollid){
+    jQuery('#show-form'+pollid).fadeOut(500);
+    jQuery('#show-results'+pollid).css('display', 'none');
+    
+    data = jQuery('#pollsc'+pollid).serialize();
+    jQuery.post(ajaxurl, data,  
+        function(response){
+            jQuery('#poll'+pollid).html(response);
+            jQuery('#pollsc'+pollid).html(response);
         }
     );
 }
