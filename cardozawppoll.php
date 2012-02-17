@@ -4,7 +4,7 @@
 Plugin Name: Cardoza Wordpress Poll
 Plugin URI: http://fingerfish.com/cardoza-wordpress-poll
 Description: Cardoza Wordpress Poll is completely ajax powered polling system. This poll plugin supports both single and multiple selection of answers.
-Version: 0.2
+Version: 0.3
 Author: Vinoj Cardoza
 Author URI: http://fingerfish.com/about-me/
 License: GPL2
@@ -121,12 +121,12 @@ function cwp_poll_archive($atts){
     $cwp = new CWPController();
     $option_value = $cwp->cwpp_options();
     if(isset($_GET['poll_archive_page_no'])) {
-		$polls = $cwp->retrieveArchivePoll($option_value['no_of_polls_to_display_archive'], $_GET['poll_archive_page_no']);
-		$next_polls = $cwp->retrieveArchivePoll($option_value['no_of_polls_to_display_archive'], $_GET['poll_archive_page_no']+1);
-		$page_no = $_GET['poll_archive_page_no'];
-	}
+        $polls = $cwp->retrieveArchivePoll($option_value['no_of_polls_to_display_archive'], $_GET['poll_archive_page_no']);
+        $next_polls = $cwp->retrieveArchivePoll($option_value['no_of_polls_to_display_archive'], $_GET['poll_archive_page_no']+1);
+        $page_no = $_GET['poll_archive_page_no'];
+    }
     else{
-		$polls = $cwp->retrieveArchivePoll($option_value['no_of_polls_to_display_archive']);
+        $polls = $cwp->retrieveArchivePoll($option_value['no_of_polls_to_display_archive']);
     	$page_no = 1;
     }
      
@@ -180,6 +180,96 @@ function cwp_poll_archive($atts){
     <?php 
         
     }
+}
+
+add_shortcode("cardoza_wp_poll", "cwp_poll_id_display");
+
+function cwp_poll_id_display($atts){
+    ob_start();
+    $cwp = new CWPController();
+    $option_value = $cwp->cwpp_options();
+    
+    $vars = array();
+    $vars['option_value'] = $option_value;
+                
+    $polls = $cwp->getPollList();
+    
+    foreach($polls as $poll){
+        //To calculate the time stamp for start date
+        $sdate = explode('/', $poll->start_date);
+        $smonth = $sdate[0];
+        $sday = $sdate[1];
+        $syear = $sdate[2];
+
+        $stimestamp = mktime(0, 0, 0, $smonth, $sday, $syear); //poll start date timestamp
+
+        //To calculate the time stamp for end date
+        $edate = explode('/', $poll->end_date);
+        $emonth = $edate[0];
+        $eday = $edate[1];
+        $eyear = $edate[2];   
+        $etimestamp = mktime(0, 0, 0, $emonth, $eday, $eyear); //poll end date timestamp
+        
+        $current_time = time();
+        
+        $poll_end_date = $poll->end_date;
+        $expiry_date = explode('/', $poll_end_date);
+        $exp_time = mktime(0,0,0,$expiry_date[1], $expiry_date[0], $expiry_date[2]);
+        
+        if($poll->id == trim($atts[id])){?>
+            <div id="widget-poll">
+                <div id="widget-poll-question"><?php print $poll->question;?></div>
+                
+                <form id="pollsc<?php print $poll->id;?>">
+                
+                <?php
+                
+                $poll_answers = $cwp->getPollAnswers($poll->id);
+                
+                $vars['poll_answers'] = $poll_answers;
+                $vars['total_votes'] = $poll->total_votes;
+                
+                $vars['poll'] = $poll;
+                $vars['exp_time'] = $exp_time;
+                if($current_time>$stimestamp && $current_time < $etimestamp){
+                    if(isset($_COOKIE['cwppoll'.$poll->id])){?>
+                        <div id="show-results<?php $poll->id;?>">
+                            <?php displayPollResults($vars);?>
+                        </div>
+                    <?php
+                    }
+                    else{
+                        if($option_value['poll_access']=='loggedin'){
+
+                            if(is_user_logged_in()) showPollFormSC($vars);
+
+                            else{?>
+
+                                <div id="show-results<?php $poll->id;?>">
+                                    <?php displayPollResults($vars);?>
+                                </div>
+                            <?php
+                            }
+                        }
+
+                        else showPollFormSC($vars);
+                        }
+                }
+                else{?>
+                    <div id="show-results<?php $poll->id;?>">
+                            <?php displayPollResults($vars);?>
+                    </div>
+                <?php }?>
+                </form>
+            </div>
+            
+        <?php 
+        }
+        $count++;
+    }    
+    $output_string = ob_get_contents();
+    ob_end_clean();
+    return $output_string;
 }
 
 global $CWP_db_version;
