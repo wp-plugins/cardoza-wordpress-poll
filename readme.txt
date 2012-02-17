@@ -47,9 +47,7 @@ Important Note: It is mandatory to save all the mandatory field options in this 
 
 = Creating archive poll page =
 1. Go to WP-Admin -> Pages -> Add New.
-2. Type any title you like in the post's title area and paste the following shortcode in the page content.
-[cardoza_wp_poll_archive]
-
+2. Type any title you like in the post's title area and paste the following shortcode in the page content [cardoza_wp_poll_archive]
 3. WordPress will generate the link to the page. Copy the link.
 4. Go to poll options in 'Cardoza Poll'
 5. Click the Poll options tab.
