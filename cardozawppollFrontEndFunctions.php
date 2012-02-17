@@ -63,6 +63,38 @@ function showPollForm($vars){
     <?php
 }
 
+function showPollFormSC($vars){
+    
+    $poll_answers = $vars['poll_answers'];
+    $total = $vars['total_votes'];
+    $option_value = $vars['option_value'];
+    $poll = $vars['poll'];
+    $option = 1;
+    $exp_time = $vars['exp_time'];
+    
+    ?>
+    <div id="show-form<?php echo $poll->id;?>" >
+        <?php
+        foreach($poll_answers as $answer){
+            if($poll->answer_type == "one"){?>
+                <input type="radio" name="<?php print $poll->id;?>" value="<?php print $answer->id;?>"><?php print $answer->answer;?><br/>
+            <?php
+            }
+            if($poll->answer_type == "multiple"){?>
+                <input type="checkbox" name="option<?php print $option;?>" value="<?php print $answer->id;?>"><?php print $answer->answer;?><br/>
+            <?php
+            }
+            $option++;
+        }?>
+        <input type="hidden" value="<?php print $poll->id;?>" name="poll_id" />
+        <input type="hidden" value="<?php print $exp_time;?>" name="expiry" />
+        <input type="hidden" value="<?php print $poll->answer_type;?>" name="answertype"/>
+        <input type="hidden" value="submit_vote" name="action"/>
+        <center><input type="button" value="Vote" onclick="javascript:vote_poll_sc(<?php print $poll->id;?>)" /></center>                
+    </div>
+    <?php
+}
+
 function previousPollsLink($vars){
     
     $option_value = $vars['option_value'];

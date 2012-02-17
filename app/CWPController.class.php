@@ -107,12 +107,12 @@ class CWPController {
         $polls = $this->cwpm->getNPollsFromDB();
         $current_time = time();
         foreach($polls as $poll){
-            
             //To calculate the time stamp for start date
             $sdate = explode('/', $poll->start_date);
             $smonth = $sdate[0];
             $sday = $sdate[1];
             $syear = $sdate[2];
+            
             $stimestamp = mktime(0, 0, 0, $smonth, $sday, $syear); //poll start date timestamp
             
             //To calculate the time stamp for end date
@@ -207,6 +207,7 @@ class CWPController {
     }
     
     public function saveVote(){
+        
         $pollid = $_POST['poll_id'];
         $expire = $_POST['expiry'];
         $status = 0;
@@ -237,10 +238,13 @@ class CWPController {
             $poll = $polls[0];
             print "<b>Total Votes: </b>".$poll[0]->total_votes."<br/>";
             foreach($answers as $answer){
-                print $answer->answer." - ".$answer->votes." votes";
+                
                 $total = $poll[0]->total_votes;
                 $votes = $answer->votes;
-                $width = ($votes/$total)*100;
+                if($total!=0) $width = ($votes/$total)*100;
+                else $width = 0;
+        
+                print $answer->answer." (".$answer->votes." votes, ".intval($width)."%)";
                 ?>
                 <br/>
                 <div style="

@@ -14,11 +14,13 @@ This poll is developed using MVC framework which uses both ajax and jquery.
 1. You have options to display more than 1 poll in the widget area.
 2. You can specify how many polls to be displayed in the archive page.
 
-If you have any suggestions or feedback, please post it in the following link.
+= Version 0.3 =
+* New feature added - Shortcode can be added on any page or post to display a particular poll.
 
 = Note =
 1. If you find any bugs, please report in the following page, so that it will be fixed as quick as possible.
 2. If you think any feature adding to this plugin can improve its features, please recommend it in the following link.
+3. You can add any poll into your post or page by using the shoetcode. For information how to do it, please go to Frequently asked questions.
 
 = Donations =
 
@@ -67,8 +69,28 @@ Uninstalling is as simple as deactivating the plugin.
 5. screenshot-5.gif
 6. screenshot-6.gif
 
+== Frequently Asked Questions ==
+
+= How do I display a particular poll in a page or post? =
+Its very simple to add poll in any page or post in your site.
+1. The shortcode for displaying the poll is as simple as copying the following code and paste it in your post or page.
+[cardoza_wp_poll #id]
+
+#id - this the ID of the poll which you can find it on the 'Manage Polls' of your poll plugin page.
+
+For eg: If I want to display the poll where the ID is 19 then the shortcode will be
+[cardoza_wp_poll id=19]
+
+That's it. Check your page or post now.
+
+if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
+
 == Change Log ==
+= Version 0.3 (released 17-02-2012) =
+* New feature added - Shortcode can be added on any page or post to display a particular poll.
+* Minor-bug for displaying poll results as soon as voted fixed.
+
 = Version 0.2 (released 15-02-2012) =
 * Pagination on the archive poll page validated.
-* A seperate function file created to manipulated the front end functions.
+* A seperate function file created to manipulate the front end functions.
 
