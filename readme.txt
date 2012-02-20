@@ -74,7 +74,7 @@ Uninstalling is as simple as deactivating the plugin.
 = How do I display a particular poll in a page or post? =
 Its very simple to add poll in any page or post in your site.
 
-1. The shortcode for displaying the poll is as simple as copying the following code and paste it in your post or page.
+Copy the following shortcode and paste it in your post or page for displaying the poll.
 [cardoza_wp_poll id=poll_id]
 
 poll_id - this the ID of the poll which you can find it on the 'Manage Polls' of your poll plugin page.
