@@ -14,7 +14,7 @@ This poll is developed using MVC framework which uses both ajax and jquery.
 1. You have options to display more than 1 poll in the widget area.
 2. You can specify how many polls to be displayed in the archive page.
 
-= Version 0.4 (New Features)=
+= Version 0.4 (New Features) =
 * Poll archive page displays the poll id, poll duration and poll status (Suggested by : Bill Ford, Founder of JoshuaTreeStar.com)
 * New option 'View Result' added to the 'Manage Polls' page to enable the administrator to see the poll results from Wordpress backend (Suggested by: Amber).
 * See Previous Polls changes to See polls & results
