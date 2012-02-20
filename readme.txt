@@ -17,7 +17,7 @@ This poll is developed using MVC framework which uses both ajax and jquery.
 = Version 0.4 New Features =
 * Poll archive page displays the poll id, poll duration and poll status (Suggested by : Bill Ford, Founder of JoshuaTreeStar.com)
 * New option 'View Result' added to the 'Manage Polls' page to enable the administrator to see the poll results from Wordpress backend (Suggested by: Amber).
-* See Previous Polls changes to See polls & results
+* 'See Previous Polls changed' to 'See polls & results'.
 
 = Note =
 1. If you find any bugs, please report in the following link, so that it will be fixed as quick as possible.
@@ -80,7 +80,7 @@ Copy the following shortcode and paste it in your post or page for displaying th
 
 poll_id - this the ID of the poll which you can find it on the 'Manage Polls' of your poll plugin page.
 
-For eg: If I want to display the poll where the ID is 19 then the shortcode will be
+For eg: If you want to display the poll where the ID is 19 then the shortcode will be
 [cardoza_wp_poll id=19]
 
 That's it. Check your page or post now.
@@ -100,7 +100,7 @@ if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 = Version 0.4 (released 20-02-2012) =
 * Poll archive page displays the poll id, poll duration and poll status (Suggested by : Bill Ford, Founder of JoshuaTreeStar.com)
 * New option 'View Result' added to the 'Manage Polls' page to enable the administrator to see the poll results from Wordpress backend (Suggested by: Amber).
-* See Previous Polls changes to See polls & results.
+* 'See Previous Polls changed' to 'See polls & results'.
 
 = Version 0.3 (released 17-02-2012) =
 * New feature added - Shortcode can be added on any page or post to display a particular poll.
