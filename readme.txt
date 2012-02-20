@@ -75,6 +75,7 @@ Uninstalling is as simple as deactivating the plugin.
 Its very simple to add poll in any page or post in your site.
 
 Copy the following shortcode and paste it in your post or page for displaying the poll.
+
 [cardoza_wp_poll id=poll_id]
 
 poll_id - this the ID of the poll which you can find it on the 'Manage Polls' of your poll plugin page.
