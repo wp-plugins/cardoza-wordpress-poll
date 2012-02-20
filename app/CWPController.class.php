@@ -40,7 +40,9 @@ class CWPController {
         add_action('wp_ajax_save_poll_options', array(&$this, 'savePollOptions'));
         add_action('wp_ajax_nopriv_poll_options', array(&$this, 'savePollOptions'));
         add_action('wp_ajax_submit_vote', array(&$this, 'saveVote'));
-        add_action('wp_ajax_nopriv_submit_vote', array(&$this, 'saveVote'));        
+        add_action('wp_ajax_nopriv_submit_vote', array(&$this, 'saveVote'));
+        add_action('wp_ajax_view_poll_result', array(&$this, 'viewPollResult'));
+        add_action('wp_ajax_nopriv_view_poll_result', array(&$this, 'viewPollResult'));
     }
     
     public function init(){
@@ -107,20 +109,9 @@ class CWPController {
         $polls = $this->cwpm->getNPollsFromDB();
         $current_time = time();
         foreach($polls as $poll){
-            //To calculate the time stamp for start date
-            $sdate = explode('/', $poll->start_date);
-            $smonth = $sdate[0];
-            $sday = $sdate[1];
-            $syear = $sdate[2];
-            
-            $stimestamp = mktime(0, 0, 0, $smonth, $sday, $syear); //poll start date timestamp
-            
-            //To calculate the time stamp for end date
-            $edate = explode('/', $poll->end_date);
-            $emonth = $edate[0];
-            $eday = $edate[1];
-            $eyear = $edate[2];   
-            $etimestamp = mktime(0, 0, 0, $emonth, $eday, $eyear); //poll end date timestamp
+                                   
+            $stimestamp = $this->getStrToTime($poll->start_date);
+            $etimestamp = $this->getStrToTime($poll->end_date);
             
             if($current_time>$stimestamp && $current_time < $etimestamp){
                 array_push($open_polls, $poll);
@@ -277,6 +268,41 @@ class CWPController {
         }
         
         die();
+    }
+    
+    public function viewPollResult(){
+        
+        $pollid = $_POST['poll_id'];
+        $polls = $this->cwpm->getPollByIDFromDB($pollid);
+        $answers = $this->cwpm->getPollAnswersFromDB($pollid);
+        $option_value = $this->cwpp_options();
+        $poll = $polls[0];
+        print "<b>".$poll[0]->question."</b><br/>";
+        print "<b>Total Votes: </b>".$poll[0]->total_votes."<br/>";
+        foreach($answers as $answer){
+                
+                $total = $poll[0]->total_votes;
+                $votes = $answer->votes;
+                if($total!=0) $width = ($votes/$total)*100;
+                else $width = 0;
+                print "<div style='width:100%;float:left;'>".$answer->answer." (".$answer->votes." votes, ".intval($width)."%)</div>";
+                ?>
+                <hr style="float:left;height:10px;width:<?php echo $width;?>%;background-color:#4a7194;">
+                <?php
+            }?>
+                <div id="clear">
+        <?php
+        die();
+    }
+    
+    public function getStrToTime($date){
+        
+        $date = explode('/', $date);
+        $month = $date[0];
+        $day = $date[1];
+        $year = $date[2];   
+        $timestamp = mktime(0, 0, 0, $month, $day, $year); 
+        return $timestamp;
     }
 }
 

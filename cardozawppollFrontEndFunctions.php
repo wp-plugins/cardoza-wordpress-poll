@@ -105,8 +105,8 @@ function previousPollsLink($vars){
         <?php
         $archive_url = $option_value['archive_url'];
         $url = explode('?', $archive_url);
-        if(sizeof($url)>1) echo '<a href="'.$option_value['archive_url'].'&poll_archive_page_no=1">See previous polls</a>';
-        else echo '<a href="'.$option_value['archive_url'].'?poll_archive_page_no=1">See previous polls</a>';
+        if(sizeof($url)>1) echo '<a href="'.$option_value['archive_url'].'&poll_archive_page_no=1">See all polls &amp; results</a>';
+        else echo '<a href="'.$option_value['archive_url'].'?poll_archive_page_no=1">See all polls &amp; results</a>';
     }
 }
 ?>

@@ -326,6 +326,20 @@ function savePollOptions(){
         }
     });
 }
+
+function viewPollResults(pollid){
+    
+    var data = {
+            action: 'view_poll_result',
+            poll_id: pollid
+        };
+    jQuery.post(ajaxurl, data,  
+        function(response){
+            jAlert(response, "Result for pollid : "+pollid);
+        }
+    );
+}
+
 function showTab(id){
     
     reset();

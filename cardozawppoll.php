@@ -164,9 +164,18 @@ function cwp_poll_archive($atts){
     
     if(empty($polls)) echo "<br>Sorry! No polls found in the archive for this page";
     foreach($polls as $poll){
-        $poll_end_date = $poll->end_date;
+        
+        $stimestamp = $cwp->getStrToTime($poll->start_date);
+        $etimestamp = $cwp->getStrToTime($poll->end_date);
+        $current_time = time();
         ?>
+            <br/>
+            <strong>Poll id : </strong>#<?php print $poll->id." - ".date('F jS, Y', $stimestamp);?>&nbsp;to&nbsp;<?php print date('F jS, Y', $etimestamp);?>&nbsp;&nbsp;(<?php
+                if($etimestamp > $current_time) echo "Open";
+                else echo "Closed";
+            ?>)
             <div id="widget-poll">
+                
                 <div id="widget-poll-question"><?php print $poll->question;?></div>
                 <?php
                 $poll_answers = $cwp->getPollAnswers($poll->id);         
@@ -195,26 +204,11 @@ function cwp_poll_id_display($atts){
     $polls = $cwp->getPollList();
     
     foreach($polls as $poll){
-        //To calculate the time stamp for start date
-        $sdate = explode('/', $poll->start_date);
-        $smonth = $sdate[0];
-        $sday = $sdate[1];
-        $syear = $sdate[2];
-
-        $stimestamp = mktime(0, 0, 0, $smonth, $sday, $syear); //poll start date timestamp
-
-        //To calculate the time stamp for end date
-        $edate = explode('/', $poll->end_date);
-        $emonth = $edate[0];
-        $eday = $edate[1];
-        $eyear = $edate[2];   
-        $etimestamp = mktime(0, 0, 0, $emonth, $eday, $eyear); //poll end date timestamp
+        
+        $stimestamp = $cwp->getStrToTime($poll->start_date);
+        $etimestamp = $cwp->getStrToTime($poll->end_date);
         
         $current_time = time();
-        
-        $poll_end_date = $poll->end_date;
-        $expiry_date = explode('/', $poll_end_date);
-        $exp_time = mktime(0,0,0,$expiry_date[1], $expiry_date[0], $expiry_date[2]);
         
         if($poll->id == trim($atts[id])){?>
             <div id="widget-poll">
@@ -228,9 +222,9 @@ function cwp_poll_id_display($atts){
                 
                 $vars['poll_answers'] = $poll_answers;
                 $vars['total_votes'] = $poll->total_votes;
-                
                 $vars['poll'] = $poll;
-                $vars['exp_time'] = $exp_time;
+                $vars['exp_time'] = $etimestamp;
+                
                 if($current_time>$stimestamp && $current_time < $etimestamp){
                     if(isset($_COOKIE['cwppoll'.$poll->id])){?>
                         <div id="show-results<?php $poll->id;?>">

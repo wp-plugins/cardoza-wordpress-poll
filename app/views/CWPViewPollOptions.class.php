@@ -96,7 +96,7 @@ class CWPViewPollOptions extends CWPView {
                 
                 <div id="label">Poll archive URL: </div>
                 <input id="archive-url" 
-                       style="width:450px;"
+                       style="width:350px;"
                        onblur="javascript:setBorderDefault('archive-url');" 
                        onfocus="javascript:setBorder('archive-url');"
                        name="archive_url" type="text" value="<?php if(!empty($opts['archive_url'])) echo $opts['archive_url'];?>" class="txt" />
