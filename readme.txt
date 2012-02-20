@@ -97,9 +97,9 @@ if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 == Change Log ==
 
 = Version 0.4 (released 20-02-2012) =
-* Poll archive page displays the poll id, poll duration and status (Credit: Bill Ford, Founder of JoshuaTreeStar.com)
-* See Previous Polls changes to See polls & results
-* New option 'View Result' added to the 'Manage Polls' page to enable the administrator to see the poll results from Wordpress backend.
+* Poll archive page displays the poll id, poll duration and poll status (Suggested by : Bill Ford, Founder of JoshuaTreeStar.com)
+* New option 'View Result' added to the 'Manage Polls' page to enable the administrator to see the poll results from Wordpress backend (Suggested by: Amber).
+* See Previous Polls changes to See polls & results.
 
 = Version 0.3 (released 17-02-2012) =
 * New feature added - Shortcode can be added on any page or post to display a particular poll.
