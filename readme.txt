@@ -15,7 +15,7 @@ This poll is developed using MVC framework which uses both ajax and jquery.
 2. You can specify how many polls to be displayed in the archive page.
 3. Administrator can view the poll statistics by date wise.
 
-== In development ==
+= In development =
 * More refinement in poll statistics data.
 * Restricting the viewers to poll according to the geo location.
 
