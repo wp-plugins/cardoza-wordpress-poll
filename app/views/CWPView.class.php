@@ -9,6 +9,7 @@ require 'CWPViewPollOptions.class.php';
 require 'CWPViewWidget.class.php';
 require 'CWPViewManagePolls.class.php';
 require 'CWPViewEditPoll.class.php';
+require 'CWPViewStats.class.php';
 
 class CWPView {
     
@@ -49,6 +50,7 @@ class CWPView {
                 <li><a id="menu-tab2" href="javascript:showTab(2);">Add New Poll</a></li>
                 <li><a id="menu-tab3" href="javascript:showTab(3);">Poll Options</a></li>
                 <li><a id="menu-tab4" href="javascript:showTab(4);">Widget Options</a></li>
+                <li><a id="menu-tab5" href="javascript:showTab(5);">Poll Statistics</a></li>
             </ul>
             <div id="cwp-content">
                 
@@ -59,7 +61,8 @@ class CWPView {
             $this->view_manage_poll->init();
             $view_create_poll = new CWPViewCreatePoll();
             $view_poll_options = new CWPViewPollOptions();
-            $view_widget_options = new CWPViewWidget(); 
+            $view_widget_options = new CWPViewWidget();
+            $view_stats = new CWPViewStats();
         ?>
             </div>
         </div>

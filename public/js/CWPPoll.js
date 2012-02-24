@@ -327,6 +327,18 @@ function savePollOptions(){
     });
 }
 
+function getPollStatsjs(arg){
+    var data = {
+            action: 'view_poll_stats',
+            arguments: arg
+        };
+    jQuery.post(ajaxurl, data,  
+        function(response){
+            jQuery('#cwp-graph').html(response);
+        }
+    );
+}
+
 function viewPollResults(pollid){
     
     var data = {
@@ -350,9 +362,9 @@ function showTab(id){
 
 function reset(){
     
-    jQuery('#tab1, #tab2, #tab3, #tab4').css('display', 'none');
-    jQuery('#menu-tab1, #menu-tab2, #menu-tab3, #menu-tab4').css('background-color', '#fff');
-    jQuery('#menu-tab1, #menu-tab2, #menu-tab3, #menu-tab4').css('color', '#4a7194');
+    jQuery('#tab1, #tab2, #tab3, #tab4, #tab5').css('display', 'none');
+    jQuery('#menu-tab1, #menu-tab2, #menu-tab3, #menu-tab4, #menu-tab5').css('background-color', '#fff');
+    jQuery('#menu-tab1, #menu-tab2, #menu-tab3, #menu-tab4, #menu-tab5').css('color', '#4a7194');
 }
 
 function clearAll(){

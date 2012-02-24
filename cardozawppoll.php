@@ -4,7 +4,7 @@
 Plugin Name: Cardoza Wordpress Poll
 Plugin URI: http://fingerfish.com/cardoza-wordpress-poll
 Description: Cardoza Wordpress Poll is completely ajax powered polling system. This poll plugin supports both single and multiple selection of answers.
-Version: 0.4
+Version: 0.5
 Author: Vinoj Cardoza
 Author URI: http://fingerfish.com/about-me/
 License: GPL2
@@ -13,15 +13,18 @@ define('CWP_PGN_DIR', plugin_dir_url(__FILE__));
 
 require_once 'app/CWPController.class.php';
 
+/* To include the stylesheets */
 wp_enqueue_style('cwpcss', CWP_PGN_DIR.'public/css/CWPPoll.css');
+
+/* To include the javascripts */
 wp_enqueue_script('cwp-main', CWP_PGN_DIR.'public/js/CWPPoll.js', array('jquery'));
 
-add_action('wp_head','pluginname_ajaxurl');
+add_action('wp_head','cwppoll_ajaxurl');
 add_action('plugins_loaded', 'trigger_init');
 
 register_activation_hook  ( __FILE__, 'CWP_Install' );
 
-function pluginname_ajaxurl() {
+function cwppoll_ajaxurl() {
 ?>
 <script type="text/javascript">
 var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
@@ -38,7 +41,9 @@ function trigger_init(){
     register_sidebar_widget(__('Cardoza Wordpress Poll'), 'widget_cardoza_wp_poll');
 }
 
+/*Calling all the required files*/
 require_once 'cardozawppollFrontEndFunctions.php';
+require_once 'cardozawppolldb.php';
 
 function widget_cardoza_wp_poll($args){
     
@@ -265,39 +270,5 @@ function cwp_poll_id_display($atts){
     ob_end_clean();
     return $output_string;
 }
-
-global $CWP_db_version;
-$CWP_db_version = "1.0";
-
-function CWP_install(){
-    global $wpdb;
-    global $CWP_db_version;
-    
-    $poll_table = $wpdb->prefix."cwp_poll";
-    $poll_answer_table = $wpdb->prefix."cwp_poll_answers";
-    
-    $create_poll_table = "CREATE TABLE ".$poll_table." (
-		id int(10) not null auto_increment,
-		name tinytext not null,
-                question tinytext not null,
-                answer_type tinytext not null,
-                no_of_answers tinytext null,
-                start_date tinytext not null,
-                end_date tinytext not null,
-                total_votes int(10) not null,
-		UNIQUE KEY id (id));";
-    
-    $create_poll_answer_table = "CREATE TABLE ".$poll_answer_table." (
-		id int(10) not null auto_increment,
-		pollid int(10) not null,
-                answer tinytext not null,
-                votes int(10) not null,
-		UNIQUE KEY id (id));";
-        
-    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-    dbDelta($create_poll_table);
-    dbDelta($create_poll_answer_table);
-    
-    add_option("CWP_db_Version", $CWP_db_version);
-}
+add_action('plugins_loaded', 'cwp_db_update');
 ?>

@@ -24,7 +24,7 @@ function displayPollResults($vars){
         <br/>
         
         <div style="height:<?php if(!empty($option_value['bar_height'])) echo $option_value['bar_height'];else echo "10";?>px;
-        width:<?php echo $width?>%;background-color:#<?php if(!empty($option_value['bar_color'])) echo $option_value['bar_color'];else echo "ECF1EF";?>"></div>
+        width:<?php echo $width?>%;background-color:#<?php if(!empty($option_value['bar_color'])) echo $option_value['bar_color'];else echo "CCC";?>"></div>
         
     <?php
     }

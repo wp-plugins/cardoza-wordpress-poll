@@ -173,6 +173,15 @@ class CWPModel {
             $result = $wpdb->query("UPDATE ".$wpdb->prefix."cwp_poll_answers SET
             votes = votes+1 WHERE id = ".$ansid);
         }
+        $ip=$_SERVER['REMOTE_ADDR'];
+        $result = $wpdb->query("INSERT INTO 
+            ".$wpdb->prefix."cwp_poll_logs (pollid, ip_address, polledtime) VALUES (
+                ".$pollid.", '".$ip."', '".time()."')");
+    }
+    public function pollStats(){
+        global $wpdb;    
+        $poll_stats = $wpdb->get_results("SELECT * FROM ".$wpdb->prefix."cwp_poll_logs");
+        return $poll_stats;
     }
 }
 ?>

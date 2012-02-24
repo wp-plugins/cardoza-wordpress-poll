@@ -6,7 +6,6 @@
 require_once 'CWPModel.class.php';
 require_once 'views/CWPView.class.php';
 
-
 class CWPController {
     
     public $cwpv; //instance variable for views
@@ -43,6 +42,8 @@ class CWPController {
         add_action('wp_ajax_nopriv_submit_vote', array(&$this, 'saveVote'));
         add_action('wp_ajax_view_poll_result', array(&$this, 'viewPollResult'));
         add_action('wp_ajax_nopriv_view_poll_result', array(&$this, 'viewPollResult'));
+        add_action('wp_ajax_view_poll_stats', array(&$this, 'getPollStats'));
+        add_action('wp_ajax_nopriv_view_poll_stats', array(&$this, 'getPollStats'));
     }
     
     public function init(){
@@ -249,27 +250,7 @@ class CWPController {
         
         die();
     }
-    public function cancelVote(){
-        
-        $pollid = $_POST['poll_id'];
-        setcookie('cwppoll'.$pollid, "true", time()-3600, COOKIEPATH, COOKIE_DOMAIN,false,true);
-        $answerid = array();
-        if($_POST['answertype'] == 'one'){
-            $answerid[] = $_POST[$pollid];
-        }
-        if($_POST['answertype'] == 'multiple'){
-            for($i=1; $i<=200; $i++){
-                $answerid[] = $_POST['option'.$i];
-            }
-        }
-        if(sizeof($answerid>0)){
-            
-            $this->cwpm->updatePollVote($pollid, $answerid);
-        }
-        
-        die();
-    }
-    
+       
     public function viewPollResult(){
         
         $pollid = $_POST['poll_id'];
@@ -303,6 +284,101 @@ class CWPController {
         $year = $date[2];   
         $timestamp = mktime(0, 0, 0, $month, $day, $year); 
         return $timestamp;
+    }
+    
+    public function getPollStats($vars = null){
+        $poll_stats = $this->cwpm->pollStats();
+        $current_time = time();
+        $votes = array();
+        $today = mktime(0,0,0,date('m'),date('d'),date('Y'));
+        if(isset($_POST['arguments'])) $vars['arguments'] = $_POST['arguments'];
+        if(empty($vars)){
+            if(!empty($poll_stats)){
+                for($i=0;$i<7;$i++){
+                    $vars['label'] = 'Last 7 days Statistics';
+                    $from = $today - ((24*60*60)*$i);
+                    if($i!=0) $to = $today - ((24*60*60)*($i-1));
+                    else $to = time();
+                    foreach($poll_stats as $stats){
+                        if($stats->polledtime>$from && $stats->polledtime<$to){
+                            if(array_key_exists($from, $votes)){
+                                if(is_array($votes[$from])) $votes[$from] = $votes[$from]+1;
+                                else $votes[$from] = $votes[$from]+1;           
+                            }
+                            else $votes[$from] = 1;
+                        }
+                    }
+                }  
+            }
+            $vars['votes'] = $votes;
+            return $vars;
+        }
+        else{
+            if(!empty($poll_stats)){
+                $days = $vars['arguments'];
+                for($i=0;$i<$days;$i++){
+                    $vars['label'] = 'Last '.$days.' days Statistics';
+                    $from = $today - ((24*60*60)*$i);
+                    if($i!=0) $to = $today - ((24*60*60)*($i-1));
+                    else $to = time();
+                    foreach($poll_stats as $stats){
+                        if($stats->polledtime>$from && $stats->polledtime<$to){
+                            if(array_key_exists($from, $votes)){
+                                if(is_array($votes[$from])) $votes[$from] = $votes[$from]+1;
+                                else $votes[$from] = $votes[$from]+1;           
+                            }
+                            else $votes[$from] = 1;
+                        }
+                    }
+                }
+                $label = $vars['label'];
+                if(!empty($votes)){
+                    $max_value = 0;
+
+                    foreach($votes as $vote){
+                        if($vote>$max_value) $max_value = $vote; 
+                    }
+
+                    if($max_value<10) $max_value = 10;
+
+                    if(($max_value%10) != 0) $max_y_axis_value = ($max_value+10-($max_value%10));
+                    else $max_y_axis_value = $max_value;
+                    ?>
+                    <div id="cwp-xaxis">
+                        <?php print $label;?>
+                    </div>
+                    <div id="cwp-yaxis">
+                        <?php 
+                        for($i=0; $i<10; $i++){?>
+                            <div class="cwp-yaxis-label">
+                                <?php print $max_y_axis_value-(($max_y_axis_value/10)*$i);?>-
+                            </div>
+                        <?php
+                        }
+                        ?>
+                    </div>
+                    <div id="cwp-graph-content">
+                        <?php
+                            $bar_width = 545/sizeof($votes);
+                            if($bar_width>5) $bar_width = $bar_width-1;
+                            $bar_width = $bar_width;
+                            $bar_height = (493/$max_y_axis_value);
+                        ?>
+                        <?php foreach($votes as $key=>$vote){?>
+                                <div id="cwp-graph-bar" 
+                                     style="width:<?php echo $bar_width;?>px;
+                                            height:<?php echo $bar_height*$vote;?>px;
+                                            margin-top:<?php echo 500-($bar_height*$vote);?>px;
+                                            margin-left:<?php if($bar_width<5) echo '0';else echo '1';?>px" 
+                                     title ="Date:<?php echo date('d/m/y',$key)." - ".$vote;?> Votes">
+                                </div>
+                        <?php }?>
+                    </div>
+                <?php
+                }
+            }
+        }
+        die();
     }
 }
 

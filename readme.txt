@@ -2,7 +2,7 @@
 Contributors: Vinoj Cardoza
 Tags: poll, cardoza, vote, widget, booth, polls, polling
 Requires at least: 3.0
-Tested up to: 3.3
+Tested up to: 3.3.1
 Stable tag: trunk
 License: GPLv2 or later
 
@@ -13,11 +13,17 @@ This poll is developed using MVC framework which uses both ajax and jquery.
 
 1. You have options to display more than 1 poll in the widget area.
 2. You can specify how many polls to be displayed in the archive page.
+3. Administrator can view the poll statistics by date wise.
 
-= Version 0.4 New Features =
-* Poll archive page displays the poll id, poll duration and poll status (Suggested by : Bill Ford, Founder of JoshuaTreeStar.com)
-* New option 'View Result' added to the 'Manage Polls' page to enable the administrator to see the poll results from Wordpress backend (Suggested by: Amber).
-* 'See Previous Polls changed' to 'See polls & results'.
+== In development ==
+* More refinement in poll statistics data.
+* Restricting the viewers to poll according to the geo location.
+
+= Version 0.5 (released 24-02-2012) =
+* Poll Statistical analysis implemented such that the administrator can see the poll logs in a graph format. can view 
+* This poll statistics feature will be only available to those who have installed or updated after 24th February 2012. 
+* Code structure formalised again.
+* Database modified to get the poll logs.
 
 = Note =
 1. If you find any bugs, please report in the following link, so that it will be fixed as quick as possible.
@@ -68,6 +74,7 @@ Uninstalling is as simple as deactivating the plugin.
 4. screenshot-4.gif
 5. screenshot-5.gif
 6. screenshot-6.gif
+7. screenshot-7.gif
 
 == Frequently Asked Questions ==
 
@@ -96,6 +103,12 @@ That's it. Check your page or post now.
 if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
+
+= Version 0.5 (released 24-02-2012) =
+* Poll Statistical analysis implemented such that the administrator can see the poll logs in a graph format.
+* This poll statistics feature will be only available to those who have installed or updated after 24th February 2012. 
+* Code structure formalised again.
+* Database modified to get the poll logs.
 
 = Version 0.4 (released 20-02-2012) =
 * Poll archive page displays the poll id, poll duration and poll status (Suggested by : Bill Ford, Founder of JoshuaTreeStar.com)

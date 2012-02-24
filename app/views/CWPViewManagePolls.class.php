@@ -77,6 +77,5 @@ class CWPViewManagePolls{
                 </div>
         </div>
 <?php }
-
 }
 ?>
