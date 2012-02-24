@@ -44,12 +44,12 @@ class CWPView {
         ?>
         <div class="wrap">
             <h2><?php _e("Cardoza Wordpress Poll", "cwppoll_tans_domain"); ?></h2><br />
-            <div id="message"></div>
+            <div id="message"><h3>* Mandatory fields.</h3></div>
             <ul id="tabs">
                 <li><a id="menu-tab1" href="javascript:showTab(1);">Manage Polls</a></li>
                 <li><a id="menu-tab2" href="javascript:showTab(2);">Add New Poll</a></li>
                 <li><a id="menu-tab3" href="javascript:showTab(3);">Poll Options</a></li>
-                <li><a id="menu-tab4" href="javascript:showTab(4);">Widget Options</a></li>
+                <li><a id="menu-tab4" href="javascript:showTab(4);">Widget Options *</a></li>
                 <li><a id="menu-tab5" href="javascript:showTab(5);">Poll Statistics</a></li>
             </ul>
             <div id="cwp-content">

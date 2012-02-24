@@ -21,7 +21,7 @@ class CWPViewWidget{
                        onfocus="javascript:setBorder('widget-title');"
                        name="widget_title" type="text" value="<?php if(!empty($opts['title'])) print $opts['title'];?>" class="txt" />
                 <div id="clear"></div>
-                <div id="label">Display Older Polls Link: </div>
+                <div id="label">Display Older Polls Link: * </div>
                 <select class="slct" name="poll-archive" style="width:75px;">
                     <option value="yes"
                     <?php
@@ -35,7 +35,7 @@ class CWPViewWidget{
                     >No</option>
                 </select>
                 <div id="clear"></div>
-                <div id="label">Select the latest number of polls to be displayed: </div>
+                <div id="label">Select the latest number of polls to be displayed: * </div>
                 <select class="slct" name="no_of_polls" style="width:75px;">
                     <?php
                         for($i=1; $i<=10; $i++){
@@ -50,15 +50,16 @@ class CWPViewWidget{
                 <input id="widget-width" style="width: 50px;"
                        onblur="javascript:setBorderDefault('widget-width');" 
                        onfocus="javascript:setBorder('widget-width');"
-                       name="widget_width" type="text" value="<?php if(!empty($opts['width'])) print $opts['width'];?>" class="txt" />
+                       name="widget_width" type="text" value="<?php if(!empty($opts['width'])) print $opts['width'];?>" class="txt" />px
                 <div id="clear"></div>
-                <center>
+                
                 <div id="label">Widget height: </div>
                 <input id="widget-height" style="width: 50px;"
                        onblur="javascript:setBorderDefault('widget-height');" 
                        onfocus="javascript:setBorder('widget-height');"
-                       name="widget_height" type="text" value="<?php if(!empty($opts['height'])) print $opts['height'];?>" class="txt" /> 
+                       name="widget_height" type="text" value="<?php if(!empty($opts['height'])) print $opts['height'];?>" class="txt" />px
                 <div id="clear"></div>
+                <center>
                 <input type="hidden" name="action" value="save_widget" />
                 <input id="widget-opt" 
                        onclick="javascript:saveWidgetOptions()"
