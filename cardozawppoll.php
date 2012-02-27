@@ -4,7 +4,7 @@
 Plugin Name: Cardoza Wordpress Poll
 Plugin URI: http://fingerfish.com/cardoza-wordpress-poll
 Description: Cardoza Wordpress Poll is completely ajax powered polling system. This poll plugin supports both single and multiple selection of answers.
-Version: 0.5
+Version: 0.6
 Author: Vinoj Cardoza
 Author URI: http://fingerfish.com/about-me/
 License: GPL2
@@ -61,6 +61,9 @@ function widget_cardoza_wp_poll($args){
     if(empty($option_value['title'])) $option_value['title'] = "Poll";
     echo $option_value['title'];
     
+    if(!empty($option_value['no_of_polls'])) $no_of_polls_in_Widget = $option_value['no_of_polls'];
+    else $no_of_polls_in_Widget = 1;
+    
     echo $after_title;
     
     $polls = $cwp->retrievePoll();
@@ -69,7 +72,7 @@ function widget_cardoza_wp_poll($args){
         $poll_end_date = $poll->end_date;
         $expiry_date = explode('/', $poll_end_date);
         $exp_time = mktime(0,0,0,$expiry_date[1], $expiry_date[0], $expiry_date[2]);
-        if($count <= $option_value['no_of_polls']){?>
+        if($count <= $no_of_polls_in_Widget){?>
             <div id="widget-poll" <?php if(!empty($option_value['poll_bg_color'])) echo 'style="background-color:#'.$option_value['poll_bg_color'].';"';?>>
                 <div id="widget-poll-question"><?php print $poll->question;?></div>
                 
@@ -188,6 +191,7 @@ function cwp_poll_archive($atts){
                 $vars['total_votes'] = $poll->total_votes;
                 $vars['option_value'] = $option_value;
                 $vars['poll_id'] = $poll->id;
+                $vars['poll'] = $poll;
                 displayPollResults($vars);
                 ?>
             </div>

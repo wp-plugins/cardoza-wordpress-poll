@@ -58,7 +58,8 @@ class CWPViewStats {
                                 margin-left:<?php if($bar_width<5) echo '0';else echo '1';?>px" 
                          title ="Date:<?php echo date('d/m/y',$key)." - ".$vote;?> Votes">
                     </div>
-                    <?php }?>
+                    <?php                                                 
+                    }?>
                 </div>
                 
             </div>
@@ -70,6 +71,11 @@ class CWPViewStats {
 ?>
        </div>
         <?php
+    }
+    
+    public function getLocation($ip){ 
+        
+        
     }
 
 }

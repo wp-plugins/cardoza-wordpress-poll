@@ -43,38 +43,37 @@ class CWPViewManagePolls{
                         $total_votes = 0;
                         foreach($polls as $poll){?>
 
-                                <tr style="background-color: #ECF1EF;height:40px;">
-                                    <td align="center"><?php print $poll->id;?></td>
-                                    <td style="padding-left:3px;"><?php print $poll->name;?></td>
-                                    <td style="padding-left:3px;"><?php print $poll->question;?></td>
-                                    <td style="padding-left:3px;"><?php print $poll->answer_type;?></td>
-                                    <td align="center"><?php print $poll->start_date;?></td>
-                                    <td align="center"><?php print $poll->end_date;?></td>
-                                    <td align="center">
-                                    <?php
-                                    $timestamp = $controller->getStrToTime($poll->end_date);
-                                    $current_time = time();
-                                    if($current_time < $timestamp) echo "Open";
-                                    else echo "Closed"
-                                    ?>
-                                    </td>
-                                    <td align="center"><?php print $poll->total_votes;?></td>
-                                    <td align="center"><input name="view_poll_results" type="button" onclick="javascript:viewPollResults(<?php print $poll->id;?>)" value="View Result"/></td>
-                                </tr>
+                            <tr style="background-color: #ECF1EF;height:40px;">
+                                <td align="center"><?php print $poll->id;?></td>
+                                <td style="padding-left:3px;"><?php print $poll->name;?></td>
+                                <td style="padding-left:3px;"><?php print $poll->question;?></td>
+                                <td style="padding-left:3px;"><?php print $poll->answer_type;?></td>
+                                <td align="center"><?php print $poll->start_date;?></td>
+                                <td align="center"><?php print $poll->end_date;?></td>
+                                <td align="center">
+                                <?php
+                                $timestamp = $controller->getStrToTime($poll->end_date);
+                                $current_time = time();
+                                if($current_time < $timestamp) echo "Open";
+                                else echo "Closed"
+                                ?>
+                                </td>
+                                <td align="center"><?php print $poll->total_votes;?></td>
+                                <td align="center"><input name="view_poll_results" type="button" onclick="javascript:viewPollResults(<?php print $poll->id;?>)" value="View Result"/></td>
+                            </tr>
                         <?php
                         $total_votes = $total_votes +  $poll->total_votes;
                         }
                         ?>
-                    </form>
                 </table>
                     <br/>
                 <div id="box">
-                <div id="label" style="color:#000;">Total No of Votes :</div>&nbsp;&nbsp;&nbsp;<?php print $total_votes;?>
+                <div id="label" style="color:#000;">Total No of Voters :</div>&nbsp;&nbsp;&nbsp;<?php print $total_votes;?>
                 <div id="clear"></div>
                 </div>
             </div>
             </div>
-                </div>
+        </div>
         </div>
 <?php }
 }

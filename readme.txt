@@ -19,11 +19,11 @@ This poll is developed using MVC framework which uses both ajax and jquery.
 * More refinement in poll statistics data.
 * Restricting the viewers to poll according to the geo location.
 
-= Version 0.5 (released 24-02-2012) =
-* Poll Statistical analysis implemented such that the administrator can see the poll logs in a graph format. can view 
-* This poll statistics feature will be only available to those who have installed or updated after 24th February 2012. 
-* Code structure formalised again.
-* Database modified to get the poll logs.
+= Version 0.6 (released 27-02-2012) =
+* Total Votes modified for multiple type answers in displaying the results. (Suggested by HR)
+* Default value for no of polls in Widget is set to 1 if the option was not set by the administrator.
+* Random answer display of answers bug fixed (Suggested by Bill Ford).
+* Mandatory fields(*) notification given in the user interface (Suggested by Keith).
 
 = Note =
 1. If you find any bugs, please report in the following link, so that it will be fixed as quick as possible.
@@ -103,6 +103,11 @@ That's it. Check your page or post now.
 if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
+= Version 0.6 (released 27-02-2012) =
+* Total Votes modified for multiple type answers in displaying the results. (Suggested by HR)
+* Default value for no of polls in Widget is set to 1 if the option was not set by the administrator.
+* Random answer display of answers bug fixed (Suggested by Bill Ford).
+* Mandatory fields(*) notification given in the user interface (Suggested by Keith).
 
 = Version 0.5 (released 24-02-2012) =
 * Poll Statistical analysis implemented such that the administrator can see the poll logs in a graph format.
