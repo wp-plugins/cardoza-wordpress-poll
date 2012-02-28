@@ -6,22 +6,15 @@ function displayPollResults($vars){
     $total = $vars['total_votes'];
     $option_value = $vars['option_value'];
     $poll_id = $vars['poll_id'];
-    $poll = $vars['poll'];
-    $answer_type = $poll->answer_type;
-    $total_votes = 0;  
     
-    if($answer_type == "multiple") print "<b>Total Voters: </b>".$total."<br/>";
-    
-    foreach($poll_answers as $answer){
-        $total_votes = $total_votes + $answer->votes;
-    }
-    print "<b>Total Votes: </b>".$total_votes."<br/>";
+        
+    print "<b>Total Votes: </b>".$total."<br/>";
     
     foreach($poll_answers as $answer){
                       
         $votes = $answer->votes;
         
-        if($total_votes!=0) $width = ($votes/$total_votes)*100;
+        if($total!=0) $width = ($votes/$total)*100;
         else $width = 0;
         
         print $answer->answer." (".$answer->votes." votes, ".intval($width)."%)";

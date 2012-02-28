@@ -2,7 +2,7 @@
 Contributors: Vinoj Cardoza
 Tags: poll, cardoza, vote, widget, booth, polls, polling
 Requires at least: 3.0
-Tested up to: 3.3.1
+Tested up to: 3.3
 Stable tag: trunk
 License: GPLv2 or later
 
@@ -15,15 +15,14 @@ This poll is developed using MVC framework which uses both ajax and jquery.
 2. You can specify how many polls to be displayed in the archive page.
 3. Administrator can view the poll statistics by date wise.
 
-= In development =
+== In development ==
 * More refinement in poll statistics data.
 * Restricting the viewers to poll according to the geo location.
 
-= Version 0.6 (released 27-02-2012) =
-* Total Votes modified for multiple type answers in displaying the results. (Suggested by HR)
-* Default value for no of polls in Widget is set to 1 if the option was not set by the administrator.
-* Random answer display of answers bug fixed (Suggested by Bill Ford).
-* Mandatory fields(*) notification given in the user interface (Suggested by Keith).
+= Version 0.5 (released 24-02-2012) =
+* Poll Statistical analysis implemented such that the administrator can see the poll logs in a graph format. can view 
+* Code structure formalised again.
+* Database modified to get the poll logs.
 
 = Note =
 1. If you find any bugs, please report in the following link, so that it will be fixed as quick as possible.
@@ -74,7 +73,6 @@ Uninstalling is as simple as deactivating the plugin.
 4. screenshot-4.gif
 5. screenshot-5.gif
 6. screenshot-6.gif
-7. screenshot-7.gif
 
 == Frequently Asked Questions ==
 
@@ -103,15 +101,9 @@ That's it. Check your page or post now.
 if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
-= Version 0.6 (released 27-02-2012) =
-* Total Votes modified for multiple type answers in displaying the results. (Suggested by HR)
-* Default value for no of polls in Widget is set to 1 if the option was not set by the administrator.
-* Random answer display of answers bug fixed (Suggested by Bill Ford).
-* Mandatory fields(*) notification given in the user interface (Suggested by Keith).
 
 = Version 0.5 (released 24-02-2012) =
-* Poll Statistical analysis implemented such that the administrator can see the poll logs in a graph format.
-* This poll statistics feature will be only available to those who have installed or updated after 24th February 2012. 
+* Poll Statistical analysis implemented such that the administrator can see the poll logs in a graph format. can view 
 * Code structure formalised again.
 * Database modified to get the poll logs.
 

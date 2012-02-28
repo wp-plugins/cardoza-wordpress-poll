@@ -7,7 +7,7 @@ var i;
 jQuery(document).ready(function(){
     no_of_answers = 2;
     reset();
-    showTab(1);
+    showTab(5);
     
     jQuery('#poll-preview').css('height', '0px');
     jQuery("#no-of-answers, #widget-height, #widget-width, #poll-bar-height").keydown(function(event) {

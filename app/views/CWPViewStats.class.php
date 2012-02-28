@@ -58,24 +58,18 @@ class CWPViewStats {
                                 margin-left:<?php if($bar_width<5) echo '0';else echo '1';?>px" 
                          title ="Date:<?php echo date('d/m/y',$key)." - ".$vote;?> Votes">
                     </div>
-                    <?php                                                 
-                    }?>
+                    <?php }?>
                 </div>
                 
             </div>
             </div>
             <?php }
             else{
-                print "No data available to analyze. If you have installed or updated the plugin recently, poll statistics will not be available until someone votes after the installation or updation.";
+                print "No data available to analyze. If you have installed or updated the plugin recently, poll statistics will not be available until someone votes.";
             }
 ?>
        </div>
         <?php
-    }
-    
-    public function getLocation($ip){ 
-        
-        
     }
 
 }

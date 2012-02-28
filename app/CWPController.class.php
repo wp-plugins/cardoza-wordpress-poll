@@ -306,8 +306,6 @@ class CWPController {
                                 else $votes[$from] = $votes[$from]+1;           
                             }
                             else $votes[$from] = 1;
-                            $ipAddress = '77.73.11.170';
-
                         }
                     }
                 }  
@@ -380,7 +378,6 @@ class CWPController {
                 }
             }
         }
-        
         die();
     }
 }
