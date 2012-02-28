@@ -10,6 +10,7 @@ class CWPViewStats {
             $vars = $controller->getPollStats();
             $votes = $vars['votes'];
             $label = $vars['label'];
+            //print_r($this->getLocation('77.73.11.170'));
             if(!empty($votes)){
                 $max_value = 0;
                 
@@ -58,18 +59,35 @@ class CWPViewStats {
                                 margin-left:<?php if($bar_width<5) echo '0';else echo '1';?>px" 
                          title ="Date:<?php echo date('d/m/y',$key)." - ".$vote;?> Votes">
                     </div>
-                    <?php }?>
+                    <?php                                                 
+                    }?>
                 </div>
                 
             </div>
             </div>
             <?php }
             else{
-                print "No data available to analyze. If you have installed or updated the plugin recently, poll statistics will not be available until someone votes.";
+                print "No data available to analyze. If you have installed or updated the plugin recently, poll statistics will not be available until someone votes after the installation or updation.";
             }
 ?>
        </div>
         <?php
+    }
+    
+    public function getLocation($ip){ 
+    /*    
+       $location =  simplexml_load_file("http://freegeoip.net/xml/".$ip);
+       if (isset($xml_data->errcode)){
+            $location = $xml_data->err;
+            
+        } else {
+            $location['city'] = $xml_data->City;
+            $location['country'] = $xml_data->CountryName;
+            $location['ndeg'] = $xml_data->Latitude;
+            $location['edeg'] = $xml_data->Longitude;
+            $location['source'] = "<a href=\"http://freegeoip.net/static/index.html\">freegeoip.net</a>";
+        }
+       return $location;*/
     }
 
 }

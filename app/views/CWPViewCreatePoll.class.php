@@ -5,18 +5,18 @@
  * user interface to create a new poll.
  */
 
-class CWPViewCreatePoll extends CWPView{
+class CWPViewCreatePoll{
 
-    function __construct() {?>
-
+    public function __construct() {?>
+    
         <div id="tab2" class="tab-content">
             <form id="create-poll" name="create_poll">
-                <h3>Poll Friendly Name</h3>
+                <h3>Poll Friendly Name</h3>                
                 <div id="box">
                     <div id="label">Friendly name* :</div>
                     <input id="poll-name" name="poll_name" style="width:350px;"
                            onblur="javascript:setBorderDefault('poll-name');" 
-                           onfocus="javascript:setBorder('poll-name');" type="text" value=""/>
+                           onfocus="javascript:setBorder('poll-name');" type="text" value="" />
                     <div id="clear"></div>
                 </div>
                 <h3>Poll Question</h3>
@@ -24,7 +24,7 @@ class CWPViewCreatePoll extends CWPView{
                     <div id="label">Question* :</div>
                     <input id="poll-question" name="poll_question" style="width:350px;"
                            onblur="javascript:setBorderDefault('poll-question');" 
-                           onfocus="javascript:setBorder('poll-question');" type="text" value=""/>
+                           onfocus="javascript:setBorder('poll-question');" type="text" value="" />
                     <div id="clear"></div>
                 </div>
                 <h3>Poll Answers</h3>
@@ -77,13 +77,15 @@ class CWPViewCreatePoll extends CWPView{
                     <div id="label">End Date* :</div>
                     <input id="end_date" type="text" name="e_date" style="width:100px;"/> <b>Format: </b> mm/dd/yyyy
                     <div id="clear"></div>
-                </div><center>
+                </div>
+                <center>
                     <input type="hidden" name="action" value="save_poll" />
                     <input id="add-answer" 
                            onclick="javascript:validateAddNewPollForm()"
                            onblur="javascript:setBorderDefault('add-answer');" 
                            onfocus="javascript:setBorder('add-answer');"
-                           type="button" value="Add New Poll"/></center>
+                           type="button" value="Add New Poll" />
+                </center>
             </form>
         </div> 
         <?php

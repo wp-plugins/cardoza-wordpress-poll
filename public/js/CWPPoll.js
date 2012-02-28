@@ -7,7 +7,7 @@ var i;
 jQuery(document).ready(function(){
     no_of_answers = 2;
     reset();
-    showTab(5);
+    showTab(1);
     
     jQuery('#poll-preview').css('height', '0px');
     jQuery("#no-of-answers, #widget-height, #widget-width, #poll-bar-height").keydown(function(event) {
@@ -98,7 +98,6 @@ function validateAddNewPollForm(){
                 jAlert("Poll saved successfully!", "Save message");
                 jQuery.post(ajaxurl, jQuery('#create-poll').serialize(),  
                     function(response){
-                        jQuery('#message').html(response);
                         clearAll();
                     }
                 );

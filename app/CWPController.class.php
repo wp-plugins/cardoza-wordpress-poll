@@ -378,6 +378,7 @@ class CWPController {
                 }
             }
         }
+        
         die();
     }
 }
