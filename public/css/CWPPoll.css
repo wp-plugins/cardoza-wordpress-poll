@@ -2,7 +2,7 @@
     font-family: Arial;
     color:#4a7194;
 }
-#tabs { margin: 1em 0 0 0; }
+#tabs { margin: 1em 0 1px 0; }
 #tabs li { display: inline; width: 50px; }
 #tabs a { 
     padding: 3px 8px 2px 8px; 
