@@ -65,7 +65,7 @@ function showPollForm($vars){
         <input type="hidden" value="<?php print $exp_time;?>" name="expiry" />
         <input type="hidden" value="<?php print $poll->answer_type;?>" name="answertype"/>
         <input type="hidden" value="submit_vote" name="action"/>
-        <center><input type="button" value="Vote" onclick="javascript:vote_poll(<?php print $poll->id;?>)" /></center>                
+        <center><input style="width:60px;height:25px;" type="button" value="Vote" onclick="javascript:vote_poll(<?php print $poll->id;?>)" /></center>                
     </div>
     <?php
 }
@@ -97,7 +97,7 @@ function showPollFormSC($vars){
         <input type="hidden" value="<?php print $exp_time;?>" name="expiry" />
         <input type="hidden" value="<?php print $poll->answer_type;?>" name="answertype"/>
         <input type="hidden" value="submit_vote" name="action"/>
-        <center><input type="button" value="Vote" onclick="javascript:vote_poll_sc(<?php print $poll->id;?>)" /></center>                
+        <center><input style="width:60px;height:25px;" type="button" value="Vote" onclick="javascript:vote_poll_sc(<?php print $poll->id;?>)" /></center>                
     </div>
     <?php
 }

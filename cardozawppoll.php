@@ -4,7 +4,7 @@
 Plugin Name: Cardoza Wordpress Poll
 Plugin URI: http://fingerfish.com/cardoza-wordpress-poll
 Description: Cardoza Wordpress Poll is completely ajax powered polling system. This poll plugin supports both single and multiple selection of answers.
-Version: 0.7
+Version: 0.8
 Author: Vinoj Cardoza
 Author URI: http://fingerfish.com/about-me/
 License: GPL2
@@ -170,7 +170,7 @@ function cwp_poll_archive($atts){
     ?>
     <?php
     
-    if(empty($polls)) echo "<br>Sorry! No polls found in the archive for this page";
+    if(empty($polls)) _e("<br>Sorry! No polls found in the archive for this page");
     foreach($polls as $poll){
         
         $stimestamp = $cwp->getStrToTime($poll->start_date);

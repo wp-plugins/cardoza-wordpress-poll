@@ -226,9 +226,16 @@ class CWPController {
             $this->cwpm->updatePollVote($pollid, $answerid);
             $answers = $this->cwpm->getPollAnswersFromDB($pollid);
             $polls = $this->cwpm->getPollByIDFromDB($pollid);
-            
             $poll = $polls[0];
-            print "<b>Total Votes: </b>".$poll[0]->total_votes."<br/>";
+            $answer_type = $poll[0]->answer_type;
+            
+            $total = $poll[0]->total_votes;
+            if($answer_type == "multiple") print "<b>Total Voters: </b>".$total."<br/>";
+    
+            foreach($answers as $answer){
+                $total_votes = $total_votes + $answer->votes;
+            }
+            print "<b>Total Votes: </b>".$total_votes."<br/>";
             foreach($answers as $answer){
                 
                 $total = $poll[0]->total_votes;
