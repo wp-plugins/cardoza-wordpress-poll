@@ -1,5 +1,4 @@
 <?php
-
 /*
 Plugin Name: Cardoza Wordpress Poll
 Plugin URI: http://fingerfish.com/cardoza-wordpress-poll
