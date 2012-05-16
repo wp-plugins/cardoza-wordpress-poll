@@ -1,4 +1,4 @@
-=== Cardoza Worpress Poll ===
+=== Cardoza Wordpress Poll ===
 Contributors: Vinoj Cardoza
 Tags: poll, cardoza, vote, widget, booth, polls, polling
 Requires at least: 3.0
