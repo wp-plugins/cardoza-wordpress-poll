@@ -15,8 +15,9 @@ This poll is developed using MVC framework which uses both ajax and jquery.
 2. You can specify how many polls to be displayed in the archive page.
 3. Administrator can view the poll statistics by date wise.
 
-= Version 0.8 (released 12-03-2012) =
-* A minor bug fixed while voting on multiple option answers.
+= Version 0.9 (released 18-05-2012) =
+* As requested by lots of people, the user logged in access for polling is enabled.
+* Now if you configure to allow only logged in users to poll, then the polling will be manipulated by user id.
 
 = Note =
 1. If you find any bugs, please report in the following link, so that it will be fixed as quick as possible.
@@ -96,6 +97,9 @@ That's it. Check your page or post now.
 if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
+= Version 0.9 (released 18-05-2012) =
+* As requested by lots of people, the user logged in access for polling is enabled.
+* Now if you configure to allow only logged in users to poll, then the polling will be manipulated by user id.
 
 = Version 0.8 (released 12-03-2012) =
 * A minor bug fixed while voting on multiple option answers.

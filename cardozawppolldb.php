@@ -11,32 +11,33 @@ function CWP_install(){
     $poll_logs_table = $wpdb->prefix."cwp_poll_logs";
     
     $create_poll_table = "CREATE TABLE ".$poll_table." (
-		id int(10) not null auto_increment,
-		name tinytext not null,
+				id int(10) not null auto_increment,
+				name tinytext not null,
                 question tinytext not null,
                 answer_type tinytext not null,
                 no_of_answers tinytext null,
                 start_date tinytext not null,
                 end_date tinytext not null,
                 total_votes int(10) not null,
-		UNIQUE KEY id (id));";
+				UNIQUE KEY id (id));";
     
     $create_poll_answer_table = "CREATE TABLE ".$poll_answer_table." (
-		id int(10) not null auto_increment,
-		pollid int(10) not null,
+				id int(10) not null auto_increment,
+				pollid int(10) not null,
                 answer tinytext not null,
                 votes int(10) not null,
-		UNIQUE KEY id (id));";
+				UNIQUE KEY id (id));";
     
     $create_poll_logs_table = "CREATE TABLE ".$poll_logs_table." (
-		id int(10) not null auto_increment,
-		pollid int(10) not null,
+				id int(10) not null auto_increment,
+				pollid int(10) not null,
                 ip_address tinytext not null,
                 country tinytext null,
                 state tinytext null,
                 city tinytext null,
-                polledtime tinytext null, 
-		UNIQUE KEY id (id));";
+                polledtime tinytext null,
+				userid tinytext null,
+				UNIQUE KEY id (id));";
         
     require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
     dbDelta($create_poll_table);
@@ -57,14 +58,15 @@ function cwp_db_update(){
     if(!empty($installed_version) && $installed_version == '1.0'){
         if($installed_version != $CWP_db_version){
             $create_poll_logs_table = "CREATE TABLE ".$poll_logs_table." (
-		id int(10) not null auto_increment,
-		pollid int(10) not null,
+				id int(10) not null auto_increment,
+				pollid int(10) not null,
                 ip_address tinytext not null,
                 country tinytext null,
                 state tinytext null,
                 city tinytext null,
-                polledtime tinytext null, 
-		UNIQUE KEY id (id));";
+                polledtime tinytext null,
+				userid tinytext null,
+				UNIQUE KEY id (id));";
             require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
             dbDelta($create_poll_logs_table);
         }

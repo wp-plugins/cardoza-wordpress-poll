@@ -174,14 +174,25 @@ class CWPModel {
             votes = votes+1 WHERE id = ".$ansid);
         }
         $ip=$_SERVER['REMOTE_ADDR'];
+		global $current_user;
+		get_currentuserinfo();
+		$loggedinuserid = $current_user->ID;
+		if(empty($loggedinuserid)) $loggedinuserid = 0;
+		
         $result = $wpdb->query("INSERT INTO 
-            ".$wpdb->prefix."cwp_poll_logs (pollid, ip_address, polledtime) VALUES (
-                ".$pollid.", '".$ip."', '".time()."')");
+            ".$wpdb->prefix."cwp_poll_logs (pollid, ip_address, polledtime, userid) VALUES (
+                ".$pollid.", '".$ip."', '".time()."', '".$loggedinuserid."')");
     }
     public function pollStats(){
         global $wpdb;    
         $poll_stats = $wpdb->get_results("SELECT * FROM ".$wpdb->prefix."cwp_poll_logs");
         return $poll_stats;
     }
+	
+	public function getPollLoggedDetail($pollid, $userid){
+		global $wpdb;	
+		$result = $wpdb->get_results("SELECT * FROM ".$wpdb->prefix."cwp_poll_logs WHERE pollid=".$pollid." AND userid='".$userid."'");
+		return $result;
+	}
 }
 ?>

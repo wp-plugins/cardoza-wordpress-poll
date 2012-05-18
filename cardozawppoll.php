@@ -3,7 +3,7 @@
 Plugin Name: Cardoza Wordpress Poll
 Plugin URI: http://fingerfish.com/cardoza-wordpress-poll
 Description: Cardoza Wordpress Poll is completely ajax powered polling system. This poll plugin supports both single and multiple selection of answers.
-Version: 0.8
+Version: 0.9
 Author: Vinoj Cardoza
 Author URI: http://fingerfish.com/about-me/
 License: GPL2
@@ -96,8 +96,14 @@ function widget_cardoza_wp_poll($args){
                 else{
                     if($option_value['poll_access']=='loggedin'){
                         
-                        if(is_user_logged_in()) showPollForm($vars);
-                        
+                        if(is_user_logged_in()){
+							global $current_user;
+							get_currentuserinfo();
+							$loggedinuserid = $current_user->ID;
+							$status = $cwp->getPollLogged($poll->id, $loggedinuserid);
+							if(empty($status)) showPollForm($vars);
+							else displayPollResults($vars);
+						}
                         else{?>
                     
                             <div id="show-results<?php $poll->id;?>">
@@ -106,9 +112,9 @@ function widget_cardoza_wp_poll($args){
                         <?php
                         }
                     }
-                    
                     else showPollForm($vars);
-                    }?>
+                    }
+					?>
                     
                 </form>
             </div>
@@ -243,7 +249,14 @@ function cwp_poll_id_display($atts){
                     else{
                         if($option_value['poll_access']=='loggedin'){
 
-                            if(is_user_logged_in()) showPollFormSC($vars);
+                            if(is_user_logged_in()){
+								global $current_user;
+								get_currentuserinfo();
+								$loggedinuserid = $current_user->ID;
+								$status = $cwp->getPollLogged($poll->id, $loggedinuserid);
+								if(empty($status)) showPollFormSC($vars);
+								else displayPollResults($vars);							
+							}
 
                             else{?>
 

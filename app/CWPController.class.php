@@ -388,6 +388,11 @@ class CWPController {
         
         die();
     }
+	
+	public function getPollLogged($pollid, $userid){
+		$status = $this->cwpm->getPollLoggedDetail($pollid, $userid);
+		return $status;		
+	}
 }
 
 ?>
