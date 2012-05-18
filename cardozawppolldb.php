@@ -1,6 +1,6 @@
 <?php
 global $CWP_db_version;
-$CWP_db_version = "1.1";
+$CWP_db_version = "1.2";
 
 function CWP_install(){
     global $wpdb;
@@ -56,6 +56,23 @@ function cwp_db_update(){
     $poll_logs_table = $wpdb->prefix."cwp_poll_logs";
     
     if(!empty($installed_version) && $installed_version == '1.0'){
+        if($installed_version != $CWP_db_version){
+            $create_poll_logs_table = "CREATE TABLE ".$poll_logs_table." (
+				id int(10) not null auto_increment,
+				pollid int(10) not null,
+                ip_address tinytext not null,
+                country tinytext null,
+                state tinytext null,
+                city tinytext null,
+                polledtime tinytext null,
+				userid tinytext null,
+				UNIQUE KEY id (id));";
+            require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+            dbDelta($create_poll_logs_table);
+        }
+    }
+	
+	if(!empty($installed_version) && $installed_version == '1.1'){
         if($installed_version != $CWP_db_version){
             $create_poll_logs_table = "CREATE TABLE ".$poll_logs_table." (
 				id int(10) not null auto_increment,
