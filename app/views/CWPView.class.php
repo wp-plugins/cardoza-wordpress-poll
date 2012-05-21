@@ -36,7 +36,7 @@ class CWPView {
             'Polls', 
             'manage_options', 
             'cwp_poll', array(&$this, 'poll_page'), 
-            CWP_PGN_DIR . 'public/css/images/Vinoj.jpg');
+            CWP_PGN_DIR . 'public/css/images/poll.png');
     }
 
     /* The actual admin interface starts form here */
