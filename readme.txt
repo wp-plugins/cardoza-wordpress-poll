@@ -94,6 +94,9 @@ if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
 
+= Version 31.05.2012 (released 31-05-2012) =
+* Minor tweaks added to the code (Suggested by Paul Bearne).
+
 = Version 1.0 (released 21-05-2012) =
 * A minor bug fixed on displaying the polls for the logged in user.
 
