@@ -93,7 +93,7 @@ That's it. Check your page or post now.
 if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
-= Version 26.06.2012 (released 31-05-2012) =
+= Version 31.06 (released 31-05-2012) =
 * New option for locking the poll added to the plugin.
 * Now site administrators can select the option to lock the poll by either cookies or IP address.
 * New feature added to view the list of users polled.
