@@ -408,6 +408,7 @@ class CWPController {
         $available = '';
         if(!empty($logs)){
         ?>
+            <h3>User logs for Poll id #<?php echo $pollid;?></h3>
             <table width="100%" style="background-color: #4A7194;color:#333;">
                 <thead style="background-color: #4A7194;color:#FFF;height:30px;">
                     <th>User id</th>
