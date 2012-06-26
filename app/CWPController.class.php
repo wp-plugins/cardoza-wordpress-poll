@@ -44,6 +44,8 @@ class CWPController {
         add_action('wp_ajax_nopriv_view_poll_result', array(&$this, 'viewPollResult'));
         add_action('wp_ajax_view_poll_stats', array(&$this, 'getPollStats'));
         add_action('wp_ajax_nopriv_view_poll_stats', array(&$this, 'getPollStats'));
+        add_action('wp_ajax_view_poll_logs', array(&$this, 'getPollLogs'));
+        add_action('wp_ajax_nopriv_view_poll_logs', array(&$this, 'getPollLogs'));
     }
     
     public function init(){
@@ -184,6 +186,7 @@ class CWPController {
         $vars['archive_url'] = $_POST['archive_url'];
         $vars['no_of_polls_to_display_archive'] = $_POST['no_of_polls_to_display_archive'];
         $vars['poll_access'] = $_POST['poll_access'];
+        $vars['poll_lock'] = $_POST['poll_lock'];
         $vars['poll_bar_color'] = $_POST['poll_bar_color'];
         $vars['poll_bar_height'] = $_POST['poll_bar_height'];
         $vars['poll_bg_color'] = $_POST['poll_bg_color'];
@@ -389,10 +392,57 @@ class CWPController {
         die();
     }
 	
-	public function getPollLogged($pollid, $userid){
-		$status = $this->cwpm->getPollLoggedDetail($pollid, $userid);
-		return $status;		
-	}
+    public function getPollLogged($pollid, $userid){
+        $status = $this->cwpm->getPollLoggedDetail($pollid, $userid);
+        return $status;		
+    }
+    
+    public function getPollIPLogged($pollid){
+        $status = $this->cwpm->getPollIPStatus($pollid);
+        return $status;
+    }
+    
+    public function getPollLogs(){
+        $pollid = $_POST['pollid'];
+        $logs = $this->cwpm->getPollUserLogsByPollID($pollid);
+        $available = '';
+        if(!empty($logs)){
+        ?>
+            <table width="100%" style="background-color: #4A7194;color:#333;">
+                <thead style="background-color: #4A7194;color:#FFF;height:30px;">
+                    <th>User id</th>
+                    <th>User name</th>
+                    <th>Polled time</th>
+                    <th>IP Address</th>
+                    <th>Answers</th>
+                </thead>
+                        
+            <?php
+            foreach($logs as $log){
+                if($log->userid > 0){
+                    $available = 'yes';
+                    $date = new DateTime();
+                    $date->setTimestamp($log->polledtime);
+                    if(!empty($log->answerid)) {
+                        $getanswer = $this->cwpm->getsPollAnswerByID($log->answerid);
+                        $answer = $getanswer[0]->answer;
+                    }
+                    else $answer = 'NULL';
+                    print '<tr style="background-color: #ECF1EF;height:20px;">';
+                    $userinfo = get_userdata($log->userid);
+                    print '<td align="center">'.$log->userid.'</td>';
+                    print '<td>'.$userinfo->display_name.'</td>';
+                    print '<td align="center">'.$date->format('d-m-Y H:i:s').'</td>';
+                    print '<td align="center">'.$log->ip_address.'</td>';
+                    print '<td>'.$answer.'</td>';
+                    print '</tr>';
+                }
+            }
+            print '</table>';
+        }
+        if($available != 'yes') print '<p>No user logs found for this poll</p>';
+        die();
+    }
 }
 
 ?>

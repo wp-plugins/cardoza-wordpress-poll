@@ -3,7 +3,7 @@
 Plugin Name: Cardoza Wordpress Poll
 Plugin URI: http://fingerfish.com/cardoza-wordpress-poll
 Description: Cardoza Wordpress Poll is completely ajax powered polling system. This poll plugin supports both single and multiple selection of answers.
-Version: 31.05.2012
+Version: 26.06.2012
 Author: Vinoj Cardoza
 Author URI: http://fingerfish.com/about-me/
 License: GPL2
@@ -87,34 +87,48 @@ function widget_cardoza_wp_poll($args){
                 $vars['poll'] = $poll;
                 $vars['exp_time'] = $exp_time;
                 
-                if(isset($_COOKIE['cwppoll'.$poll->id])){?>
-                    <div id="show-results<?php $poll->id;?>">
-                        <?php displayPollResults($vars);?>
-                    </div>
-                <?php
+                if($option_value['poll_access']=='loggedin'){
+                        
+                    if(is_user_logged_in()){
+                        global $current_user;
+                        get_currentuserinfo();
+                        $loggedinuserid = $current_user->ID;
+                        $status = $cwp->getPollLogged($poll->id, $loggedinuserid);
+                        if(empty($status)) showPollForm($vars);
+                        else displayPollResults($vars);
+                    }
+                    else{?>
+
+                        <div id="show-results<?php $poll->id;?>">
+                            <?php displayPollResults($vars);?>
+                        </div>
+                    <?php
+                    }
                 }
                 else{
-                    if($option_value['poll_access']=='loggedin'){
-                        
-                        if(is_user_logged_in()){
-							global $current_user;
-							get_currentuserinfo();
-							$loggedinuserid = $current_user->ID;
-							$status = $cwp->getPollLogged($poll->id, $loggedinuserid);
-							if(empty($status)) showPollForm($vars);
-							else displayPollResults($vars);
-						}
-                        else{?>
                     
+                    $lock_by = $option_value['poll_lock'];
+                    if($lock_by == 'cookies'){
+                        if(isset($_COOKIE['cwppoll'.$poll->id])){?>
                             <div id="show-results<?php $poll->id;?>">
                                 <?php displayPollResults($vars);?>
                             </div>
                         <?php
                         }
+                        else showPollForm($vars);
                     }
-                    else showPollForm($vars);
-                    }
-					?>
+                    elseif($lock_by == 'ipaddress'){    
+                        $status = $cwp->getPollIPLogged($poll->id);
+                        if(!empty($status)){?>
+                            <div id="show-results<?php $poll->id;?>">
+                                <?php displayPollResults($vars);?>
+                            </div>
+                        <?php
+                        }
+                        else showPollForm($vars);
+                    } 
+                }
+                ?>
                     
                 </form>
             </div>
@@ -240,45 +254,55 @@ function cwp_poll_id_display($atts){
                 $vars['exp_time'] = $etimestamp;
                 
                 if($current_time>$stimestamp && $current_time < $etimestamp){
-                    if(isset($_COOKIE['cwppoll'.$poll->id])){?>
-                        <div id="show-results<?php $poll->id;?>">
-                            <?php displayPollResults($vars);?>
-                        </div>
-                    <?php
+                    
+                    if($option_value['poll_access']=='loggedin'){
+
+                        if(is_user_logged_in()){
+                                global $current_user;
+                                get_currentuserinfo();
+                                $loggedinuserid = $current_user->ID;
+                                $status = $cwp->getPollLogged($poll->id, $loggedinuserid);
+                                if(empty($status)) showPollFormSC($vars);
+                                else displayPollResults($vars);							
+                        }
+
+                        else{?>
+
+                            <div id="show-results<?php $poll->id;?>">
+                                <?php displayPollResults($vars);?>
+                            </div>
+                        <?php
+                        }
                     }
+
                     else{
-                        if($option_value['poll_access']=='loggedin'){
-
-                            if(is_user_logged_in()){
-								global $current_user;
-								get_currentuserinfo();
-								$loggedinuserid = $current_user->ID;
-								$status = $cwp->getPollLogged($poll->id, $loggedinuserid);
-								if(empty($status)) showPollFormSC($vars);
-								else displayPollResults($vars);							
-							}
-
-                            else{?>
-
+                        $lock_by = $option_value['poll_lock'];
+                        if($lock_by == 'cookies'){
+                            if(isset($_COOKIE['cwppoll'.$poll->id])){?>
                                 <div id="show-results<?php $poll->id;?>">
                                     <?php displayPollResults($vars);?>
                                 </div>
-                            <?php
+                    <?php
+                            }
+                            else showPollFormSC($vars);
+                        }
+                        elseif($lock_by == 'ipaddress'){
+                            $status = $cwp->getPollIPLogged($poll->id);
+                            if(empty($status)) showPollFormSC($vars);
+                            else {?>
+                                <div id="show-results<?php $poll->id;?>">
+                                    <?php displayPollResults($vars);?>
+                                </div>
+                    <?php
                             }
                         }
-
-                        else showPollFormSC($vars);
-                        }
-                }
-                else{?>
-                    <div id="show-results<?php $poll->id;?>">
-                            <?php displayPollResults($vars);?>
-                    </div>
-                <?php }?>
+                    }
+                    ?>
                 </form>
             </div>
             
         <?php 
+                }
         }
         $count++;
     }    

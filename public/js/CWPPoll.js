@@ -338,6 +338,18 @@ function getPollStatsjs(arg){
     );
 }
 
+function userlogs(pollid){
+    var data = {
+            action: 'view_poll_logs',
+            pollid: pollid
+        };
+    jQuery.post(ajaxurl, data,  
+        function(response){
+            jQuery('#poll-logs').html(response);
+        }
+    );
+}
+
 function viewPollResults(pollid){
     
     var data = {
@@ -361,9 +373,9 @@ function showTab(id){
 
 function reset(){
     
-    jQuery('#tab1, #tab2, #tab3, #tab4, #tab5').css('display', 'none');
-    jQuery('#menu-tab1, #menu-tab2, #menu-tab3, #menu-tab4, #menu-tab5').css('background-color', '#fff');
-    jQuery('#menu-tab1, #menu-tab2, #menu-tab3, #menu-tab4, #menu-tab5').css('color', '#4a7194');
+    jQuery('#tab1, #tab2, #tab3, #tab4, #tab5, #tab6').css('display', 'none');
+    jQuery('#menu-tab1, #menu-tab2, #menu-tab3, #menu-tab4, #menu-tab5, #menu-tab6').css('background-color', '#fff');
+    jQuery('#menu-tab1, #menu-tab2, #menu-tab3, #menu-tab4, #menu-tab5, #menu-tab6').css('color', '#4a7194');
 }
 
 function clearAll(){

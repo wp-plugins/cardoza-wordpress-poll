@@ -32,6 +32,22 @@ class CWPViewPollOptions extends CWPView {
                     >Only logged in users can poll </option>
                 </select>
                 <div id="clear"></div>
+                
+                <div id="label">Lock Poll by </div>
+                <select name="poll_lock" id="poll-lock" class="slct">
+                    <option value="cookies"
+                    <?php
+                        print $opts['poll_lock'];
+                        if(!empty($opts['poll_lock']) && $opts['poll_lock']=='cookies') echo " selected";
+                    ?>        
+                    >Cookies</option>
+                    <option value="ipaddress"
+                    <?php
+                        if(!empty($opts['poll_lock']) && $opts['poll_lock']=='ipaddress') echo " selected";
+                    ?>
+                    >IP Address</option>
+                </select>
+                <div id="clear"></div>
             </div>
             <h3>Poll style options</h3>
             <div id="box">

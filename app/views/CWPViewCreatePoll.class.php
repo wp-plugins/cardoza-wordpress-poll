@@ -9,7 +9,7 @@ class CWPViewCreatePoll{
 
     public function __construct() {?>
     
-        <div id="tab2" class="tab-content">
+        <div id="tab2" class="tab-content" style="z-index:10000;">
             <form id="create-poll" name="create_poll">
                 <h3>Poll Friendly Name</h3>                
                 <div id="box">

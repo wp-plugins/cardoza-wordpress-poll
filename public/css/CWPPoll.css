@@ -193,3 +193,7 @@ form select{
 }
 
 #poll-wh-style{width:60px;height:25px;}
+
+html.wp-toolbar body.wp-admin div#footer{
+    display: none;
+}

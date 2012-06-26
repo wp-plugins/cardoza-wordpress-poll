@@ -9,7 +9,7 @@ License: GPLv2 or later
 Cardoza Wordpress Poll is completely ajax powered polling system. This poll plugin supports both single and multiple selection of answers.
 
 == Description ==
-This poll is developed using MVC framework which uses both ajax and jquery.
+This poll has the following features which uses both ajax and jquery.
 
 1. You have options to display more than 1 poll in the widget area.
 2. You can specify how many polls to be displayed in the archive page.
@@ -93,6 +93,10 @@ That's it. Check your page or post now.
 if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
+= Version 26.06.2012 (released 31-05-2012) =
+* New option for locking the poll added to the plugin.
+* Now site administrators can select the option to lock the poll by either cookies or IP address.
+* New feature added to view the list of users polled.
 
 = Version 31.05.2012 (released 31-05-2012) =
 * Minor tweaks added to the code (Suggested by Paul Bearne).
