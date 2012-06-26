@@ -422,8 +422,6 @@ class CWPController {
             foreach($logs as $log){
                 if($log->userid > 0){
                     $available = 'yes';
-                    $date = new DateTime();
-                    $date->setTimestamp($log->polledtime);
                     if(!empty($log->answerid)) {
                         $getanswer = $this->cwpm->getsPollAnswerByID($log->answerid);
                         $answer = $getanswer[0]->answer;
@@ -433,7 +431,7 @@ class CWPController {
                     $userinfo = get_userdata($log->userid);
                     print '<td align="center">'.$log->userid.'</td>';
                     print '<td>'.$userinfo->display_name.'</td>';
-                    print '<td align="center">'.$date->format('d-m-Y H:i:s').'</td>';
+                    print '<td align="center">'.date('d-m-Y H:i:s', $log->polledtime).'</td>';
                     print '<td align="center">'.$log->ip_address.'</td>';
                     print '<td>'.$answer.'</td>';
                     print '</tr>';
