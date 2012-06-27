@@ -3,7 +3,7 @@
 Plugin Name: Cardoza Wordpress Poll
 Plugin URI: http://fingerfish.com/cardoza-wordpress-poll
 Description: Cardoza Wordpress Poll is completely ajax powered polling system. This poll plugin supports both single and multiple selection of answers.
-Version: 31.07
+Version: 31.08
 Author: Vinoj Cardoza
 Author URI: http://fingerfish.com/about-me/
 License: GPL2
@@ -108,7 +108,28 @@ function widget_cardoza_wp_poll($args){
                 else{
                     
                     $lock_by = $option_value['poll_lock'];
-                    if($lock_by == 'cookies'){
+                    if(!empty($lock_by)){
+                        if($lock_by == 'cookies'){
+                            if(isset($_COOKIE['cwppoll'.$poll->id])){?>
+                                <div id="show-results<?php $poll->id;?>">
+                                    <?php displayPollResults($vars);?>
+                                </div>
+                            <?php
+                            }
+                            else showPollForm($vars);
+                        }
+                        elseif($lock_by == 'ipaddress'){    
+                            $status = $cwp->getPollIPLogged($poll->id);
+                            if(!empty($status)){?>
+                                <div id="show-results<?php $poll->id;?>">
+                                    <?php displayPollResults($vars);?>
+                                </div>
+                            <?php
+                            }
+                            else showPollForm($vars);
+                        }
+                    }
+                    else{
                         if(isset($_COOKIE['cwppoll'.$poll->id])){?>
                             <div id="show-results<?php $poll->id;?>">
                                 <?php displayPollResults($vars);?>
@@ -117,16 +138,6 @@ function widget_cardoza_wp_poll($args){
                         }
                         else showPollForm($vars);
                     }
-                    elseif($lock_by == 'ipaddress'){    
-                        $status = $cwp->getPollIPLogged($poll->id);
-                        if(!empty($status)){?>
-                            <div id="show-results<?php $poll->id;?>">
-                                <?php displayPollResults($vars);?>
-                            </div>
-                        <?php
-                        }
-                        else showPollForm($vars);
-                    } 
                 }
                 ?>
                     
@@ -277,24 +288,35 @@ function cwp_poll_id_display($atts){
 
                     else{
                         $lock_by = $option_value['poll_lock'];
-                        if($lock_by == 'cookies'){
+                        if(!empty($lock_by)){
+                            if($lock_by == 'cookies'){
+                                if(isset($_COOKIE['cwppoll'.$poll->id])){?>
+                                    <div id="show-results<?php $poll->id;?>">
+                                        <?php displayPollResults($vars);?>
+                                    </div>
+                            <?php
+                                }
+                                else showPollFormSC($vars);
+                            }
+                            elseif($lock_by == 'ipaddress'){
+                                $status = $cwp->getPollIPLogged($poll->id);
+                                if(empty($status)) showPollFormSC($vars);
+                                else {?>
+                                    <div id="show-results<?php $poll->id;?>">
+                                        <?php displayPollResults($vars);?>
+                                    </div>
+                            <?php
+                                }
+                            }
+                        }
+                        else{
                             if(isset($_COOKIE['cwppoll'.$poll->id])){?>
                                 <div id="show-results<?php $poll->id;?>">
                                     <?php displayPollResults($vars);?>
                                 </div>
-                    <?php
+                            <?php
                             }
-                            else showPollFormSC($vars);
-                        }
-                        elseif($lock_by == 'ipaddress'){
-                            $status = $cwp->getPollIPLogged($poll->id);
-                            if(empty($status)) showPollFormSC($vars);
-                            else {?>
-                                <div id="show-results<?php $poll->id;?>">
-                                    <?php displayPollResults($vars);?>
-                                </div>
-                    <?php
-                            }
+                            else showPollForm($vars);
                         }
                     }
                     ?>
