@@ -44,7 +44,7 @@ class CWPView {
     public function poll_page() {
         ?>
         <div class="wrap">
-            <h2><?php _e("Cardoza Wordpress Poll", "cwppoll_tans_domain"); ?></h2><br />
+            <h2><?php _e("Wordpress Poll", "cwppoll_tans_domain"); ?></h2><br />
             <h3>* Mandatory fields.</h3>
             <ul id="tabs">
                 <li><a id="menu-tab1" href="javascript:showTab(1);">Manage Polls</a></li>

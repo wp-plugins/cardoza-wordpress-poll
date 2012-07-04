@@ -1,4 +1,4 @@
-=== Cardoza Wordpress Poll ===
+=== Wordpress Poll ===
 Contributors: vinoj.cardoza
 Donate link: http://www.fingerfish.com/
 Tags: poll, cardoza, vote, widget, booth, polls, polling
@@ -7,7 +7,7 @@ Tested up to: 3.4
 Stable tag: trunk
 License: GPLv2 or later
 
-Cardoza Wordpress Poll is completely ajax powered polling system. This poll plugin supports both single and multiple selection of answers.
+Wordpress Poll is completely ajax powered polling system. This poll plugin supports both single and multiple selection of answers.
 
 == Description ==
 This poll has the following features which uses both ajax and jquery.
@@ -36,13 +36,13 @@ For more visit: http://fingerfish.com/cardoza-wordpress-poll/
 1. Download the plugin.
 2. Upload to your blog (/wp-content/plugins/).
 3. Activate it.
-4. Click the Appearance menu and click the Cardoza Poll.
+4. Click the 'Poll' menu.
 6. Fill in the options.
 a. Create new poll by clicking Add new poll.
 b. You can setup the widget options by clicking 'Widget Options'.
 c. Poll options should be filled and saved before starting to display the first poll.
 d. Use 'Manage polls' to edit and delete polls.
-7. Then go to widget and drag and drop Cardoza's Wordpress Poll in the area you want to display the plugin.
+7. Then go to widget and drag and drop Wordpress Poll in the area you want to display the plugin.
 
 Important Note: It is mandatory to save all the mandatory field options in this plugin.
 
@@ -50,7 +50,7 @@ Important Note: It is mandatory to save all the mandatory field options in this 
 1. Go to WP-Admin -> Pages -> Add New.
 2. Type any title you like in the post's title area and paste the following shortcode in the page content [cardoza_wp_poll_archive]
 3. WordPress will generate the link to the page. Copy the link.
-4. Go to poll options in 'Cardoza Poll'
+4. Go to poll options in 'Poll'
 5. Click the Poll options tab.
 6. Paste the archive page link in 'Poll archive URL'.
 7. Save the options.
@@ -96,6 +96,9 @@ That's it. Check your page or post now.
 if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
+= Version 31.09 (released 04-07-2012) =
+* Cardoza Wordpress Poll renamed to Wordpress Poll
+
 = Version 31.08 (released 27-06-2012) =
 * A minor default option for Lock by amended in the plugin coding.
 

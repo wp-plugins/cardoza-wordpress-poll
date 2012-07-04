@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: Cardoza Wordpress Poll
+Plugin Name: Wordpress Poll
 Plugin URI: http://fingerfish.com/cardoza-wordpress-poll
-Description: Cardoza Wordpress Poll is completely ajax powered polling system. This poll plugin supports both single and multiple selection of answers.
-Version: 31.08
+Description: Wordpress Poll is completely ajax powered polling system. This poll plugin supports both single and multiple selection of answers.
+Version: 31.09
 Author: Vinoj Cardoza
 Author URI: http://fingerfish.com/about-me/
 License: GPL2
@@ -37,7 +37,7 @@ function trigger_init(){
         $cwp = new CWPController();
         $cwp->init();
     }
-    register_sidebar_widget(__('Cardoza Wordpress Poll'), 'widget_cardoza_wp_poll');
+    register_sidebar_widget(__('Wordpress Poll'), 'widget_cardoza_wp_poll');
 }
 
 /*Calling all the required files*/
@@ -106,7 +106,6 @@ function widget_cardoza_wp_poll($args){
                     }
                 }
                 else{
-                    
                     $lock_by = $option_value['poll_lock'];
                     if(empty($lock_by)) $lock_by = 'cookies';
                     if($lock_by == 'cookies'){
@@ -130,7 +129,6 @@ function widget_cardoza_wp_poll($args){
                     }
                 }
                 ?>
-                    
                 </form>
             </div>
             
