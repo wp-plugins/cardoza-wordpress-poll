@@ -1,7 +1,7 @@
 === Wordpress Poll ===
 Contributors: vinoj.cardoza
 Donate link: http://www.fingerfish.com/
-Tags: poll, cardoza, vote, widget, booth, polls, polling
+Tags: poll, cardoza, vote, widget, booth, polls, polling, votes, voting
 Requires at least: 3.0
 Tested up to: 3.4
 Stable tag: trunk
