@@ -98,6 +98,7 @@ if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 == Change Log ==
 = Version 31.09 (released 04-07-2012) =
 * Cardoza Wordpress Poll renamed to Wordpress Poll
+* Note:If you don't see the widget after updating the plugin, please check you widget in the admin section whether it is enabled.
 
 = Version 31.08 (released 27-06-2012) =
 * A minor default option for Lock by amended in the plugin coding.
