@@ -12,8 +12,8 @@ Wordpress Poll is completely ajax powered polling system. This poll plugin suppo
 == Description ==
 This poll has the following features which uses both ajax and jquery.
 
-1. You have options to display more than 1 poll in the widget area.
-2. You can specify how many polls to be displayed in the archive page.
+1. Administrator have options to display more than one poll in the widget area.
+2. Administrator can specify how many polls to be displayed in the archive page.
 3. Administrator can view the poll statistics by date wise.
 4. User logs can be seen in the admin section.
 5. Poll access can be locked by cookies, IP address or user id.
