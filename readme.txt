@@ -28,7 +28,7 @@ This poll has the following features which uses both ajax and jquery.
 The translation were done using a translation software. I am not sure about the correctness of the translation. If you find some mistakes in the translation in your language, please let me know through the following link comments section. Also, if you couldn't find your language and you can do it, please let me know.
 
 = Translated Languages =
-* French
+* French - http://plugins.trac.wordpress.org/browser/cardoza-wordpress-poll/i18n/French
 
 = Donations =
 
