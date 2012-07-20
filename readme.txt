@@ -101,7 +101,7 @@ That's it. Check your page or post now.
 if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
-= Version 1.5 (released 20-07-2012) =
+= Version 32.0 (released 20-07-2012) =
 * Translation enabled.
 
 = Version 1.4 (released 04-07-2012) =
