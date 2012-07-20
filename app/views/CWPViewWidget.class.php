@@ -12,30 +12,30 @@ class CWPViewWidget{
         
         ?>
         <div id="tab4" class="tab-content">
-            <h3>Widget options</h3>
+            <h3><?php _e('Widget options','cardozapolldomain');?></h3>
             <div id="box">
                 <form id="widget-options">
-                <div id="label">Title of the widget: </div>
+                <div id="label"><?php _e('Title','cardozapolldomain');?>: </div>
                 <input id="widget-title" style="width: 300px;"
                        onblur="javascript:setBorderDefault('widget-title');" 
                        onfocus="javascript:setBorder('widget-title');"
                        name="widget_title" type="text" value="<?php if(!empty($opts['title'])) print $opts['title'];?>" class="txt" />
                 <div id="clear"></div>
-                <div id="label">Display Older Polls Link: * </div>
+                <div id="label"><?php _e('Display Older Polls Link','cardozapolldomain');?>: * </div>
                 <select class="slct" name="poll-archive" style="width:75px;">
                     <option value="yes"
                     <?php
                         if(!empty($opts['archive']) && $opts['archive']=='yes') echo " selected";
                     ?>
-                    >Yes</option>
+                    ><?php _e('Yes','cardozapolldomain');?></option>
                     <option value="no"
                     <?php
                         if(!empty($opts['archive']) && $opts['archive']=='no') echo " selected";
                     ?>
-                    >No</option>
+                    ><?php _e('No','cardozapolldomain');?></option>
                 </select>
                 <div id="clear"></div>
-                <div id="label">Select the latest number of polls to be displayed: * </div>
+                <div id="label"><?php _e('Select the latest number of polls to be displayed','cardozapolldomain');?>: * </div>
                 <select class="slct" name="no_of_polls" style="width:75px;">
                     <?php
                         for($i=1; $i<=10; $i++){
@@ -46,14 +46,14 @@ class CWPViewWidget{
                     ?>
                 </select>
                 <div id="clear"></div>
-                <div id="label">Widget width: </div>
+                <div id="label"><?php _e('Width','cardozapolldomain');?>: </div>
                 <input id="widget-width" style="width: 50px;"
                        onblur="javascript:setBorderDefault('widget-width');" 
                        onfocus="javascript:setBorder('widget-width');"
                        name="widget_width" type="text" value="<?php if(!empty($opts['width'])) print $opts['width'];?>" class="txt" />px
                 <div id="clear"></div>
                 
-                <div id="label">Widget height: </div>
+                <div id="label"><?php _e('Height','cardozapolldomain');?>: </div>
                 <input id="widget-height" style="width: 50px;"
                        onblur="javascript:setBorderDefault('widget-height');" 
                        onfocus="javascript:setBorder('widget-height');"
@@ -65,7 +65,7 @@ class CWPViewWidget{
                        onclick="javascript:saveWidgetOptions()"
                        onblur="javascript:setBorderDefault('widget-opt');" 
                        onfocus="javascript:setBorder('widget-opt');"
-                       type="button" value="Save Widget Options"/></center>
+                       type="button" value="<?php _e('Save','cardozapolldomain');?>"/></center>
                 </form>
             </div>
         </div>

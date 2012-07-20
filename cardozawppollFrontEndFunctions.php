@@ -10,12 +10,12 @@ function displayPollResults($vars){
     $answer_type = $poll->answer_type;
     $total_votes = 0;  
     
-    if($answer_type == "multiple") print "<b>Total Voters: </b>".$total."<br/>";
+    if($answer_type == "multiple") print "<b>".__("Total Voters", "cardozapolldomain").": </b>".$total."<br/>";
     
     foreach($poll_answers as $answer){
         $total_votes = $total_votes + $answer->votes;
     }
-    print "<b>Total Votes: </b>".$total_votes."<br/>";
+    print "<b>".__("Total Votes", "cardozapolldomain").": </b>".$total_votes."<br/>";
     
     foreach($poll_answers as $answer){
                       
@@ -24,7 +24,7 @@ function displayPollResults($vars){
         if($total_votes!=0) $width = ($votes/$total_votes)*100;
         else $width = 0;
         
-        print $answer->answer." (".$answer->votes." votes, ".intval($width)."%)";
+        print $answer->answer." (".$answer->votes.__(" votes", "cardozapolldomain").", ".intval($width)."%)";
         
         ?>
         
@@ -65,7 +65,7 @@ function showPollForm($vars){
         <input type="hidden" value="<?php print $exp_time;?>" name="expiry" />
         <input type="hidden" value="<?php print $poll->answer_type;?>" name="answertype"/>
         <input type="hidden" value="submit_vote" name="action"/>
-        <center><input id="poll-wh-style" type="button" value="Vote" onclick="javascript:vote_poll(<?php print $poll->id;?>)" /></center>                
+        <center><input id="poll-wh-style" type="button" value="<?php print __('Vote', 'cardozapolldomain');?>" onclick="javascript:vote_poll(<?php print $poll->id;?>)" /></center>                
     </div>
     <?php
 }
@@ -97,7 +97,7 @@ function showPollFormSC($vars){
         <input type="hidden" value="<?php print $exp_time;?>" name="expiry" />
         <input type="hidden" value="<?php print $poll->answer_type;?>" name="answertype"/>
         <input type="hidden" value="submit_vote" name="action"/>
-        <center><input style="width:60px;height:25px;" type="button" value="Vote" onclick="javascript:vote_poll_sc(<?php print $poll->id;?>)" /></center>                
+        <center><input style="width:60px;height:25px;" type="button" value="<?php print __('Vote', 'cardozapolldomain');?>" onclick="javascript:vote_poll_sc(<?php print $poll->id;?>)" /></center>                
     </div>
     <?php
 }
@@ -112,8 +112,8 @@ function previousPollsLink($vars){
         <?php
         $archive_url = $option_value['archive_url'];
         $url = explode('?', $archive_url);
-        if(sizeof($url)>1) echo '<a href="'.$option_value['archive_url'].'&poll_archive_page_no=1">See all polls &amp; results</a>';
-        else echo '<a href="'.$option_value['archive_url'].'?poll_archive_page_no=1">See all polls &amp; results</a>';
+        if(sizeof($url)>1) echo '<a href="'.$option_value['archive_url'].'&poll_archive_page_no=1">'.__('See all polls & results', 'cardozapolldomain').'</a>';
+        else echo '<a href="'.$option_value['archive_url'].'?poll_archive_page_no=1">'.__('See all polls & results', 'cardozapolldomain').'</a>';
     }
 }
 ?>

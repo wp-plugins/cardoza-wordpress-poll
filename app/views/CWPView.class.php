@@ -34,7 +34,7 @@ class CWPView {
 
         add_menu_page(
             __('Poll'), 
-            'Polls', 
+            __('Poll'), 
             'manage_options', 
             'cwp_poll', array(&$this, 'poll_page'), 
             CWP_PGN_DIR . 'public/css/images/poll.png');
@@ -44,15 +44,39 @@ class CWPView {
     public function poll_page() {
         ?>
         <div class="wrap">
-            <h2><?php _e("Wordpress Poll", "cwppoll_tans_domain"); ?></h2><br />
-            <h3>* Mandatory fields.</h3>
+            <h2><?php _e("Wordpress Poll", "cardozapolldomain"); ?></h2><br />
+            <h3>* <?php _e("Mandatory fields", "cardozapolldomain"); ?>.</h3>
             <ul id="tabs">
-                <li><a id="menu-tab1" href="javascript:showTab(1);">Manage Polls</a></li>
-                <li><a id="menu-tab2" href="javascript:showTab(2);">Add New Poll</a></li>
-                <li><a id="menu-tab3" href="javascript:showTab(3);">Poll Options</a></li>
-                <li><a id="menu-tab4" href="javascript:showTab(4);">Widget Options *</a></li>
-                <li><a id="menu-tab5" href="javascript:showTab(5);">Poll Statistics</a></li>
-                <li><a id="menu-tab6" href="javascript:showTab(6);">User Logs</a></li>
+                <li>
+                    <a id="menu-tab1" href="javascript:showTab(1);">
+                        <?php _e('Manage Polls', 'cardozapolldomain');?>
+                    </a>
+                </li>
+                <li>
+                    <a id="menu-tab2" href="javascript:showTab(2);">
+                        <?php _e('Add New Poll', 'cardozapolldomain');?>
+                    </a>
+                </li>
+                <li>
+                    <a id="menu-tab3" href="javascript:showTab(3);">
+                        <?php _e('Poll Options', 'cardozapolldomain');?>
+                    </a>
+                </li>
+                <li>
+                    <a id="menu-tab4" href="javascript:showTab(4);">
+                        <?php _e('Widget Options', 'cardozapolldomain');?> *
+                    </a>
+                </li>
+                <li>
+                    <a id="menu-tab5" href="javascript:showTab(5);">
+                        <?php _e('Poll Statistics', 'cardozapolldomain');?>
+                    </a>
+                </li>
+                <li>
+                    <a id="menu-tab6" href="javascript:showTab(6);">
+                        <?php _e('User Logs', 'cardozapolldomain');?>
+                    </a>
+                </li>
             </ul>
             <div id="cwp-content">
                 

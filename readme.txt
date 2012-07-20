@@ -17,11 +17,18 @@ This poll has the following features which uses both ajax and jquery.
 3. Administrator can view the poll statistics by date wise.
 4. User logs can be seen in the admin section.
 5. Poll access can be locked by cookies, IP address or user id.
+6. Translation enabled.
 
 = Note =
 1. If you find any bugs, please report in the following link, so that it will be fixed as quick as possible.
 2. If you think any feature adding to this plugin can improve its features, please recommend it in the following link.
 3. You can add any poll into your post or page by using the shortcode. For information how to do it, please go to Frequently asked questions.
+
+= Translation =
+The translation were done using a translation software. I am not sure about the correctness of the translation. If you find some mistakes in the translation in your language, please let me know through the following link comments section. Also, if you couldn't find your language and you can do it, please let me know.
+
+= Translated Languages =
+* French
 
 = Donations =
 
@@ -94,6 +101,9 @@ That's it. Check your page or post now.
 if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
+= Version 1.5 (released 20-07-2012) =
+* Translation enabled.
+
 = Version 1.4 (released 04-07-2012) =
 * Cardoza Wordpress Poll renamed to Wordpress Poll
 * Note:If you don't see the widget after updating the plugin, please check you widget in the admin section whether it is enabled.

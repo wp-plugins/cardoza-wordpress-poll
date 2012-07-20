@@ -15,26 +15,26 @@ class CWPViewManagePolls{
                 <input id="refresh-list" class="inpt"
                     onclick="javascript:refreshPollList()"
                     onblur="javascript:setBorderDefault('refresh-list');" 
-                    onfocus="javascript:setBorder('refresh-list');" type="button" value="Refresh Poll List"/>
+                    onfocus="javascript:setBorder('refresh-list');" type="button" value="<?php _e("Refresh Poll List", "cardozapolldomain");?>"/>
                 <input id="edit-poll" class="inpt"
                     onblur="javascript:setBorderDefault('edit-poll');" 
-                    onfocus="javascript:setBorder('edit-poll');" type="button" value="Edit a Poll" onclick="javascript:editPoll()" />
+                    onfocus="javascript:setBorder('edit-poll');" type="button" value="<?php _e("Edit a Poll", "cardozapolldomain");?>" onclick="javascript:editPoll()" />
                 <input id="delete-poll" class="inpt"
                     onblur="javascript:setBorderDefault('delete-poll');" 
-                    onfocus="javascript:setBorder('delete-poll');" type="button" value="Delete a Poll" onclick="javascript:deletePoll()" />
+                    onfocus="javascript:setBorder('delete-poll');" type="button" value="<?php _e("Delete a Poll", "cardozapolldomain");?>" onclick="javascript:deletePoll()" />
                 <br />     
                 <div id="all-polls">
                 <table width="100%" style="background-color: #4A7194;color:#333;">
                     <thead style="background-color: #4A7194;color:#FFF;height:30px;">
                         <th>ID</th>
-                        <th>Name</th>
-                        <th>Question</th>
-                        <th>Answer type</th>
-                        <th>Start date</th>
-                        <th>End date</th>
-                        <th>Status</th>
-                        <th>Total votes</th>
-                        <th>View Results</th>
+                        <th><?php _e("Name", "cardozapolldomain");?></th>
+                        <th><?php _e("Question", "cardozapolldomain");?></th>
+                        <th><?php _e("Answer type", "cardozapolldomain");?></th>
+                        <th><?php _e("Start date", "cardozapolldomain");?></th>
+                        <th><?php _e("End date", "cardozapolldomain");?></th>
+                        <th><?php _e("Status", "cardozapolldomain");?></th>
+                        <th><?php _e("Total votes", "cardozapolldomain");?></th>
+                        <th><?php _e("View Results", "cardozapolldomain");?></th>
                     </thead>
                     <form id="manage-poll">
                         <?php
@@ -54,12 +54,12 @@ class CWPViewManagePolls{
                                 <?php
                                 $timestamp = $controller->getStrToTime($poll->end_date);
                                 $current_time = time();
-                                if($current_time < $timestamp) echo "Open";
-                                else echo "Closed"
+                                if($current_time < $timestamp) echo __("Open", "cardozapolldomain");
+                                else echo __("Closed", "cardozapolldomain");
                                 ?>
                                 </td>
                                 <td align="center"><?php print $poll->total_votes;?></td>
-                                <td align="center"><input name="view_poll_results" type="button" onclick="javascript:viewPollResults(<?php print $poll->id;?>)" value="View Result"/></td>
+                                <td align="center"><input name="view_poll_results" type="button" onclick="javascript:viewPollResults(<?php print $poll->id;?>)" value="<?php _e("View Result", "cardozapolldomain");?>"/></td>
                             </tr>
                         <?php
                         $total_votes = $total_votes +  $poll->total_votes;
@@ -69,7 +69,7 @@ class CWPViewManagePolls{
                 </table>
                     <br/>
                 <div id="box">
-                <div id="label" style="color:#000;">Total No of Voters :</div>&nbsp;&nbsp;&nbsp;<?php print $total_votes;?>
+                <div id="label" style="color:#000;"><?php _e("Total No of Voters", "cardozapolldomain");?> :</div>&nbsp;&nbsp;&nbsp;<?php print $total_votes;?>
                 <div id="clear"></div>
                 </div>
             </div>

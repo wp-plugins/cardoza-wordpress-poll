@@ -4,13 +4,12 @@ class CWPViewStats {
     function __construct($vars = null) {
         ?>
         <div id="tab5" class="tab-content">
-            <h3>Poll Statistics</h3>
+            <h3><?php _e('Poll Statistics','cardozapolldomain');?></h3>
             <?php
             $controller = new CWPController();
             $vars = $controller->getPollStats();
             $votes = $vars['votes'];
             $label = $vars['label'];
-            //print_r($this->getLocation('77.73.11.170'));
             if(!empty($votes)){
                 $max_value = 0;
                 
@@ -24,9 +23,9 @@ class CWPViewStats {
                 else $max_y_axis_value = $max_value;
             ?>
             <div id="box">
-            <input type="button" onclick="javascript:getPollStatsjs(7)" value="Last 7 days statistics"/>
-            <input type="button" onclick="javascript:getPollStatsjs(15)" value="Last 15 days statistics"/>
-            <input type="button" onclick="javascript:getPollStatsjs(30)" value="Last 30 days statistics"/>
+            <input type="button" onclick="javascript:getPollStatsjs(7)" value="<?php _e('Last 7 days statistics','cardozapolldomain');?>"/>
+            <input type="button" onclick="javascript:getPollStatsjs(15)" value="<?php _e('Last 15 days statistics','cardozapolldomain');?>"/>
+            <input type="button" onclick="javascript:getPollStatsjs(30)" value="<?php _e('Last 30 days statistics','cardozapolldomain');?>"/>
             </div>
             <div id="clear"></div>
             <div id="box">                
@@ -67,7 +66,7 @@ class CWPViewStats {
             </div>
             <?php }
             else{
-                print "No data available to analyze. If you have installed or updated the plugin recently, poll statistics will not be available until someone votes after the installation or updation.";
+                print __('No data available to analyze. If you have installed or updated the plugin recently, poll statistics will not be available until someone votes after the installation or updation.','cardozapolldomain');
             }
 ?>
        </div>

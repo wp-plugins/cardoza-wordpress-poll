@@ -3,7 +3,7 @@
 Plugin Name: Wordpress Poll
 Plugin URI: http://fingerfish.com/cardoza-wordpress-poll
 Description: Wordpress Poll is completely ajax powered polling system. This poll plugin supports both single and multiple selection of answers.
-Version: 1.5
+Version: 2.0
 Author: Vinoj Cardoza
 Author URI: http://fingerfish.com/about-me/
 License: GPL2
@@ -37,7 +37,8 @@ function trigger_init(){
         $cwp = new CWPController();
         $cwp->init();
     }
-    register_sidebar_widget(__('Wordpress Poll'), 'widget_cardoza_wp_poll');
+    load_plugin_textdomain('cardozapolldomain', false, dirname( plugin_basename(__FILE__)).'/languages');
+    register_sidebar_widget('Wordpress Poll', 'widget_cardoza_wp_poll');
 }
 
 /*Calling all the required files*/
@@ -188,7 +189,7 @@ function cwp_poll_archive($atts){
     ?>
     <?php
     
-    if(empty($polls)) _e("<br>Sorry! No polls found in the archive for this page");
+    if(empty($polls)) print "<br>".__("Sorry! No polls found in the archive for this page", "cardozapolldomain");
     foreach($polls as $poll){
         
         $stimestamp = $cwp->getStrToTime($poll->start_date);
@@ -197,8 +198,8 @@ function cwp_poll_archive($atts){
         ?>
             <br/>
             <strong>Poll id : </strong>#<?php print $poll->id." - ".date('F jS, Y', $stimestamp);?>&nbsp;to&nbsp;<?php print date('F jS, Y', $etimestamp);?>&nbsp;&nbsp;(<?php
-                if($etimestamp > $current_time) echo "Open";
-                else echo "Closed";
+                if($etimestamp > $current_time) echo __("Open", "cardozapolldomain");
+                else echo __("Closed", "cardozapolldomain");
             ?>)
             <div id="widget-poll">
                 

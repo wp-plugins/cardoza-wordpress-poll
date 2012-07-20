@@ -238,7 +238,7 @@ class CWPController {
             foreach($answers as $answer){
                 $total_votes = $total_votes + $answer->votes;
             }
-            print "<b>Total Votes: </b>".$total_votes."<br/>";
+            print "<b>".__('Total Votes','cardozapolldomain').": </b>".$total_votes."<br/>";
             foreach($answers as $answer){
                 
                 $total = $poll[0]->total_votes;
@@ -246,7 +246,7 @@ class CWPController {
                 if($total!=0) $width = ($votes/$total)*100;
                 else $width = 0;
         
-                print $answer->answer." (".$answer->votes." votes, ".intval($width)."%)";
+                print $answer->answer." (".$answer->votes.__(" votes", "cardozapolldomain").", ".intval($width)."%)";
                 ?>
                 <br/>
                 <div style="
@@ -269,14 +269,14 @@ class CWPController {
         $option_value = $this->cwpp_options();
         $poll = $polls[0];
         print "<b>".$poll[0]->question."</b><br/>";
-        print "<b>Total Votes: </b>".$poll[0]->total_votes."<br/>";
+        print "<b>".__("Total Votes", "cardozapolldomain").": </b>".$poll[0]->total_votes."<br/>";
         foreach($answers as $answer){
                 
                 $total = $poll[0]->total_votes;
                 $votes = $answer->votes;
                 if($total!=0) $width = ($votes/$total)*100;
                 else $width = 0;
-                print "<div style='width:100%;float:left;'>".$answer->answer." (".$answer->votes." votes, ".intval($width)."%)</div>";
+                print "<div style='width:100%;float:left;'>".$answer->answer." (".$answer->votes.__(" votes", "cardozapolldomain").", ".intval($width)."%)</div>";
                 ?>
                 <hr style="float:left;height:10px;width:<?php echo $width;?>%;background-color:#4a7194;">
                 <?php
@@ -305,7 +305,7 @@ class CWPController {
         if(empty($vars)){
             if(!empty($poll_stats)){
                 for($i=0;$i<7;$i++){
-                    $vars['label'] = 'Last 7 days Statistics';
+                    $vars['label'] = __('Last 7 days statistics', 'cardozapolldomain');
                     $from = $today - ((24*60*60)*$i);
                     if($i!=0) $to = $today - ((24*60*60)*($i-1));
                     else $to = time();
@@ -411,11 +411,11 @@ class CWPController {
             <h3>User logs for Poll id #<?php echo $pollid;?></h3>
             <table width="100%" style="background-color: #4A7194;color:#333;">
                 <thead style="background-color: #4A7194;color:#FFF;height:30px;">
-                    <th>User id</th>
-                    <th>User name</th>
-                    <th>Polled time</th>
-                    <th>IP Address</th>
-                    <th>Answers</th>
+                    <th><?php _e('User ID', 'cardozapolldomain');?></th>
+                    <th><?php _e('User name', 'cardozapolldomain');?></th>
+                    <th><?php _e('Polled time', 'cardozapolldomain');?></th>
+                    <th><?php _e('IP Address', 'cardozapolldomain');?></th>
+                    <th><?php _e('Answers', 'cardozapolldomain');?></th>
                 </thead>
                         
             <?php
@@ -426,7 +426,7 @@ class CWPController {
                         $getanswer = $this->cwpm->getsPollAnswerByID($log->answerid);
                         $answer = $getanswer[0]->answer;
                     }
-                    else $answer = 'NULL';
+                    else $answer = __('NULL', 'cardozapolldomain');
                     print '<tr style="background-color: #ECF1EF;height:20px;">';
                     $userinfo = get_userdata($log->userid);
                     print '<td align="center">'.$log->userid.'</td>';
@@ -439,7 +439,7 @@ class CWPController {
             }
             print '</table>';
         }
-        if($available != 'yes') print '<p>No user logs found for this poll</p>';
+        if($available != 'yes') print '<p>'.__('No user logs found for this poll', 'cardozapolldomain').'</p>';
         die();
     }
 }

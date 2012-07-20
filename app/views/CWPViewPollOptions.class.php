@@ -12,10 +12,10 @@ class CWPViewPollOptions extends CWPView {
         $opts = $controller->cwpp_options();
         ?>
         <div id="tab3" class="tab-content">
-            <h3>Poll options</h3>
+            <h3><?php _e('Poll options','cardozapolldomain');?></h3>
             <div id="box">
                 <form id="poll-options">
-                <div id="label">Who is allowed to vote? </div>
+                <div id="label"><?php _e('Who is allowed to vote?','cardozapolldomain');?> </div>
                 <select name="poll_access" id="poll-access" class="slct"
                         onblur="javascript:setBorderDefault('poll-access');" 
                         onchange="javascript:showanswers(this.value)"
@@ -24,34 +24,34 @@ class CWPViewPollOptions extends CWPView {
                     <?php
                         if(!empty($opts['poll_access']) && $opts['poll_access']=='all') echo " selected";
                     ?>        
-                    >Anyone can poll</option>
+                    ><?php _e('Anyone can poll','cardozapolldomain');?></option>
                     <option value="loggedin"
                     <?php
                         if(!empty($opts['poll_access']) && $opts['poll_access']=='loggedin') echo " selected";
                     ?>
-                    >Only logged in users can poll </option>
+                    ><?php _e('Only logged in users can poll','cardozapolldomain');?> </option>
                 </select>
                 <div id="clear"></div>
                 
-                <div id="label">Lock Poll by </div>
+                <div id="label"><?php _e('Lock Poll by','cardozapolldomain');?> </div>
                 <select name="poll_lock" id="poll-lock" class="slct">
                     <option value="cookies"
                     <?php
                         print $opts['poll_lock'];
                         if(!empty($opts['poll_lock']) && $opts['poll_lock']=='cookies') echo " selected";
                     ?>        
-                    >Cookies</option>
+                    ><?php _e('Cookies','cardozapolldomain');?></option>
                     <option value="ipaddress"
                     <?php
                         if(!empty($opts['poll_lock']) && $opts['poll_lock']=='ipaddress') echo " selected";
                     ?>
-                    >IP Address</option>
+                    ><?php _e('IP Address','cardozapolldomain');?></option>
                 </select>
                 <div id="clear"></div>
             </div>
-            <h3>Poll style options</h3>
+            <h3><?php _e('Poll style options','cardozapolldomain');?></h3>
             <div id="box">
-                <div id="label">Poll background colour: #</div>
+                <div id="label"><?php _e('Background colour','cardozapolldomain');?>: #</div>
                 <input id="poll-bg-color" 
                        style="width:100px;"
                        onkeyup="javascript:getColor('bg-cp', this.value)"
@@ -60,7 +60,7 @@ class CWPViewPollOptions extends CWPView {
                        name="poll_bg_color" type="text" value="<?php if(!empty($opts['poll_bg_color'])) echo $opts['poll_bg_color'];?>" class="txt" />
                 <div class="color-preview" id="bg-cp"></div>
                 <div id="clear"></div>
-                <div id="label">Poll bar colour: #</div>
+                <div id="label"><?php _e('Colour','cardozapolldomain');?>: #</div>
                 <input id="poll-bar-color" 
                        style="width:100px;"
                        onkeyup="javascript:getColor('bg-bc', this.value)"
@@ -69,7 +69,7 @@ class CWPViewPollOptions extends CWPView {
                        name="poll_bar_color" type="text" value="<?php if(!empty($opts['bar_color'])) echo $opts['bar_color'];?>" class="txt" />
                 <div class="color-preview" id="bg-bc"></div>
                 <div id="clear"></div>
-                <div id="label">Poll bar height : </div>
+                <div id="label"><?php _e('Height','cardozapolldomain');?> : </div>
                 <input id="poll-bar-height" 
                        style="width:40px;"
                        onkeyup="javascript:pollSetHeight(this.value)"
@@ -78,24 +78,24 @@ class CWPViewPollOptions extends CWPView {
                        name="poll_bar_height" type="text" value="<?php if(!empty($opts['bar_height'])) echo $opts['bar_height'];?>" class="txt" />
                 
                 <div id="clear"></div>
-                <div id="label">Preview of the poll bar : </div>
+                <div id="label"><?php _e('Preview of the poll bar','cardozapolldomain');?> : </div>
                 <div class="color-preview" id="poll-preview"></div>
                 <div id="clear"></div>
             </div>
             
-            <h3>Poll archive options</h3>
+            <h3><?php _e('Poll archive options','cardozapolldomain');?></h3>
             <div id="box">
-                <div id="label">Polls to display in the older polls page: </div>
+                <div id="label"><?php _e('Polls to display in the older polls page','cardozapolldomain');?>: </div>
                 <select style="width:250px;" name="polls_to_display_archive" id="poll-access" class="slct"
                         onblur="javascript:setBorderDefault('poll-access');" 
                         onchange="javascript:showanswers(this.value)"
                         onfocus="javascript:setBorder('poll-access');">
-                    <option value="open"<?php if(!empty($opts['polls_to_display_archive']) && $opts['polls_to_display_archive']=='open') echo " selected";?>>Opened Polls Only</option>
-                    <option value="closed"<?php if(!empty($opts['polls_to_display_archive']) && $opts['polls_to_display_archive']=='closed') echo " selected";?>>Closed Polls Only</option>
-                    <option value="open-closed"<?php if(!empty($opts['polls_to_display_archive']) && $opts['polls_to_display_archive']=='open-closed') echo " selected";?>>Opened and Closed Polls</option>
+                    <option value="open" <?php if(!empty($opts['polls_to_display_archive']) && $opts['polls_to_display_archive']=='open') echo " selected";?>><?php _e('Opened Polls Only','cardozapolldomain');?></option>
+                    <option value="closed" <?php if(!empty($opts['polls_to_display_archive']) && $opts['polls_to_display_archive']=='closed') echo " selected";?>><?php _e('Closed Polls Only','cardozapolldomain');?></option>
+                    <option value="open-closed" <?php if(!empty($opts['polls_to_display_archive']) && $opts['polls_to_display_archive']=='open-closed') echo " selected";?>><?php _e('Opened and Closed Polls','cardozapolldomain');?></option>
                 </select>
                 <div id="clear"></div>
-                <div id="label">No of polls to display per page in the older polls: </div>
+                <div id="label"><?php _e('No of polls to display per page in the older polls','cardozapolldomain');?>: </div>
                 <select name="no_of_polls_to_display_archive" id="poll-access" class="slct"
                         onblur="javascript:setBorderDefault('poll-access');" 
                         onchange="javascript:showanswers(this.value)"
@@ -110,7 +110,7 @@ class CWPViewPollOptions extends CWPView {
                 </select>
                 <div id="clear"></div>
                 
-                <div id="label">Poll archive URL: </div>
+                <div id="label"><?php _e('Poll archive URL','cardozapolldomain');?>: </div>
                 <input id="archive-url" 
                        style="width:350px;"
                        onblur="javascript:setBorderDefault('archive-url');" 
