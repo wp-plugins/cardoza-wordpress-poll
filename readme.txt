@@ -94,19 +94,19 @@ That's it. Check your page or post now.
 if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
-= Version 31.09 (released 04-07-2012) =
+= Version 1.4 (released 04-07-2012) =
 * Cardoza Wordpress Poll renamed to Wordpress Poll
 * Note:If you don't see the widget after updating the plugin, please check you widget in the admin section whether it is enabled.
 
-= Version 31.08 (released 27-06-2012) =
+= Version 1.3 (released 27-06-2012) =
 * A minor default option for Lock by amended in the plugin coding.
 
-= Version 31.07 (released 26-06-2012) =
+= Version 1.2 (released 26-06-2012) =
 * New option for locking the poll added to the plugin.
 * Now site administrators can select the option to lock the poll by either cookies or IP address.
 * New feature added to view the list of users polled.
 
-= Version 31.05.2012 (released 31-05-2012) =
+= Version 1.1 (released 31-05-2012) =
 * Minor tweaks added to the code (Suggested by Paul Bearne).
 
 = Version 1.0 (released 21-05-2012) =
