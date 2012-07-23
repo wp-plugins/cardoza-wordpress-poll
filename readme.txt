@@ -25,7 +25,7 @@ This poll has the following features which uses both ajax and jquery.
 3. You can add any poll into your post or page by using the shortcode. For information how to do it, please go to Frequently asked questions.
 
 = Translation =
-The translation were done using a translation software. I am not sure about the correctness of the translation. If you find some mistakes in the translation in your language, please let me know through the following link comments section. Also, if you couldn't find your language and you can do it, please let me know.
+The translation were done using a translation software. I am not sure about the translation. If you find some mistakes in the translation in your language, please let me know through the following link comments section. Also, if you couldn't find your language and you can do it, please let me know.
 
 = Translated Languages =
 * French - http://plugins.trac.wordpress.org/browser/cardoza-wordpress-poll/i18n/French
