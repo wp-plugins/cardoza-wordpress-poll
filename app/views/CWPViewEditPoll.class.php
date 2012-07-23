@@ -75,10 +75,10 @@ class CWPViewEditPoll {
                 </div>
                 <h3><?php _e("Poll Start/End Date", "cardozapolldomain");?></h3>
                 <div id="box">
-                    <div id="label"><?php _e("Start Date", "cardozapolldomain");?>* :</div>
+                    <div id="label"><?php _e("Start date", "cardozapolldomain");?>* :</div>
                     <input id="edit_start_date" type="text" name="s_date" value="<?php print $poll[0]->start_date; ?>" style="margin-right:10px;width:100px;"/> <b>Format:</b> mm/dd/yyyy
                     <div id="clear"></div>
-                    <div id="label"><?php _e("End Date", "cardozapolldomain");?>* :</div>
+                    <div id="label"><?php _e("End date", "cardozapolldomain");?>* :</div>
                     <input id="edit_end_date" type="text" name="e_date" value="<?php print $poll[0]->end_date; ?>" style="margin-right:10px;width:100px;"/> <b>Format:</b> mm/dd/yyyy
                     <div id="clear"></div>
                 </div><center>

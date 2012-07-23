@@ -10,12 +10,12 @@ function displayPollResults($vars){
     $answer_type = $poll->answer_type;
     $total_votes = 0;  
     
-    if($answer_type == "multiple") print "<b>".__("Total Voters", "cardozapolldomain").": </b>".$total."<br/>";
+    if($answer_type == "multiple") print "<b>".__("Total voters", "cardozapolldomain").": </b>".$total."<br/>";
     
     foreach($poll_answers as $answer){
         $total_votes = $total_votes + $answer->votes;
     }
-    print "<b>".__("Total Votes", "cardozapolldomain").": </b>".$total_votes."<br/>";
+    print "<b>".__("Total votes", "cardozapolldomain").": </b>".$total_votes."<br/>";
     
     foreach($poll_answers as $answer){
                       

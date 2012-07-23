@@ -34,7 +34,7 @@ class CWPViewManagePolls{
                         <th><?php _e("End date", "cardozapolldomain");?></th>
                         <th><?php _e("Status", "cardozapolldomain");?></th>
                         <th><?php _e("Total votes", "cardozapolldomain");?></th>
-                        <th><?php _e("View Results", "cardozapolldomain");?></th>
+                        <th><?php _e("View Result", "cardozapolldomain");?></th>
                     </thead>
                     <form id="manage-poll">
                         <?php
@@ -69,7 +69,7 @@ class CWPViewManagePolls{
                 </table>
                     <br/>
                 <div id="box">
-                <div id="label" style="color:#000;"><?php _e("Total No of Voters", "cardozapolldomain");?> :</div>&nbsp;&nbsp;&nbsp;<?php print $total_votes;?>
+                <div id="label" style="color:#000;"><?php _e("Total voters", "cardozapolldomain");?> :</div>&nbsp;&nbsp;&nbsp;<?php print $total_votes;?>
                 <div id="clear"></div>
                 </div>
             </div>

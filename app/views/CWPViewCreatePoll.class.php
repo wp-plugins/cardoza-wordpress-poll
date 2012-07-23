@@ -71,10 +71,10 @@ class CWPViewCreatePoll{
                 </div>
                 <h3><?php _e('Poll Start/End Date','cardozapolldomain');?></h3>
                 <div id="box">
-                    <div id="label"><?php _e('Start Date','cardozapolldomain');?>* :</div>
+                    <div id="label"><?php _e('Start date','cardozapolldomain');?>* :</div>
                     <input id="start_date" type="text" name="s_date" style="width:100px;"/> <b><?php _e('Format','cardozapolldomain');?>: </b> mm/dd/yyyy
                     <div id="clear"></div>
-                    <div id="label"><?php _e('End Date','cardozapolldomain');?>* :</div>
+                    <div id="label"><?php _e('End date','cardozapolldomain');?>* :</div>
                     <input id="end_date" type="text" name="e_date" style="width:100px;"/> <b><?php _e('Format','cardozapolldomain');?>: </b> mm/dd/yyyy
                     <div id="clear"></div>
                 </div>
