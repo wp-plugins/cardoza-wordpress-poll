@@ -238,7 +238,7 @@ class CWPController {
             foreach($answers as $answer){
                 $total_votes = $total_votes + $answer->votes;
             }
-            print "<b>".__('Total Votes','cardozapolldomain').": </b>".$total_votes."<br/>";
+            print "<b>".__('Total votes','cardozapolldomain').": </b>".$total_votes."<br/>";
             foreach($answers as $answer){
                 
                 $total = $poll[0]->total_votes;
@@ -269,7 +269,7 @@ class CWPController {
         $option_value = $this->cwpp_options();
         $poll = $polls[0];
         print "<b>".$poll[0]->question."</b><br/>";
-        print "<b>".__("Total Votes", "cardozapolldomain").": </b>".$poll[0]->total_votes."<br/>";
+        print "<b>".__("Total votes", "cardozapolldomain").": </b>".$poll[0]->total_votes."<br/>";
         foreach($answers as $answer){
                 
                 $total = $poll[0]->total_votes;
