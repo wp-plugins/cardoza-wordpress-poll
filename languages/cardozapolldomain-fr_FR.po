@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cardozapolldomain\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-20 11:24-0000\n"
-"PO-Revision-Date: 2012-07-20 11:24-0000\n"
+"POT-Creation-Date: 2012-07-23 14:08-0000\n"
+"PO-Revision-Date: 2012-07-23 14:12-0000\n"
 "Last-Translator: Vinoj Cardoza <vinoj.cardoza@hotmail.com>\n"
 "Language-Team: Vinoj Cardoza <vinoj.cardoza@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -32,14 +32,15 @@ msgid "Closed"
 msgstr "Fermé"
 
 #: ../cardozawppollFrontEndFunctions.php:13
-msgid "Total Voters"
+#: ../app/views/CWPViewManagePolls.class.php:72
+msgid "Total voters"
 msgstr "Electeurs totaux"
 
 #: ../cardozawppollFrontEndFunctions.php:18
-#: ../app/CWPController.class.php:241
-#: ../app/CWPController.class.php:272
-msgid "Total Votes"
-msgstr "Votes totaux"
+#: ../app/views/CWPViewManagePolls.class.php:36
+#: ../app/views/CWPViewUserLogs.class.php:18
+msgid "Total votes"
+msgstr "Total votes"
 
 #: ../cardozawppollFrontEndFunctions.php:27
 #: ../app/CWPController.class.php:249
@@ -56,6 +57,11 @@ msgstr "Voter"
 #: ../cardozawppollFrontEndFunctions.php:116
 msgid "See all polls & results"
 msgstr "Voir tous les sondages & les résultats"
+
+#: ../app/CWPController.class.php:241
+#: ../app/CWPController.class.php:272
+msgid "Total Votes"
+msgstr "Votes totaux"
 
 #: ../app/CWPController.class.php:308
 #: ../app/views/CWPViewStats.class.php:26
@@ -201,8 +207,10 @@ msgstr "Interroger la Date de Début/Fin"
 
 #: ../app/views/CWPViewCreatePoll.class.php:74
 #: ../app/views/CWPViewEditPoll.class.php:78
-msgid "Start Date"
-msgstr "Commencer la Date"
+#: ../app/views/CWPViewManagePolls.class.php:33
+#: ../app/views/CWPViewUserLogs.class.php:15
+msgid "Start date"
+msgstr "Commencer la date"
 
 #: ../app/views/CWPViewCreatePoll.class.php:75
 #: ../app/views/CWPViewCreatePoll.class.php:78
@@ -211,8 +219,10 @@ msgstr "Format"
 
 #: ../app/views/CWPViewCreatePoll.class.php:77
 #: ../app/views/CWPViewEditPoll.class.php:81
-msgid "End Date"
-msgstr "Terminer la Date"
+#: ../app/views/CWPViewManagePolls.class.php:34
+#: ../app/views/CWPViewUserLogs.class.php:16
+msgid "End date"
+msgstr "Terminer la date"
 
 #: ../app/views/CWPViewEditPoll.class.php:20
 #: ../app/views/CWPViewManagePolls.class.php:18
@@ -257,37 +267,15 @@ msgstr "Arrêt"
 msgid "Answer type"
 msgstr "Répondre le type"
 
-#: ../app/views/CWPViewManagePolls.class.php:33
-#: ../app/views/CWPViewUserLogs.class.php:15
-msgid "Start date"
-msgstr "Commencer la date"
-
-#: ../app/views/CWPViewManagePolls.class.php:34
-#: ../app/views/CWPViewUserLogs.class.php:16
-msgid "End date"
-msgstr "Terminer la date"
-
 #: ../app/views/CWPViewManagePolls.class.php:35
 #: ../app/views/CWPViewUserLogs.class.php:17
 msgid "Status"
 msgstr "Statut"
 
-#: ../app/views/CWPViewManagePolls.class.php:36
-#: ../app/views/CWPViewUserLogs.class.php:18
-msgid "Total votes"
-msgstr "Total votes"
-
 #: ../app/views/CWPViewManagePolls.class.php:37
-msgid "View Results"
-msgstr "La vue Résulte"
-
 #: ../app/views/CWPViewManagePolls.class.php:62
 msgid "View Result"
 msgstr "Regarder le Résultat"
-
-#: ../app/views/CWPViewManagePolls.class.php:72
-msgid "Total No of Voters"
-msgstr "Le nombre total d'Electeurs"
 
 #: ../app/views/CWPViewPollOptions.class.php:15
 msgid "Poll options"
@@ -418,6 +406,21 @@ msgstr "Choisir le dernier nombre de sondages être affiché"
 #: ../app/views/CWPViewWidget.class.php:49
 msgid "Width"
 msgstr "Largeur"
+
+#~ msgid "Total No of Voters"
+#~ msgstr "Le nombre total d'Electeurs"
+
+#~ msgid "View Results"
+#~ msgstr "La vue Résulte"
+
+#~ msgid "Total Voters"
+#~ msgstr "Electeurs totaux"
+
+#~ msgid "Start Date"
+#~ msgstr "Commencer la Date"
+
+#~ msgid "End Date"
+#~ msgstr "Terminer la Date"
 
 #, fuzzy
 #~ msgid "Last 7 days Statistics"
