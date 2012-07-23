@@ -35,6 +35,7 @@ The translation were done using a translation software. I am not sure about the 
 
 = Translated Languages =
 Link for translation - http://plugins.trac.wordpress.org/browser/cardoza-wordpress-poll/i18n
+
 * French (Translated by Laurent Verpeet)
 
 == Installation ==
