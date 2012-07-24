@@ -103,6 +103,9 @@ That's it. Check your page or post now.
 if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
+= Version 32.01 (released 23-07-2012) =
+* French translation updated.
+
 = Version 32.0 (released 20-07-2012) =
 * Translation enabled.
 
