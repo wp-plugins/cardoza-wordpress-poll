@@ -34,9 +34,9 @@ For more visit: http://fingerfish.com/cardoza-wordpress-poll/
 The translation were done using a translation software. I am not sure about the correctness of the translation. If you find some mistakes in the translation in your language, please let me know through the following link comments section. Also, if you couldn't find your language and you can do it, please let me know.
 
 = Translated Languages =
-Link for translation - http://plugins.trac.wordpress.org/browser/cardoza-wordpress-poll/i18n
 
 * French (Translated by Laurent Verpeet)
+* Spanish
 
 == Installation ==
 
@@ -103,8 +103,9 @@ That's it. Check your page or post now.
 if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
+
 = Version 32.01 (released 23-07-2012) =
-* French translation updated.
+* French translation updated (Translated by Laurent Verpeet).
 
 = Version 32.0 (released 20-07-2012) =
 * Translation enabled.
