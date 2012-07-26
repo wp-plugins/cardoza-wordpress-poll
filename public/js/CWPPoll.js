@@ -396,7 +396,17 @@ function setBorderDefault(id){
     jQuery('#'+id).css('border', '1px #4a7194 solid');
 }
 
+function showresults(id){
+    jQuery('.show-form'+id).css('display', 'none');
+    jQuery('.showresultslink'+id).css('display', 'none');
+    jQuery('.show-results'+id).css('display', 'block');
+}
 
+function showforms(id){
+    jQuery('.show-results'+id).css('display', 'none');
+    jQuery('.showresultslink'+id).css('display', 'block');
+    jQuery('.show-form'+id).css('display', 'block');
+}
 
 (function($) {
 	

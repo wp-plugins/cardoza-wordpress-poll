@@ -1,41 +1,44 @@
 <?php
 
-function displayPollResults($vars){
+function displayPollResults( $vars){
     
     $poll_answers = $vars['poll_answers'];
     $total = $vars['total_votes'];
     $option_value = $vars['option_value'];
-    $poll_id = $vars['poll_id'];
     $poll = $vars['poll'];
     $answer_type = $poll->answer_type;
     $total_votes = 0;  
-    
-    if($answer_type == "multiple") print "<b>".__("Total voters", "cardozapolldomain").": </b>".$total."<br/>";
-    
-    foreach($poll_answers as $answer){
-        $total_votes = $total_votes + $answer->votes;
-    }
-    print "<b>".__("Total votes", "cardozapolldomain").": </b>".$total_votes."<br/>";
-    
-    foreach($poll_answers as $answer){
-                      
-        $votes = $answer->votes;
-        
-        if($total_votes!=0) $width = ($votes/$total_votes)*100;
-        else $width = 0;
-        
-        print $answer->answer." (".$answer->votes.__(" votes", "cardozapolldomain").", ".intval($width)."%)";
-        
-        ?>
-        
-        <br/>
-        
-        <div style="height:<?php if(!empty($option_value['bar_height'])) echo $option_value['bar_height'];else echo "10";?>px;
-        width:<?php echo $width?>%;background-color:#<?php if(!empty($option_value['bar_color'])) echo $option_value['bar_color'];else echo "CCC";?>"></div>
-        
-    <?php
-    }
-    
+	$poll_id = $vars['poll']->id;
+    ?>
+	<div id="show-results<?php echo $poll_id;?>" class="show-results<?php echo $poll_id;?>">
+		<?php
+		if($answer_type == "multiple") print "<b>".__("Total voters", "cardozapolldomain").": </b>".$total."<br/>";
+		
+		foreach($poll_answers as $answer){
+			$total_votes = $total_votes + $answer->votes;
+		}
+		print "<b>".__("Total votes", "cardozapolldomain").": </b>".$total_votes."<br/>";
+		
+		foreach($poll_answers as $answer){
+						  
+			$votes = $answer->votes;
+			
+			if($total_votes!=0) $width = ($votes/$total_votes)*100;
+			else $width = 0;
+			
+			print $answer->answer." (".$answer->votes.__(" votes", "cardozapolldomain").", ".intval($width)."%)";
+			
+			?>
+			
+			<br/>
+			
+			<div style="height:<?php if(!empty($option_value['bar_height'])) echo $option_value['bar_height'];else echo "10";?>px;
+			width:<?php echo $width?>%;background-color:#<?php if(!empty($option_value['bar_color'])) echo $option_value['bar_color'];else echo "CCC";?>"></div>	
+	<?php
+    	}
+    ?>
+	</div>
+	<?php
 }
 
 function showPollForm($vars){
@@ -48,7 +51,7 @@ function showPollForm($vars){
     $exp_time = $vars['exp_time'];
     
     ?>
-    <div id="show-form<?php echo $poll->id;?>" >
+    <div id="show-form<?php echo $poll->id;?>" class="show-form<?php echo $poll->id;?>">
         <?php
         foreach($poll_answers as $answer){
             if($poll->answer_type == "one"){?>
@@ -80,7 +83,7 @@ function showPollFormSC($vars){
     $exp_time = $vars['exp_time'];
     
     ?>
-    <div id="show-form<?php echo $poll->id;?>" >
+    <div id="show-form<?php echo $poll->id;?>" class="show-form<?php echo $poll->id;?>">
         <?php
         foreach($poll_answers as $answer){
             if($poll->answer_type == "one"){?>

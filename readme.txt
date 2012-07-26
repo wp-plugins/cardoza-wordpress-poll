@@ -103,63 +103,65 @@ That's it. Check your page or post now.
 if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
+= Version 32.2 =
+* 'View Result' -toggle option enabled in the widget and shortcode.
 
-= Version 32.01 (released 23-07-2012) =
+= Version 32.01 =
 * French translation updated (Translated by Laurent Verpeet).
 
-= Version 32.0 (released 20-07-2012) =
+= Version 32.0 =
 * Translation enabled.
 
-= Version 1.4 (released 04-07-2012) =
+= Version 1.4 =
 * Cardoza Wordpress Poll renamed to Wordpress Poll
 * Note:If you don't see the widget after updating the plugin, please check you widget in the admin section whether it is enabled.
 
-= Version 1.3 (released 27-06-2012) =
+= Version 1.3 =
 * A minor default option for Lock by amended in the plugin coding.
 
-= Version 1.2 (released 26-06-2012) =
+= Version 1.2 =
 * New option for locking the poll added to the plugin.
 * Now site administrators can select the option to lock the poll by either cookies or IP address.
 * New feature added to view the list of users polled.
 
-= Version 1.1 (released 31-05-2012) =
+= Version 1.1 =
 * Minor tweaks added to the code (Suggested by Paul Bearne).
 
-= Version 1.0 (released 21-05-2012) =
+= Version 1.0 =
 * A minor bug fixed on displaying the polls for the logged in user.
 
-= Version 0.9 (released 18-05-2012) =
+= Version 0.9 =
 * As requested by lots of people, the user logged in access for polling is enabled.
 * Now if you configure to allow only logged in users to poll, then the polling will be manipulated by user id.
 
-= Version 0.8 (released 12-03-2012) =
+= Version 0.8 =
 * A minor bug fixed while voting on multiple option answers.
 
-= Version 0.7 (released 28-02-2012) =
+= Version 0.7 =
 * Previous plugin update had some bugs on creating polls and fixed now.(Thanks to Bill Ford)
 
-= Version 0.6 (released 27-02-2012) =
+= Version 0.6 =
 * Total Votes modified for multiple type answers in displaying the results. (Suggested by HR)
 * Default value for no of polls in Widget is set to 1 if the option was not set by the administrator.
 * Random answer display of answers bug fixed (Suggested by Bill Ford).
 * Mandatory fields(*) notification given in the user interface (Suggested by Keith).
 
-= Version 0.5 (released 24-02-2012) =
+= Version 0.5 =
 * Poll Statistical analysis implemented such that the administrator can see the poll logs in a graph format.
 * This poll statistics feature will be only available to those who have installed or updated after 24th February 2012. 
 * Code structure formalised again.
 * Database modified to get the poll logs.
 
-= Version 0.4 (released 20-02-2012) =
+= Version 0.4 =
 * Poll archive page displays the poll id, poll duration and poll status (Suggested by : Bill Ford, Founder of JoshuaTreeStar.com)
 * New option 'View Result' added to the 'Manage Polls' page to enable the administrator to see the poll results from Wordpress backend (Suggested by: Amber).
 * 'See Previous Polls changed' to 'See polls & results'.
 
-= Version 0.3 (released 17-02-2012) =
+= Version 0.3 =
 * New feature added - Shortcode can be added on any page or post to display a particular poll.
 * Minor-bug for displaying poll results as soon as voted fixed.
 
-= Version 0.2 (released 15-02-2012) =
+= Version 0.2 =
 * Pagination on the archive poll page validated.
 * A seperate function file created to manipulate the front end functions.
 

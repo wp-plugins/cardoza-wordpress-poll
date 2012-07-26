@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: cardozapolldomain\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-07-26 11:13-0000\n"
-"PO-Revision-Date: 2012-07-26 11:14-0000\n"
+"PO-Revision-Date: 2012-07-26 11:13-0000\n"
 "Last-Translator: Vinoj Cardoza <vinoj.cardoza@hotmail.com>\n"
 "Language-Team: Vinoj Cardoza <vinoj.cardoza@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -11,42 +11,42 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
 "X-Poedit-Basepath: .\n"
-"X-Poedit-Language: French\n"
-"X-Poedit-Country: FRANCE\n"
+"X-Poedit-Language: Spanish\n"
+"X-Poedit-Country: SPAIN\n"
 "X-Poedit-SearchPath-0: ..\n"
 
 #: ../cardozawppoll.php:186
 msgid "Sorry! No polls found in the archive for this page"
-msgstr "Désolé! Aucuns sondages n'a été trouvé dans l'archive pour cette page"
+msgstr "¡Lo siento! No hay encuestas que se encuentran en el archivo de esta página"
 
 #: ../cardozawppoll.php:195
 #: ../app/views/CWPViewManagePolls.class.php:57
 #: ../app/views/CWPViewUserLogs.class.php:39
 msgid "Open"
-msgstr "Ouvert"
+msgstr "Abierto"
 
 #: ../cardozawppoll.php:196
 #: ../app/views/CWPViewManagePolls.class.php:58
 #: ../app/views/CWPViewUserLogs.class.php:40
 msgid "Closed"
-msgstr "Fermer"
+msgstr "Cerrado"
 
 #: ../cardozawppoll.php:313
 #: ../app/views/CWPViewManagePolls.class.php:37
 #: ../app/views/CWPViewManagePolls.class.php:62
 msgid "View Result"
-msgstr "Voir le résultat"
+msgstr "Ver Resultados"
 
 #: ../cardozawppoll.php:320
 #: ../cardozawppollFrontEndFunctions.php:71
 #: ../cardozawppollFrontEndFunctions.php:103
 msgid "Vote"
-msgstr "Voter"
+msgstr "votar"
 
 #: ../cardozawppollFrontEndFunctions.php:15
 #: ../app/views/CWPViewManagePolls.class.php:72
 msgid "Total voters"
-msgstr "Total des votants"
+msgstr "Total de votantes"
 
 #: ../cardozawppollFrontEndFunctions.php:20
 #: ../app/CWPController.class.php:241
@@ -54,247 +54,247 @@ msgstr "Total des votants"
 #: ../app/views/CWPViewManagePolls.class.php:36
 #: ../app/views/CWPViewUserLogs.class.php:18
 msgid "Total votes"
-msgstr "Total des votes"
+msgstr "Total de votos"
 
 #: ../cardozawppollFrontEndFunctions.php:29
 #: ../app/CWPController.class.php:249
 #: ../app/CWPController.class.php:279
 msgid " votes"
-msgstr " votes"
+msgstr "votos"
 
 #: ../cardozawppollFrontEndFunctions.php:118
 #: ../cardozawppollFrontEndFunctions.php:119
 msgid "See all polls & results"
-msgstr "Voir tous les sondages & les résultats"
+msgstr "Ver todas las encuestas y los resultados"
 
 #: ../app/CWPController.class.php:308
 #: ../app/views/CWPViewStats.class.php:26
 msgid "Last 7 days statistics"
-msgstr "Statistiques des 7 derniers jours"
+msgstr "Últimos 7 días las estadísticas"
 
 #: ../app/CWPController.class.php:414
 msgid "User ID"
-msgstr "Utilisateur"
+msgstr "ID de usuario"
 
 #: ../app/CWPController.class.php:415
 msgid "User name"
-msgstr "Nom de l'utilisateur"
+msgstr "Nombre de usuario"
 
 #: ../app/CWPController.class.php:416
 msgid "Polled time"
-msgstr "Heure du sondage"
+msgstr "Tiempo de sondeo"
 
 #: ../app/CWPController.class.php:417
 #: ../app/views/CWPViewPollOptions.class.php:48
 msgid "IP Address"
-msgstr "Adresse IP"
+msgstr "Dirección IP"
 
 #: ../app/CWPController.class.php:418
 msgid "Answers"
-msgstr "Réponses"
+msgstr "Respuestas"
 
 #: ../app/CWPController.class.php:429
 msgid "NULL"
-msgstr "NUL"
+msgstr "NULL"
 
 #: ../app/CWPController.class.php:442
 msgid "No user logs found for this poll"
-msgstr "Aucun utilisateur trouvé pour ce sondage"
+msgstr "Usuario inicia sesión no se encuentra en esta encuesta"
 
 #: ../app/views/CWPView.class.php:36
 #: ../app/views/CWPView.class.php:37
 msgid "Poll"
-msgstr "Sondage"
+msgstr "Encuesta"
 
 #: ../app/views/CWPView.class.php:47
 msgid "Wordpress Poll"
-msgstr "Wordpress Sondage"
+msgstr "Wordpress Poll"
 
 #: ../app/views/CWPView.class.php:48
 msgid "Mandatory fields"
-msgstr "Champs obligatoires"
+msgstr "Los campos obligatorios"
 
 #: ../app/views/CWPView.class.php:52
 msgid "Manage Polls"
-msgstr "Gérer les sondages"
+msgstr "Administrar Encuestas"
 
 #: ../app/views/CWPView.class.php:57
 #: ../app/views/CWPViewCreatePoll.class.php:87
 msgid "Add New Poll"
-msgstr "Ajouter un nouveau sondage"
+msgstr "Añadir una nueva encuesta"
 
 #: ../app/views/CWPView.class.php:62
 msgid "Poll Options"
-msgstr "Options des sondages"
+msgstr "Opciones de la encuesta"
 
 #: ../app/views/CWPView.class.php:67
 msgid "Widget Options"
-msgstr "Options du Widget"
+msgstr "Opciones de Widget"
 
 #: ../app/views/CWPView.class.php:72
 #: ../app/views/CWPViewStats.class.php:7
 msgid "Poll Statistics"
-msgstr "Statistiques des sondages"
+msgstr "Encuesta Estadísticas"
 
 #: ../app/views/CWPView.class.php:77
 msgid "User Logs"
-msgstr "Log des utilisateurs"
+msgstr "Registros de usuarios"
 
 #: ../app/views/CWPViewCreatePoll.class.php:14
 #: ../app/views/CWPViewEditPoll.class.php:29
 msgid "Poll Friendly Name"
-msgstr "Nom amical du sondage"
+msgstr "Nombre descriptivo encuesta"
 
 #: ../app/views/CWPViewCreatePoll.class.php:16
 #: ../app/views/CWPViewEditPoll.class.php:31
 msgid "Friendly name"
-msgstr "Nom amical"
+msgstr "Nombre descriptivo"
 
 #: ../app/views/CWPViewCreatePoll.class.php:22
 #: ../app/views/CWPViewEditPoll.class.php:36
 msgid "Poll Question"
-msgstr "Question du sondage"
+msgstr "Encuesta Pregunta"
 
 #: ../app/views/CWPViewCreatePoll.class.php:24
 #: ../app/views/CWPViewManagePolls.class.php:31
 #: ../app/views/CWPViewUserLogs.class.php:13
 msgid "Question"
-msgstr "Question"
+msgstr "Pregunta"
 
 #: ../app/views/CWPViewCreatePoll.class.php:30
 #: ../app/views/CWPViewEditPoll.class.php:44
 msgid "Poll Answers"
-msgstr "Réponses du sondage"
+msgstr "Las respuestas de la encuesta"
 
 #: ../app/views/CWPViewCreatePoll.class.php:33
 #: ../app/views/CWPViewCreatePoll.class.php:37
 msgid "Answer"
-msgstr "Réponse"
+msgstr "Responder"
 
 #: ../app/views/CWPViewCreatePoll.class.php:47
 msgid "Add answer"
-msgstr "Ajouter une réponse"
+msgstr "Añadir respuesta"
 
 #: ../app/views/CWPViewCreatePoll.class.php:52
 msgid "Remove Answer"
-msgstr "Supprimer une réponse"
+msgstr "Eliminar Respuesta"
 
 #: ../app/views/CWPViewCreatePoll.class.php:55
 #: ../app/views/CWPViewEditPoll.class.php:60
 msgid "Poll Answer type"
-msgstr "Type de réponse"
+msgstr "Encuesta tipo de respuesta"
 
 #: ../app/views/CWPViewCreatePoll.class.php:57
 #: ../app/views/CWPViewEditPoll.class.php:62
 msgid "Allow users to select"
-msgstr "Permettre à l'utilisateur de choisir"
+msgstr "Permitir a los usuarios seleccionar"
 
 #: ../app/views/CWPViewCreatePoll.class.php:62
 #: ../app/views/CWPViewEditPoll.class.php:66
 msgid "Only one answer"
-msgstr "Une seule réponse"
+msgstr "Sólo una respuesta"
 
 #: ../app/views/CWPViewCreatePoll.class.php:63
 #: ../app/views/CWPViewEditPoll.class.php:67
 msgid "More than one answer"
-msgstr "Plusieurs réponses"
+msgstr "Más de una respuesta"
 
 #: ../app/views/CWPViewCreatePoll.class.php:67
 #: ../app/views/CWPViewEditPoll.class.php:71
 msgid "No of answers to allow"
-msgstr "Nombre de réponses possible"
+msgstr "Número de respuestas para permitir"
 
 #: ../app/views/CWPViewCreatePoll.class.php:72
 #: ../app/views/CWPViewEditPoll.class.php:76
 msgid "Poll Start/End Date"
-msgstr "Date de départ et de fin de sondage"
+msgstr "Encuesta de inicio y fecha de finalización"
 
 #: ../app/views/CWPViewCreatePoll.class.php:74
 #: ../app/views/CWPViewEditPoll.class.php:78
 #: ../app/views/CWPViewManagePolls.class.php:33
 #: ../app/views/CWPViewUserLogs.class.php:15
 msgid "Start date"
-msgstr "Date de début"
+msgstr "Fecha de inicio"
 
 #: ../app/views/CWPViewCreatePoll.class.php:75
 #: ../app/views/CWPViewCreatePoll.class.php:78
 msgid "Format"
-msgstr "Format"
+msgstr "Formato"
 
 #: ../app/views/CWPViewCreatePoll.class.php:77
 #: ../app/views/CWPViewEditPoll.class.php:81
 #: ../app/views/CWPViewManagePolls.class.php:34
 #: ../app/views/CWPViewUserLogs.class.php:16
 msgid "End date"
-msgstr "Date de fin"
+msgstr "Fecha de finalización"
 
 #: ../app/views/CWPViewEditPoll.class.php:20
 #: ../app/views/CWPViewManagePolls.class.php:18
 msgid "Refresh Poll List"
-msgstr "Rafraichir la liste de sondage"
+msgstr "Actualizar la lista de encuesta"
 
 #: ../app/views/CWPViewEditPoll.class.php:23
 #: ../app/views/CWPViewManagePolls.class.php:21
 msgid "Edit a Poll"
-msgstr "Modifier un sondage"
+msgstr "Editar una encuesta"
 
 #: ../app/views/CWPViewEditPoll.class.php:26
 #: ../app/views/CWPViewManagePolls.class.php:24
 msgid "Delete a Poll"
-msgstr "Supprimer un sondage"
+msgstr "Eliminar una Encuesta"
 
 #: ../app/views/CWPViewEditPoll.class.php:38
 #: ../app/views/CWPViewManagePolls.class.php:30
 #: ../app/views/CWPViewUserLogs.class.php:12
 msgid "Name"
-msgstr "Nom"
+msgstr "Nombre"
 
 #: ../app/views/CWPViewEditPoll.class.php:52
 msgid "Edit"
-msgstr "Modifier"
+msgstr "Editar"
 
 #: ../app/views/CWPViewEditPoll.class.php:53
 msgid "Delete"
-msgstr "Supprimer"
+msgstr "Borrar"
 
 #: ../app/views/CWPViewEditPoll.class.php:57
 msgid "Add more answers"
-msgstr "Ajouter une réponse"
+msgstr "Añadir más respuestas"
 
 #: ../app/views/CWPViewEditPoll.class.php:92
 #: ../app/views/CWPViewWidget.class.php:68
 msgid "Save"
-msgstr "Sauver"
+msgstr "Ahorrar"
 
 #: ../app/views/CWPViewManagePolls.class.php:32
 #: ../app/views/CWPViewUserLogs.class.php:14
 msgid "Answer type"
-msgstr "Type de réponse"
+msgstr "Responde el tipo"
 
 #: ../app/views/CWPViewManagePolls.class.php:35
 #: ../app/views/CWPViewUserLogs.class.php:17
 msgid "Status"
-msgstr "Status"
+msgstr "Estado"
 
 #: ../app/views/CWPViewPollOptions.class.php:15
 msgid "Poll options"
-msgstr "Options du sondage"
+msgstr "Ver Resultados"
 
 #: ../app/views/CWPViewPollOptions.class.php:18
 msgid "Who is allowed to vote?"
-msgstr "Qui peux voter?"
+msgstr "¿Quién puede votar?"
 
 #: ../app/views/CWPViewPollOptions.class.php:27
 msgid "Anyone can poll"
-msgstr "Tout le monde peut voter"
+msgstr "Cualquier persona puede hacer un sondeo"
 
 #: ../app/views/CWPViewPollOptions.class.php:32
 msgid "Only logged in users can poll"
-msgstr "Seul un utilisateur connecté peut voter"
+msgstr "Sólo los usuarios registrados pueden sondear"
 
 #: ../app/views/CWPViewPollOptions.class.php:36
 msgid "Lock Poll by"
-msgstr "Vérrouiller le sondage par"
+msgstr "Bloqueo de la encuesta por"
 
 #: ../app/views/CWPViewPollOptions.class.php:43
 msgid "Cookies"
@@ -302,128 +302,107 @@ msgstr "Cookies"
 
 #: ../app/views/CWPViewPollOptions.class.php:52
 msgid "Poll style options"
-msgstr "Options du styles de sondage"
+msgstr "Opciones a la encuesta de estilo"
 
 #: ../app/views/CWPViewPollOptions.class.php:54
 msgid "Background colour"
-msgstr "Couleur de fond"
+msgstr "Color de fondo"
 
 #: ../app/views/CWPViewPollOptions.class.php:63
 msgid "Colour"
-msgstr "Couleur"
+msgstr "Color"
 
 #: ../app/views/CWPViewPollOptions.class.php:72
 #: ../app/views/CWPViewWidget.class.php:56
 msgid "Height"
-msgstr "Hauteur"
+msgstr "Altura"
 
 #: ../app/views/CWPViewPollOptions.class.php:81
 msgid "Preview of the poll bar"
-msgstr "Prévisualisation de la barre de sondage"
+msgstr "Vista previa de la barra de sondeo"
 
 #: ../app/views/CWPViewPollOptions.class.php:86
 msgid "Poll archive options"
-msgstr "Options d'archivage des sondages"
+msgstr "Encuesta de archivo de opciones"
 
 #: ../app/views/CWPViewPollOptions.class.php:88
 msgid "Polls to display in the older polls page"
-msgstr "Sondages à visualiser dans la page d'archive"
+msgstr "Encuestas que se mostrará en la página más encuestas"
 
 #: ../app/views/CWPViewPollOptions.class.php:93
 msgid "Opened Polls Only"
-msgstr "Seulement les sondages ouverts"
+msgstr "Encuestas abiertas sólo"
 
 #: ../app/views/CWPViewPollOptions.class.php:94
 msgid "Closed Polls Only"
-msgstr "Seulement les sondages fermés"
+msgstr "Encuestas cerradas sólo"
 
 #: ../app/views/CWPViewPollOptions.class.php:95
 msgid "Opened and Closed Polls"
-msgstr "Les sondages ouverts et fermes"
+msgstr "Encuestas abiertas y cerradas"
 
 #: ../app/views/CWPViewPollOptions.class.php:98
 msgid "No of polls to display per page in the older polls"
-msgstr "No de sondage à visualiser par page dans l'archive"
+msgstr "N º de encuestas a mostrar por página en las encuestas de mayores"
 
 #: ../app/views/CWPViewPollOptions.class.php:113
 msgid "Poll archive URL"
-msgstr "URL d'archivage des sondages"
+msgstr "Encuesta URL del archivo"
 
 #: ../app/views/CWPViewStats.class.php:27
 msgid "Last 15 days statistics"
-msgstr "Statistiques des 15 derniers jours"
+msgstr "Últimos 15 días las estadísticas"
 
 #: ../app/views/CWPViewStats.class.php:28
 msgid "Last 30 days statistics"
-msgstr "Statistiques des 30 derniers jours"
+msgstr "Últimos 30 días las estadísticas"
 
 #: ../app/views/CWPViewStats.class.php:69
 msgid "No data available to analyze. If you have installed or updated the plugin recently, poll statistics will not be available until someone votes after the installation or updation."
-msgstr "Pas de donnée à analiser. Si vous avez récemment installé ou mis à jour le plugin, les statistiques des sondages ne seront pas disponible jusqu'à ce que quelqu'un vote après l'installation ou la mise à jour."
+msgstr "No hay datos disponibles para analizar. Si ha instalado o actualizado el plugin hace poco, las estadísticas de la encuesta no estará disponible hasta que alguien vota después de la instalación o updation."
 
 #: ../app/views/CWPViewUserLogs.class.php:5
 msgid "This feature will show the list of users voted for a particular poll."
-msgstr "Cette caractéristique montrera la liste des votes des utilisateurs pour un sondage spécifique."
+msgstr "Esta característica le mostrará la lista de usuarios votaron a favor de una encuesta en particular."
 
 #: ../app/views/CWPViewUserLogs.class.php:6
 msgid "The results will be shown only when the logged in users has voted for the poll. (The answers will be visible only for the votes after 26.06.2012)"
-msgstr "Le résultat sera montré uniquement lorsque l'utilisateur connecté aura voté pour le sondage. (Les réponses seront visible uniquement pour le vote après le 26.06.2012)"
+msgstr "Los resultados se muestran sólo cuando el usuarios registrados ha votado a favor de la encuesta. (Las respuestas serán visibles sólo para los votos después del 26/06/2012)"
 
 #: ../app/views/CWPViewUserLogs.class.php:7
 msgid "Poll User Logs"
-msgstr "Log des utilisateurs du sondage"
+msgstr "Registros de la encuesta de usuarios"
 
 #: ../app/views/CWPViewUserLogs.class.php:19
 #: ../app/views/CWPViewUserLogs.class.php:44
 msgid "View User Logs"
-msgstr "Visualisation du log utilisateur"
+msgstr "Ver los registros de usuario"
 
 #: ../app/views/CWPViewWidget.class.php:15
 msgid "Widget options"
-msgstr "Options du Widget"
+msgstr "Opciones Widget"
 
 #: ../app/views/CWPViewWidget.class.php:18
 msgid "Title"
-msgstr "Titre"
+msgstr "Título"
 
 #: ../app/views/CWPViewWidget.class.php:24
 msgid "Display Older Polls Link"
-msgstr "Lien pour la visualisation des anciens sondages"
+msgstr "Mostrar antiguo Enlace Encuestas"
 
 #: ../app/views/CWPViewWidget.class.php:30
 msgid "Yes"
-msgstr "Oui"
+msgstr "Sí"
 
 #: ../app/views/CWPViewWidget.class.php:35
 msgid "No"
-msgstr "Non"
+msgstr "No"
 
 #: ../app/views/CWPViewWidget.class.php:38
 msgid "Select the latest number of polls to be displayed"
-msgstr "Sélectionner le nombre de sondages à visualiser"
+msgstr "Seleccione el último número de encuestas que se mostrará"
 
 #: ../app/views/CWPViewWidget.class.php:49
 msgid "Width"
-msgstr "Largeur"
+msgstr "Ancho"
 
-#~ msgid "Total No of Voters"
-#~ msgstr "Le nombre total d'Electeurs"
-
-#~ msgid "View Results"
-#~ msgstr "La vue Résulte"
-
-#~ msgid "Start Date"
-#~ msgstr "Date de début"
-
-#~ msgid "End Date"
-#~ msgstr "Date de fin"
-
-#~ msgid "Total Votes"
-#~ msgstr "Total des votes"
-
-#~ msgid "Total Voters"
-#~ msgstr "Total des votants"
-
-#, fuzzy
-#~ msgid "Last 7 days Statistics"
-#~ msgstr "Dernier 7 statistique de jours"
