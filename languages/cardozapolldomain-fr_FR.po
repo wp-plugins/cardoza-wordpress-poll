@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cardozapolldomain\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-26 11:13-0000\n"
-"PO-Revision-Date: 2012-07-26 11:14-0000\n"
+"POT-Creation-Date: 2012-07-27 11:09-0000\n"
+"PO-Revision-Date: 2012-07-27 11:09-0000\n"
 "Last-Translator: Vinoj Cardoza <vinoj.cardoza@hotmail.com>\n"
 "Language-Team: Vinoj Cardoza <vinoj.cardoza@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -38,17 +38,17 @@ msgid "View Result"
 msgstr "Voir le résultat"
 
 #: ../cardozawppoll.php:320
-#: ../cardozawppollFrontEndFunctions.php:71
-#: ../cardozawppollFrontEndFunctions.php:103
+#: ../cardozawppollFrontEndFunctions.php:72
+#: ../cardozawppollFrontEndFunctions.php:104
 msgid "Vote"
 msgstr "Voter"
 
-#: ../cardozawppollFrontEndFunctions.php:15
+#: ../cardozawppollFrontEndFunctions.php:21
 #: ../app/views/CWPViewManagePolls.class.php:72
 msgid "Total voters"
 msgstr "Total des votants"
 
-#: ../cardozawppollFrontEndFunctions.php:20
+#: ../cardozawppollFrontEndFunctions.php:26
 #: ../app/CWPController.class.php:241
 #: ../app/CWPController.class.php:272
 #: ../app/views/CWPViewManagePolls.class.php:36
@@ -56,14 +56,14 @@ msgstr "Total des votants"
 msgid "Total votes"
 msgstr "Total des votes"
 
-#: ../cardozawppollFrontEndFunctions.php:29
+#: ../cardozawppollFrontEndFunctions.php:37
 #: ../app/CWPController.class.php:249
 #: ../app/CWPController.class.php:279
 msgid " votes"
 msgstr " votes"
 
-#: ../cardozawppollFrontEndFunctions.php:118
 #: ../cardozawppollFrontEndFunctions.php:119
+#: ../cardozawppollFrontEndFunctions.php:120
 msgid "See all polls & results"
 msgstr "Voir tous les sondages & les résultats"
 

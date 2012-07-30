@@ -197,3 +197,10 @@ form select{
 html.wp-toolbar body.wp-admin div#footer{
     display: none;
 }
+
+.total-voters, .total-votes, .result-answer{
+    width: 100%;
+}
+.result-answer{
+    padding-top: 10px;
+}

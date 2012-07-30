@@ -35,7 +35,9 @@ The translation were done using a translation software. I am not sure about the 
 
 = Translated Languages =
 
+* Dutch (Translated by Niels de Bruin)
 * French (Translated by Laurent Verpeet)
+* German (Translated by Peter Kaulfuss)
 * Spanish
 
 == Installation ==
@@ -103,6 +105,11 @@ That's it. Check your page or post now.
 if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
+= Version 32.3 =
+* The accuracy of result percentage calculation was recoded.
+* Translation in Dutch released. (Translated by Niels de Bruin)
+* Translation in German released. (Translated by Peter Kaulfuss)
+
 = Version 32.2 =
 * 'View Result' -toggle option enabled in the widget and shortcode.
 

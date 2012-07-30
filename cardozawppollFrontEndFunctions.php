@@ -1,43 +1,44 @@
 <?php
 
 function displayPollResults( $vars){
-    
     $poll_answers = $vars['poll_answers'];
     $total = $vars['total_votes'];
     $option_value = $vars['option_value'];
     $poll = $vars['poll'];
     $answer_type = $poll->answer_type;
     $total_votes = 0;  
-	$poll_id = $vars['poll']->id;
+    $poll_id = $vars['poll']->id;
+    if(!empty($option_value['bar_height'])) 
+        $bar_height = $option_value['bar_height'];
+    else $bar_height = "10";
+    if(!empty($option_value['bar_color'])) 
+        $bar_color = $option_value['bar_color'];
+    else 
+        $bar_color = "CCC";
     ?>
-	<div id="show-results<?php echo $poll_id;?>" class="show-results<?php echo $poll_id;?>">
-		<?php
-		if($answer_type == "multiple") print "<b>".__("Total voters", "cardozapolldomain").": </b>".$total."<br/>";
-		
-		foreach($poll_answers as $answer){
-			$total_votes = $total_votes + $answer->votes;
-		}
-		print "<b>".__("Total votes", "cardozapolldomain").": </b>".$total_votes."<br/>";
-		
-		foreach($poll_answers as $answer){
-						  
-			$votes = $answer->votes;
-			
-			if($total_votes!=0) $width = ($votes/$total_votes)*100;
-			else $width = 0;
-			
-			print $answer->answer." (".$answer->votes.__(" votes", "cardozapolldomain").", ".intval($width)."%)";
-			
-			?>
-			
-			<br/>
-			
-			<div style="height:<?php if(!empty($option_value['bar_height'])) echo $option_value['bar_height'];else echo "10";?>px;
-			width:<?php echo $width?>%;background-color:#<?php if(!empty($option_value['bar_color'])) echo $option_value['bar_color'];else echo "CCC";?>"></div>	
-	<?php
-    	}
+    <div id="show-results<?php echo $poll_id;?>" class="show-results<?php echo $poll_id;?>">
+    <?php
+        if($answer_type == "multiple") print "<div class='total-voters'><b>".__("Total voters", "cardozapolldomain").": </b>".$total."</div>";
+
+        foreach($poll_answers as $answer){
+            $total_votes = $total_votes + $answer->votes;
+        }
+        print "<div class='total-votes'><b>".__("Total votes", "cardozapolldomain").": </b>".$total_votes."</div>";
+        $answer_count = 0;
+        $total_answer_count = sizeof($poll_answers);
+        $total_width = 0;
+        foreach($poll_answers as $answer){
+            $answer_count++;
+            $votes = $answer->votes;
+            if($total_votes!=0) $width = ($votes/$total_votes)*100;
+            else $width = 0;
+            if($answer_count == $total_answer_count) $width = 100 - $total_width;
+            else $total_width = $total_width + round($width);
+            print "<div class='result-answer'>".$answer->answer." (".$answer->votes.__(" votes", "cardozapolldomain").", ".round($width)."%)</div>";
+            print '<div style="height:'.$bar_height.'px;width:'.$width.'%;background-color:#'.$bar_color.'"></div>';
+        } 
     ?>
-	</div>
+    </div>
 	<?php
 }
 
