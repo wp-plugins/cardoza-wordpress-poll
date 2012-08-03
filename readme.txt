@@ -105,6 +105,11 @@ That's it. Check your page or post now.
 if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
+= Version 32.4 =
+* Date picker added for the start and end date of add new poll.
+* Some animation effects added to the tab styles.
+* Minor modification was done to the Dutch translation.
+
 = Version 32.3 =
 * The accuracy of result percentage calculation was recoded.
 * Translation in Dutch released. (Translated by Niels de Bruin)

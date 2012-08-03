@@ -8,7 +8,8 @@ jQuery(document).ready(function(){
     no_of_answers = 2;
     reset();
     showTab(1);
-    
+    jQuery('#start_date').datepicker();
+    jQuery('#end_date').datepicker();
     jQuery('#poll-preview').css('height', '0px');
     jQuery("#no-of-answers, #widget-height, #widget-width, #poll-bar-height").keydown(function(event) {
         // Allow: backspace, delete, tab and escape
@@ -300,6 +301,12 @@ function editPoll(){
                         function(response){
                             if(response!=0){
                                 jQuery('#manage-polls').html(response);
+                                jQuery('#manage-polls').show({
+                                    effect : 'slide',
+                                    easing : 'easeOutQuart',
+                                    direction : 'up',
+                                    duration : 1000
+                                });
                             }
                             else{
                                 jAlert("Sorry the poll id you entered not found!", "Error message");
@@ -346,6 +353,12 @@ function userlogs(pollid){
     jQuery.post(ajaxurl, data,  
         function(response){
             jQuery('#poll-logs').html(response);
+            jQuery('#poll-logs').show({
+                effect : 'slide',
+                easing : 'easeOutQuart',
+                direction : 'up',
+                duration : 1000
+            });
         }
     );
 }
@@ -366,7 +379,15 @@ function viewPollResults(pollid){
 function showTab(id){
     
     reset();
-    jQuery('#tab'+id).fadeIn(500);  
+    jQuery('#tab'+id).show();  
+    jQuery('#cwp-content').show({
+        effect : 'slide',
+        easing : 'easeOutQuart',
+        direction : 'up',
+        duration : 1000
+    });
+
+
     jQuery('#menu-tab'+id).css('color', '#fff');
     jQuery('#menu-tab'+id).css('background-color', '#4a7194');
 }

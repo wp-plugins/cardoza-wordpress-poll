@@ -3,7 +3,7 @@
 Plugin Name: Wordpress Poll
 Plugin URI: http://fingerfish.com/cardoza-wordpress-poll
 Description: Wordpress Poll is completely ajax powered polling system. This poll plugin supports both single and multiple selection of answers.
-Version: 32.3
+Version: 32.4
 Author: Vinoj Cardoza
 Author URI: http://fingerfish.com/about-me/
 License: GPL2
@@ -14,9 +14,11 @@ require_once 'app/CWPController.class.php';
 
 /* To include the stylesheets */
 wp_enqueue_style('cwpcss', CWP_PGN_DIR.'public/css/CWPPoll.css');
+wp_enqueue_style('cwpcssjqui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/base/jquery-ui.css');
 
 /* To include the javascripts */
 wp_enqueue_script('cwp-main', CWP_PGN_DIR.'public/js/CWPPoll.js', array('jquery'));
+wp_enqueue_script('cwp-mainjqui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js', array('jquery'));
 
 add_action('wp_head','cwppoll_ajaxurl');
 add_action('plugins_loaded', 'trigger_init');

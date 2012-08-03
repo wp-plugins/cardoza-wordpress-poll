@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cardozapolldomain\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-27 13:13-0000\n"
-"PO-Revision-Date: 2012-07-27 13:31-0000\n"
+"POT-Creation-Date: 2012-07-30 14:21-0000\n"
+"PO-Revision-Date: 2012-07-30 14:24-0000\n"
 "Last-Translator: Vinoj Cardoza <vinoj.cardoza@hotmail.com>\n"
 "Language-Team: Vinoj Cardoza <vinoj.cardoza@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -187,7 +187,7 @@ msgstr "Antworttypen der Umfrage"
 #: ../app/views/CWPViewCreatePoll.class.php:57
 #: ../app/views/CWPViewEditPoll.class.php:62
 msgid "Allow users to select"
-msgstr "Benutzern die Auswahl erlauben"
+msgstr "Benutzern die Auswahl erlauben von"
 
 #: ../app/views/CWPViewCreatePoll.class.php:62
 #: ../app/views/CWPViewEditPoll.class.php:66
@@ -262,6 +262,7 @@ msgid "Add more answers"
 msgstr "Weitere Antworten hinzufügen"
 
 #: ../app/views/CWPViewEditPoll.class.php:92
+#: ../app/views/CWPViewPollOptions.class.php:127
 #: ../app/views/CWPViewWidget.class.php:68
 msgid "Save"
 msgstr "Speichern"
@@ -282,7 +283,7 @@ msgstr "Umfrageoptionen"
 
 #: ../app/views/CWPViewPollOptions.class.php:18
 msgid "Who is allowed to vote?"
-msgstr "Wer kan an der Abstimmung teilnehmen?	"
+msgstr "Wer kann an der Abstimmung teilnehmen?"
 
 #: ../app/views/CWPViewPollOptions.class.php:27
 msgid "Anyone can poll"
@@ -290,11 +291,11 @@ msgstr "Jeder kann teilnehmen"
 
 #: ../app/views/CWPViewPollOptions.class.php:32
 msgid "Only logged in users can poll"
-msgstr "Nur registrierte Benutzer können Abstimmen"
+msgstr "Nur registrierte Benutzer können teilnehmen"
 
 #: ../app/views/CWPViewPollOptions.class.php:36
 msgid "Lock Poll by"
-msgstr "Sichere Umfrage von"
+msgstr "Teilnahme an Umfrage sperren über"
 
 #: ../app/views/CWPViewPollOptions.class.php:43
 msgid "Cookies"
@@ -388,7 +389,7 @@ msgstr "Titel"
 
 #: ../app/views/CWPViewWidget.class.php:24
 msgid "Display Older Polls Link"
-msgstr "Link älterer Umfragen anzeigen"
+msgstr "Link zu älteren Umfragen anzeigen"
 
 #: ../app/views/CWPViewWidget.class.php:30
 msgid "Yes"

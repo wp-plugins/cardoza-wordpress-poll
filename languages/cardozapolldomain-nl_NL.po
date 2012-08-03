@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: cardozapolldomain\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-07-27 10:53-0000\n"
-"PO-Revision-Date: 2012-07-27 11:08-0000\n"
+"PO-Revision-Date: 2012-07-31 09:59-0000\n"
 "Last-Translator: Vinoj Cardoza <vinoj.cardoza@hotmail.com>\n"
 "Language-Team: Vinoj Cardoza <vinoj.cardoza@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -290,11 +290,11 @@ msgstr "Iedereen kan pollen"
 
 #: ../app/views/CWPViewPollOptions.class.php:32
 msgid "Only logged in users can poll"
-msgstr "Alleen ingelogde gebruikers kunnen pollen"
+msgstr "Alleen ingelogde gebruikers kunnen stemmen"
 
 #: ../app/views/CWPViewPollOptions.class.php:36
 msgid "Lock Poll by"
-msgstr "Vergrendel Poll door"
+msgstr "Vergrendel Poll met"
 
 #: ../app/views/CWPViewPollOptions.class.php:43
 msgid "Cookies"
@@ -302,7 +302,7 @@ msgstr "Cookies"
 
 #: ../app/views/CWPViewPollOptions.class.php:52
 msgid "Poll style options"
-msgstr "Poll style opties"
+msgstr "Poll stijl opties"
 
 #: ../app/views/CWPViewPollOptions.class.php:54
 msgid "Background colour"
@@ -327,7 +327,7 @@ msgstr "Poll archief opties"
 
 #: ../app/views/CWPViewPollOptions.class.php:88
 msgid "Polls to display in the older polls page"
-msgstr "Polls om weer te geven op de 'oudere polls' pagina"
+msgstr "Polls om weer te geven"
 
 #: ../app/views/CWPViewPollOptions.class.php:93
 msgid "Opened Polls Only"
@@ -343,7 +343,7 @@ msgstr "Geopende en gesloten Polls"
 
 #: ../app/views/CWPViewPollOptions.class.php:98
 msgid "No of polls to display per page in the older polls"
-msgstr "Aantal polls om per pagina weer te geven van de 'oudere polls'"
+msgstr "Aantal polls per pagina"
 
 #: ../app/views/CWPViewPollOptions.class.php:113
 msgid "Poll archive URL"
@@ -388,7 +388,7 @@ msgstr "Titel"
 
 #: ../app/views/CWPViewWidget.class.php:24
 msgid "Display Older Polls Link"
-msgstr "Geef oudere polls link weer"
+msgstr "Toon een link naar oudere polls"
 
 #: ../app/views/CWPViewWidget.class.php:30
 msgid "Yes"

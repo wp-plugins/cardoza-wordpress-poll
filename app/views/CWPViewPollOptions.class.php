@@ -124,7 +124,7 @@ class CWPViewPollOptions extends CWPView {
                    onclick="javascript:savePollOptions()"
                    onblur="javascript:setBorderDefault('save-poll-options');" 
                    onfocus="javascript:setBorder('save-poll-options');"
-                   type="button" value="Save Poll Options"/></center>
+                   type="button" value="<?php _e('Save','cardozapolldomain');?>"/></center>
             </form>
         </div>
 <?php
