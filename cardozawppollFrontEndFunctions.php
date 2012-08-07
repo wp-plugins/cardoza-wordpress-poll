@@ -32,7 +32,7 @@ function displayPollResults( $vars){
             $votes = $answer->votes;
             if($total_votes!=0) $width = ($votes/$total_votes)*100;
             else $width = 0;
-            if($answer_count == $total_answer_count) $width = 100 - $total_width;
+            if($answer_count == $total_answer_count && $total_votes>0) $width = 100 - $total_width;
             else $total_width = $total_width + round($width);
             print "<div class='result-answer'>".$answer->answer." (".$answer->votes.__(" votes", "cardozapolldomain").", ".round($width)."%)</div>";
             print '<div style="height:'.$bar_height.'px;width:'.$width.'%;background-color:#'.$bar_color.'"></div>';
