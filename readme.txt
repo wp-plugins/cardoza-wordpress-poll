@@ -106,6 +106,9 @@ if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
 
+= Version 32.6 =
+* Poll Vote button height and width fixed and not restricted.
+
 = Version 32.5 =
 * Minor bug fixed to display the vote percentage.
 

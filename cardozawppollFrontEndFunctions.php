@@ -101,7 +101,7 @@ function showPollFormSC($vars){
         <input type="hidden" value="<?php print $exp_time;?>" name="expiry" />
         <input type="hidden" value="<?php print $poll->answer_type;?>" name="answertype"/>
         <input type="hidden" value="submit_vote" name="action"/>
-        <center><input style="width:60px;height:25px;" type="button" value="<?php print __('Vote', 'cardozapolldomain');?>" onclick="javascript:vote_poll_sc(<?php print $poll->id;?>)" /></center>                
+        <center><input type="button" id="poll-wh-style" value="<?php print __('Vote', 'cardozapolldomain');?>" onclick="javascript:vote_poll_sc(<?php print $poll->id;?>)" /></center>                
     </div>
     <?php
 }
