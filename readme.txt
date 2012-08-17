@@ -31,13 +31,14 @@ Thanks for downloading and installing my plugin. You can show your appreciation 
 For more visit: http://fingerfish.com/cardoza-wordpress-poll/
 
 = Translation =
-The translation were done using a translation software. I am not sure about the correctness of the translation. If you find some mistakes in the translation in your language, please let me know through the following link comments section. Also, if you couldn't find your language and you can do it, please let me know.
+Some of the translation were done using a translation software. I am not sure about the correctness of the translation. If you find some mistakes in the translation in your language, please let me know through the following link comments section. Also, if you couldn't find your language and you can do it, please let me know.
 
 = Translated Languages =
 
 * Dutch (Translated by Niels de Bruin)
 * French (Translated by Laurent Verpeet)
 * German (Translated by Peter Kaulfuss)
+* Russian (Translated by Boris)
 * Spanish
 
 == Installation ==
@@ -105,6 +106,10 @@ That's it. Check your page or post now.
 if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
+
+= Version 32.7 =
+* Russian translation added (Translated by Boris).
+* Some of the Markup Validation done.
 
 = Version 32.6 =
 * Poll Vote button height and width fixed and not restricted.
