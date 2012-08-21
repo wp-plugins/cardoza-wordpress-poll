@@ -75,12 +75,12 @@ form select{
     font-family: Arial;
     margin-left:10px;  
 }
-#widget-poll{
+.widget-poll{
     margin-bottom: 5px;
     padding: 3px;
     text-align: left;
 }
-#widget-poll-question{
+.widget-poll-question{
     font-weight: bold;
 }
 #cwp-graph{
@@ -192,7 +192,7 @@ form select{
 	margin: .5em 0em;
 }
 
-#poll-wh-style{padding:2px 10px 2px 10px;}
+.poll-wh-style{padding:2px 10px 2px 10px;}
 
 html.wp-toolbar body.wp-admin div#footer{
     display: none;

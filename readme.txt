@@ -38,6 +38,7 @@ Some of the translation were done using a translation software. I am not sure ab
 * Dutch (Translated by Niels de Bruin)
 * French (Translated by Laurent Verpeet)
 * German (Translated by Peter Kaulfuss)
+* Portuguese-Brazilian (Translated by Rodrigo).
 * Russian (Translated by Boris)
 * Spanish
 
@@ -106,6 +107,10 @@ That's it. Check your page or post now.
 if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
+
+= Version 32.8 =
+* Portuguese-Brazilian translation added (Translated by Rodrigo).
+* All the Markup Validation done.
 
 = Version 32.7 =
 * Russian translation added (Translated by Boris).

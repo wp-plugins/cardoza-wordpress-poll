@@ -3,7 +3,7 @@
 Plugin Name: Wordpress Poll
 Plugin URI: http://fingerfish.com/cardoza-wordpress-poll
 Description: Wordpress Poll is completely ajax powered polling system. This poll plugin supports both single and multiple selection of answers.
-Version: 32.7
+Version: 32.8
 Author: Vinoj Cardoza
 Author URI: http://fingerfish.com/about-me/
 License: GPL2
@@ -75,10 +75,10 @@ function widget_cardoza_wp_poll($args){
         $expiry_date = explode('/', $poll_end_date);
         $exp_time = mktime(0,0,0,$expiry_date[1], $expiry_date[0], $expiry_date[2]);
         if($count <= $no_of_polls_in_Widget){?>
-            <div id="widget-poll" <?php if(!empty($option_value['poll_bg_color'])) echo 'style="background-color:#'.$option_value['poll_bg_color'].';"';?>>
-                <div id="widget-poll-question"><?php print $poll->question;?></div>
+            <div class="widget-poll" <?php if(!empty($option_value['poll_bg_color'])) echo 'style="background-color:#'.$option_value['poll_bg_color'].';"';?>>
+                <div class="widget-poll-question"><?php print $poll->question;?></div>
                 
-                <form id="poll<?php print $poll->id;?>">
+                <form id="poll<?php print $poll->id;?>" method="post" action="">
                 
                 <?php
                 
@@ -197,9 +197,9 @@ function cwp_poll_archive($atts){
                 if($etimestamp > $current_time) echo __("Open", "cardozapolldomain");
                 else echo __("Closed", "cardozapolldomain");
             ?>)
-            <div id="widget-poll">
+            <div class="widget-poll">
                 
-                <div id="widget-poll-question"><?php print $poll->question;?></div>
+                <div class="widget-poll-question"><?php print $poll->question;?></div>
                 <?php
                 $poll_answers = $cwp->getPollAnswers($poll->id);         
                 $vars['poll_answers'] = $poll_answers;
@@ -235,10 +235,10 @@ function cwp_poll_id_display($atts){
         $current_time = time();
         
         if($poll->id == trim($atts['id'])){?>
-            <div id="widget-poll">
-                <div id="widget-poll-question"><?php print $poll->question;?></div>
+            <div class="widget-poll">
+                <div class="widget-poll-question"><?php print $poll->question;?></div>
                 
-                <form id="pollsc<?php print $poll->id;?>">
+                <form id="pollsc<?php print $poll->id;?>" method="post" action="">
                 
                 <?php
                 
@@ -315,7 +315,7 @@ function toggleResultsVotes($pollid, $vars){
 			<?php _e('View Result', 'cardozapolldomain');?>
 		</a>
 	</center>
-	<div id="show-results<?php echo $pollid;?>" class="show-results<?php echo $pollid;?>" style="display:none;">
+	<div class="show-results<?php echo $pollid;?>" style="display:none;">
 		<?php displayPollResults($vars);?>
 		<center>
 			<a class="showformlink" href="javascript:showforms(<?php echo $pollid;?>);">
