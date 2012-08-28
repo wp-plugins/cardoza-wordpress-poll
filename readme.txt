@@ -3,7 +3,7 @@ Contributors: vinoj.cardoza
 Donate link: http://www.fingerfish.com/
 Tags: poll, cardoza, vote, widget, booth, polls, polling, votes, voting
 Requires at least: 3.0
-Tested up to: 3.4
+Tested up to: 3.4.1
 Stable tag: trunk
 License: GPLv2 or later
 
@@ -35,6 +35,7 @@ Some of the translation were done using a translation software. I am not sure ab
 
 = Translated Languages =
 
+* Danish (Translated by Henrik van der Buchwald).
 * Dutch (Translated by Niels de Bruin)
 * French (Translated by Laurent Verpeet)
 * German (Translated by Peter Kaulfuss)
@@ -107,6 +108,9 @@ That's it. Check your page or post now.
 if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
+
+= Version 32.9 =
+* Danish translation added (Translated by Henrik van der Buchwald).
 
 = Version 32.8 =
 * Portuguese-Brazilian translation added (Translated by Rodrigo).
