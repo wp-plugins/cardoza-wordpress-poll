@@ -39,9 +39,10 @@ Some of the translation were done using a translation software. I am not sure ab
 * Dutch (Translated by Niels de Bruin)
 * French (Translated by Laurent Verpeet)
 * German (Translated by Peter Kaulfuss)
+* Italian (Translated by Roberto Bani)
 * Portuguese-Brazilian (Translated by Rodrigo).
 * Russian (Translated by Boris)
-* Spanish
+* Spanish (Translated by Diego Silva Opazo)
 
 == Installation ==
 
@@ -108,6 +109,10 @@ That's it. Check your page or post now.
 if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
+
+= Version 33.0 =
+* Italian translation added (Translated by Roberto Bani).
+* Spanish translation modified (Translated by Diego Silva Opazo).
 
 = Version 32.9 =
 * Danish translation added (Translated by Henrik van der Buchwald).
