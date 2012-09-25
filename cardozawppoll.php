@@ -3,7 +3,7 @@
 Plugin Name: Wordpress Poll
 Plugin URI: http://fingerfish.com/cardoza-wordpress-poll
 Description: Wordpress Poll is completely ajax powered polling system. This poll plugin supports both single and multiple selection of answers.
-Version: 33.0
+Version: 33.1
 Author: Vinoj Cardoza
 Author URI: http://fingerfish.com/about-me/
 License: GPL2
@@ -141,77 +141,102 @@ add_shortcode("cardoza_wp_poll_archive", "cwp_poll_archive");
 
 //function to display the poll archive shortcode
 function cwp_poll_archive($atts){
+    
     $cwp = new CWPController();
     $option_value = $cwp->cwpp_options();
-    if(isset($_GET['poll_archive_page_no'])) {
-        $polls = $cwp->retrieveArchivePoll($option_value['no_of_polls_to_display_archive'], $_GET['poll_archive_page_no']);
-        $next_polls = $cwp->retrieveArchivePoll($option_value['no_of_polls_to_display_archive'], $_GET['poll_archive_page_no']+1);
-        $page_no = $_GET['poll_archive_page_no'];
+    $current_time = time();
+    
+    /* Object for Model (CWPModel.class.php) */
+    $model_cwp = new CWPModel();
+    
+    /* To get all the polls */
+    $all_polls = $model_cwp->getPollsFromDB();
+    $archive_option = $option_value['polls_to_display_archive'];
+    $polls_to_display = $option_value['no_of_polls_to_display_archive'];
+    $archive_polls = array();
+    
+    foreach($all_polls as $poll)
+    {
+        $stimestamp = $cwp->getStrToTime($poll->start_date);
+        $etimestamp = $cwp->getStrToTime($poll->end_date);
+        if($archive_option == 'open')
+        {
+            if($current_time < $etimestamp && $current_time > $stimestamp) $archive_polls[] = $poll;
+        }
+        if($archive_option == 'closed')
+        {
+            if($current_time > $etimestamp) $archive_polls[] = $poll;
+        }
+        if($archive_option == 'open-closed')
+        {
+            if($current_time > $stimestamp) $archive_polls[] = $poll;
+        }
     }
-    else{
-        $polls = $cwp->retrieveArchivePoll($option_value['no_of_polls_to_display_archive']);
-    	$page_no = 1;
+    
+    $total_polls = sizeof($archive_polls);
+    
+    if(isset($_GET['poll_archive_page_no'])) $page_no = $_GET['poll_archive_page_no'];       
+    else $page_no = 1;
+    
+    $start_from = ($page_no - 1) * $polls_to_display;
+    $end_to = ($page_no * $polls_to_display) - 1;
+    
+    $i = 0;
+    foreach($archive_polls as $poll)
+    {
+        if($i >= $start_from && $i <= $end_to) $polls[] = $poll;
+        $i++;
     }
-     
+    
     if($page_no != 1) $previous_page = $page_no -1;
     else $previous_page = $page_no = 1;
     
-    $next_page = $page_no+1;
+    if($end_to < $total_polls-1) $next_page = $page_no+1;
+    else $next_page = $page_no;
+    
     $count = 1;
     $archive_url = $option_value['archive_url'];
     $url = explode('?', $archive_url);
+    
     if(sizeof($url)>1){
         if($_GET['poll_archive_page_no']!=1) {?>
             <a style="margin-right:10px;" id="previous-page" href="<?php echo $option_value['archive_url'].'&poll_archive_page_no='.$previous_page;?>">Previous Page</a>
-        <?php
-        }
-        if(sizeof($next_polls)>0){
-        ?>
-            <a id="next-page" href="<?php echo $option_value['archive_url'].'&poll_archive_page_no='.$next_page;?>">Next Page</a>
-        <?php
-        }   
+        <?php } ?>
+        <a id="next-page" href="<?php echo $option_value['archive_url'].'&poll_archive_page_no='.$next_page;?>">Next Page</a>
+        <?php   
     }
     else{
         if($_GET['poll_archive_page_no']!=1) {?>
         <a id="previous-page" href="<?php echo $option_value['archive_url'].'?poll_archive_page_no='.$previous_page;?>">Previous Page</a>
-        <?php
-        }
-        if(sizeof($next_polls)>0){
-        ?>
-            <a id="next-page" href="<?php echo $option_value['archive_url'].'?poll_archive_page_no='.$next_page;?>">Next Page</a>
-    <?php
-        }
-    }
-    ?>
-    <?php
+        <?php } ?>
+        <a id="next-page" href="<?php echo $option_value['archive_url'].'?poll_archive_page_no='.$next_page;?>">Next Page</a>
+    <?php 
+    } 
     
     if(empty($polls)) print "<br>".__("Sorry! No polls found in the archive for this page", "cardozapolldomain");
+    
     foreach($polls as $poll){
-        
         $stimestamp = $cwp->getStrToTime($poll->start_date);
         $etimestamp = $cwp->getStrToTime($poll->end_date);
-        $current_time = time();
         ?>
-            <br/>
-            <strong>Poll id : </strong>#<?php print $poll->id." - ".date('F jS, Y', $stimestamp);?>&nbsp;to&nbsp;<?php print date('F jS, Y', $etimestamp);?>&nbsp;&nbsp;(<?php
-                if($etimestamp > $current_time) echo __("Open", "cardozapolldomain");
-                else echo __("Closed", "cardozapolldomain");
-            ?>)
-            <div class="widget-poll">
-                
-                <div class="widget-poll-question"><?php print $poll->question;?></div>
-                <?php
-                $poll_answers = $cwp->getPollAnswers($poll->id);         
-                $vars['poll_answers'] = $poll_answers;
-                $vars['total_votes'] = $poll->total_votes;
-                $vars['option_value'] = $option_value;
-                $vars['poll_id'] = $poll->id;
-                $vars['poll'] = $poll;
-                displayPollResults($vars);
-                ?>
-            </div>
+        <br/>
+        <strong>Poll id : </strong>#<?php print $poll->id." - ".date('F jS, Y', $stimestamp);?>&nbsp;to&nbsp;<?php print date('F jS, Y', $etimestamp);?>&nbsp;&nbsp;(<?php
+            if($etimestamp > $current_time) echo __("Open", "cardozapolldomain");
+            else echo __("Closed", "cardozapolldomain");
+        ?>)
+        <div class="widget-poll">
+            <div class="widget-poll-question"><?php print $poll->question;?></div>
+            <?php
+            $poll_answers = $cwp->getPollAnswers($poll->id);         
+            $vars['poll_answers'] = $poll_answers;
+            $vars['total_votes'] = $poll->total_votes;
+            $vars['option_value'] = $option_value;
+            $vars['poll_id'] = $poll->id;
+            $vars['poll'] = $poll;
+            displayPollResults($vars);
+            ?>
+        </div>
     <?php 
-        
     }
 }
 

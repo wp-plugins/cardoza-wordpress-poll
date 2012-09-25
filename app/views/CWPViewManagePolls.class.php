@@ -52,10 +52,15 @@ class CWPViewManagePolls{
                                 <td align="center"><?php print $poll->end_date;?></td>
                                 <td align="center">
                                 <?php
-                                $timestamp = $controller->getStrToTime($poll->end_date);
+                                $stimestamp = $controller->getStrToTime($poll->start_date);
+                                $etimestamp = $controller->getStrToTime($poll->end_date);
                                 $current_time = time();
-                                if($current_time < $timestamp) echo __("Open", "cardozapolldomain");
-                                else echo __("Closed", "cardozapolldomain");
+                                if($current_time < $etimestamp && $current_time > $stimestamp) 
+                                    echo __("Open", "cardozapolldomain");
+                                elseif($current_time < $stimestamp) 
+                                    echo __("Not yet opened", "cardozapolldomain");
+                                else 
+                                    echo __("Closed", "cardozapolldomain");
                                 ?>
                                 </td>
                                 <td align="center"><?php print $poll->total_votes;?></td>

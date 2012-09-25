@@ -110,6 +110,11 @@ if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
 
+= Version 33.1 =
+* Polls archive page modified.
+* Polls archive page option amended for the display.
+* New (Not yet opened) status added for the poll.
+
 = Version 33.0 =
 * Italian translation added (Translated by Roberto Bani).
 * Spanish translation modified (Translated by Diego Silva Opazo).
