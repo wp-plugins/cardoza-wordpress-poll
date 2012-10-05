@@ -1,0 +1,411 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cardozapolldomain\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-07-30 14:21-0000\n"
+"PO-Revision-Date: 2012-08-27 11:47+0100\n"
+"Last-Translator: Henrik Buchwald <henrik@buchwald.dk>\n"
+"Language-Team: Vinoj Cardoza <vinoj.cardoza@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"Language: de_DE\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../cardozawppoll.php:186
+msgid "Sorry! No polls found in the archive for this page"
+msgstr "Undskyld! Ingen meningsmålinger fundet i arkivet for denne side"
+
+#: ../cardozawppoll.php:195 ../app/views/CWPViewManagePolls.class.php:57
+#: ../app/views/CWPViewUserLogs.class.php:39
+msgid "Open"
+msgstr "Åben"
+
+#: ../cardozawppoll.php:196 ../app/views/CWPViewManagePolls.class.php:58
+#: ../app/views/CWPViewUserLogs.class.php:40
+msgid "Closed"
+msgstr "Lukket"
+
+#: ../cardozawppoll.php:313 ../app/views/CWPViewManagePolls.class.php:37
+#: ../app/views/CWPViewManagePolls.class.php:62
+msgid "View Result"
+msgstr "Vis resultat"
+
+#: ../cardozawppoll.php:320 ../cardozawppollFrontEndFunctions.php:72
+#: ../cardozawppollFrontEndFunctions.php:104
+msgid "Vote"
+msgstr "Stem"
+
+#: ../cardozawppollFrontEndFunctions.php:21
+#: ../app/views/CWPViewManagePolls.class.php:72
+msgid "Total voters"
+msgstr "Samlet vælgere / stemmer"
+
+#: ../cardozawppollFrontEndFunctions.php:26 ../app/CWPController.class.php:241
+#: ../app/CWPController.class.php:272
+#: ../app/views/CWPViewManagePolls.class.php:36
+#: ../app/views/CWPViewUserLogs.class.php:18
+msgid "Total votes"
+msgstr "Samlet vælgere / stemmer"
+
+#: ../cardozawppollFrontEndFunctions.php:37 ../app/CWPController.class.php:249
+#: ../app/CWPController.class.php:279
+msgid " votes"
+msgstr "Stemmer"
+
+#: ../cardozawppollFrontEndFunctions.php:119
+#: ../cardozawppollFrontEndFunctions.php:120
+msgid "See all polls & results"
+msgstr "Se alle afstemninger og resultater"
+
+#: ../app/CWPController.class.php:308 ../app/views/CWPViewStats.class.php:26
+msgid "Last 7 days statistics"
+msgstr "Sidste 7 dage statistik"
+
+#: ../app/CWPController.class.php:414
+msgid "User ID"
+msgstr "Bruger-ID"
+
+#: ../app/CWPController.class.php:415
+msgid "User name"
+msgstr "Bruger navn"
+
+#: ../app/CWPController.class.php:416
+msgid "Polled time"
+msgstr "Afstemnings tid"
+
+#: ../app/CWPController.class.php:417
+#: ../app/views/CWPViewPollOptions.class.php:48
+msgid "IP Address"
+msgstr "IP adresse"
+
+#: ../app/CWPController.class.php:418
+msgid "Answers"
+msgstr "Svar"
+
+#: ../app/CWPController.class.php:429
+msgid "NULL"
+msgstr "Nul"
+
+#: ../app/CWPController.class.php:442
+msgid "No user logs found for this poll"
+msgstr "WIngen bruger logs fundet for denne afstemning"
+
+#: ../app/views/CWPView.class.php:36 ../app/views/CWPView.class.php:37
+msgid "Poll"
+msgstr "Afstemning"
+
+#: ../app/views/CWPView.class.php:47
+msgid "Wordpress Poll"
+msgstr "Wordpress afstemning"
+
+#: ../app/views/CWPView.class.php:48
+msgid "Mandatory fields"
+msgstr "Obligatoriske felter"
+
+#: ../app/views/CWPView.class.php:52
+msgid "Manage Polls"
+msgstr "Administrer afstemninger"
+
+#: ../app/views/CWPView.class.php:57
+#: ../app/views/CWPViewCreatePoll.class.php:87
+msgid "Add New Poll"
+msgstr "Tilføj ny afstemning"
+
+#: ../app/views/CWPView.class.php:62
+msgid "Poll Options"
+msgstr "Afstemnings muligheder"
+
+#: ../app/views/CWPView.class.php:67
+msgid "Widget Options"
+msgstr "Widget indstillinger"
+
+#: ../app/views/CWPView.class.php:72 ../app/views/CWPViewStats.class.php:7
+msgid "Poll Statistics"
+msgstr "Afstemnings statistik"
+
+#: ../app/views/CWPView.class.php:77
+msgid "User Logs"
+msgstr "Bruger Logs"
+
+#: ../app/views/CWPViewCreatePoll.class.php:14
+#: ../app/views/CWPViewEditPoll.class.php:29
+msgid "Poll Friendly Name"
+msgstr "Poll Kaldenavn"
+
+#: ../app/views/CWPViewCreatePoll.class.php:16
+#: ../app/views/CWPViewEditPoll.class.php:31
+msgid "Friendly name"
+msgstr "Venlige navn"
+
+#: ../app/views/CWPViewCreatePoll.class.php:22
+#: ../app/views/CWPViewEditPoll.class.php:36
+msgid "Poll Question"
+msgstr "Afstemnings spørgsmål"
+
+#: ../app/views/CWPViewCreatePoll.class.php:24
+#: ../app/views/CWPViewManagePolls.class.php:31
+#: ../app/views/CWPViewUserLogs.class.php:13
+msgid "Question"
+msgstr "Sprøgsmål"
+
+#: ../app/views/CWPViewCreatePoll.class.php:30
+#: ../app/views/CWPViewEditPoll.class.php:44
+msgid "Poll Answers"
+msgstr "Afstemnings svar"
+
+#: ../app/views/CWPViewCreatePoll.class.php:33
+#: ../app/views/CWPViewCreatePoll.class.php:37
+msgid "Answer"
+msgstr "Svar"
+
+#: ../app/views/CWPViewCreatePoll.class.php:47
+msgid "Add answer"
+msgstr "Tilføj svar"
+
+#: ../app/views/CWPViewCreatePoll.class.php:52
+msgid "Remove Answer"
+msgstr "Fjern svar"
+
+#: ../app/views/CWPViewCreatePoll.class.php:55
+#: ../app/views/CWPViewEditPoll.class.php:60
+msgid "Poll Answer type"
+msgstr "fstemningens svar muligheder"
+
+#: ../app/views/CWPViewCreatePoll.class.php:57
+#: ../app/views/CWPViewEditPoll.class.php:62
+msgid "Allow users to select"
+msgstr "Tillad brugere at vælge"
+
+#: ../app/views/CWPViewCreatePoll.class.php:62
+#: ../app/views/CWPViewEditPoll.class.php:66
+msgid "Only one answer"
+msgstr "Kun et svar"
+
+#: ../app/views/CWPViewCreatePoll.class.php:63
+#: ../app/views/CWPViewEditPoll.class.php:67
+msgid "More than one answer"
+msgstr "Mer end et svar"
+
+#: ../app/views/CWPViewCreatePoll.class.php:67
+#: ../app/views/CWPViewEditPoll.class.php:71
+msgid "No of answers to allow"
+msgstr "Ingen af svarene til at tillade"
+
+#: ../app/views/CWPViewCreatePoll.class.php:72
+#: ../app/views/CWPViewEditPoll.class.php:76
+msgid "Poll Start/End Date"
+msgstr "Afstemningens Start/slul dato"
+
+#: ../app/views/CWPViewCreatePoll.class.php:74
+#: ../app/views/CWPViewEditPoll.class.php:78
+#: ../app/views/CWPViewManagePolls.class.php:33
+#: ../app/views/CWPViewUserLogs.class.php:15
+msgid "Start date"
+msgstr "Start dato"
+
+#: ../app/views/CWPViewCreatePoll.class.php:75
+#: ../app/views/CWPViewCreatePoll.class.php:78
+msgid "Format"
+msgstr "Udseende/format"
+
+#: ../app/views/CWPViewCreatePoll.class.php:77
+#: ../app/views/CWPViewEditPoll.class.php:81
+#: ../app/views/CWPViewManagePolls.class.php:34
+#: ../app/views/CWPViewUserLogs.class.php:16
+msgid "End date"
+msgstr "Slut dato"
+
+#: ../app/views/CWPViewEditPoll.class.php:20
+#: ../app/views/CWPViewManagePolls.class.php:18
+msgid "Refresh Poll List"
+msgstr "Opdater afstemnings liste"
+
+#: ../app/views/CWPViewEditPoll.class.php:23
+#: ../app/views/CWPViewManagePolls.class.php:21
+msgid "Edit a Poll"
+msgstr "Rdiger en afstemning"
+
+#: ../app/views/CWPViewEditPoll.class.php:26
+#: ../app/views/CWPViewManagePolls.class.php:24
+msgid "Delete a Poll"
+msgstr "Slet en afstemning"
+
+#: ../app/views/CWPViewEditPoll.class.php:38
+#: ../app/views/CWPViewManagePolls.class.php:30
+#: ../app/views/CWPViewUserLogs.class.php:12
+msgid "Name"
+msgstr "Navn"
+
+#: ../app/views/CWPViewEditPoll.class.php:52
+msgid "Edit"
+msgstr "Redigerändern"
+
+#: ../app/views/CWPViewEditPoll.class.php:53
+msgid "Delete"
+msgstr "Slet"
+
+#: ../app/views/CWPViewEditPoll.class.php:57
+msgid "Add more answers"
+msgstr "Tilføj flere svar"
+
+#: ../app/views/CWPViewEditPoll.class.php:92
+#: ../app/views/CWPViewPollOptions.class.php:127
+#: ../app/views/CWPViewWidget.class.php:68
+msgid "Save"
+msgstr "Gem"
+
+#: ../app/views/CWPViewManagePolls.class.php:32
+#: ../app/views/CWPViewUserLogs.class.php:14
+msgid "Answer type"
+msgstr "Svar typer"
+
+#: ../app/views/CWPViewManagePolls.class.php:35
+#: ../app/views/CWPViewUserLogs.class.php:17
+msgid "Status"
+msgstr "Status"
+
+#: ../app/views/CWPViewPollOptions.class.php:15
+msgid "Poll options"
+msgstr "Afstemnings muligheder"
+
+#: ../app/views/CWPViewPollOptions.class.php:18
+msgid "Who is allowed to vote?"
+msgstr "Hvem kan deltage i afstemningen?"
+
+#: ../app/views/CWPViewPollOptions.class.php:27
+msgid "Anyone can poll"
+msgstr "Alle kan deltage"
+
+#: ../app/views/CWPViewPollOptions.class.php:32
+msgid "Only logged in users can poll"
+msgstr "Kun registeret gruger kan deltage"
+
+#: ../app/views/CWPViewPollOptions.class.php:36
+msgid "Lock Poll by"
+msgstr "Register afstemningen ved"
+
+#: ../app/views/CWPViewPollOptions.class.php:43
+msgid "Cookies"
+msgstr "Cookies"
+
+#: ../app/views/CWPViewPollOptions.class.php:52
+msgid "Poll style options"
+msgstr "Afstemningens stil muligheder"
+
+#: ../app/views/CWPViewPollOptions.class.php:54
+msgid "Background colour"
+msgstr "Baggrunds farve"
+
+#: ../app/views/CWPViewPollOptions.class.php:63
+msgid "Colour"
+msgstr "Farve"
+
+#: ../app/views/CWPViewPollOptions.class.php:72
+#: ../app/views/CWPViewWidget.class.php:56
+msgid "Height"
+msgstr "Højde"
+
+#: ../app/views/CWPViewPollOptions.class.php:81
+msgid "Preview of the poll bar"
+msgstr "Udkast af afstemnings boksen"
+
+#: ../app/views/CWPViewPollOptions.class.php:86
+msgid "Poll archive options"
+msgstr "Afstemningens arkiverings indstillinger"
+
+#: ../app/views/CWPViewPollOptions.class.php:88
+msgid "Polls to display in the older polls page"
+msgstr "Afstemninger skal vises i ældre meningsmålinger på siden"
+
+#: ../app/views/CWPViewPollOptions.class.php:93
+msgid "Opened Polls Only"
+msgstr "Kun åbnede meningsmålinger"
+
+#: ../app/views/CWPViewPollOptions.class.php:94
+msgid "Closed Polls Only"
+msgstr "Kun lukket afstemninger"
+
+#: ../app/views/CWPViewPollOptions.class.php:95
+msgid "Opened and Closed Polls"
+msgstr "Åbne og lukket afstemninger"
+
+#: ../app/views/CWPViewPollOptions.class.php:98
+msgid "No of polls to display per page in the older polls"
+msgstr "Ingen af meningsmålinger skal vises på side i de ældre meningsmålinger"
+
+#: ../app/views/CWPViewPollOptions.class.php:113
+msgid "Poll archive URL"
+msgstr "URL til arkivside"
+
+#: ../app/views/CWPViewStats.class.php:27
+msgid "Last 15 days statistics"
+msgstr "Statistik for de sidste 15 dage"
+
+#: ../app/views/CWPViewStats.class.php:28
+msgid "Last 30 days statistics"
+msgstr "Statistik for de sidste 30 dage"
+
+#: ../app/views/CWPViewStats.class.php:69
+msgid ""
+"No data available to analyze. If you have installed or updated the plugin "
+"recently, poll statistics will not be available until someone votes after "
+"the installation or updation."
+msgstr ""
+"Ingen data til rådighed til at analysere. Hvis du har installeret eller "
+"opdateret plugin for nylig, vil meningsmåling statistikker ikke være "
+"tilgængelige indtil nogen stemmer efter installationen eller updation."
+
+#: ../app/views/CWPViewUserLogs.class.php:5
+msgid "This feature will show the list of users voted for a particular poll."
+msgstr ""
+"Denne funktion vil vise en liste over brugere stemte for en bestemt "
+"afstemning."
+
+#: ../app/views/CWPViewUserLogs.class.php:6
+msgid ""
+"The results will be shown only when the logged in users has voted for the "
+"poll. (The answers will be visible only for the votes after 26.06.2012)"
+msgstr ""
+"Resultaterne vil kun blive vist, når den indloggede brugere har stemt for "
+"afstemningen. (Svarene vil først blive synlige for stemmerne efter "
+"2012/06/26)"
+
+#: ../app/views/CWPViewUserLogs.class.php:7
+msgid "Poll User Logs"
+msgstr "Afstemnings bruger logs"
+
+#: ../app/views/CWPViewUserLogs.class.php:19
+#: ../app/views/CWPViewUserLogs.class.php:44
+msgid "View User Logs"
+msgstr "SE bruger logs"
+
+#: ../app/views/CWPViewWidget.class.php:15
+msgid "Widget options"
+msgstr "Widget indstillinger"
+
+#: ../app/views/CWPViewWidget.class.php:18
+msgid "Title"
+msgstr "Titel"
+
+#: ../app/views/CWPViewWidget.class.php:24
+msgid "Display Older Polls Link"
+msgstr "Vis ældre afstemnings link"
+
+#: ../app/views/CWPViewWidget.class.php:30
+msgid "Yes"
+msgstr "Ja"
+
+#: ../app/views/CWPViewWidget.class.php:35
+msgid "No"
+msgstr "Nej"
+
+#: ../app/views/CWPViewWidget.class.php:38
+msgid "Select the latest number of polls to be displayed"
+msgstr "Vælg den nyeste antal afstemninger, der skal vises."
+
+#: ../app/views/CWPViewWidget.class.php:49
+msgid "Width"
+msgstr "Bredde"
