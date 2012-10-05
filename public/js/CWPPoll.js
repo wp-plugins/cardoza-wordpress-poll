@@ -2,6 +2,8 @@
 var no_of_answers;
 var show_alert;
 var i;
+var answer_type;
+var max_no_answers;
 
 //Body on load
 jQuery(document).ready(function(){
@@ -108,28 +110,81 @@ function validateAddNewPollForm(){
     
 }
 
-function vote_poll(pollid){
-    jQuery('#show-form'+pollid).fadeOut(500);
-    jQuery('#show-results'+pollid).css('display', 'none');
-    data = jQuery('#poll'+pollid).serialize();
-    jQuery.post(ajaxurl, data,  
-        function(response){
-            jQuery('#poll'+pollid).html(response);
-            jQuery('#pollsc'+pollid).html(response);
-        }
-    );
-}
-function vote_poll_sc(pollid){
-    jQuery('#show-form'+pollid).fadeOut(500);
-    jQuery('#show-results'+pollid).css('display', 'none');
+function vote_poll(pollid, answertype, maxnoanswers){
     
-    data = jQuery('#pollsc'+pollid).serialize();
-    jQuery.post(ajaxurl, data,  
-        function(response){
-            jQuery('#poll'+pollid).html(response);
-            jQuery('#pollsc'+pollid).html(response);
-        }
-    );
+    if(answertype == 'multiple')
+    {
+        data = jQuery('#poll'+pollid).serialize();
+        should_not_exceed = maxnoanswers + 1;
+        find_string = "option" + should_not_exceed;
+        var n=data.search(find_string);
+        if(n < 0)
+            {
+                jQuery('#show-form'+pollid).fadeOut(500);
+                jQuery('#show-results'+pollid).css('display', 'none');
+                jQuery.post(ajaxurl, data,  
+                    function(response){
+                        jQuery('#poll'+pollid).html(response);
+                        jQuery('#pollsc'+pollid).html(response);
+                    }
+                );
+            }
+        else
+            {
+                jAlert("Sorry! Maximum no of answers allowed is " + maxnoanswers, "Error message");
+            }
+    }
+    if(answertype == 'one')
+    {
+        data = jQuery('#poll'+pollid).serialize();
+        jQuery('#show-form'+pollid).fadeOut(500);
+        jQuery('#show-results'+pollid).css('display', 'none');
+        jQuery.post(ajaxurl, data,  
+            function(response){
+                jQuery('#poll'+pollid).html(response);
+                jQuery('#pollsc'+pollid).html(response);
+            }
+        ); 
+    }
+}
+
+
+function vote_poll_sc(pollid, answertype, maxnoanswers){
+  
+    if(answertype == 'multiple')
+    {
+        data = jQuery('#pollsc'+pollid).serialize();
+        should_not_exceed = maxnoanswers + 1;
+        find_string = "option" + should_not_exceed;
+        var n=data.search(find_string);
+        if(n < 0)
+            {
+                jQuery('#show-form'+pollid).fadeOut(500);
+                jQuery('#show-results'+pollid).css('display', 'none');
+                jQuery.post(ajaxurl, data,  
+                    function(response){
+                        jQuery('#poll'+pollid).html(response);
+                        jQuery('#pollsc'+pollid).html(response);
+                    }
+                );
+            }
+        else
+            {
+                jAlert("Sorry! Maximum no of answers allowed is " + maxnoanswers, "Error message");
+            }
+    }
+    if(answertype == 'one')
+    {
+        data = jQuery('#pollsc'+pollid).serialize();
+        jQuery('#show-form'+pollid).fadeOut(500);
+        jQuery('#show-results'+pollid).css('display', 'none');
+        jQuery.post(ajaxurl, data,  
+            function(response){
+                jQuery('#poll'+pollid).html(response);
+                jQuery('#pollsc'+pollid).html(response);
+            }
+        ); 
+    }    
 }
 
 function cancel_vote_poll(pollid){

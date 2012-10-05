@@ -33,7 +33,7 @@ class CWPModel {
         
         global $wpdb;
         $all_polls = $wpdb->get_results("SELECT 
-                    id, name, question, answer_type, start_date, end_date, total_votes
+                    id, name, question, answer_type, no_of_answers, start_date, end_date, total_votes
                     FROM ".$wpdb->prefix."cwp_poll ORDER BY id DESC");
         return $all_polls;
     }
@@ -78,7 +78,7 @@ class CWPModel {
         $all_polls = array();
         
         $all_polls = $wpdb->get_results("SELECT 
-                    id, name, question, answer_type, start_date, end_date, total_votes 
+                    id, name, question, answer_type, no_of_answers, start_date, end_date, total_votes 
                     FROM ".$wpdb->prefix."cwp_poll ORDER BY id DESC");
         return $all_polls;
     }
