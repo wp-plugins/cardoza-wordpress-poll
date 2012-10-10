@@ -115,10 +115,8 @@ function vote_poll(pollid, answertype, maxnoanswers){
     if(answertype == 'multiple')
     {
         data = jQuery('#poll'+pollid).serialize();
-        should_not_exceed = maxnoanswers + 1;
-        find_string = "option" + should_not_exceed;
-        var n=data.search(find_string);
-        if(n < 0)
+        var n=data.match(/option/g);
+        if(parseInt(n.length) <= parseInt(maxnoanswers))
             {
                 jQuery('#show-form'+pollid).fadeOut(500);
                 jQuery('#show-results'+pollid).css('display', 'none');
@@ -154,10 +152,8 @@ function vote_poll_sc(pollid, answertype, maxnoanswers){
     if(answertype == 'multiple')
     {
         data = jQuery('#pollsc'+pollid).serialize();
-        should_not_exceed = maxnoanswers + 1;
-        find_string = "option" + should_not_exceed;
-        var n=data.search(find_string);
-        if(n < 0)
+        var n=data.match(/option/g);
+        if(parseInt(n.length) <= parseInt(maxnoanswers))
             {
                 jQuery('#show-form'+pollid).fadeOut(500);
                 jQuery('#show-results'+pollid).css('display', 'none');

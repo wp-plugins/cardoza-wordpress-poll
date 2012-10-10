@@ -110,6 +110,9 @@ if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
 
+= Version 33.3 =
+* Javascript function for identifying max no of answers changed.
+
 = Version 33.2 =
 * A major bug multiple choice polls do not lock out more choices is sorted out now.
 
