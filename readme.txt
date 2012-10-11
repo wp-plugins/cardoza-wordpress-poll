@@ -107,6 +107,12 @@ That's it. Check your page or post now.
 5. Click 'View Result'.
 6. Once clicked it will display the poll result.
 
+= How do I add images poll? =
+1. Add the images in your media of wordpress backend.
+2. Copy the 'File Url' of your uploaded image.
+3. Paste the Url in the Answers of 'Add New Image Poll'.
+4. Done
+
 if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
