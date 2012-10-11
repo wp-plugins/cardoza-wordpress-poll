@@ -117,6 +117,9 @@ if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
 
+= Version 33.5 =
+* Donation request for adding new image poll is removed and available for free to everyone.
+
 = Version 33.4 =
 * New feature - Image poll included in the plugin.
 
