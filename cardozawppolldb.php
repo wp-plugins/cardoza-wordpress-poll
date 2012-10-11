@@ -1,6 +1,6 @@
 <?php
 global $CWP_db_version;
-$CWP_db_version = "1.3";
+$CWP_db_version = "1.4";
 
 function CWP_install(){
     global $wpdb;
@@ -19,6 +19,7 @@ function CWP_install(){
                                 start_date tinytext not null,
                                 end_date tinytext not null,
                                 total_votes int(10) not null,
+                                poll_type tinytext null,
 				UNIQUE KEY id (id));";
     
     $create_poll_answer_table = "CREATE TABLE ".$poll_answer_table." (
@@ -55,6 +56,7 @@ function cwp_db_update(){
     
     $installed_version = get_option('CWP_db_Version');
     $poll_logs_table = $wpdb->prefix."cwp_poll_logs";
+    $poll_table = $wpdb->prefix."cwp_poll";
     
     if(!empty($installed_version) && $installed_version == '1.0'){
         if($installed_version != $CWP_db_version){
@@ -69,8 +71,11 @@ function cwp_db_update(){
 				userid tinytext null,
                                 answerid tinytext null,
 				UNIQUE KEY id (id));";
+            $alter_poll_table = "ALTER TABLE ".$poll_table."
+				ADD poll_type tinytext null";
             require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
             dbDelta($create_poll_logs_table);
+            $wpdb->query($alter_poll_table);
         }
     }
     
@@ -87,19 +92,35 @@ function cwp_db_update(){
 				userid tinytext null,
                                 answerid tinytext null,
 				UNIQUE KEY id (id));";
+            $alter_poll_table = "ALTER TABLE ".$poll_table."
+				ADD poll_type tinytext null";
             require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
             dbDelta($create_poll_logs_table);
+            $wpdb->query($alter_poll_table);
         }
     }
     
     if(!empty($installed_version) && $installed_version == '1.2'){
         if($installed_version != $CWP_db_version){
             $create_poll_logs_table = "ALTER TABLE ".$poll_logs_table."
-				ADD answerid tinytext null";
+                                    ADD answerid tinytext null";
+            
+            $alter_poll_table = "ALTER TABLE ".$poll_table."
+                                    ADD poll_type tinytext null";
+            
             require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
             dbDelta($create_poll_logs_table);
+            $wpdb->query($alter_poll_table);
         }
     }
+    if(!empty($installed_version) && $installed_version == '1.3'){
+        if($installed_version != $CWP_db_version){
+            $alter_poll_table = "ALTER TABLE ".$poll_table." ADD poll_type tinytext null";
+            require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+            $wpdb->query($alter_poll_table);
+        }
+    }
+    
     
     update_option("CWP_db_Version", $CWP_db_version);
 }

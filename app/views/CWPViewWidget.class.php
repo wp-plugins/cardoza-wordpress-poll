@@ -11,7 +11,7 @@ class CWPViewWidget{
         $opts = $controller->cwpp_options();
         
         ?>
-        <div id="tab4" class="tab-content">
+        <div id="tab5" class="tab-content">
             <h3><?php _e('Widget options','cardozapolldomain');?></h3>
             <div id="box">
                 <form id="widget-options">

@@ -7,13 +7,14 @@ class CWPModel {
         global $wpdb;
         $table = $wpdb->prefix.'cwp_poll'; 
         $insert_poll = $wpdb->insert($table, array(
-            'name' => $vars['name'],
-            'question' => $vars['question'],
-            'answer_type' => $vars['answer_type'] ,
+            'name'          => $vars['name'],
+            'question'      => $vars['question'],
+            'answer_type'   => $vars['answer_type'] ,
             'no_of_answers' => $vars['no_of_answers'],
-            'start_date' => $vars['s_date'],
-            'end_date' => $vars['e_date'],
-			'total_votes' => 0
+            'start_date'    => $vars['s_date'],
+            'end_date'      => $vars['e_date'],
+            'poll_type'     => $vars['poll_type'],
+            'total_votes'   => 0
         ));
         
         $poll_id = $wpdb->get_results("SELECT max(id) as 'maxid' FROM ".$wpdb->prefix."cwp_poll");
@@ -32,9 +33,7 @@ class CWPModel {
     public function getPollsFromDB(){
         
         global $wpdb;
-        $all_polls = $wpdb->get_results("SELECT 
-                    id, name, question, answer_type, no_of_answers, start_date, end_date, total_votes
-                    FROM ".$wpdb->prefix."cwp_poll ORDER BY id DESC");
+        $all_polls = $wpdb->get_results("SELECT * FROM ".$wpdb->prefix."cwp_poll ORDER BY id DESC");
         return $all_polls;
     }
     
@@ -77,9 +76,7 @@ class CWPModel {
         global $wpdb;
         $all_polls = array();
         
-        $all_polls = $wpdb->get_results("SELECT 
-                    id, name, question, answer_type, no_of_answers, start_date, end_date, total_votes 
-                    FROM ".$wpdb->prefix."cwp_poll ORDER BY id DESC");
+        $all_polls = $wpdb->get_results("SELECT * FROM ".$wpdb->prefix."cwp_poll ORDER BY id DESC");
         return $all_polls;
     }
     
@@ -91,9 +88,7 @@ class CWPModel {
         if($page_no<1) $to = 0;
         else $to = $page_no*$no_of_polls;
         
-        $all_polls = $wpdb->get_results("SELECT 
-                    id, name, question, answer_type, start_date, end_date, total_votes 
-                    FROM ".$wpdb->prefix."cwp_poll ORDER BY id DESC LIMIT ".$to.",".$no_of_polls);
+        $all_polls = $wpdb->get_results("SELECT * FROM ".$wpdb->prefix."cwp_poll ORDER BY id DESC LIMIT ".$to.",".$no_of_polls);
         
         return $all_polls;
     }
@@ -103,9 +98,7 @@ class CWPModel {
         $poll_answers = array();
         $poll = array();
         $vars = array();
-        $poll = $wpdb->get_results("SELECT 
-                    id, name, question, answer_type, no_of_answers, start_date, end_date, total_votes 
-                    FROM ".$wpdb->prefix."cwp_poll WHERE id=".$poll_id);
+        $poll = $wpdb->get_results("SELECT * FROM ".$wpdb->prefix."cwp_poll WHERE id=".$poll_id);
         array_push($vars, $poll);
         $poll_answers = $wpdb->get_results("SELECT * FROM ".$wpdb->prefix."cwp_poll_answers WHERE pollid=".$poll_id);
         array_push($vars, $poll_answers);

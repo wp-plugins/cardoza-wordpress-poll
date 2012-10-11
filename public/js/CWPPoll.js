@@ -12,6 +12,8 @@ jQuery(document).ready(function(){
     showTab(1);
     jQuery('#start_date').datepicker();
     jQuery('#end_date').datepicker();
+    jQuery('#image_start_date').datepicker();
+    jQuery('#image_end_date').datepicker();
     jQuery('#poll-preview').css('height', '0px');
     jQuery("#no-of-answers, #widget-height, #widget-width, #poll-bar-height").keydown(function(event) {
         // Allow: backspace, delete, tab and escape
@@ -75,10 +77,11 @@ function pollSetHeight(value){
 function validateAddNewPollForm(){
     
     show_alert = 0;
-    if((jQuery('#poll-name').val()=="") || 
-        (jQuery('#poll-question').val()=="")){
+    
+    if((jQuery('#poll-name').val()=="") ||  (jQuery('#poll-question').val()=="")){
         show_alert = 1;
     }
+    
     if(jQuery('#poll-answer-type').val()=="multiple"){
         
         if((jQuery('#no-of-answers').val()>no_of_answers)||(jQuery('#no-of-answers').val()<2)){
@@ -110,6 +113,45 @@ function validateAddNewPollForm(){
     
 }
 
+function validateAddNewImagePollForm(){
+    
+    show_alert = 0;
+    
+    if((jQuery('#image-poll-name').val()=="") ||  (jQuery('#image-poll-question').val()=="")){
+        show_alert = 1;
+    }
+    
+    if(jQuery('#image-poll-answer-type').val()=="multiple"){
+        
+        if((jQuery('#image-no-of-answers').val()>no_of_answers)||(jQuery('#image-no-of-answers').val()<2)){
+            
+            jAlert("The number of answers found is less than the value you specified", 'Warning!');
+            show_alert = 1;
+        }
+    }
+    
+    for(i=1; i<=no_of_answers; i++){
+        if(jQuery('#image-ans'+no_of_answers).val()==""){
+            show_alert = 1;
+        }
+    }
+    
+    if(show_alert==1) jAlert("All the mandatory (*) fields should be filled in to add new poll!", 'Alert!');
+    else{
+        jConfirm('Do you want to create this poll?', 'Confirmation Dialog', function(r) {
+            if(r==true){
+                jAlert("Poll saved successfully!", "Save message");
+                jQuery.post(ajaxurl, jQuery('#image-create-poll').serialize(),  
+                    function(response){
+                        clearAll();
+                    }
+                );
+            }
+        });
+    }
+    
+}
+
 function vote_poll(pollid, answertype, maxnoanswers){
     
     if(answertype == 'multiple')
@@ -127,10 +169,7 @@ function vote_poll(pollid, answertype, maxnoanswers){
                     }
                 );
             }
-        else
-            {
-                jAlert("Sorry! Maximum no of answers allowed is " + maxnoanswers, "Error message");
-            }
+        else jAlert("Sorry! Maximum no of answers allowed is " + maxnoanswers, "Error message");
     }
     if(answertype == 'one')
     {
@@ -164,10 +203,7 @@ function vote_poll_sc(pollid, answertype, maxnoanswers){
                     }
                 );
             }
-        else
-            {
-                jAlert("Sorry! Maximum no of answers allowed is " + maxnoanswers, "Error message");
-            }
+        else jAlert("Sorry! Maximum no of answers allowed is " + maxnoanswers, "Error message");
     }
     if(answertype == 'one')
     {
@@ -445,9 +481,9 @@ function showTab(id){
 
 function reset(){
     
-    jQuery('#tab1, #tab2, #tab3, #tab4, #tab5, #tab6').css('display', 'none');
-    jQuery('#menu-tab1, #menu-tab2, #menu-tab3, #menu-tab4, #menu-tab5, #menu-tab6').css('background-color', '#fff');
-    jQuery('#menu-tab1, #menu-tab2, #menu-tab3, #menu-tab4, #menu-tab5, #menu-tab6').css('color', '#4a7194');
+    jQuery('#tab1, #tab2, #tab3, #tab4, #tab5, #tab6, #tab7').css('display', 'none');
+    jQuery('#menu-tab1, #menu-tab2, #menu-tab3, #menu-tab4, #menu-tab5, #menu-tab6, #menu-tab7').css('background-color', '#fff');
+    jQuery('#menu-tab1, #menu-tab2, #menu-tab3, #menu-tab4, #menu-tab5, #menu-tab6, #menu-tab7').css('color', '#4a7194');
 }
 
 function clearAll(){

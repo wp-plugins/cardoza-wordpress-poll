@@ -11,7 +11,7 @@ class CWPViewPollOptions extends CWPView {
         $controller = new CWPController();
         $opts = $controller->cwpp_options();
         ?>
-        <div id="tab3" class="tab-content">
+        <div id="tab4" class="tab-content">
             <h3><?php _e('Poll options','cardozapolldomain');?></h3>
             <div id="box">
                 <form id="poll-options">

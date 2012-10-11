@@ -34,7 +34,10 @@ function displayPollResults( $vars){
             else $width = 0;
             if($answer_count == $total_answer_count && $total_votes>0) $width = 100 - $total_width;
             else $total_width = $total_width + round($width);
-            print "<div class='result-answer'>".$answer->answer." (".$answer->votes.__(" votes", "cardozapolldomain").", ".round($width)."%)</div>";
+            if($poll->poll_type == 'image_poll')
+                print "<div class='result-answer'><img src='".$answer->answer."' width='100' alt='".$answer->answer."'/> <br />(".$answer->votes.__(" votes", "cardozapolldomain").", ".round($width)."%)</div>";
+            else
+                print "<div class='result-answer'>".$answer->answer." (".$answer->votes.__(" votes", "cardozapolldomain").", ".round($width)."%)</div>";
             print '<div style="height:'.$bar_height.'px;width:'.$width.'%;background-color:#'.$bar_color.'"></div>';
         } 
     ?>
@@ -48,23 +51,40 @@ function showPollForm($vars){
     $total = $vars['total_votes'];
     $option_value = $vars['option_value'];
     $poll = $vars['poll'];
+    
     $option = 1;
     $exp_time = $vars['exp_time'];
     if(empty($poll->no_of_answers)) $poll->no_of_answers = 100;
     ?>
     <div id="show-form<?php echo $poll->id;?>" class="show-form<?php echo $poll->id;?>">
+        
         <?php
+        print '<table>';
         foreach($poll_answers as $answer){
-            if($poll->answer_type == "one"){?>
-                <input type="radio" name="<?php print $poll->id;?>" value="<?php print $answer->id;?>" /><?php print $answer->answer;?><br/>
-            <?php
+            if($poll->answer_type == "one"){
+                    print '<tr><td valign="middle"><input type="radio" name="'.$poll->id.'" value="'.$answer->id.'" /></td>';
+                    if($poll->poll_type == 'image_poll') {
+                        print '<td><img src="'.$answer->answer.'" width="100" alt="'.$answer->answer.'" /></td>';
+                    }
+                    else {
+                        print '<td>'.$answer->answer.'</td>';
+                    }
+                    print '</tr>';
             }
-            if($poll->answer_type == "multiple"){?>
-                <input type="checkbox" name="option<?php print $option;?>" value="<?php print $answer->id;?>" /><?php print $answer->answer;?><br/>
-            <?php
+            if($poll->answer_type == "multiple"){
+                print '<tr><td valign="middle"><input type="checkbox" name="option'.$option.'" value="'.$answer->id.'" /></td>';
+                if($poll->poll_type == 'image_poll') {
+                        print '<td><img src="'.$answer->answer.'" width="100" alt="'.$answer->answer.'"/></td>';
+                    }
+                    else {
+                        print '<td>'.$answer->answer.'</td>';
+                    }
+                print '</tr>';
             }
             $option++;
-        }?>
+        }
+        print '</table>';
+        ?>
         <input type="hidden" value="<?php print $poll->id;?>" name="poll_id" />
         <input type="hidden" value="<?php print $exp_time;?>" name="expiry" />
         <input type="hidden" value="<?php print $poll->answer_type;?>" name="answertype"/>
@@ -88,17 +108,32 @@ function showPollFormSC($vars){
     ?>
     <div id="show-form<?php echo $poll->id;?>" class="show-form<?php echo $poll->id;?>">
         <?php
+        print '<table>';
         foreach($poll_answers as $answer){
-            if($poll->answer_type == "one"){?>
-                <input type="radio" name="<?php print $poll->id;?>" value="<?php print $answer->id;?>" /><?php print $answer->answer;?><br/>
-            <?php
+            if($poll->answer_type == "one"){
+                    print '<tr><td valign="middle"><input type="radio" name="'.$poll->id.'" value="'.$answer->id.'" /></td>';
+                    if($poll->poll_type == 'image_poll') {
+                        print '<td><img src="'.$answer->answer.'" width="100" alt="'.$answer->answer.'" /></td>';
+                    }
+                    else {
+                        print '<td>'.$answer->answer.'</td>';
+                    }
+                    print '</tr>';
             }
-            if($poll->answer_type == "multiple"){?>
-                <input type="checkbox" name="option<?php print $option;?>" value="<?php print $answer->id;?>" /><?php print $answer->answer;?><br/>
-            <?php
+            if($poll->answer_type == "multiple"){
+                print '<tr><td valign="middle"><input type="checkbox" name="option'.$option.'" value="'.$answer->id.'" /></td>';
+                if($poll->poll_type == 'image_poll') {
+                        print '<td><img src="'.$answer->answer.'" width="100"  alt="'.$answer->answer.'" /></td>';
+                    }
+                    else {
+                        print '<td>'.$answer->answer.'</td>';
+                    }
+                print '</tr>';
             }
             $option++;
-        }?>
+        }
+        print '</table>';
+        ?>
         <input type="hidden" value="<?php print $poll->id;?>" name="poll_id" />
         <input type="hidden" value="<?php print $exp_time;?>" name="expiry" />
         <input type="hidden" value="<?php print $poll->answer_type;?>" name="answertype"/>

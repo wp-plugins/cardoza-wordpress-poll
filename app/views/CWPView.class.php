@@ -5,6 +5,7 @@
  */
 
 require 'CWPViewCreatePoll.class.php';
+require 'CWPViewCreateImagePoll.class.php';
 require 'CWPViewPollOptions.class.php';
 require 'CWPViewWidget.class.php';
 require 'CWPViewManagePolls.class.php';
@@ -59,21 +60,26 @@ class CWPView {
                 </li>
                 <li>
                     <a id="menu-tab3" href="javascript:showTab(3);">
-                        <?php _e('Poll Options', 'cardozapolldomain');?>
+                        <?php _e('Add New Image Poll', 'cardozapolldomain');?>
                     </a>
                 </li>
                 <li>
                     <a id="menu-tab4" href="javascript:showTab(4);">
-                        <?php _e('Widget Options', 'cardozapolldomain');?> *
+                        <?php _e('Poll Options', 'cardozapolldomain');?>
                     </a>
                 </li>
                 <li>
                     <a id="menu-tab5" href="javascript:showTab(5);">
-                        <?php _e('Poll Statistics', 'cardozapolldomain');?>
+                        <?php _e('Widget Options', 'cardozapolldomain');?> *
                     </a>
                 </li>
                 <li>
                     <a id="menu-tab6" href="javascript:showTab(6);">
+                        <?php _e('Poll Statistics', 'cardozapolldomain');?>
+                    </a>
+                </li>
+                <li>
+                    <a id="menu-tab7" href="javascript:showTab(7);">
                         <?php _e('User Logs', 'cardozapolldomain');?>
                     </a>
                 </li>
@@ -86,6 +92,7 @@ class CWPView {
              */
             $this->view_manage_poll->init();
             $view_create_poll = new CWPViewCreatePoll();
+            $view_create_image_poll = new CWPViewCreateImagePoll();
             $view_poll_options = new CWPViewPollOptions();
             $view_widget_options = new CWPViewWidget();
             $view_stats = new CWPViewStats();

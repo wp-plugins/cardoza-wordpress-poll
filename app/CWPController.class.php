@@ -62,6 +62,7 @@ class CWPController {
         $vars['no_of_answers'] = $_POST['no_of_answers'];
         $vars['s_date'] = $_POST['s_date'];
         $vars['e_date'] = $_POST['e_date'];
+        $vars['poll_type'] = $_POST['poll_type'];
         
         for($i=1;$i<=50;$i++) {
             if(!empty($_POST['answer'.$i])) array_push($answers, $_POST['answer'.$i]);
@@ -207,6 +208,7 @@ class CWPController {
         $expire = $_POST['expiry'];
         $status = 0;
         $option_value = $this->cwpp_options();
+        $vars['option_value'] = $option_value;
         $answerid = array();
         if($_POST['answertype'] == 'one'){
             if(isset($_POST[$pollid])){
@@ -245,8 +247,11 @@ class CWPController {
                 $votes = $answer->votes;
                 if($total!=0) $width = ($votes/$total)*100;
                 else $width = 0;
-        
-                print $answer->answer." (".$answer->votes.__(" votes", "cardozapolldomain").", ".intval($width)."%)";
+                
+                if($poll[0]->poll_type == 'image_poll')
+                    print "<div class='result-answer'><img src='".$answer->answer."' width='100' alt='".$answer->answer."'/> <br />(".$answer->votes.__(" votes", "cardozapolldomain").", ".round($width)."%)</div>";
+                else
+                    print "<div class='result-answer'>".$answer->answer." (".$answer->votes.__(" votes", "cardozapolldomain").", ".round($width)."%)</div>";
                 ?>
                 <br/>
                 <div style="

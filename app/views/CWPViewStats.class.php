@@ -3,7 +3,7 @@
 class CWPViewStats {
     function __construct($vars = null) {
         ?>
-        <div id="tab5" class="tab-content">
+        <div id="tab6" class="tab-content">
             <h3><?php _e('Poll Statistics','cardozapolldomain');?></h3>
             <?php
             $controller = new CWPController();

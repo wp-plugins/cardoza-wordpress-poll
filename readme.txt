@@ -16,8 +16,9 @@ This poll has the following features which uses both ajax and jquery.
 2. Administrator can specify how many polls to be displayed in the archive page.
 3. Administrator can view the poll statistics by date wise.
 4. User logs can be seen in the admin section.
-5. Poll access can be locked by cookies, IP address or user id.
-6. Translation enabled.
+5. Image polls available.
+6. Poll access can be locked by cookies, IP address or user id.
+7. Translation enabled.
 
 = Note =
 1. If you find any bugs, please report in the following link, so that it will be fixed as quick as possible.
@@ -109,6 +110,9 @@ That's it. Check your page or post now.
 if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
+
+= Version 33.4 =
+* New feature - Image poll included in the plugin.
 
 = Version 33.3 =
 * Javascript function for identifying max no of answers changed.
