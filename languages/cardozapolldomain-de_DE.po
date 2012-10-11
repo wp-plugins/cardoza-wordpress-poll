@@ -1,0 +1,409 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cardozapolldomain\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-07-30 14:21-0000\n"
+"PO-Revision-Date: 2012-07-30 14:24-0000\n"
+"Last-Translator: Vinoj Cardoza <vinoj.cardoza@hotmail.com>\n"
+"Language-Team: Vinoj Cardoza <vinoj.cardoza@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../cardozawppoll.php:186
+msgid "Sorry! No polls found in the archive for this page"
+msgstr "Entschuldigung, wir haben bisher keine Umfragen in unserem Archiv. "
+
+#: ../cardozawppoll.php:195
+#: ../app/views/CWPViewManagePolls.class.php:57
+#: ../app/views/CWPViewUserLogs.class.php:39
+msgid "Open"
+msgstr "eröffnet / laufend"
+
+#: ../cardozawppoll.php:196
+#: ../app/views/CWPViewManagePolls.class.php:58
+#: ../app/views/CWPViewUserLogs.class.php:40
+msgid "Closed"
+msgstr "geschlossen"
+
+#: ../cardozawppoll.php:313
+#: ../app/views/CWPViewManagePolls.class.php:37
+#: ../app/views/CWPViewManagePolls.class.php:62
+msgid "View Result"
+msgstr "Ergebnis ansehen"
+
+#: ../cardozawppoll.php:320
+#: ../cardozawppollFrontEndFunctions.php:72
+#: ../cardozawppollFrontEndFunctions.php:104
+msgid "Vote"
+msgstr "Abstimmung"
+
+#: ../cardozawppollFrontEndFunctions.php:21
+#: ../app/views/CWPViewManagePolls.class.php:72
+msgid "Total voters"
+msgstr "Teilnehmer insgesamt"
+
+#: ../cardozawppollFrontEndFunctions.php:26
+#: ../app/CWPController.class.php:241
+#: ../app/CWPController.class.php:272
+#: ../app/views/CWPViewManagePolls.class.php:36
+#: ../app/views/CWPViewUserLogs.class.php:18
+msgid "Total votes"
+msgstr "Abstimmungen insgesamt"
+
+#: ../cardozawppollFrontEndFunctions.php:37
+#: ../app/CWPController.class.php:249
+#: ../app/CWPController.class.php:279
+msgid " votes"
+msgstr "Abstimmungen"
+
+#: ../cardozawppollFrontEndFunctions.php:119
+#: ../cardozawppollFrontEndFunctions.php:120
+msgid "See all polls & results"
+msgstr "Alle Umfragen und Ergebnisse anschauen"
+
+#: ../app/CWPController.class.php:308
+#: ../app/views/CWPViewStats.class.php:26
+msgid "Last 7 days statistics"
+msgstr "Statistik der letzten 7 Tage"
+
+#: ../app/CWPController.class.php:414
+msgid "User ID"
+msgstr "Benutzer ID"
+
+#: ../app/CWPController.class.php:415
+msgid "User name"
+msgstr "Benutzername"
+
+#: ../app/CWPController.class.php:416
+msgid "Polled time"
+msgstr "Abstimmungszeit"
+
+#: ../app/CWPController.class.php:417
+#: ../app/views/CWPViewPollOptions.class.php:48
+msgid "IP Address"
+msgstr "IP Adresse"
+
+#: ../app/CWPController.class.php:418
+msgid "Answers"
+msgstr "Antworten"
+
+#: ../app/CWPController.class.php:429
+msgid "NULL"
+msgstr "Null"
+
+#: ../app/CWPController.class.php:442
+msgid "No user logs found for this poll"
+msgstr "Wir konnten keine Benutzer Logs für diese Umfragen finden."
+
+#: ../app/views/CWPView.class.php:36
+#: ../app/views/CWPView.class.php:37
+msgid "Poll"
+msgstr "Umfrage"
+
+#: ../app/views/CWPView.class.php:47
+msgid "Wordpress Poll"
+msgstr "Wordpress Poll"
+
+#: ../app/views/CWPView.class.php:48
+msgid "Mandatory fields"
+msgstr "benötigte Felder"
+
+#: ../app/views/CWPView.class.php:52
+msgid "Manage Polls"
+msgstr "Umfragen verwalten"
+
+#: ../app/views/CWPView.class.php:57
+#: ../app/views/CWPViewCreatePoll.class.php:87
+msgid "Add New Poll"
+msgstr "Neue Umfrage hinzufügen"
+
+#: ../app/views/CWPView.class.php:62
+msgid "Poll Options"
+msgstr "Umfrage Einstellungen"
+
+#: ../app/views/CWPView.class.php:67
+msgid "Widget Options"
+msgstr "Widget Einstellungen"
+
+#: ../app/views/CWPView.class.php:72
+#: ../app/views/CWPViewStats.class.php:7
+msgid "Poll Statistics"
+msgstr "Umfrage Statistik"
+
+#: ../app/views/CWPView.class.php:77
+msgid "User Logs"
+msgstr "Benutzer Logs"
+
+#: ../app/views/CWPViewCreatePoll.class.php:14
+#: ../app/views/CWPViewEditPoll.class.php:29
+msgid "Poll Friendly Name"
+msgstr "Umfragefreundlicher Name"
+
+#: ../app/views/CWPViewCreatePoll.class.php:16
+#: ../app/views/CWPViewEditPoll.class.php:31
+msgid "Friendly name"
+msgstr "Freundlicher Name"
+
+#: ../app/views/CWPViewCreatePoll.class.php:22
+#: ../app/views/CWPViewEditPoll.class.php:36
+msgid "Poll Question"
+msgstr "Fragestellung der Umfrage"
+
+#: ../app/views/CWPViewCreatePoll.class.php:24
+#: ../app/views/CWPViewManagePolls.class.php:31
+#: ../app/views/CWPViewUserLogs.class.php:13
+msgid "Question"
+msgstr "Frage"
+
+#: ../app/views/CWPViewCreatePoll.class.php:30
+#: ../app/views/CWPViewEditPoll.class.php:44
+msgid "Poll Answers"
+msgstr "Antworten der Umfrage"
+
+#: ../app/views/CWPViewCreatePoll.class.php:33
+#: ../app/views/CWPViewCreatePoll.class.php:37
+msgid "Answer"
+msgstr "Antwort"
+
+#: ../app/views/CWPViewCreatePoll.class.php:47
+msgid "Add answer"
+msgstr "Antwort hinzufügen"
+
+#: ../app/views/CWPViewCreatePoll.class.php:52
+msgid "Remove Answer"
+msgstr "Antwort entfernen"
+
+#: ../app/views/CWPViewCreatePoll.class.php:55
+#: ../app/views/CWPViewEditPoll.class.php:60
+msgid "Poll Answer type"
+msgstr "Antworttypen der Umfrage"
+
+#: ../app/views/CWPViewCreatePoll.class.php:57
+#: ../app/views/CWPViewEditPoll.class.php:62
+msgid "Allow users to select"
+msgstr "Benutzern die Auswahl erlauben von"
+
+#: ../app/views/CWPViewCreatePoll.class.php:62
+#: ../app/views/CWPViewEditPoll.class.php:66
+msgid "Only one answer"
+msgstr "Nur einer Antwort"
+
+#: ../app/views/CWPViewCreatePoll.class.php:63
+#: ../app/views/CWPViewEditPoll.class.php:67
+msgid "More than one answer"
+msgstr "Mehr als einer Antwort"
+
+#: ../app/views/CWPViewCreatePoll.class.php:67
+#: ../app/views/CWPViewEditPoll.class.php:71
+msgid "No of answers to allow"
+msgstr "Wieviel Antworten sind erlaubt"
+
+#: ../app/views/CWPViewCreatePoll.class.php:72
+#: ../app/views/CWPViewEditPoll.class.php:76
+msgid "Poll Start/End Date"
+msgstr "Start- und Ablaufzeit der Umfrage"
+
+#: ../app/views/CWPViewCreatePoll.class.php:74
+#: ../app/views/CWPViewEditPoll.class.php:78
+#: ../app/views/CWPViewManagePolls.class.php:33
+#: ../app/views/CWPViewUserLogs.class.php:15
+msgid "Start date"
+msgstr "Startdatum"
+
+#: ../app/views/CWPViewCreatePoll.class.php:75
+#: ../app/views/CWPViewCreatePoll.class.php:78
+msgid "Format"
+msgstr "Aussehen"
+
+#: ../app/views/CWPViewCreatePoll.class.php:77
+#: ../app/views/CWPViewEditPoll.class.php:81
+#: ../app/views/CWPViewManagePolls.class.php:34
+#: ../app/views/CWPViewUserLogs.class.php:16
+msgid "End date"
+msgstr "Ablaufdatum"
+
+#: ../app/views/CWPViewEditPoll.class.php:20
+#: ../app/views/CWPViewManagePolls.class.php:18
+msgid "Refresh Poll List"
+msgstr "Liste neu laden"
+
+#: ../app/views/CWPViewEditPoll.class.php:23
+#: ../app/views/CWPViewManagePolls.class.php:21
+msgid "Edit a Poll"
+msgstr "Umfrage ändern"
+
+#: ../app/views/CWPViewEditPoll.class.php:26
+#: ../app/views/CWPViewManagePolls.class.php:24
+msgid "Delete a Poll"
+msgstr "Umfrage löschen"
+
+#: ../app/views/CWPViewEditPoll.class.php:38
+#: ../app/views/CWPViewManagePolls.class.php:30
+#: ../app/views/CWPViewUserLogs.class.php:12
+msgid "Name"
+msgstr "Name"
+
+#: ../app/views/CWPViewEditPoll.class.php:52
+msgid "Edit"
+msgstr "ändern"
+
+#: ../app/views/CWPViewEditPoll.class.php:53
+msgid "Delete"
+msgstr "löschen"
+
+#: ../app/views/CWPViewEditPoll.class.php:57
+msgid "Add more answers"
+msgstr "Weitere Antworten hinzufügen"
+
+#: ../app/views/CWPViewEditPoll.class.php:92
+#: ../app/views/CWPViewPollOptions.class.php:127
+#: ../app/views/CWPViewWidget.class.php:68
+msgid "Save"
+msgstr "Speichern"
+
+#: ../app/views/CWPViewManagePolls.class.php:32
+#: ../app/views/CWPViewUserLogs.class.php:14
+msgid "Answer type"
+msgstr "Antworttyp"
+
+#: ../app/views/CWPViewManagePolls.class.php:35
+#: ../app/views/CWPViewUserLogs.class.php:17
+msgid "Status"
+msgstr "Status"
+
+#: ../app/views/CWPViewPollOptions.class.php:15
+msgid "Poll options"
+msgstr "Umfrageoptionen"
+
+#: ../app/views/CWPViewPollOptions.class.php:18
+msgid "Who is allowed to vote?"
+msgstr "Wer kann an der Abstimmung teilnehmen?"
+
+#: ../app/views/CWPViewPollOptions.class.php:27
+msgid "Anyone can poll"
+msgstr "Jeder kann teilnehmen"
+
+#: ../app/views/CWPViewPollOptions.class.php:32
+msgid "Only logged in users can poll"
+msgstr "Nur registrierte Benutzer können teilnehmen"
+
+#: ../app/views/CWPViewPollOptions.class.php:36
+msgid "Lock Poll by"
+msgstr "Teilnahme an Umfrage sperren über"
+
+#: ../app/views/CWPViewPollOptions.class.php:43
+msgid "Cookies"
+msgstr "Cookies"
+
+#: ../app/views/CWPViewPollOptions.class.php:52
+msgid "Poll style options"
+msgstr "Umfrage Layout Optionen"
+
+#: ../app/views/CWPViewPollOptions.class.php:54
+msgid "Background colour"
+msgstr "Hintergrundfarbe"
+
+#: ../app/views/CWPViewPollOptions.class.php:63
+msgid "Colour"
+msgstr "Farbe"
+
+#: ../app/views/CWPViewPollOptions.class.php:72
+#: ../app/views/CWPViewWidget.class.php:56
+msgid "Height"
+msgstr "Höhe"
+
+#: ../app/views/CWPViewPollOptions.class.php:81
+msgid "Preview of the poll bar"
+msgstr "Vorschau auf den Abstimmungsbalken"
+
+#: ../app/views/CWPViewPollOptions.class.php:86
+msgid "Poll archive options"
+msgstr "Umfrage Archiv Einstellungen"
+
+#: ../app/views/CWPViewPollOptions.class.php:88
+msgid "Polls to display in the older polls page"
+msgstr "Welche Umfragen sollen auf der Archivseite angezeigt werden?"
+
+#: ../app/views/CWPViewPollOptions.class.php:93
+msgid "Opened Polls Only"
+msgstr "Laufende Umfragen"
+
+#: ../app/views/CWPViewPollOptions.class.php:94
+msgid "Closed Polls Only"
+msgstr "Abgeschlossene Umfragen"
+
+#: ../app/views/CWPViewPollOptions.class.php:95
+msgid "Opened and Closed Polls"
+msgstr "Laufende und abgeschlossene Umfragen"
+
+#: ../app/views/CWPViewPollOptions.class.php:98
+msgid "No of polls to display per page in the older polls"
+msgstr "Wieviel Umfragen sollen auf einer Archivseite gezeigt werden?"
+
+#: ../app/views/CWPViewPollOptions.class.php:113
+msgid "Poll archive URL"
+msgstr "URL der Archivseite"
+
+#: ../app/views/CWPViewStats.class.php:27
+msgid "Last 15 days statistics"
+msgstr "Statistik der letzten 15 Tage"
+
+#: ../app/views/CWPViewStats.class.php:28
+msgid "Last 30 days statistics"
+msgstr "Statistik der letzten 30 Tage"
+
+#: ../app/views/CWPViewStats.class.php:69
+msgid "No data available to analyze. If you have installed or updated the plugin recently, poll statistics will not be available until someone votes after the installation or updation."
+msgstr "Es sind keine Daten zur Analyse verfügbar. Wenn das Plugin erst installiert oder ein Update durchgeführt wurde, sind die Statistiken erst wieder verfügbar, wenn in einer Umfrage eine Abstimmung vorgenommen wurde."
+
+#: ../app/views/CWPViewUserLogs.class.php:5
+msgid "This feature will show the list of users voted for a particular poll."
+msgstr "Diese Funktion zeigt die Benutzer an, die an den einzelnen Umfragen teilgenommen haben."
+
+#: ../app/views/CWPViewUserLogs.class.php:6
+msgid "The results will be shown only when the logged in users has voted for the poll. (The answers will be visible only for the votes after 26.06.2012)"
+msgstr "Die Ergebnisse werden nur angezeigt, wenn die Benutzer zur Abstimmung eingeloggt waren.  (Die Antworten werden nur für Abstimmungen nach dem 26.06.2012 sichtbar sein.)"
+
+#: ../app/views/CWPViewUserLogs.class.php:7
+msgid "Poll User Logs"
+msgstr "Umfrage Benutzer Logs"
+
+#: ../app/views/CWPViewUserLogs.class.php:19
+#: ../app/views/CWPViewUserLogs.class.php:44
+msgid "View User Logs"
+msgstr "Benutzer Logs ansehen"
+
+#: ../app/views/CWPViewWidget.class.php:15
+msgid "Widget options"
+msgstr "Widget Einstellungen"
+
+#: ../app/views/CWPViewWidget.class.php:18
+msgid "Title"
+msgstr "Titel"
+
+#: ../app/views/CWPViewWidget.class.php:24
+msgid "Display Older Polls Link"
+msgstr "Link zu älteren Umfragen anzeigen"
+
+#: ../app/views/CWPViewWidget.class.php:30
+msgid "Yes"
+msgstr "Ja"
+
+#: ../app/views/CWPViewWidget.class.php:35
+msgid "No"
+msgstr "Nein"
+
+#: ../app/views/CWPViewWidget.class.php:38
+msgid "Select the latest number of polls to be displayed"
+msgstr "Wieviele Umfragen sollen maximal angezeigt werden?"
+
+#: ../app/views/CWPViewWidget.class.php:49
+msgid "Width"
+msgstr "Breite"
+
