@@ -1,6 +1,6 @@
 === Wordpress Poll ===
 Contributors: vinoj.cardoza
-Donate link: http://www.fingerfish.com/
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=vinoj%2ecardoza%40gmail%2ecom&currency_code=GBP&lc=US&bn=PP%2dDonationsBF&charset=UTF%2d8
 Tags: poll, cardoza, vote, widget, booth, polls, polling, votes, voting
 Requires at least: 3.0
 Tested up to: 3.4.1
@@ -26,7 +26,7 @@ This poll has the following features which uses both ajax and jquery.
 
 = Donations =
 
-Thanks for downloading and installing my plugin. You can show your appreciation and support future development by donating. To donate visit my site http://www.fingerfish.com.
+Thanks for downloading and installing my plugin. You can show your appreciation and support future development by donating. To donate click here https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=vinoj%2ecardoza%40gmail%2ecom&currency_code=GBP&lc=US&bn=PP%2dDonationsBF&charset=UTF%2d8
 
 For more visit: http://fingerfish.com/cardoza-wordpress-poll/
 
