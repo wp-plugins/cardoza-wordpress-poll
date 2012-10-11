@@ -4,41 +4,90 @@
  * This is the class file which will have all the markup for the 
  * user interface to create a new poll.
  */
-if(isset($_POST['submit'])){
-    update_option('cwpp_useremail', $_POST['useremail']);
-    update_option('cwpp_key', $_POST['key']);
-}
-
 class CWPViewCreateImagePoll{
 
     public function __construct() {
         print '<div id="tab3" class="tab-content" style="z-index:10000;">';
-        $useremail = stripslashes(get_option('cwpp_useremail'));
-        $key = stripslashes(get_option('cwpp_key'));
-        if(empty($useremail) || empty($key)){
-            print '<h4 style="color: #000000; font-weight: bold">Hi! you have to make a small donation of £2 to activate this feature in this plugin. After you make the donation you will be mailed with the access key within next 24 hours. Please note that you have specify your email address while you are making the donation! <br>Many Thanks for your support.</h4>';
-            print '<h3>Enter your access details below</h3><form method="post" action="">';
-            print '<table><tr><td>Enter your registered email:</td>';
-            print '<td><input type="text" name="useremail" size="40" /></td></tr>';
-            print '<tr><td>Enter your key:</td>';
-            print '<td><input type="text" name="key" size="40" /></td></tr></table>';
-            print '<tr><td></td><td><input type="submit" name="submit" value="Submit" /></td></tr>';
-            print '</form>';
-        }
-        else{
-            $a=file_get_contents('http://www.fingerfish.com/support/wordpresspollapi.php?useremail='.$useremail.'&key='.$key.'&plugin=poll');
-            if(!empty($a)) echo $a;
-            else{
-                echo '<h3 style="color:red;">Authentication Failed! Check your access details</h3>';
-                print '<h3>Enter your access details below</h3><form method="post" action="">';
-                print '<table><tr><td>Enter your registered email:</td>';
-                print '<td><input type="text" name="useremail" size="40" value="'.$useremail.'" /></td></tr>';
-                print '<tr><td>Enter your key:</td>';
-                print '<td><input type="text" name="key" size="40" value="'.$key.'" /></td></tr></table>';
-                print '<tr><td></td><td><input type="submit" name="submit" value="Submit" /></td></tr>';
-                print '</form>';
-            }
-        }
+       	?>
+        <form id="image-create-poll" name="create_poll">
+                <h3><?php _e('Poll Friendly Name', 'cardozapolldomain');?></h3>                
+                <div id="box">
+                    <div id="label"><?php _e('Friendly name', 'cardozapolldomain');?>* :</div>
+                    <input id="image-poll-name" name="poll_name" style="width:350px;"
+                           onblur="javascript:setBorderDefault('poll-name');" 
+                           onfocus="javascript:setBorder('poll-name');" type="text" value="" />
+                    <div id="clear"></div>
+                </div>
+                <h3>Poll Question</h3>
+                <div id="box">
+                    <div id="label"><?php _e('Question', 'cardozapolldomain');?>* :</div>
+                    <input id="image-poll-question" name="poll_question" style="width:350px;"
+                           onblur="javascript:setBorderDefault('poll-question');" 
+                           onfocus="javascript:setBorder('poll-question');" type="text" value="" />
+                    <div id="clear"></div>
+                </div>
+                <h3><?php _e('Poll Answers', 'cardozapolldomain');?></h3>
+                <div id="box">
+                    <div class="answers">
+                        <div id="answer1"><div id="label"><?php _e('Answer', 'cardozapolldomain');?> 1* :</div>
+                            <input id="image-ans1" name="answer1" type="text" value="" style="width:350px;" />
+                            <div id="clear"></div>
+                        </div>
+                        <div id="answer2"><div id="label"><?php _e('Answer', 'cardozapolldomain');?> 2* :</div>
+                            <input id="image-ans2" name="answer2" type="text" value="" style="width:350px;" />
+                            <div id="clear"></div>
+                        </div>
+                    </div>
+                    <center>
+                        <input id="add-answer" 
+                               onblur="javascript:setBorderDefault('add-answer');" 
+                               onfocus="javascript:setBorder('add-answer');" 
+                               onclick="javascript:appendAnswers()"
+                               type="button" value="<?php _e('Add answer', 'cardozapolldomain');?>"/>
+                        <input id="remove-answer" 
+                               onblur="javascript:setBorderDefault('remove-answer');" 
+                               onfocus="javascript:setBorder('remove-answer');" 
+                               onclick="javascript:removeAnswers()"
+                               type="button" value="<?php _e('Remove Answer', 'cardozapolldomain');?>"/>
+                    </center>
+                </div>
+                <h3><?php _e('Poll Answer type', 'cardozapolldomain');?></h3>
+                <div id="box">
+                    <div id="label"><?php _e('Allow users to select', 'cardozapolldomain');?>* :</div>
+                    <select name="poll_answer_type" id="image-poll-answer-type"
+                            onblur="javascript:setBorderDefault('poll-answer-type');" 
+                            onchange="javascript:showanswers(this.value)"
+                            onfocus="javascript:setBorder('poll-answer-type');">
+                        <option value="one">Only one answer</option>
+                        <option value="multiple">More than one answer</option>
+                    </select>
+                    <div id="clear"></div>
+                    <div id="nanswers">
+                        <div id="label"><?php _e('No of answers to allow', 'cardozapolldomain');?>* :</div>
+                        <input id="image-no-of-answers" style="width:40px" name="no_of_answers" type="text" value="" />
+                    </div>
+                    <div id="clear"></div>
+                </div>
+                <h3><?php _e('Poll Start/End Date', 'cardozapolldomain');?></h3>
+                <div id="box">
+                    <div id="label"><?php _e('Start date', 'cardozapolldomain');?>* :</div>
+                    <input id="image_start_date" type="text" name="s_date" style="width:100px;"/> <b><?php _e('Format', 'cardozapolldomain');?>: </b> mm/dd/yyyy
+                    <div id="clear"></div>
+                    <div id="label"><?php _e('End date', 'cardozapolldomain');?>* :</div>
+                    <input id="image_end_date" type="text" name="e_date" style="width:100px;"/> <b><?php _e('Format', 'cardozapolldomain');?>: </b> mm/dd/yyyy
+                    <div id="clear"></div>
+                </div>
+                <center>
+                    <input type="hidden" name="action" value="save_poll" />
+                    <input type="hidden" name="poll_type" value="image_poll" />
+                    <input id="add-answer" 
+                           onclick="javascript:validateAddNewImagePollForm()"
+                           onblur="javascript:setBorderDefault('add-answer');" 
+                           onfocus="javascript:setBorder('add-answer');"
+                           type="button" value="<?php _e('Add New Poll', 'cardozapolldomain');?>" />
+                </center>
+            </form>
+        <?php
         print '</div>';
     }
 }
