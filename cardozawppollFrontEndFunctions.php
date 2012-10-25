@@ -90,8 +90,7 @@ function showPollForm($vars){
         <input type="hidden" value="<?php print $poll->answer_type;?>" name="answertype"/>
         <input type="hidden" value="<?php print $poll->no_of_answers;?>" name="max_no_of_answers" />
         <input type="hidden" value="submit_vote" name="action"/>
-        <center><input class="poll-wh-style" type="button" value="<?php print __('Vote', 'cardozapolldomain');?>" 
-                       onclick="javascript:vote_poll(<?php print $poll->id;?>,'<?php print $poll->answer_type;?>',<?php print $poll->no_of_answers;?>)" /></center>                
+        <center><input class="poll-wh-style" type="button" value="<?php print __('Vote', 'cardozapolldomain');?>" onclick="javascript:vote_poll(<?php print $poll->id;?>,'<?php print $poll->answer_type;?>',<?php print $poll->no_of_answers;?>)" /></center>                
     </div>
     <?php
 }
@@ -139,8 +138,7 @@ function showPollFormSC($vars){
         <input type="hidden" value="<?php print $poll->answer_type;?>" name="answertype"/>
         <input type="hidden" value="<?php print $poll->no_of_answers;?>" name="max_no_of_answers" />
         <input type="hidden" value="submit_vote" name="action"/>
-        <center><input type="button" class="poll-wh-style" value="<?php print __('Vote', 'cardozapolldomain');?>" 
-                       onclick="javascript:vote_poll_sc(<?php print $poll->id;?>,'<?php print $poll->answer_type;?>',<?php print $poll->no_of_answers;?>)" /></center>                
+        <center><input type="button" class="poll-wh-style" value="<?php print __('Vote', 'cardozapolldomain');?>" onclick="javascript:vote_poll_sc(<?php print $poll->id;?>,'<?php print $poll->answer_type;?>',<?php print $poll->no_of_answers;?>)" /></center>                
     </div>
     <?php
 }

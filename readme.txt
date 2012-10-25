@@ -35,13 +35,14 @@ For more visit: http://fingerfish.com/cardoza-wordpress-poll/
 Some of the translation were done using a translation software. I am not sure about the correctness of the translation. If you find some mistakes in the translation in your language, please let me know through the following link comments section. Also, if you couldn't find your language and you can do it, please let me know.
 
 = Translated Languages =
-
-* Danish (Translated by Henrik van der Buchwald).
+* Croatian (Translated by Bojan KS)
+* Danish (Translated by Henrik van der Buchwald)
 * Dutch (Translated by Niels de Bruin)
 * French (Translated by Laurent Verpeet)
 * German (Translated by Peter Kaulfuss)
+* Greek (Translated by Kontosis Konstantinos)
 * Italian (Translated by Roberto Bani)
-* Portuguese-Brazilian (Translated by Rodrigo).
+* Portuguese-Brazilian (Translated by Rodrigo)
 * Russian (Translated by Boris)
 * Spanish (Translated by Diego Silva Opazo)
 
@@ -116,6 +117,10 @@ That's it. Check your page or post now.
 if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
+= Version 33.6 =
+* Important security vulnerability updated. (Suggested by Ryan Satterfield, Planet Zuda, LLC, http://planetzuda.com)  
+* Croatian translation added (Translated by Bojan KS).
+* Greek translation added (Translated by Kontosis Konstantinos)
 
 = Version 33.5 =
 * Donation request for adding new image poll is removed and available for free to everyone.

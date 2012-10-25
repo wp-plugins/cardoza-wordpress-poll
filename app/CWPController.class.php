@@ -56,10 +56,10 @@ class CWPController {
     public function saveNewPoll(){
         
         $answers = array();
-        $vars['name'] = stripslashes($_POST['poll_name']);
-        $vars['question'] = stripslashes($_POST['poll_question']);
+        $vars['name'] = htmlspecialchars(stripslashes($_POST['poll_name']));
+        $vars['question'] = htmlspecialchars(stripslashes($_POST['poll_question']));
         $vars['answer_type'] = $_POST['poll_answer_type'];
-        $vars['no_of_answers'] = $_POST['no_of_answers'];
+        $vars['no_of_answers'] = htmlspecialchars(stripslashes($_POST['no_of_answers']));
         $vars['s_date'] = $_POST['s_date'];
         $vars['e_date'] = $_POST['e_date'];
         $vars['poll_type'] = $_POST['poll_type'];
@@ -84,9 +84,9 @@ class CWPController {
     }
     
     public function deletePoll(){
-        $poll = $this->cwpm->getPollByIDFromDB($_POST['pollid']);
+        $poll = $this->cwpm->getPollByIDFromDB(htmlspecialchars(stripslashes($_POST['pollid'])));
         if(sizeof($poll[0])<1) return false;
-        else $result = $this->cwpm->deletePollFromDB($_POST['pollid']);
+        else $result = $this->cwpm->deletePollFromDB(htmlspecialchars(stripslashes($_POST['pollid'])));
         $this->refreshPollList();
     }
     
@@ -98,11 +98,11 @@ class CWPController {
     
     public function saveWidgetOptions(){
         
-        $vars['no_of_polls'] = $_POST['no_of_polls'];
-        $vars['poll_archive'] = $_POST['poll-archive'];
-        $vars['height'] = $_POST['widget_height'];
-        $vars['width'] = $_POST['widget_width'];
-        $vars['title'] = $_POST['widget_title'];
+        $vars['no_of_polls'] = htmlspecialchars(stripslashes($_POST['no_of_polls']));
+        $vars['poll_archive'] = htmlspecialchars(stripslashes($_POST['poll-archive']));
+        $vars['height'] = htmlspecialchars(stripslashes($_POST['widget_height']));
+        $vars['width'] = htmlspecialchars(stripslashes($_POST['widget_width']));
+        $vars['title'] = htmlspecialchars(stripslashes($_POST['widget_title']));
         $this->cwpm->saveWidgetOptionsToDB($vars);
         die();
     }
@@ -171,8 +171,8 @@ class CWPController {
     
     public function editPollSave(){
         $vars = array();
-        $vars['name'] = stripslashes($_POST['poll_name']);
-        $vars['question'] = stripslashes($_POST['poll_question']);
+        $vars['name'] = htmlspecialchars(stripslashes($_POST['poll_name']));
+        $vars['question'] = htmlspecialchars(stripslashes($_POST['poll_question']));
         $vars['answer_type'] = $_POST['poll_answer_type'];
         $vars['no_of_answers'] = $_POST['no_of_answers'];
         $vars['s_date'] = $_POST['s_date'];
