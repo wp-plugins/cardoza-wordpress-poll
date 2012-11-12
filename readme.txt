@@ -36,6 +36,7 @@ Some of the translation were done using a translation software. I am not sure ab
 
 = Translated Languages =
 * Croatian (Translated by Bojan KS)
+* Czech (Translated by Vaclav Cadek st.)
 * Danish (Translated by Henrik van der Buchwald)
 * Dutch (Translated by Niels de Bruin)
 * French (Translated by Laurent Verpeet)
@@ -117,6 +118,10 @@ That's it. Check your page or post now.
 if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
+
+= Version 33.7 =
+* Czech translation added (Translated by Vaclav Cadek st.).
+
 = Version 33.6 =
 * Important security vulnerability updated. (Suggested by Ryan Satterfield, Planet Zuda, LLC, http://planetzuda.com)  
 * Croatian translation added (Translated by Bojan KS).
