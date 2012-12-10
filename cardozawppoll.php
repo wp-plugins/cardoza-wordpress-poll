@@ -3,7 +3,7 @@
 Plugin Name: Wordpress Poll
 Plugin URI: http://fingerfish.com/cardoza-wordpress-poll
 Description: Wordpress Poll is completely ajax powered polling system. This poll plugin supports both single and multiple selection of answers.
-Version: 33.7
+Version: 33.8
 Author: Vinoj Cardoza
 Author URI: http://fingerfish.com/about-me/
 License: GPL2
@@ -12,13 +12,16 @@ define('CWP_PGN_DIR', plugin_dir_url(__FILE__));
 
 require_once 'app/CWPController.class.php';
 
+/* To include the javascripts */
+wp_enqueue_script('jquery');
+wp_enqueue_script('jquery-ui-core');
+wp_enqueue_script('cwp-main', CWP_PGN_DIR.'public/js/CWPPoll.js', array('jquery','jquery-ui-core'));
+wp_enqueue_script('cwp-main-datepicker', CWP_PGN_DIR.'public/js/jquery.ui.datepicker.min.js', array('jquery','jquery-ui-core'));
+
 /* To include the stylesheets */
 wp_enqueue_style('cwpcss', CWP_PGN_DIR.'public/css/CWPPoll.css');
-wp_enqueue_style('cwpcssjqui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/base/jquery-ui.css');
-
-/* To include the javascripts */
-wp_enqueue_script('cwp-main', CWP_PGN_DIR.'public/js/CWPPoll.js', array('jquery'));
-wp_enqueue_script('cwp-mainjqui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js', array('jquery'));
+wp_enqueue_style('cwpcssjqui', CWP_PGN_DIR.'public/css/JqueryUi.css');
+		
 
 add_action('wp_head','cwppoll_ajaxurl');
 add_action('plugins_loaded', 'trigger_init');
