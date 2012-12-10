@@ -1,0 +1,436 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cardozapolldomain\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-25 10:44-0000\n"
+"PO-Revision-Date: 2012-10-25 11:00-0000\n"
+"Last-Translator: Vinoj Cardoza <vinoj.cardoza@hotmail.com>\n"
+"Language-Team: Vinoj Cardoza <vinoj.cardoza@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: Greek\n"
+"X-Poedit-Country: GREECE\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../cardozawppoll.php:216
+msgid "Sorry! No polls found in the archive for this page"
+msgstr "Συγγνώμη! Δεν υπάρχουν δημοσκοπήσεις στο αρχείο για αυτή τη σελίδα"
+
+#: ../cardozawppoll.php:224
+#: ../app/views/CWPViewManagePolls.class.php:59
+#: ../app/views/CWPViewUserLogs.class.php:39
+msgid "Open"
+msgstr "ανοιχτό"
+
+#: ../cardozawppoll.php:225
+#: ../app/views/CWPViewManagePolls.class.php:63
+#: ../app/views/CWPViewUserLogs.class.php:40
+msgid "Closed"
+msgstr "κλειστό"
+
+#: ../cardozawppoll.php:340
+#: ../app/views/CWPViewManagePolls.class.php:37
+#: ../app/views/CWPViewManagePolls.class.php:67
+msgid "View Result"
+msgstr "Προβολή Αποτελεσμάτων"
+
+#: ../cardozawppoll.php:347
+#: ../cardozawppollFrontEndFunctions.php:93
+#: ../cardozawppollFrontEndFunctions.php:141
+msgid "Vote"
+msgstr "ψήφος"
+
+#: ../cardozawppollFrontEndFunctions.php:21
+#: ../app/views/CWPViewManagePolls.class.php:77
+msgid "Total voters"
+msgstr "Σύνολο ψηφοφόρων"
+
+#: ../cardozawppollFrontEndFunctions.php:26
+#: ../app/CWPController.class.php:243
+#: ../app/CWPController.class.php:277
+#: ../app/views/CWPViewManagePolls.class.php:36
+#: ../app/views/CWPViewUserLogs.class.php:18
+msgid "Total votes"
+msgstr "Σύνολο ψήφων"
+
+#: ../cardozawppollFrontEndFunctions.php:38
+#: ../cardozawppollFrontEndFunctions.php:40
+#: ../app/CWPController.class.php:252
+#: ../app/CWPController.class.php:254
+#: ../app/CWPController.class.php:284
+msgid " votes"
+msgstr "ψήφους"
+
+#: ../cardozawppollFrontEndFunctions.php:156
+#: ../cardozawppollFrontEndFunctions.php:157
+msgid "See all polls and results"
+msgstr "Δείτε όλες τις δημοσκοπήσεις και τα αποτελέσματα"
+
+#: ../app/CWPController.class.php:313
+#: ../app/views/CWPViewStats.class.php:26
+msgid "Last 7 days statistics"
+msgstr "Στατιστικά Τελευταίων 7 ημερών "
+
+#: ../app/CWPController.class.php:419
+msgid "User ID"
+msgstr "Όνομα Χρήστη"
+
+#: ../app/CWPController.class.php:420
+msgid "User name"
+msgstr "όνομα χρήστη"
+
+#: ../app/CWPController.class.php:421
+msgid "Polled time"
+msgstr "Χρόνος Δημοσκόπησης"
+
+#: ../app/CWPController.class.php:422
+#: ../app/views/CWPViewPollOptions.class.php:48
+msgid "IP Address"
+msgstr "Διεύθυνση IP"
+
+#: ../app/CWPController.class.php:423
+msgid "Answers"
+msgstr "Απαντήσεις"
+
+#: ../app/CWPController.class.php:434
+msgid "NULL"
+msgstr "NULL"
+
+#: ../app/CWPController.class.php:447
+msgid "No user logs found for this poll"
+msgstr "Δεν βρέθηκε χρήστης που να συνδέεται με αυτή τη δημοσκόπηση"
+
+#: ../app/views/CWPView.class.php:37
+#: ../app/views/CWPView.class.php:38
+msgid "Poll"
+msgstr "Δημοσκόπηση"
+
+#: ../app/views/CWPView.class.php:48
+msgid "Wordpress Poll"
+msgstr "Wordpress Poll"
+
+#: ../app/views/CWPView.class.php:49
+msgid "Mandatory fields"
+msgstr "Υποχρεωτικά πεδία"
+
+#: ../app/views/CWPView.class.php:53
+msgid "Manage Polls"
+msgstr "Διαχείριση Δημοσκοπήσεων"
+
+#: ../app/views/CWPView.class.php:58
+#: ../app/views/CWPViewCreateImagePoll.class.php:87
+#: ../app/views/CWPViewCreatePoll.class.php:87
+msgid "Add New Poll"
+msgstr "Προσθήκη Νέας Δημοσκόπησης"
+
+#: ../app/views/CWPView.class.php:63
+msgid "Add New Image Poll"
+msgstr "Προσθήκη Νέας Δημοσκόπησης"
+
+#: ../app/views/CWPView.class.php:68
+msgid "Poll Options"
+msgstr "Επιλογές Δημοσκόπησης"
+
+#: ../app/views/CWPView.class.php:73
+msgid "Widget Options"
+msgstr "Επιλογές Widget"
+
+#: ../app/views/CWPView.class.php:78
+#: ../app/views/CWPViewStats.class.php:7
+msgid "Poll Statistics"
+msgstr "Στατιστικά Δημοσκόπησης "
+
+#: ../app/views/CWPView.class.php:83
+msgid "User Logs"
+msgstr "Logs χρήστη"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:13
+#: ../app/views/CWPViewCreatePoll.class.php:14
+#: ../app/views/CWPViewEditPoll.class.php:29
+msgid "Poll Friendly Name"
+msgstr "Φιλικό όνομα Δημοσκόπησης "
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:15
+#: ../app/views/CWPViewCreatePoll.class.php:16
+#: ../app/views/CWPViewEditPoll.class.php:31
+msgid "Friendly name"
+msgstr "Φιλικό όνομα"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:23
+#: ../app/views/CWPViewCreatePoll.class.php:24
+#: ../app/views/CWPViewManagePolls.class.php:31
+#: ../app/views/CWPViewUserLogs.class.php:13
+msgid "Question"
+msgstr "ερώτηση"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:29
+#: ../app/views/CWPViewCreatePoll.class.php:30
+#: ../app/views/CWPViewEditPoll.class.php:44
+msgid "Poll Answers"
+msgstr "Απαντήσεις Δημοσκόπησης"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:32
+#: ../app/views/CWPViewCreateImagePoll.class.php:36
+#: ../app/views/CWPViewCreatePoll.class.php:33
+#: ../app/views/CWPViewCreatePoll.class.php:37
+msgid "Answer"
+msgstr "απάντηση"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:46
+#: ../app/views/CWPViewCreatePoll.class.php:47
+msgid "Add answer"
+msgstr "Προσθήκη Απάντησης"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:51
+#: ../app/views/CWPViewCreatePoll.class.php:52
+msgid "Remove Answer"
+msgstr "Κατάργηση Απάντησης"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:54
+#: ../app/views/CWPViewCreatePoll.class.php:55
+#: ../app/views/CWPViewEditPoll.class.php:60
+msgid "Poll Answer type"
+msgstr "Τύπος Απάντησης Δημοσκόπησης  "
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:56
+#: ../app/views/CWPViewCreatePoll.class.php:57
+#: ../app/views/CWPViewEditPoll.class.php:62
+msgid "Allow users to select"
+msgstr "Επέτρεψε στους χρήστες να επιλέξουν"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:66
+#: ../app/views/CWPViewCreatePoll.class.php:67
+#: ../app/views/CWPViewEditPoll.class.php:71
+msgid "No of answers to allow"
+msgstr "Επιτρεπόμενος Αριθμός απαντήσεων "
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:71
+#: ../app/views/CWPViewCreatePoll.class.php:72
+#: ../app/views/CWPViewEditPoll.class.php:76
+msgid "Poll Start/End Date"
+msgstr "Δημοσκόπηση έναρξης και την ημερομηνία λήξης"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:73
+#: ../app/views/CWPViewCreatePoll.class.php:74
+#: ../app/views/CWPViewEditPoll.class.php:78
+#: ../app/views/CWPViewManagePolls.class.php:33
+#: ../app/views/CWPViewUserLogs.class.php:15
+msgid "Start date"
+msgstr "ημερομηνία έναρξης"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:74
+#: ../app/views/CWPViewCreateImagePoll.class.php:77
+#: ../app/views/CWPViewCreatePoll.class.php:75
+#: ../app/views/CWPViewCreatePoll.class.php:78
+msgid "Format"
+msgstr "Μορφή"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:76
+#: ../app/views/CWPViewCreatePoll.class.php:77
+#: ../app/views/CWPViewEditPoll.class.php:81
+#: ../app/views/CWPViewManagePolls.class.php:34
+#: ../app/views/CWPViewUserLogs.class.php:16
+msgid "End date"
+msgstr "ημερομηνία λήξης"
+
+#: ../app/views/CWPViewCreatePoll.class.php:22
+#: ../app/views/CWPViewEditPoll.class.php:36
+msgid "Poll Question"
+msgstr "Ερώτηση Δημοσκόπηση"
+
+#: ../app/views/CWPViewCreatePoll.class.php:62
+#: ../app/views/CWPViewEditPoll.class.php:66
+msgid "Only one answer"
+msgstr "Μόνο μία απάντηση"
+
+#: ../app/views/CWPViewCreatePoll.class.php:63
+#: ../app/views/CWPViewEditPoll.class.php:67
+msgid "More than one answer"
+msgstr "Περισσότερες από μία απάντηση"
+
+#: ../app/views/CWPViewEditPoll.class.php:20
+#: ../app/views/CWPViewManagePolls.class.php:18
+msgid "Refresh Poll List"
+msgstr "Ανανέωση λίστας Δημοσκόπησης"
+
+#: ../app/views/CWPViewEditPoll.class.php:23
+#: ../app/views/CWPViewManagePolls.class.php:21
+msgid "Edit a Poll"
+msgstr "Επεξεργασία Δημοσκόπησης"
+
+#: ../app/views/CWPViewEditPoll.class.php:26
+#: ../app/views/CWPViewManagePolls.class.php:24
+msgid "Delete a Poll"
+msgstr "Διαγραφή Δημοσκόπησης"
+
+#: ../app/views/CWPViewEditPoll.class.php:38
+#: ../app/views/CWPViewManagePolls.class.php:30
+#: ../app/views/CWPViewUserLogs.class.php:12
+msgid "Name"
+msgstr "όνομα"
+
+#: ../app/views/CWPViewEditPoll.class.php:52
+msgid "Edit"
+msgstr "Επεξεργασία"
+
+#: ../app/views/CWPViewEditPoll.class.php:53
+msgid "Delete"
+msgstr "Διαγραφή"
+
+#: ../app/views/CWPViewEditPoll.class.php:57
+msgid "Add more answers"
+msgstr "Προσθέστε περισσότερες απαντήσεις"
+
+#: ../app/views/CWPViewEditPoll.class.php:92
+#: ../app/views/CWPViewPollOptions.class.php:127
+#: ../app/views/CWPViewWidget.class.php:68
+msgid "Save"
+msgstr "Σώστε"
+
+#: ../app/views/CWPViewManagePolls.class.php:32
+#: ../app/views/CWPViewUserLogs.class.php:14
+msgid "Answer type"
+msgstr "Τύπος Απάντησης"
+
+#: ../app/views/CWPViewManagePolls.class.php:35
+#: ../app/views/CWPViewUserLogs.class.php:17
+msgid "Status"
+msgstr "κατάσταση"
+
+#: ../app/views/CWPViewManagePolls.class.php:61
+msgid "Not yet opened"
+msgstr "Δεν έχουν ανοίξει"
+
+#: ../app/views/CWPViewPollOptions.class.php:15
+msgid "Poll options"
+msgstr "Επιλογές Δημοσκόπησης "
+
+#: ../app/views/CWPViewPollOptions.class.php:18
+msgid "Who is allowed to vote?"
+msgstr "Ποιος έχει το δικαίωμα να ψηφίζει;"
+
+#: ../app/views/CWPViewPollOptions.class.php:27
+msgid "Anyone can poll"
+msgstr "Οποιοσδήποτε μπορεί να δημοσκοπήσει"
+
+#: ../app/views/CWPViewPollOptions.class.php:32
+msgid "Only logged in users can poll"
+msgstr "Μόνο συνδεδεμένοι χρήστες μπορούν να δημοσκοπήσουν"
+
+#: ../app/views/CWPViewPollOptions.class.php:36
+msgid "Lock Poll by"
+msgstr "Κλείδωμα Δημοσκόπησης από"
+
+#: ../app/views/CWPViewPollOptions.class.php:43
+msgid "Cookies"
+msgstr "Cookies"
+
+#: ../app/views/CWPViewPollOptions.class.php:52
+msgid "Poll style options"
+msgstr "Επιλογές στυλ Δημοσκόπησης "
+
+#: ../app/views/CWPViewPollOptions.class.php:54
+msgid "Background colour"
+msgstr "χρώμα φόντου"
+
+#: ../app/views/CWPViewPollOptions.class.php:63
+msgid "Colour"
+msgstr "χρώμα"
+
+#: ../app/views/CWPViewPollOptions.class.php:72
+#: ../app/views/CWPViewWidget.class.php:56
+msgid "Height"
+msgstr "ύψος"
+
+#: ../app/views/CWPViewPollOptions.class.php:81
+msgid "Preview of the poll bar"
+msgstr "Προεπισκόπηση της μπάρας δημοσκόπησης"
+
+#: ../app/views/CWPViewPollOptions.class.php:86
+msgid "Poll archive options"
+msgstr "Επιλογές αρχείου Δημοσκόπησης "
+
+#: ../app/views/CWPViewPollOptions.class.php:88
+msgid "Polls to display in the older polls page"
+msgstr "Δημοσκοπήσεις που εμφανίζονται στη σελίδα παλαιών δημοσκοπήσεων"
+
+#: ../app/views/CWPViewPollOptions.class.php:93
+msgid "Opened Polls Only"
+msgstr "Ανοικτές Δημοσκοπήσεις Μόνο"
+
+#: ../app/views/CWPViewPollOptions.class.php:94
+msgid "Closed Polls Only"
+msgstr "Κλειστές Δημοσκοπήσεις Μόνο"
+
+#: ../app/views/CWPViewPollOptions.class.php:95
+msgid "Opened and Closed Polls"
+msgstr "Ανοικτές και Κλειστές Δημοσκοπήσεις"
+
+#: ../app/views/CWPViewPollOptions.class.php:98
+msgid "No of polls to display per page in the older polls"
+msgstr "Αριθμός Δημοσκοπήσεων που εμφανίζονται στη σελίδα παλαιών δημοσκοπήσεων"
+
+#: ../app/views/CWPViewPollOptions.class.php:113
+msgid "Poll archive URL"
+msgstr "Αρχείο URL Δημοσκοπήσεων  "
+
+#: ../app/views/CWPViewStats.class.php:27
+msgid "Last 15 days statistics"
+msgstr "Στατιστικά Τελευταίων 15 ημερών "
+
+#: ../app/views/CWPViewStats.class.php:28
+msgid "Last 30 days statistics"
+msgstr "Στατιστικά Τελευταίων 30 ημερών "
+
+#: ../app/views/CWPViewStats.class.php:69
+msgid "No data available to analyze. If you have installed or updated the plugin recently, poll statistics will not be available until someone votes after the installation or updation."
+msgstr "Δεν υπάρχουν διαθέσιμα στοιχεία για την ανάλυση. Εάν έχετε εγκαταστήσει ή ενημερώσει το plugin πρόσφατα, στατιστικά στοιχεία δεν θα είναι διαθέσιμα μέχρι να ψηφίσει κάποιος μετά την εγκατάσταση ή την ενημέρωση."
+
+#: ../app/views/CWPViewUserLogs.class.php:5
+msgid "This feature will show the list of users voted for a particular poll."
+msgstr "Αυτή η επιλογή θα εμφανίσει τη λίστα των χρηστών που ψήφισαν για μια συγκεκριμένη δημοσκόπηση."
+
+#: ../app/views/CWPViewUserLogs.class.php:6
+msgid "The results will be shown only when the logged in users has voted for the poll. (The answers will be visible only for the votes after 26.06.2012)"
+msgstr "Τα αποτελέσματα θα εμφανίζονται μόνο όταν οι συνδεδεμένοι χρήστες ψήφισαν για τη δημοσκόπηση. (Οι απαντήσεις θα είναι ορατές μόνο για τις ψήφους μετά την 06/26/2012)"
+
+#: ../app/views/CWPViewUserLogs.class.php:7
+msgid "Poll User Logs"
+msgstr "Logs χρήστη Δημοσκόπησης"
+
+#: ../app/views/CWPViewUserLogs.class.php:19
+#: ../app/views/CWPViewUserLogs.class.php:44
+msgid "View User Logs"
+msgstr "Δείτε τα Logs χρήστη"
+
+#: ../app/views/CWPViewWidget.class.php:15
+msgid "Widget options"
+msgstr "Επιλογές Widget"
+
+#: ../app/views/CWPViewWidget.class.php:18
+msgid "Title"
+msgstr "Τίτλος"
+
+#: ../app/views/CWPViewWidget.class.php:24
+msgid "Display Older Polls Link"
+msgstr "Εμφάνιση Σύνδεσης Παλαιοτέρων Δημοσκοπησεων"
+
+#: ../app/views/CWPViewWidget.class.php:30
+msgid "Yes"
+msgstr "Ναί"
+
+#: ../app/views/CWPViewWidget.class.php:35
+msgid "No"
+msgstr "Οχι"
+
+#: ../app/views/CWPViewWidget.class.php:38
+msgid "Select the latest number of polls to be displayed"
+msgstr "Επιλέξτε τους τελευταίους αριθμούς των δημοσκοπήσεων που θα εμφανίζονται"
+
+#: ../app/views/CWPViewWidget.class.php:49
+msgid "Width"
+msgstr "Πλάτος"
+
