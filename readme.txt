@@ -119,6 +119,9 @@ if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
 
+= Version 33.8 =
+* Plugin campatibility ensured for Wordpress 3.5 release.
+
 = Version 33.7 =
 * Czech translation added (Translated by Vaclav Cadek st.).
 
