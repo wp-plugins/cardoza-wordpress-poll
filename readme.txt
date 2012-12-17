@@ -44,6 +44,7 @@ Some of the translation were done using a translation software. I am not sure ab
 * Greek (Translated by Kontosis Konstantinos)
 * Italian (Translated by Roberto Bani)
 * Portuguese-Brazilian (Translated by Rodrigo)
+* Romanian (Translated by Dachin Raul)
 * Russian (Translated by Boris)
 * Spanish (Translated by Diego Silva Opazo)
 
@@ -118,6 +119,9 @@ That's it. Check your page or post now.
 if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
 
 == Change Log ==
+
+= Version 33.9 =
+* Romanian translation added (Translated by Dachin Raul).
 
 = Version 33.8 =
 * Plugin campatibility ensured for Wordpress 3.5 release.
