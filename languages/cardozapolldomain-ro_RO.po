@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cardozapolldomain\n"
 "POT-Creation-Date: 2012-12-17 16:37-0000\n"
-"PO-Revision-Date: 2012-12-17 16:53-0000\n"
+"PO-Revision-Date: 2012-12-18 11:56-0000\n"
 "Last-Translator: \n"
 "Language-Team: Vinoj Cardoza <vinoj.cardoza@gmail.com>\n"
 "Language: Romanian\n"
@@ -61,7 +61,7 @@ msgstr "Total voturi"
 #: ../cardoza-wordpress-poll/app/CWPController.class.php:254
 #: ../cardoza-wordpress-poll/app/CWPController.class.php:284
 msgid " votes"
-msgstr "Voturi"
+msgstr "voturi"
 
 #: ../cardoza-wordpress-poll/cardozawppollFrontEndFunctions.php:156
 #: ../cardoza-wordpress-poll/cardozawppollFrontEndFunctions.php:157
@@ -109,7 +109,7 @@ msgstr "Sondaj"
 
 #: ../cardoza-wordpress-poll/app/views/CWPView.class.php:48
 msgid "Wordpress Poll"
-msgstr "Wordpress Poll"
+msgstr "Sondaje Wordpress"
 
 #: ../cardoza-wordpress-poll/app/views/CWPView.class.php:49
 msgid "Mandatory fields"
@@ -117,13 +117,13 @@ msgstr "Câmpuri obligatorii"
 
 #: ../cardoza-wordpress-poll/app/views/CWPView.class.php:53
 msgid "Manage Polls"
-msgstr "Gestionează sondaje"
+msgstr "Gestionează Sondaje"
 
 #: ../cardoza-wordpress-poll/app/views/CWPView.class.php:58
 #: ../cardoza-wordpress-poll/app/views/CWPViewCreateImagePoll.class.php:87
 #: ../cardoza-wordpress-poll/app/views/CWPViewCreatePoll.class.php:87
 msgid "Add New Poll"
-msgstr "Adaugă sondaj nou"
+msgstr "Adaugă Sondaj Nou"
 
 #: ../cardoza-wordpress-poll/app/views/CWPView.class.php:63
 msgid "Add New Image Poll"
@@ -131,7 +131,7 @@ msgstr "Adaugă Sondaj noua imagine"
 
 #: ../cardoza-wordpress-poll/app/views/CWPView.class.php:68
 msgid "Poll Options"
-msgstr "Opțiuni sondaj"
+msgstr "Opțiuni Sondaj"
 
 #: ../cardoza-wordpress-poll/app/views/CWPView.class.php:73
 msgid "Widget Options"
@@ -144,7 +144,7 @@ msgstr "Statistici Sondaj"
 
 #: ../cardoza-wordpress-poll/app/views/CWPView.class.php:83
 msgid "User Logs"
-msgstr "Jurnale utilizator"
+msgstr "Jurnale Utilizator"
 
 #: ../cardoza-wordpress-poll/app/views/CWPViewCreateImagePoll.class.php:13
 #: ../cardoza-wordpress-poll/app/views/CWPViewCreatePoll.class.php:14
@@ -210,7 +210,7 @@ msgstr "Număr de răspunsuri permise"
 #: ../cardoza-wordpress-poll/app/views/CWPViewCreatePoll.class.php:72
 #: ../cardoza-wordpress-poll/app/views/CWPViewEditPoll.class.php:76
 msgid "Poll Start/End Date"
-msgstr "Data de începere și de terminare a sondajului"
+msgstr "Data de start/sfârșit sondaj"
 
 #: ../cardoza-wordpress-poll/app/views/CWPViewCreateImagePoll.class.php:73
 #: ../cardoza-wordpress-poll/app/views/CWPViewCreatePoll.class.php:74
@@ -218,7 +218,7 @@ msgstr "Data de începere și de terminare a sondajului"
 #: ../cardoza-wordpress-poll/app/views/CWPViewManagePolls.class.php:33
 #: ../cardoza-wordpress-poll/app/views/CWPViewUserLogs.class.php:15
 msgid "Start date"
-msgstr "Dată începere"
+msgstr "Dată start"
 
 #: ../cardoza-wordpress-poll/app/views/CWPViewCreateImagePoll.class.php:74
 #: ../cardoza-wordpress-poll/app/views/CWPViewCreateImagePoll.class.php:77
