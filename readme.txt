@@ -120,6 +120,9 @@ if you have any queries post it at http://www.vinojcardoza.com/cardoza-wordpress
 
 == Change Log ==
 
+= Version 34.0 =
+* Footer display in 3.5 updated for poll plugin
+
 = Version 33.9 =
 * Romanian translation added (Translated by Dachin Raul).
 
