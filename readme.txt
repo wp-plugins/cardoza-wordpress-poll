@@ -29,7 +29,7 @@ This poll has the following features which uses both ajax and jquery.
 
 Thanks for downloading and installing my plugin. You can show your appreciation and support future development by donating.
 
-For more visit: http://fingerfish.com/cardoza-wordpress-poll/
+For more visit: http://www.vinojcardoza.com/cardoza-wordpress-poll/
 
 = Translation =
 Some of the translation were done using a translation software. I am not sure about the correctness of the translation. If you find some mistakes in the translation in your language, please let me know through the following link comments section. Also, if you couldn't find your language and you can do it, please let me know.
@@ -116,7 +116,7 @@ That's it. Check your page or post now.
 3. Paste the Url in the Answers of 'Add New Image Poll'.
 4. Done
 
-if you have any queries post it at http://fingerfish.com/cardoza-wordpress-poll
+if you have any queries post it at http://www.vinojcardoza.com/cardoza-wordpress-poll
 
 == Change Log ==
 
