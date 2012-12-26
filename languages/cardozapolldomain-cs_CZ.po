@@ -1,0 +1,436 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cardozapolldomain\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-12 12:28-0000\n"
+"PO-Revision-Date: 2012-11-13 09:23-0000\n"
+"Last-Translator: Vinoj Cardoza <vinoj.cardoza@hotmail.com>\n"
+"Language-Team: Vinoj Cardoza <vinoj.cardoza@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: Czech\n"
+"X-Poedit-Country: CZECH REPUBLIC\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../cardozawppoll.php:216
+msgid "Sorry! No polls found in the archive for this page"
+msgstr "Je nám líto! Na této stránce nebyla nalezena žádná anketa."
+
+#: ../cardozawppoll.php:224
+#: ../app/views/CWPViewManagePolls.class.php:59
+#: ../app/views/CWPViewUserLogs.class.php:39
+msgid "Open"
+msgstr "Otevřeno"
+
+#: ../cardozawppoll.php:225
+#: ../app/views/CWPViewManagePolls.class.php:63
+#: ../app/views/CWPViewUserLogs.class.php:40
+msgid "Closed"
+msgstr "Ukončeno"
+
+#: ../cardozawppoll.php:340
+#: ../app/views/CWPViewManagePolls.class.php:37
+#: ../app/views/CWPViewManagePolls.class.php:67
+msgid "View Result"
+msgstr "Zobrazit výsledky"
+
+#: ../cardozawppoll.php:347
+#: ../cardozawppollFrontEndFunctions.php:93
+#: ../cardozawppollFrontEndFunctions.php:141
+msgid "Vote"
+msgstr "Hlasovat"
+
+#: ../cardozawppollFrontEndFunctions.php:21
+#: ../app/views/CWPViewManagePolls.class.php:77
+msgid "Total voters"
+msgstr "Celkem hlasovalo"
+
+#: ../cardozawppollFrontEndFunctions.php:26
+#: ../app/CWPController.class.php:243
+#: ../app/CWPController.class.php:277
+#: ../app/views/CWPViewManagePolls.class.php:36
+#: ../app/views/CWPViewUserLogs.class.php:18
+msgid "Total votes"
+msgstr "Hlasů celkem"
+
+#: ../cardozawppollFrontEndFunctions.php:38
+#: ../cardozawppollFrontEndFunctions.php:40
+#: ../app/CWPController.class.php:252
+#: ../app/CWPController.class.php:254
+#: ../app/CWPController.class.php:284
+msgid " votes"
+msgstr "hlasů"
+
+#: ../cardozawppollFrontEndFunctions.php:156
+#: ../cardozawppollFrontEndFunctions.php:157
+msgid "See all polls and results"
+msgstr "Zobrazit všechny ankety a výsledky"
+
+#: ../app/CWPController.class.php:313
+#: ../app/views/CWPViewStats.class.php:26
+msgid "Last 7 days statistics"
+msgstr "Statistika za posledních 7 dní"
+
+#: ../app/CWPController.class.php:419
+msgid "User ID"
+msgstr "ID uživatele"
+
+#: ../app/CWPController.class.php:420
+msgid "User name"
+msgstr "Jméno uživatele"
+
+#: ../app/CWPController.class.php:421
+msgid "Polled time"
+msgstr "Čas ankety"
+
+#: ../app/CWPController.class.php:422
+#: ../app/views/CWPViewPollOptions.class.php:48
+msgid "IP Address"
+msgstr "IP Adresa"
+
+#: ../app/CWPController.class.php:423
+msgid "Answers"
+msgstr "Odpovědi"
+
+#: ../app/CWPController.class.php:434
+msgid "NULL"
+msgstr "NULA"
+
+#: ../app/CWPController.class.php:447
+msgid "No user logs found for this poll"
+msgstr "K této anketě nebyl nalezen žádný záznam"
+
+#: ../app/views/CWPView.class.php:37
+#: ../app/views/CWPView.class.php:38
+msgid "Poll"
+msgstr "Anketa"
+
+#: ../app/views/CWPView.class.php:48
+msgid "Wordpress Poll"
+msgstr "Wordpress Poll"
+
+#: ../app/views/CWPView.class.php:49
+msgid "Mandatory fields"
+msgstr "Povinná pole"
+
+#: ../app/views/CWPView.class.php:53
+msgid "Manage Polls"
+msgstr "Správa ankety"
+
+#: ../app/views/CWPView.class.php:58
+#: ../app/views/CWPViewCreateImagePoll.class.php:87
+#: ../app/views/CWPViewCreatePoll.class.php:87
+msgid "Add New Poll"
+msgstr "Přidej novou anketu"
+
+#: ../app/views/CWPView.class.php:63
+msgid "Add New Image Poll"
+msgstr "Přidat novou grafickou Anketa"
+
+#: ../app/views/CWPView.class.php:68
+msgid "Poll Options"
+msgstr "Nastavení ankety"
+
+#: ../app/views/CWPView.class.php:73
+msgid "Widget Options"
+msgstr "Nastavení widgetu"
+
+#: ../app/views/CWPView.class.php:78
+#: ../app/views/CWPViewStats.class.php:7
+msgid "Poll Statistics"
+msgstr "Statistiky"
+
+#: ../app/views/CWPView.class.php:83
+msgid "User Logs"
+msgstr "Logy registrovaných uživatelů"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:13
+#: ../app/views/CWPViewCreatePoll.class.php:14
+#: ../app/views/CWPViewEditPoll.class.php:29
+msgid "Poll Friendly Name"
+msgstr "Krátký název ankety"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:15
+#: ../app/views/CWPViewCreatePoll.class.php:16
+#: ../app/views/CWPViewEditPoll.class.php:31
+msgid "Friendly name"
+msgstr "Krátký název"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:23
+#: ../app/views/CWPViewCreatePoll.class.php:24
+#: ../app/views/CWPViewManagePolls.class.php:31
+#: ../app/views/CWPViewUserLogs.class.php:13
+msgid "Question"
+msgstr "otázka"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:29
+#: ../app/views/CWPViewCreatePoll.class.php:30
+#: ../app/views/CWPViewEditPoll.class.php:44
+msgid "Poll Answers"
+msgstr "Odpovědi"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:32
+#: ../app/views/CWPViewCreateImagePoll.class.php:36
+#: ../app/views/CWPViewCreatePoll.class.php:33
+#: ../app/views/CWPViewCreatePoll.class.php:37
+msgid "Answer"
+msgstr "Odpověď"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:46
+#: ../app/views/CWPViewCreatePoll.class.php:47
+msgid "Add answer"
+msgstr "Přidej odpověď"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:51
+#: ../app/views/CWPViewCreatePoll.class.php:52
+msgid "Remove Answer"
+msgstr "Odstraň odpověď"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:54
+#: ../app/views/CWPViewCreatePoll.class.php:55
+#: ../app/views/CWPViewEditPoll.class.php:60
+msgid "Poll Answer type"
+msgstr "Typ odpovědi"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:56
+#: ../app/views/CWPViewCreatePoll.class.php:57
+#: ../app/views/CWPViewEditPoll.class.php:62
+msgid "Allow users to select"
+msgstr "Nech uživatele vybrat"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:66
+#: ../app/views/CWPViewCreatePoll.class.php:67
+#: ../app/views/CWPViewEditPoll.class.php:71
+msgid "No of answers to allow"
+msgstr "Počet povolených odpovědí"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:71
+#: ../app/views/CWPViewCreatePoll.class.php:72
+#: ../app/views/CWPViewEditPoll.class.php:76
+msgid "Poll Start/End Date"
+msgstr "Datum začátku a ukončení ankety"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:73
+#: ../app/views/CWPViewCreatePoll.class.php:74
+#: ../app/views/CWPViewEditPoll.class.php:78
+#: ../app/views/CWPViewManagePolls.class.php:33
+#: ../app/views/CWPViewUserLogs.class.php:15
+msgid "Start date"
+msgstr "Počáteční datum"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:74
+#: ../app/views/CWPViewCreateImagePoll.class.php:77
+#: ../app/views/CWPViewCreatePoll.class.php:75
+#: ../app/views/CWPViewCreatePoll.class.php:78
+msgid "Format"
+msgstr "Formát"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:76
+#: ../app/views/CWPViewCreatePoll.class.php:77
+#: ../app/views/CWPViewEditPoll.class.php:81
+#: ../app/views/CWPViewManagePolls.class.php:34
+#: ../app/views/CWPViewUserLogs.class.php:16
+msgid "End date"
+msgstr "Datum ukončení"
+
+#: ../app/views/CWPViewCreatePoll.class.php:22
+#: ../app/views/CWPViewEditPoll.class.php:36
+msgid "Poll Question"
+msgstr "Otázka ankety"
+
+#: ../app/views/CWPViewCreatePoll.class.php:62
+#: ../app/views/CWPViewEditPoll.class.php:66
+msgid "Only one answer"
+msgstr "Pouze jedna odpověď"
+
+#: ../app/views/CWPViewCreatePoll.class.php:63
+#: ../app/views/CWPViewEditPoll.class.php:67
+msgid "More than one answer"
+msgstr "Více než jedna odpověď"
+
+#: ../app/views/CWPViewEditPoll.class.php:20
+#: ../app/views/CWPViewManagePolls.class.php:18
+msgid "Refresh Poll List"
+msgstr "Aktualizace seznamu anket"
+
+#: ../app/views/CWPViewEditPoll.class.php:23
+#: ../app/views/CWPViewManagePolls.class.php:21
+msgid "Edit a Poll"
+msgstr "Editace ankety"
+
+#: ../app/views/CWPViewEditPoll.class.php:26
+#: ../app/views/CWPViewManagePolls.class.php:24
+msgid "Delete a Poll"
+msgstr "Vymazání ankety"
+
+#: ../app/views/CWPViewEditPoll.class.php:38
+#: ../app/views/CWPViewManagePolls.class.php:30
+#: ../app/views/CWPViewUserLogs.class.php:12
+msgid "Name"
+msgstr "Jméno"
+
+#: ../app/views/CWPViewEditPoll.class.php:52
+msgid "Edit"
+msgstr "Editace"
+
+#: ../app/views/CWPViewEditPoll.class.php:53
+msgid "Delete"
+msgstr "Vymazat"
+
+#: ../app/views/CWPViewEditPoll.class.php:57
+msgid "Add more answers"
+msgstr "Přidat více odpovědí"
+
+#: ../app/views/CWPViewEditPoll.class.php:92
+#: ../app/views/CWPViewPollOptions.class.php:127
+#: ../app/views/CWPViewWidget.class.php:68
+msgid "Save"
+msgstr "Uložit"
+
+#: ../app/views/CWPViewManagePolls.class.php:32
+#: ../app/views/CWPViewUserLogs.class.php:14
+msgid "Answer type"
+msgstr "Typ odpovědi"
+
+#: ../app/views/CWPViewManagePolls.class.php:35
+#: ../app/views/CWPViewUserLogs.class.php:17
+msgid "Status"
+msgstr "Stav"
+
+#: ../app/views/CWPViewManagePolls.class.php:61
+msgid "Not yet opened"
+msgstr "Které ještě nebylo otevřeno"
+
+#: ../app/views/CWPViewPollOptions.class.php:15
+msgid "Poll options"
+msgstr "Možnosti ankety"
+
+#: ../app/views/CWPViewPollOptions.class.php:18
+msgid "Who is allowed to vote?"
+msgstr "Kdo může hlasovat?"
+
+#: ../app/views/CWPViewPollOptions.class.php:27
+msgid "Anyone can poll"
+msgstr "Hlasovat může každý"
+
+#: ../app/views/CWPViewPollOptions.class.php:32
+msgid "Only logged in users can poll"
+msgstr "Hlasovat mohou pouze přihlášení uživatelé"
+
+#: ../app/views/CWPViewPollOptions.class.php:36
+msgid "Lock Poll by"
+msgstr "Zamezení opakovaného hlasování pomocí"
+
+#: ../app/views/CWPViewPollOptions.class.php:43
+msgid "Cookies"
+msgstr "Cookies"
+
+#: ../app/views/CWPViewPollOptions.class.php:52
+msgid "Poll style options"
+msgstr "Volby stylu ankety"
+
+#: ../app/views/CWPViewPollOptions.class.php:54
+msgid "Background colour"
+msgstr "Barva pozadí"
+
+#: ../app/views/CWPViewPollOptions.class.php:63
+msgid "Colour"
+msgstr "Barva"
+
+#: ../app/views/CWPViewPollOptions.class.php:72
+#: ../app/views/CWPViewWidget.class.php:56
+msgid "Height"
+msgstr "Výška"
+
+#: ../app/views/CWPViewPollOptions.class.php:81
+msgid "Preview of the poll bar"
+msgstr "Náhled hlasovacího proužku"
+
+#: ../app/views/CWPViewPollOptions.class.php:86
+msgid "Poll archive options"
+msgstr "Volby pro archiv"
+
+#: ../app/views/CWPViewPollOptions.class.php:88
+msgid "Polls to display in the older polls page"
+msgstr "Ankety, které se mají zobrazit na starších stránkách"
+
+#: ../app/views/CWPViewPollOptions.class.php:93
+msgid "Opened Polls Only"
+msgstr "Pouze otevřené ankety"
+
+#: ../app/views/CWPViewPollOptions.class.php:94
+msgid "Closed Polls Only"
+msgstr "Pouze ukončené ankety"
+
+#: ../app/views/CWPViewPollOptions.class.php:95
+msgid "Opened and Closed Polls"
+msgstr "Otevřené a ukončené ankety"
+
+#: ../app/views/CWPViewPollOptions.class.php:98
+msgid "No of polls to display per page in the older polls"
+msgstr "Počet starších anket, které se mají zobrazit na jedné stránce."
+
+#: ../app/views/CWPViewPollOptions.class.php:113
+msgid "Poll archive URL"
+msgstr "Archiv URL"
+
+#: ../app/views/CWPViewStats.class.php:27
+msgid "Last 15 days statistics"
+msgstr "Statistika za posledních 15 dní"
+
+#: ../app/views/CWPViewStats.class.php:28
+msgid "Last 30 days statistics"
+msgstr "Statistika za posledních 30 dní."
+
+#: ../app/views/CWPViewStats.class.php:69
+msgid "No data available to analyze. If you have installed or updated the plugin recently, poll statistics will not be available until someone votes after the installation or updation."
+msgstr "No data available to analyze. If you have installed or updated the plugin recently, poll statistics will not be available until someone votes after the installation or updation.Nejsou k dispozici žádná data pro analýzu. Pokud jste nedávno plugin instalovali nebo aktualizovali, statistika nebude k dispozici do doby instalace nebo aktualizace. "
+
+#: ../app/views/CWPViewUserLogs.class.php:5
+msgid "This feature will show the list of users voted for a particular poll."
+msgstr "Tato funkce ukáže seznam uživatelů, kteří hlasovali v konkrétní anketě."
+
+#: ../app/views/CWPViewUserLogs.class.php:6
+msgid "The results will be shown only when the logged in users has voted for the poll. (The answers will be visible only for the votes after 26.06.2012)"
+msgstr "Výsledky se zobrazí pouze pro registrované uživatele (Odpovědi budou viditelné pouze pro hlasy po 26.06.2012)"
+
+#: ../app/views/CWPViewUserLogs.class.php:7
+msgid "Poll User Logs"
+msgstr "Hlasování registrovaných uživatelů"
+
+#: ../app/views/CWPViewUserLogs.class.php:19
+#: ../app/views/CWPViewUserLogs.class.php:44
+msgid "View User Logs"
+msgstr "Zobraz hlasování registrovaných uživatelů"
+
+#: ../app/views/CWPViewWidget.class.php:15
+msgid "Widget options"
+msgstr "Nastavení widgetu"
+
+#: ../app/views/CWPViewWidget.class.php:18
+msgid "Title"
+msgstr "Titulek"
+
+#: ../app/views/CWPViewWidget.class.php:24
+msgid "Display Older Polls Link"
+msgstr "Zobrazení odkazu na starší ankety"
+
+#: ../app/views/CWPViewWidget.class.php:30
+msgid "Yes"
+msgstr "Ano"
+
+#: ../app/views/CWPViewWidget.class.php:35
+msgid "No"
+msgstr "Ne"
+
+#: ../app/views/CWPViewWidget.class.php:38
+msgid "Select the latest number of polls to be displayed"
+msgstr "Vyberte poslední číslo anket, které se zobrazí"
+
+#: ../app/views/CWPViewWidget.class.php:49
+msgid "Width"
+msgstr "Šířka"
+
