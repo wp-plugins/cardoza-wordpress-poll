@@ -1,0 +1,436 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cardozapolldomain\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-25 10:16-0000\n"
+"PO-Revision-Date: 2012-10-25 10:40-0000\n"
+"Last-Translator: Vinoj Cardoza <vinoj.cardoza@hotmail.com>\n"
+"Language-Team: Vinoj Cardoza <vinoj.cardoza@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _e;gettext;gettext_noop;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: Serbo-Croatian\n"
+"X-Poedit-Country: CROATIA\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../cardozawppoll.php:216
+msgid "Sorry! No polls found in the archive for this page"
+msgstr "Ups! U arhivi nisu pronađene ankete za ovu stranu"
+
+#: ../cardozawppoll.php:224
+#: ../app/views/CWPViewManagePolls.class.php:59
+#: ../app/views/CWPViewUserLogs.class.php:39
+msgid "Open"
+msgstr "Otvori"
+
+#: ../cardozawppoll.php:225
+#: ../app/views/CWPViewManagePolls.class.php:63
+#: ../app/views/CWPViewUserLogs.class.php:40
+msgid "Closed"
+msgstr "Zatvorene"
+
+#: ../cardozawppoll.php:340
+#: ../app/views/CWPViewManagePolls.class.php:37
+#: ../app/views/CWPViewManagePolls.class.php:67
+msgid "View Result"
+msgstr "Pregled rezultata"
+
+#: ../cardozawppoll.php:347
+#: ../cardozawppollFrontEndFunctions.php:93
+#: ../cardozawppollFrontEndFunctions.php:141
+msgid "Vote"
+msgstr "Glasaj"
+
+#: ../cardozawppollFrontEndFunctions.php:21
+#: ../app/views/CWPViewManagePolls.class.php:77
+msgid "Total voters"
+msgstr "Ukupno glasača"
+
+#: ../cardozawppollFrontEndFunctions.php:26
+#: ../app/CWPController.class.php:243
+#: ../app/CWPController.class.php:277
+#: ../app/views/CWPViewManagePolls.class.php:36
+#: ../app/views/CWPViewUserLogs.class.php:18
+msgid "Total votes"
+msgstr "Ukupno glasova"
+
+#: ../cardozawppollFrontEndFunctions.php:38
+#: ../cardozawppollFrontEndFunctions.php:40
+#: ../app/CWPController.class.php:252
+#: ../app/CWPController.class.php:254
+#: ../app/CWPController.class.php:284
+msgid " votes"
+msgstr "glasova"
+
+#: ../cardozawppollFrontEndFunctions.php:156
+#: ../cardozawppollFrontEndFunctions.php:157
+msgid "See all polls and results"
+msgstr "Pregled svih anketa i rezultata"
+
+#: ../app/CWPController.class.php:313
+#: ../app/views/CWPViewStats.class.php:26
+msgid "Last 7 days statistics"
+msgstr "Statistika za poslednjih 7 dana"
+
+#: ../app/CWPController.class.php:419
+msgid "User ID"
+msgstr "Korisnički ID"
+
+#: ../app/CWPController.class.php:420
+msgid "User name"
+msgstr "Korisničko ime"
+
+#: ../app/CWPController.class.php:421
+msgid "Polled time"
+msgstr "Glasano"
+
+#: ../app/CWPController.class.php:422
+#: ../app/views/CWPViewPollOptions.class.php:48
+msgid "IP Address"
+msgstr "IP adresa"
+
+#: ../app/CWPController.class.php:423
+msgid "Answers"
+msgstr "Odgovori"
+
+#: ../app/CWPController.class.php:434
+msgid "NULL"
+msgstr "NULL"
+
+#: ../app/CWPController.class.php:447
+msgid "No user logs found for this poll"
+msgstr "Nema korisničkih podataka za ovu anketu"
+
+#: ../app/views/CWPView.class.php:37
+#: ../app/views/CWPView.class.php:38
+msgid "Poll"
+msgstr "Anketa"
+
+#: ../app/views/CWPView.class.php:48
+msgid "Wordpress Poll"
+msgstr "Wordpress Poll"
+
+#: ../app/views/CWPView.class.php:49
+msgid "Mandatory fields"
+msgstr "Obavezna polja"
+
+#: ../app/views/CWPView.class.php:53
+msgid "Manage Polls"
+msgstr "Obrada anketa"
+
+#: ../app/views/CWPView.class.php:58
+#: ../app/views/CWPViewCreateImagePoll.class.php:87
+#: ../app/views/CWPViewCreatePoll.class.php:87
+msgid "Add New Poll"
+msgstr "Dodaj novu anketu"
+
+#: ../app/views/CWPView.class.php:63
+msgid "Add New Image Poll"
+msgstr "Dodaj novu anketu"
+
+#: ../app/views/CWPView.class.php:68
+msgid "Poll Options"
+msgstr "Opcije ankete"
+
+#: ../app/views/CWPView.class.php:73
+msgid "Widget Options"
+msgstr "Opcije vidžeta"
+
+#: ../app/views/CWPView.class.php:78
+#: ../app/views/CWPViewStats.class.php:7
+msgid "Poll Statistics"
+msgstr "Statistike anketa"
+
+#: ../app/views/CWPView.class.php:83
+msgid "User Logs"
+msgstr "Logovi korisnika"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:13
+#: ../app/views/CWPViewCreatePoll.class.php:14
+#: ../app/views/CWPViewEditPoll.class.php:29
+msgid "Poll Friendly Name"
+msgstr "Prijateljsko ime ankete"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:15
+#: ../app/views/CWPViewCreatePoll.class.php:16
+#: ../app/views/CWPViewEditPoll.class.php:31
+msgid "Friendly name"
+msgstr "Prijateljsko ime"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:23
+#: ../app/views/CWPViewCreatePoll.class.php:24
+#: ../app/views/CWPViewManagePolls.class.php:31
+#: ../app/views/CWPViewUserLogs.class.php:13
+msgid "Question"
+msgstr "Pitanje"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:29
+#: ../app/views/CWPViewCreatePoll.class.php:30
+#: ../app/views/CWPViewEditPoll.class.php:44
+msgid "Poll Answers"
+msgstr "Odgovori"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:32
+#: ../app/views/CWPViewCreateImagePoll.class.php:36
+#: ../app/views/CWPViewCreatePoll.class.php:33
+#: ../app/views/CWPViewCreatePoll.class.php:37
+msgid "Answer"
+msgstr "Odgovor"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:46
+#: ../app/views/CWPViewCreatePoll.class.php:47
+msgid "Add answer"
+msgstr "Dodaj odgovor"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:51
+#: ../app/views/CWPViewCreatePoll.class.php:52
+msgid "Remove Answer"
+msgstr "Obriši odgovor"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:54
+#: ../app/views/CWPViewCreatePoll.class.php:55
+#: ../app/views/CWPViewEditPoll.class.php:60
+msgid "Poll Answer type"
+msgstr "Vrsta odgovora"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:56
+#: ../app/views/CWPViewCreatePoll.class.php:57
+#: ../app/views/CWPViewEditPoll.class.php:62
+msgid "Allow users to select"
+msgstr "Dozvoli korisnicima da odaberu"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:66
+#: ../app/views/CWPViewCreatePoll.class.php:67
+#: ../app/views/CWPViewEditPoll.class.php:71
+msgid "No of answers to allow"
+msgstr "Broj dozvoljenih odgovora"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:71
+#: ../app/views/CWPViewCreatePoll.class.php:72
+#: ../app/views/CWPViewEditPoll.class.php:76
+msgid "Poll Start/End Date"
+msgstr "Datum početka i završetka ankete"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:73
+#: ../app/views/CWPViewCreatePoll.class.php:74
+#: ../app/views/CWPViewEditPoll.class.php:78
+#: ../app/views/CWPViewManagePolls.class.php:33
+#: ../app/views/CWPViewUserLogs.class.php:15
+msgid "Start date"
+msgstr "Početni datum"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:74
+#: ../app/views/CWPViewCreateImagePoll.class.php:77
+#: ../app/views/CWPViewCreatePoll.class.php:75
+#: ../app/views/CWPViewCreatePoll.class.php:78
+msgid "Format"
+msgstr "Format"
+
+#: ../app/views/CWPViewCreateImagePoll.class.php:76
+#: ../app/views/CWPViewCreatePoll.class.php:77
+#: ../app/views/CWPViewEditPoll.class.php:81
+#: ../app/views/CWPViewManagePolls.class.php:34
+#: ../app/views/CWPViewUserLogs.class.php:16
+msgid "End date"
+msgstr "Datum završetka"
+
+#: ../app/views/CWPViewCreatePoll.class.php:22
+#: ../app/views/CWPViewEditPoll.class.php:36
+msgid "Poll Question"
+msgstr "Anketa Pitanje"
+
+#: ../app/views/CWPViewCreatePoll.class.php:62
+#: ../app/views/CWPViewEditPoll.class.php:66
+msgid "Only one answer"
+msgstr "Samo jedan odgovor"
+
+#: ../app/views/CWPViewCreatePoll.class.php:63
+#: ../app/views/CWPViewEditPoll.class.php:67
+msgid "More than one answer"
+msgstr "Više od jednog odgovora"
+
+#: ../app/views/CWPViewEditPoll.class.php:20
+#: ../app/views/CWPViewManagePolls.class.php:18
+msgid "Refresh Poll List"
+msgstr "Osveži listu anketa"
+
+#: ../app/views/CWPViewEditPoll.class.php:23
+#: ../app/views/CWPViewManagePolls.class.php:21
+msgid "Edit a Poll"
+msgstr "Obradi anketu"
+
+#: ../app/views/CWPViewEditPoll.class.php:26
+#: ../app/views/CWPViewManagePolls.class.php:24
+msgid "Delete a Poll"
+msgstr "Obriši anketu"
+
+#: ../app/views/CWPViewEditPoll.class.php:38
+#: ../app/views/CWPViewManagePolls.class.php:30
+#: ../app/views/CWPViewUserLogs.class.php:12
+msgid "Name"
+msgstr "Ime"
+
+#: ../app/views/CWPViewEditPoll.class.php:52
+msgid "Edit"
+msgstr "Obrada"
+
+#: ../app/views/CWPViewEditPoll.class.php:53
+msgid "Delete"
+msgstr "Brisanje"
+
+#: ../app/views/CWPViewEditPoll.class.php:57
+msgid "Add more answers"
+msgstr "Dodaj još odgovora"
+
+#: ../app/views/CWPViewEditPoll.class.php:92
+#: ../app/views/CWPViewPollOptions.class.php:127
+#: ../app/views/CWPViewWidget.class.php:68
+msgid "Save"
+msgstr "Sačuvaj"
+
+#: ../app/views/CWPViewManagePolls.class.php:32
+#: ../app/views/CWPViewUserLogs.class.php:14
+msgid "Answer type"
+msgstr "Vrsta odgovora"
+
+#: ../app/views/CWPViewManagePolls.class.php:35
+#: ../app/views/CWPViewUserLogs.class.php:17
+msgid "Status"
+msgstr "Status"
+
+#: ../app/views/CWPViewManagePolls.class.php:61
+msgid "Not yet opened"
+msgstr "Još nije otvorio"
+
+#: ../app/views/CWPViewPollOptions.class.php:15
+msgid "Poll options"
+msgstr "Opcije ankete"
+
+#: ../app/views/CWPViewPollOptions.class.php:18
+msgid "Who is allowed to vote?"
+msgstr "Kome je dozvoljeno da glasa?"
+
+#: ../app/views/CWPViewPollOptions.class.php:27
+msgid "Anyone can poll"
+msgstr "Svako može da glasa"
+
+#: ../app/views/CWPViewPollOptions.class.php:32
+msgid "Only logged in users can poll"
+msgstr "Samo prijavljeni korisnici mogu da glasaju"
+
+#: ../app/views/CWPViewPollOptions.class.php:36
+msgid "Lock Poll by"
+msgstr "Anketu je zaključao"
+
+#: ../app/views/CWPViewPollOptions.class.php:43
+msgid "Cookies"
+msgstr "Cookies"
+
+#: ../app/views/CWPViewPollOptions.class.php:52
+msgid "Poll style options"
+msgstr "Stilovi"
+
+#: ../app/views/CWPViewPollOptions.class.php:54
+msgid "Background colour"
+msgstr "Pozadinska boja"
+
+#: ../app/views/CWPViewPollOptions.class.php:63
+msgid "Colour"
+msgstr "Boja"
+
+#: ../app/views/CWPViewPollOptions.class.php:72
+#: ../app/views/CWPViewWidget.class.php:56
+msgid "Height"
+msgstr "Visina"
+
+#: ../app/views/CWPViewPollOptions.class.php:81
+msgid "Preview of the poll bar"
+msgstr "Pred-pregled anketnog bar-a"
+
+#: ../app/views/CWPViewPollOptions.class.php:86
+msgid "Poll archive options"
+msgstr "Opcije anketne arhive"
+
+#: ../app/views/CWPViewPollOptions.class.php:88
+msgid "Polls to display in the older polls page"
+msgstr "Broj anketa koje treba prikazati na starijim anketnim stranama"
+
+#: ../app/views/CWPViewPollOptions.class.php:93
+msgid "Opened Polls Only"
+msgstr "Samo otvorene ankete"
+
+#: ../app/views/CWPViewPollOptions.class.php:94
+msgid "Closed Polls Only"
+msgstr "Samo zatvorene ankete"
+
+#: ../app/views/CWPViewPollOptions.class.php:95
+msgid "Opened and Closed Polls"
+msgstr "Otvorene i Zatvorene ankete"
+
+#: ../app/views/CWPViewPollOptions.class.php:98
+msgid "No of polls to display per page in the older polls"
+msgstr "Broj anketa koje treba prikazati po strani na starijim anketama"
+
+#: ../app/views/CWPViewPollOptions.class.php:113
+msgid "Poll archive URL"
+msgstr "Adresa anketne arhive"
+
+#: ../app/views/CWPViewStats.class.php:27
+msgid "Last 15 days statistics"
+msgstr "Statistika za poslednjih 15 dana"
+
+#: ../app/views/CWPViewStats.class.php:28
+msgid "Last 30 days statistics"
+msgstr "Statistika ta poslednjih 30 dana"
+
+#: ../app/views/CWPViewStats.class.php:69
+msgid "No data available to analyze. If you have installed or updated the plugin recently, poll statistics will not be available until someone votes after the installation or updation."
+msgstr "Nema podataka za analizu. Ako ste nedavno instalirali ili obnovili plugin, anketne statistike neće biti dostupne dok neko ne glasa."
+
+#: ../app/views/CWPViewUserLogs.class.php:5
+msgid "This feature will show the list of users voted for a particular poll."
+msgstr "Ova opcija će prikazati listu korisnika koji su glasali za određenu anketu."
+
+#: ../app/views/CWPViewUserLogs.class.php:6
+msgid "The results will be shown only when the logged in users has voted for the poll. (The answers will be visible only for the votes after 26.06.2012)"
+msgstr "Rezultati će biti prikazani tek pošto prijavljeni korisnik glasa u anketi. (Glasovi će biti vidljivi samo za glasove posle 26.06.2012)"
+
+#: ../app/views/CWPViewUserLogs.class.php:7
+msgid "Poll User Logs"
+msgstr "Anketni korissnički logovi"
+
+#: ../app/views/CWPViewUserLogs.class.php:19
+#: ../app/views/CWPViewUserLogs.class.php:44
+msgid "View User Logs"
+msgstr "Pregledaj korisničke logove"
+
+#: ../app/views/CWPViewWidget.class.php:15
+msgid "Widget options"
+msgstr "Opcije vidžeta"
+
+#: ../app/views/CWPViewWidget.class.php:18
+msgid "Title"
+msgstr "Nasslov"
+
+#: ../app/views/CWPViewWidget.class.php:24
+msgid "Display Older Polls Link"
+msgstr "Prikaži link za starije ankete"
+
+#: ../app/views/CWPViewWidget.class.php:30
+msgid "Yes"
+msgstr "Da"
+
+#: ../app/views/CWPViewWidget.class.php:35
+msgid "No"
+msgstr "Ne"
+
+#: ../app/views/CWPViewWidget.class.php:38
+msgid "Select the latest number of polls to be displayed"
+msgstr "Odaberite koliko poslednjih anketa želite da prikažete"
+
+#: ../app/views/CWPViewWidget.class.php:49
+msgid "Width"
+msgstr "Širina"
+
