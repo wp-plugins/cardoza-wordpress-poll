@@ -46,6 +46,7 @@ Some of the translation were done using a translation software. I am not sure ab
 * Portuguese-Brazilian (Translated by Rodrigo)
 * Romanian (Translated by Dachin Raul)
 * Russian (Translated by Boris)
+* Slovak (Translated by Branco Radenovich)
 * Spanish (Translated by Diego Silva Opazo)
 
 == Installation ==
@@ -119,6 +120,9 @@ That's it. Check your page or post now.
 if you have any queries post it at http://www.vinojcardoza.com/cardoza-wordpress-poll
 
 == Change Log ==
+
+= Version 34.01 =
+* Slovak translation added (Translated by Branco Radenovich)
 
 = Version 34.0 =
 * Footer display in Wordpress 3.5 Version updated for poll plugin
