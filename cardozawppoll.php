@@ -28,8 +28,8 @@ function enq_scripts(){
 	/* To include the javascripts */
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('jquery-ui-core');
-	wp_enqueue_script('cwp-main', plugins_url('/public/js/CWPPoll.js', __FILE__));
-	wp_enqueue_script('cwp-main-datepicker', plugins_url('/public/js/jquery.ui.datepicker.min.js', __FILE__));
+	wp_enqueue_script('cwp-main', plugins_url('/public/js/CWPPoll.js', __FILE__), array('jquery', 'jquery-ui-core'));
+	wp_enqueue_script('cwp-main-datepicker', plugins_url('/public/js/jquery.ui.datepicker.min.js', __FILE__), array('jquery', 'jquery-ui-core'));
 	
 	/* To include the stylesheets */	
 	wp_enqueue_style('cwpcss', CWP_PGN_DIR.'public/css/CWPPoll.css');
