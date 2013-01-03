@@ -33,13 +33,28 @@ class CWPView {
 
     public function cwp_admin_menu() {
 
-        add_menu_page(
+        $page = add_menu_page(
             __('Poll'), 
             __('Poll'), 
             'manage_options', 
             'cwp_poll', array(&$this, 'poll_page'), 
             CWP_PGN_DIR . 'public/css/images/poll.png');
+		
+		 add_action('admin_print_scripts-' . $page, array(&$this, 'view_enq_scripts'));
     }
+
+	public function view_enq_scripts(){
+		/* To include the javascripts */
+		wp_enqueue_script('jquery');
+		wp_enqueue_script('jquery-ui-core');
+		wp_enqueue_script('cwp-main', CWP_PGN_DIR.'public/js/CWPPoll.js', array('jquery', 'jquery-ui-core'));
+		wp_enqueue_script('cwp-main-datepicker', CWP_PGN_DIR.'public/js/jquery.ui.datepicker.min.js', array('jquery', 'jquery-ui-core'));
+		
+		/* To include the stylesheets */	
+		wp_enqueue_style('cwpcss', CWP_PGN_DIR.'public/css/CWPPoll.css');
+		wp_enqueue_style('cwpcssjqui', CWP_PGN_DIR.'public/css/JqueryUi.css');	
+	}
+	
 
     /* The actual admin interface starts form here */
     public function poll_page() {

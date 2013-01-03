@@ -121,6 +121,9 @@ if you have any queries post it at http://www.vinojcardoza.com/cardoza-wordpress
 
 == Change Log ==
 
+= Version 34.03 =
+* Admin css conflict with other themes and plugins is rectified now.
+
 = Version 34.02 =
 * All the notices on the debug mode were rectified (Thanks to Amir for notifying)
 
