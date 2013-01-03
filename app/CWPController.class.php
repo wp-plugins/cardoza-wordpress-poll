@@ -236,7 +236,7 @@ class CWPController {
             
             $total = $poll[0]->total_votes;
             if($answer_type == "multiple") print "<b>Total Voters: </b>".$total."<br/>";
-    
+    		$total_votes = 0;
             foreach($answers as $answer){
                 $total_votes = $total_votes + $answer->votes;
             }

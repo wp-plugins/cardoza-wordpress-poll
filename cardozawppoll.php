@@ -3,30 +3,38 @@
 Plugin Name: Wordpress Poll
 Plugin URI: http://www.vinojcardoza.com/cardoza-wordpress-poll
 Description: Wordpress Poll is completely ajax powered polling system. This poll plugin supports both single and multiple selection of answers.
-Version: 34.01
+Version: 34.02
 Author: Vinoj Cardoza
 Author URI: http://www.vinojcardoza.com/about-me/
 License: GPL2
 */
 define('CWP_PGN_DIR', plugin_dir_url(__FILE__));
 
+/*Calling all the required files*/
 require_once 'app/CWPController.class.php';
+require_once 'cardozawppollFrontEndFunctions.php';
+require_once 'cardozawppolldb.php';
 
-/* To include the javascripts */
-wp_enqueue_script('jquery');
-wp_enqueue_script('jquery-ui-core');
-wp_enqueue_script('cwp-main', CWP_PGN_DIR.'public/js/CWPPoll.js', array('jquery','jquery-ui-core'));
-wp_enqueue_script('cwp-main-datepicker', CWP_PGN_DIR.'public/js/jquery.ui.datepicker.min.js', array('jquery','jquery-ui-core'));
-
-/* To include the stylesheets */
-wp_enqueue_style('cwpcss', CWP_PGN_DIR.'public/css/CWPPoll.css');
-wp_enqueue_style('cwpcssjqui', CWP_PGN_DIR.'public/css/JqueryUi.css');
-		
 
 add_action('wp_head','cwppoll_ajaxurl');
+add_action('admin_init', 'enq_scripts');
+add_action('wp_enqueue_scripts', 'enq_scripts');
 add_action('plugins_loaded', 'trigger_init');
 
 register_activation_hook  ( __FILE__, 'CWP_Install' );
+
+/* To include the javascripts */
+function enq_scripts(){
+	/* To include the javascripts */
+	wp_enqueue_script('jquery');
+	wp_enqueue_script('jquery-ui-core');
+	wp_enqueue_script('cwp-main', plugins_url('/public/js/CWPPoll.js', __FILE__));
+	wp_enqueue_script('cwp-main-datepicker', plugins_url('/public/js/jquery.ui.datepicker.min.js', __FILE__));
+	
+	/* To include the stylesheets */	
+	wp_enqueue_style('cwpcss', CWP_PGN_DIR.'public/css/CWPPoll.css');
+	wp_enqueue_style('cwpcssjqui', CWP_PGN_DIR.'public/css/JqueryUi.css');	
+}
 
 function cwppoll_ajaxurl() {
 ?>
@@ -38,17 +46,14 @@ var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
 
 function trigger_init(){
      
-    if(is_admin){
+    if(is_admin()){
         $cwp = new CWPController();
         $cwp->init();
     }
     load_plugin_textdomain('cardozapolldomain', false, dirname( plugin_basename(__FILE__)).'/languages');
-    register_sidebar_widget('Wordpress Poll', 'widget_cardoza_wp_poll');
+    wp_register_sidebar_widget('CWP_WP_POLL', 'Wordpress Poll', 'widget_cardoza_wp_poll');
 }
 
-/*Calling all the required files*/
-require_once 'cardozawppollFrontEndFunctions.php';
-require_once 'cardozawppolldb.php';
 
 function widget_cardoza_wp_poll($args){
     

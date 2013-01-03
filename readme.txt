@@ -121,6 +121,9 @@ if you have any queries post it at http://www.vinojcardoza.com/cardoza-wordpress
 
 == Change Log ==
 
+= Version 34.02 =
+* All the notices on the debug mode were rectified (Thanks to Amir for notifying)
+
 = Version 34.01 =
 * Slovak translation added (Translated by Branco Radenovich)
 
