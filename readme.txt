@@ -125,7 +125,7 @@ if you have any queries post it at http://www.vinojcardoza.com/cardoza-wordpress
 = Version 34.04 =
 * Admin template changed from tabbed structure to  normal wordpress menu style.
 * Polish translation added (Translated by Robert Szymanski)
-* Provision for sutom CSS code included in the plugin.
+* Provision for custom CSS code included in the plugin.
 
 = Version 34.03 =
 * Admin css conflict with other themes and plugins is rectified now.
