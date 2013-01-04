@@ -1,80 +1,7 @@
-.wrap{
-    font-family: Arial;
-    color:#4a7194;
-}
-#tabs { margin: 1em 0 1px 0; }
-#tabs li { display: inline; width: 50px; }
-#tabs a { 
-    padding: 3px 8px 2px 8px; 
-    border: 1px solid #4a7194; 
-    margin-left: 0px; 
-    text-decoration: none;
-    font-weight: bold;
+#cwp-content{
+    font-family: Verdana;
 }
 
-#cwp-content{
-    float:left;
-    width:99%;
-    margin: 1px 0 0 0;
-    border: 1px #4a7194 solid;
-    min-height: 100px;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-}
-#box{
-    float:left;
-    width:98%;
-    background-color: #ECF1EF;
-    padding: 8px;
-    border-radius:5px;
-    margin-bottom: 20px;
-}
-.tab-content{
-    margin:10px;
-}
-.tab-content h3{
-    margin-left : 5px;
-}
-#label{
-    float:left;
-    font-weight: bold;
-    width: 450px;
-    height: 30px;
-    text-align: right;
-}
-.txt{
-    width: 500px;
-    border: 1px #4a7194 solid;
-    margin-left:10px;
-    font-family: Arial;
-    float:left;
-}
-.inpt{
-    font-family: Arial;
-    font-weight: bold;
-    color:#4a7194;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-form select{
-    font-family: Arial;
-    margin-left:10px;
-}
-.color-preview{
-    width: 22px;
-    height: 22px;
-    margin-left: 10px;
-    border: 1px #CCC solid;
-    float:left;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-}
-.slct{
-    font-family: Arial;
-    margin-left:10px;  
-}
 .widget-poll{
     margin-bottom: 5px;
     padding: 3px;
@@ -88,8 +15,8 @@ form select{
     background-color: #FFF;
     width: 625px;
     height: 600px;
-    margin: 20px;
-    margin-left:50px;
+    margin: 10px;
+    
     border: 1px solid #FFF;
     font-family: Arial;
     font-size: 11px;
@@ -194,14 +121,14 @@ form select{
 
 .poll-wh-style{padding:2px 10px 2px 10px;}
 
-html.wp-toolbar body.wp-admin div#footer,
-html.wp-toolbar body.wp-admin div#wpfooter{
-    display: none;
-}
 
 .total-voters, .total-votes, .result-answer{
     width: 100%;
 }
 .result-answer{
     padding-top: 10px;
+}
+
+#wpfooter{
+	display: none;
 }

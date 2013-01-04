@@ -2,8 +2,6 @@
 class CWPViewUserLogs{
     function __construct() {?>
             <div id="tab7" class="tab-content">
-                <h4><?php _e('This feature will show the list of users voted for a particular poll.','cardozapolldomain');?></h4>
-                <h4><?php _e('The results will be shown only when the logged in users has voted for the poll. (The answers will be visible only for the votes after 26.06.2012)','cardozapolldomain');?></h4>
                 <h3><?php _e('Poll User Logs','cardozapolldomain');?></h3>
                 <div id="all-polls">
                 <table width="100%" style="background-color: #4A7194;color:#333;">

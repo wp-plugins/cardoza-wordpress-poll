@@ -24,8 +24,6 @@ class CWPController {
         add_action('wp_ajax_nopriv_editpoll_list', array(&$this, 'editPoll'));
         add_action('wp_ajax_deletepoll', array(&$this, 'deletePoll'));
         add_action('wp_ajax_nopriv_deletepoll', array(&$this, 'deletePoll'));
-        add_action('wp_ajax_save_widget', array(&$this, 'saveWidgetOptions'));
-        add_action('wp_ajax_nopriv_save_widget', array(&$this, 'saveWidgetOptions'));
         add_action('wp_ajax_editpoll', array(&$this, 'editPoll'));
         add_action('wp_ajax_nopriv_editpoll', array(&$this, 'editPoll'));
         add_action('wp_ajax_update_answer', array(&$this, 'updateAnswer'));
@@ -36,8 +34,6 @@ class CWPController {
         add_action('wp_ajax_nopriv_add_answer', array(&$this, 'addAnswer'));
         add_action('wp_ajax_save_changes', array(&$this, 'editPollSave'));
         add_action('wp_ajax_nopriv_save_changes', array(&$this, 'editPollSave'));
-        add_action('wp_ajax_save_poll_options', array(&$this, 'savePollOptions'));
-        add_action('wp_ajax_nopriv_poll_options', array(&$this, 'savePollOptions'));
         add_action('wp_ajax_submit_vote', array(&$this, 'saveVote'));
         add_action('wp_ajax_nopriv_submit_vote', array(&$this, 'saveVote'));
         add_action('wp_ajax_view_poll_result', array(&$this, 'viewPollResult'));
@@ -104,7 +100,6 @@ class CWPController {
         $vars['width'] = htmlspecialchars(stripslashes($_POST['widget_width']));
         $vars['title'] = htmlspecialchars(stripslashes($_POST['widget_title']));
         $this->cwpm->saveWidgetOptionsToDB($vars);
-        die();
     }
     
     public function retrievePoll(){
@@ -193,7 +188,6 @@ class CWPController {
         $vars['poll_bg_color'] = $_POST['poll_bg_color'];
         $vars['polls_to_display_archive'] = $_POST['polls_to_display_archive'];
         $this->cwpm->savePollOptionsToDB($vars);
-        die();
     }
     
     public function getPollAnswers($pollid){
@@ -360,7 +354,7 @@ class CWPController {
                     else $max_y_axis_value = $max_value;
                     ?>
                     <div id="cwp-xaxis">
-                        <?php print $label;?>
+                        <h3><?php print $label;?></h3>
                     </div>
                     <div id="cwp-yaxis">
                         <?php 

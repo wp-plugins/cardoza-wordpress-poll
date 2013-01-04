@@ -3,7 +3,6 @@
 class CWPViewStats {
     function __construct($vars = null) {
         ?>
-        <div id="tab6" class="tab-content">
             <h3><?php _e('Poll Statistics','cardozapolldomain');?></h3>
             <?php
             $controller = new CWPController();
@@ -31,7 +30,7 @@ class CWPViewStats {
             <div id="box">                
             <div id="cwp-graph">
                 <div id="cwp-xaxis">
-                    <?php print $label;?>
+                    <h3><?php print $label;?></h3>
                 </div>
                 <div id="cwp-yaxis">
                     <?php 
@@ -69,25 +68,7 @@ class CWPViewStats {
                 print __('No data available to analyze. If you have installed or updated the plugin recently, poll statistics will not be available until someone votes after the installation or updation.','cardozapolldomain');
             }
 ?>
-       </div>
         <?php
     }
-    
-    public function getLocation($ip){ 
-    /*    
-       $location =  simplexml_load_file("http://freegeoip.net/xml/".$ip);
-       if (isset($xml_data->errcode)){
-            $location = $xml_data->err;
-            
-        } else {
-            $location['city'] = $xml_data->City;
-            $location['country'] = $xml_data->CountryName;
-            $location['ndeg'] = $xml_data->Latitude;
-            $location['edeg'] = $xml_data->Longitude;
-            $location['source'] = "<a href=\"http://freegeoip.net/static/index.html\">freegeoip.net</a>";
-        }
-       return $location;*/
-    }
-
 }
 ?>

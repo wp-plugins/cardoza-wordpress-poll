@@ -12,17 +12,15 @@ class CWPViewManagePolls{
         <div id="all-polls">
             <div id="tab1" class="tab-content">
                 <div id="manage-polls">
-                <input id="refresh-list" class="inpt"
-                    onclick="javascript:refreshPollList()"
-                    onblur="javascript:setBorderDefault('refresh-list');" 
-                    onfocus="javascript:setBorder('refresh-list');" type="button" value="<?php _e("Refresh Poll List", "cardozapolldomain");?>"/>
+                <input id="refresh-list" onclick="javascript:refreshPollList()"
+                    type="button" value="<?php _e("Refresh Poll List", "cardozapolldomain");?>"/>
                 <input id="edit-poll" class="inpt"
                     onblur="javascript:setBorderDefault('edit-poll');" 
                     onfocus="javascript:setBorder('edit-poll');" type="button" value="<?php _e("Edit a Poll", "cardozapolldomain");?>" onclick="javascript:editPoll()" />
                 <input id="delete-poll" class="inpt"
                     onblur="javascript:setBorderDefault('delete-poll');" 
                     onfocus="javascript:setBorder('delete-poll');" type="button" value="<?php _e("Delete a Poll", "cardozapolldomain");?>" onclick="javascript:deletePoll()" />
-                <br />     
+                <br /><br />
                 <div id="all-polls">
                 <table width="100%" style="background-color: #4A7194;color:#333;">
                     <thead style="background-color: #4A7194;color:#FFF;height:30px;">
@@ -72,11 +70,13 @@ class CWPViewManagePolls{
                         ?>
                     </form>
                 </table>
-                    <br/>
-                <div id="box">
-                <div id="label" style="color:#000;"><?php _e("Total voters", "cardozapolldomain");?> :</div>&nbsp;&nbsp;&nbsp;<?php print $total_votes;?>
-                <div id="clear"></div>
-                </div>
+                <br />
+                <table>
+                	<tr>
+                		<td><b><?php _e("Total voters", "cardozapolldomain");?> :</b></td>
+                		<td><?php print $total_votes;?></td>
+                	</tr>
+                </table>
             </div>
             </div>
         </div>

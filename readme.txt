@@ -43,9 +43,10 @@ Some of the translation were done using a translation software. I am not sure ab
 * German (Translated by Peter Kaulfuss)
 * Greek (Translated by Kontosis Konstantinos)
 * Italian (Translated by Roberto Bani)
+* Polish (Translated by Robert Szymanski)
 * Portuguese-Brazilian (Translated by Rodrigo)
 * Romanian (Translated by Dachin Raul)
-* Russian (Translated by Boris)
+* Russian (Translated by Boris & Levatti)
 * Slovak (Translated by Branco Radenovich)
 * Spanish (Translated by Diego Silva Opazo)
 
@@ -120,6 +121,11 @@ That's it. Check your page or post now.
 if you have any queries post it at http://www.vinojcardoza.com/cardoza-wordpress-poll
 
 == Change Log ==
+
+= Version 34.04 =
+* Admin template changed from tabbed structure to  normal wordpress menu style.
+* Polish translation added (Translated by Robert Szymanski)
+* Provision for sutom CSS code included in the plugin.
 
 = Version 34.03 =
 * Admin css conflict with other themes and plugins is rectified now.

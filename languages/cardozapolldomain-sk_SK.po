@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: cardozapolldomain\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-07-27 11:09-0000\n"
-"PO-Revision-Date: 2012-12-26 16:51+0100\n"
+"PO-Revision-Date: 2013-01-04 15:52-0000\n"
 "Last-Translator: Vinoj Cardoza <vinoj.cardoza@gmail.com>\n"
 "Language-Team: Vinoj Cardoza <vinoj.cardoza@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -11,36 +11,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
 "X-Poedit-Basepath: ../\n"
-"Language: es_ES\n"
+"Language: sk_SK\n"
 "X-Generator: Poedit 1.5.4\n"
-"X-Poedit-Language: Slovak\n"
-"X-Poedit-Country: SLOVAKIA\n"
 "X-Poedit-SearchPath-0: ..\n"
 
 #: ../cardozawppoll.php:186
 msgid "Sorry! No polls found in the archive for this page"
 msgstr "prepáč! Žiadne ankety našiel v archíve pre túto stránku"
 
-#: ../cardozawppoll.php:195
-#: ../app/views/CWPViewManagePolls.class.php:57
+#: ../cardozawppoll.php:195 ../app/views/CWPViewManagePolls.class.php:57
 #: ../app/views/CWPViewUserLogs.class.php:39
 msgid "Open"
 msgstr "Otvorené"
 
-#: ../cardozawppoll.php:196
-#: ../app/views/CWPViewManagePolls.class.php:58
+#: ../cardozawppoll.php:196 ../app/views/CWPViewManagePolls.class.php:58
 #: ../app/views/CWPViewUserLogs.class.php:40
 msgid "Closed"
 msgstr "Zatvorené"
 
-#: ../cardozawppoll.php:313
-#: ../app/views/CWPViewManagePolls.class.php:37
+#: ../cardozawppoll.php:313 ../app/views/CWPViewManagePolls.class.php:37
 #: ../app/views/CWPViewManagePolls.class.php:62
 msgid "View Result"
 msgstr "Zobraziť výsledok"
 
-#: ../cardozawppoll.php:320
-#: ../cardozawppollFrontEndFunctions.php:72
+#: ../cardozawppoll.php:320 ../cardozawppollFrontEndFunctions.php:72
 #: ../cardozawppollFrontEndFunctions.php:104
 msgid "Vote"
 msgstr "Hlasovanie"
@@ -50,16 +44,14 @@ msgstr "Hlasovanie"
 msgid "Total voters"
 msgstr "Celkom voliči"
 
-#: ../cardozawppollFrontEndFunctions.php:26
-#: ../app/CWPController.class.php:241
+#: ../cardozawppollFrontEndFunctions.php:26 ../app/CWPController.class.php:241
 #: ../app/CWPController.class.php:272
 #: ../app/views/CWPViewManagePolls.class.php:36
 #: ../app/views/CWPViewUserLogs.class.php:18
 msgid "Total votes"
 msgstr "Celkový počet hlasov"
 
-#: ../cardozawppollFrontEndFunctions.php:37
-#: ../app/CWPController.class.php:249
+#: ../cardozawppollFrontEndFunctions.php:37 ../app/CWPController.class.php:249
 #: ../app/CWPController.class.php:279
 msgid " votes"
 msgstr " hlasov"
@@ -69,8 +61,7 @@ msgstr " hlasov"
 msgid "See all polls & results"
 msgstr "Vidieť všetky prieskumy verejnej mienky & výsledky"
 
-#: ../app/CWPController.class.php:308
-#: ../app/views/CWPViewStats.class.php:26
+#: ../app/CWPController.class.php:308 ../app/views/CWPViewStats.class.php:26
 msgid "Last 7 days statistics"
 msgstr "Štatistiky posledných 7 dní"
 
@@ -103,8 +94,7 @@ msgstr "NULL"
 msgid "No user logs found for this poll"
 msgstr "Žiadny používateľ prihlási pre túto anketu"
 
-#: ../app/views/CWPView.class.php:36
-#: ../app/views/CWPView.class.php:37
+#: ../app/views/CWPView.class.php:36 ../app/views/CWPView.class.php:37
 msgid "Poll"
 msgstr "Anketa"
 
@@ -133,8 +123,7 @@ msgstr "Anketa voľby"
 msgid "Widget Options"
 msgstr "Možnosti widget"
 
-#: ../app/views/CWPView.class.php:72
-#: ../app/views/CWPViewStats.class.php:7
+#: ../app/views/CWPView.class.php:72 ../app/views/CWPViewStats.class.php:7
 msgid "Poll Statistics"
 msgstr "Anketa štatistiky"
 
@@ -360,16 +349,26 @@ msgid "Last 30 days statistics"
 msgstr "Štatistiky posledných 30 dní"
 
 #: ../app/views/CWPViewStats.class.php:69
-msgid "No data available to analyze. If you have installed or updated the plugin recently, poll statistics will not be available until someone votes after the installation or updation."
-msgstr "Žiadne údaje k dispozícii analyzovať. Ak máte nainštalovaný alebo nedávno aktualizovaný plugin, Anketa štatistiky nebudú k dispozícii kým niekto hlasov po inštalácii alebo updation."
+msgid ""
+"No data available to analyze. If you have installed or updated the plugin "
+"recently, poll statistics will not be available until someone votes after "
+"the installation or updation."
+msgstr ""
+"Žiadne údaje k dispozícii analyzovať. Ak máte nainštalovaný alebo nedávno "
+"aktualizovaný plugin, Anketa štatistiky nebudú k dispozícii kým niekto "
+"hlasov po inštalácii alebo updation."
 
 #: ../app/views/CWPViewUserLogs.class.php:5
 msgid "This feature will show the list of users voted for a particular poll."
 msgstr "Táto funkcia vám ukáže zoznam užívateľov volili najmä anketu."
 
 #: ../app/views/CWPViewUserLogs.class.php:6
-msgid "The results will be shown only when the logged in users has voted for the poll. (The answers will be visible only for the votes after 26.06.2012)"
-msgstr "Výsledky sa zobrazia len kedy prihlásení užívatelia hlasoval za anketu. (Odpovede budú viditeľné len pre hlasy po 26.06.2012)"
+msgid ""
+"The results will be shown only when the logged in users has voted for the "
+"poll. (The answers will be visible only for the votes after 26.06.2012)"
+msgstr ""
+"Výsledky sa zobrazia len kedy prihlásení užívatelia hlasoval za anketu. "
+"(Odpovede budú viditeľné len pre hlasy po 26.06.2012)"
 
 #: ../app/views/CWPViewUserLogs.class.php:7
 msgid "Poll User Logs"
@@ -407,4 +406,3 @@ msgstr "Vyberte najnovšiu počet ankety sa zobrazí"
 #: ../app/views/CWPViewWidget.class.php:49
 msgid "Width"
 msgstr "Šírka"
-

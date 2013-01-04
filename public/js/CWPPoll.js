@@ -8,13 +8,10 @@ var max_no_answers;
 //Body on load
 jQuery(document).ready(function(){
     no_of_answers = 2;
-    reset();
-    showTab(1);
     jQuery('#start_date').datepicker();
     jQuery('#end_date').datepicker();
     jQuery('#image_start_date').datepicker();
     jQuery('#image_end_date').datepicker();
-    jQuery('#poll-preview').css('height', '0px');
     jQuery("#no-of-answers, #widget-height, #widget-width, #poll-bar-height").keydown(function(event) {
         // Allow: backspace, delete, tab and escape
         if ( event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || 
@@ -36,13 +33,8 @@ jQuery(document).ready(function(){
 });
 
 function appendAnswers(){
-    
     no_of_answers = no_of_answers + 1;
-    jQuery('.answers').append(
-        '<div id="answer'+no_of_answers+'"><div id="label">Answer '+ no_of_answers+'* :</div>\n\
-        <input id="ans'+ no_of_answers+'" style="width:350px;" name="answer'+ no_of_answers+'"  type="text" value="" />\n\
-        <div id="clear"></div></div>');
-    
+    jQuery('.answers').append('<tr id="answer' + no_of_answers + '"><td>Answer ' + no_of_answers + '* :</td><td><input id="ans'+ no_of_answers+'" style="width:350px;" name="answer' + no_of_answers + '"  type="text" value="" /></td></tr>');
 }
 
 function showanswers(value){
@@ -51,27 +43,12 @@ function showanswers(value){
     else jQuery('#nanswers').css('display', 'block');
 }
 
-function removeAnswers(){
-    
-    if(no_of_answers <=2){
-        jAlert("You should have atleast 2 answers for a poll!", 'Alert!');
-    }
+function removeAnswers(){    
+    if(no_of_answers <=2) jAlert("You should have atleast 2 answers for a poll!", 'Alert!');
     else{
         jQuery('#answer'+no_of_answers).remove();
         no_of_answers = no_of_answers-1;   
     }
-}
-
-function getColor(id, value){
-    
-    jQuery('#'+id).css('background-color','#'+value);
-}
-
-function pollSetHeight(value){
-    var color;
-    color = jQuery('#poll-bar-color').val();
-    jQuery('#poll-preview').css('height', value);
-    jQuery('#poll-preview').css('background-color', '#'+color );
 }
 
 function validateAddNewPollForm(){
@@ -361,19 +338,6 @@ function deletePoll(){
     });
 }
 
-function saveWidgetOptions(){
-    jConfirm('Do you want to save these widget options?', 'Confirmation Dialog', function(r) {
-        if(r==true){
-            jAlert("Widget options saved successfully!", "Save message");
-            jQuery.post(ajaxurl, jQuery('#widget-options').serialize(),  
-                function(response){
-                    jQuery('#message').html(response);
-                }
-            );
-        }
-    });
-}
-
 function editPoll(){
     jPrompt('Enter the poll id you want to edit:', '', 'Prompt Dialog', function(inp) {
         if(inp) {
@@ -402,20 +366,6 @@ function editPoll(){
                     );
                 }
             });
-        }
-    });
-}
-
-function savePollOptions(){
-    
-    jConfirm('Do you want to save these poll options?', 'Confirmation Dialog', function(r) {
-        if(r==true){
-            jAlert("Poll options saved successfully!", "Save message");
-            jQuery.post(ajaxurl, jQuery('#poll-options').serialize(),  
-                function(response){
-                    jQuery('#message').html(response);
-                }
-            );
         }
     });
 }
@@ -463,45 +413,12 @@ function viewPollResults(pollid){
     );
 }
 
-function showTab(id){
-    
-    reset();
-    jQuery('#tab'+id).show();  
-    jQuery('#cwp-content').show({
-        effect : 'slide',
-        easing : 'easeOutQuart',
-        direction : 'up',
-        duration : 1000
-    });
-
-
-    jQuery('#menu-tab'+id).css('color', '#fff');
-    jQuery('#menu-tab'+id).css('background-color', '#4a7194');
-}
-
-function reset(){
-    
-    jQuery('#tab1, #tab2, #tab3, #tab4, #tab5, #tab6, #tab7').css('display', 'none');
-    jQuery('#menu-tab1, #menu-tab2, #menu-tab3, #menu-tab4, #menu-tab5, #menu-tab6, #menu-tab7').css('background-color', '#fff');
-    jQuery('#menu-tab1, #menu-tab2, #menu-tab3, #menu-tab4, #menu-tab5, #menu-tab6, #menu-tab7').css('color', '#4a7194');
-}
-
 function clearAll(){
     jQuery('#poll-name').val('');
     jQuery('#poll-question').val('');
     for(i=1; i<=no_of_answers; i++){
         jQuery('#ans'+i).val('');
     }
-}
-
-function setBorder(id){
-    
-    jQuery('#'+id).css('border', '1px #FEE0C6 solid');
-}
-
-function setBorderDefault(id){
-    
-    jQuery('#'+id).css('border', '1px #4a7194 solid');
 }
 
 function showresults(id){
