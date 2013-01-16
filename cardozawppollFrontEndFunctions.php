@@ -1,6 +1,7 @@
 <?php
 
 function displayPollResults( $vars){
+    
     $poll_answers = $vars['poll_answers'];
     $total = $vars['total_votes'];
     $option_value = $vars['option_value'];

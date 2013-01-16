@@ -3,7 +3,7 @@
 Plugin Name: Wordpress Poll
 Plugin URI: http://www.vinojcardoza.com/cardoza-wordpress-poll
 Description: Wordpress Poll is completely ajax powered polling system. This poll plugin supports both single and multiple selection of answers.
-Version: 34.04
+Version: 34.05
 Author: Vinoj Cardoza
 Author URI: http://www.vinojcardoza.com/about-me/
 License: GPL2
@@ -14,7 +14,6 @@ define('CWP_PGN_DIR', plugin_dir_url(__FILE__));
 require_once 'app/CWPController.class.php';
 require_once 'cardozawppollFrontEndFunctions.php';
 require_once 'cardozawppolldb.php';
-
 
 add_action('wp_head','cwppoll_ajaxurl');
 add_action('wp_enqueue_scripts', 'enq_scripts');
@@ -43,11 +42,13 @@ function poll_custom_css(){
 }
 
 function cwppoll_ajaxurl() {
-?>
-<script type="text/javascript">
-var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
-</script>
-<?php
+    $ajax_nonce = wp_create_nonce('cwpp#23151982');
+    echo "<script type='text/javascript'>\n" .
+        " var CwppPlgSettings = {\n" .
+        "   ajaxurl : '" . admin_url( 'admin-ajax.php' ) . "',\n" .
+        "   nonce : '" . $ajax_nonce . "'\n" .
+        " };\n" .
+        "</script>\n";
 }
 
 function trigger_init(){
@@ -58,8 +59,6 @@ function trigger_init(){
     }
     load_plugin_textdomain('cardozapolldomain', false, dirname( plugin_basename(__FILE__)).'/languages');
     wp_register_sidebar_widget('CWP_WP_POLL', 'Wordpress Poll', 'widget_cardoza_wp_poll');
-	
-	
 }
 
 
@@ -350,6 +349,7 @@ in the widget and short code area. The users can see the results
 without voting.
 */
 function toggleResultsVotes($pollid, $vars){
+    $pollid = htmlspecialchars(strip_tags($pollid));
 	?>
 	<center>
 		<a class="showresultslink<?php echo $pollid;?>" href="javascript:showresults(<?php echo $pollid;?>);">

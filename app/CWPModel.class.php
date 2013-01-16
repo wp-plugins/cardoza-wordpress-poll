@@ -149,7 +149,6 @@ class CWPModel {
     
     public function savePollOptionsToDB($vars){
                 
-        
         update_option('cwpp_archive_url', $vars['archive_url']);
         update_option('cwpp_no_of_polls_to_display_archive', $vars['no_of_polls_to_display_archive']);
         update_option('cwpp_poll_access', $vars['poll_access']);

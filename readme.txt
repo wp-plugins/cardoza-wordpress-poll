@@ -122,6 +122,9 @@ if you have any queries post it at http://www.vinojcardoza.com/cardoza-wordpress
 
 == Change Log ==
 
+= Version 34.05 =
+* Ajax referer and nonce added to improve security.
+
 = Version 34.04 =
 * Admin template changed from tabbed structure to  normal wordpress menu style.
 * Polish translation added (Translated by Robert Szymanski)

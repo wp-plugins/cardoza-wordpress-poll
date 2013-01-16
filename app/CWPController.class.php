@@ -10,11 +10,14 @@ class CWPController {
     
     public $cwpv; //instance variable for views
     public $cwpm; //instance variable for model
+    public $nonceValue;
     
     function __construct(){
         
         $this->cwpv = new CWPView();
         $this->cwpm = new CWPModel();
+        
+        $this->nonceValue= 'cwpp#23151982';
 
         add_action('wp_ajax_save_poll', array(&$this, 'saveNewPoll'));
         add_action('wp_ajax_nopriv_save_poll', array(&$this, 'saveNewPoll'));
@@ -198,6 +201,7 @@ class CWPController {
     
     public function saveVote(){
         
+        check_ajax_referer($this->nonceValue, 'nonce');
         $pollid = $_POST['poll_id'];
         $expire = $_POST['expiry'];
         $status = 0;
@@ -262,6 +266,7 @@ class CWPController {
        
     public function viewPollResult(){
         
+        check_ajax_referer($this->nonceValue, 'nonce');
         $pollid = $_POST['poll_id'];
         $polls = $this->cwpm->getPollByIDFromDB($pollid);
         $answers = $this->cwpm->getPollAnswersFromDB($pollid);

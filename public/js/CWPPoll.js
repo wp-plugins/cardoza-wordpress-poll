@@ -4,10 +4,14 @@ var show_alert;
 var i;
 var answer_type;
 var max_no_answers;
+var ajaxurl;
 
 //Body on load
 jQuery(document).ready(function(){
-    no_of_answers = 2;
+    
+    ajaxurl = CwppPlgSettings.ajaxurl+ "?nonce=" + CwppPlgSettings.nonce;
+        
+    no_of_answers = 2;   
     jQuery('#start_date').datepicker();
     jQuery('#end_date').datepicker();
     jQuery('#image_start_date').datepicker();
