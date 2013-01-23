@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wordpress Poll ru_RU\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-04 15:57-0000\n"
-"PO-Revision-Date: 2013-01-04 15:57-0000\n"
-"Last-Translator: Vinoj Cardoza <vinoj.cardoza@gmail.com>\n"
+"POT-Creation-Date: 2013-01-16 16:12+0200\n"
+"PO-Revision-Date: 2013-01-16 16:13+0200\n"
+"Last-Translator: LeVaTi Team <levati@mail.ru>\n"
 "Language-Team: LeVaTi Team <levati@mail.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -21,146 +21,150 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 # @ cardozapolldomain
-#: cardozawppoll.php:223
+#: cardozawppoll.php:231
 msgid "Sorry! No polls found in the archive for this page"
 msgstr "Извините, но архив опросов пуст"
 
 # @ cardozapolldomain
-#: cardozawppoll.php:231 app/views/CWPViewManagePolls.class.php:57
+#: cardozawppoll.php:239 app/views/CWPViewManagePolls.class.php:57
 #: app/views/CWPViewUserLogs.class.php:37
 msgid "Open"
 msgstr "Открыто"
 
 # @ cardozapolldomain
-#: cardozawppoll.php:232 app/views/CWPViewManagePolls.class.php:61
+#: cardozawppoll.php:240 app/views/CWPViewManagePolls.class.php:61
 #: app/views/CWPViewUserLogs.class.php:38
 msgid "Closed"
 msgstr "Закрыто"
 
 # @ cardozapolldomain
-#: cardozawppoll.php:347 app/views/CWPViewManagePolls.class.php:35
+#: cardozawppoll.php:356 app/views/CWPViewManagePolls.class.php:35
 #: app/views/CWPViewManagePolls.class.php:65
 msgid "View Result"
 msgstr "Смотреть результаты"
 
 # @ cardozapolldomain
-#: cardozawppoll.php:354 cardozawppollFrontEndFunctions.php:93
-#: cardozawppollFrontEndFunctions.php:141
+#: cardozawppoll.php:363 cardozawppollFrontEndFunctions.php:94
+#: cardozawppollFrontEndFunctions.php:142
 msgid "Vote"
 msgstr "Голосовать"
 
 # @ cardozapolldomain
-#: cardozawppollFrontEndFunctions.php:21
+#: cardozawppollFrontEndFunctions.php:22
 #: app/views/CWPViewManagePolls.class.php:76
 msgid "Total voters"
 msgstr "Проголосовало"
 
 # @ cardozapolldomain
-#: cardozawppollFrontEndFunctions.php:26 app/CWPController.class.php:237
-#: app/CWPController.class.php:271 app/views/CWPViewManagePolls.class.php:34
+#: cardozawppollFrontEndFunctions.php:27 app/CWPController.class.php:241
+#: app/CWPController.class.php:276 app/views/CWPViewManagePolls.class.php:34
 #: app/views/CWPViewUserLogs.class.php:16
 msgid "Total votes"
 msgstr "Ответов"
 
 # @ cardozapolldomain
-#: cardozawppollFrontEndFunctions.php:38 cardozawppollFrontEndFunctions.php:40
-#: app/CWPController.class.php:246 app/CWPController.class.php:248
-#: app/CWPController.class.php:278
+#: cardozawppollFrontEndFunctions.php:39 cardozawppollFrontEndFunctions.php:41
+#: app/CWPController.class.php:250 app/CWPController.class.php:252
+#: app/CWPController.class.php:283
 msgid " votes"
 msgstr " голосов"
 
 # @ cardozapolldomain
-#: cardozawppollFrontEndFunctions.php:156
 #: cardozawppollFrontEndFunctions.php:157
+#: cardozawppollFrontEndFunctions.php:158
 msgid "See all polls and results"
 msgstr "Смотреть все опросы"
 
 # @ cardozapolldomain
-#: app/CWPController.class.php:307 app/views/CWPViewStats.class.php:25
+#: app/CWPController.class.php:312 app/views/CWPViewStats.class.php:25
 msgid "Last 7 days statistics"
 msgstr "Статистика последних 7 дней"
 
 # @ cardozapolldomain
-#: app/CWPController.class.php:413
+#: app/CWPController.class.php:418
 msgid "User ID"
 msgstr "ID пользователя"
 
 # @ cardozapolldomain
-#: app/CWPController.class.php:414
+#: app/CWPController.class.php:419
 msgid "User name"
 msgstr "Имя пользователя"
 
 # @ cardozapolldomain
-#: app/CWPController.class.php:415
+#: app/CWPController.class.php:420
 msgid "Polled time"
 msgstr "Время голосования"
 
 # @ cardozapolldomain
-#: app/CWPController.class.php:416 app/views/CWPViewPollOptions.class.php:52
+#: app/CWPController.class.php:421 app/views/CWPViewPollOptions.class.php:52
 msgid "IP Address"
 msgstr "IP адрес"
 
 # @ cardozapolldomain
-#: app/CWPController.class.php:417
+#: app/CWPController.class.php:422
 msgid "Answers"
 msgstr "Ответы"
 
 # @ cardozapolldomain
-#: app/CWPController.class.php:428
+#: app/CWPController.class.php:433
 msgid "NULL"
 msgstr "Пусто"
 
 # @ cardozapolldomain
-#: app/CWPController.class.php:441
+#: app/CWPController.class.php:446
 msgid "No user logs found for this poll"
 msgstr "Для этого опроса нет пользовательского лога"
 
 # @ cardozapolldomain
-#: app/views/CWPView.class.php:36
+#: app/views/CWPView.class.php:38
 msgid "Manage Polls"
 msgstr "Управление опросами"
 
 # @ cardozapolldomain
-#: app/views/CWPView.class.php:37 app/views/CWPViewPollOptions.class.php:18
+#: app/views/CWPView.class.php:39 app/views/CWPViewPollOptions.class.php:18
 msgid "Poll Options"
 msgstr "Настройки опроса"
 
 # @ cardozapolldomain
-#: app/views/CWPView.class.php:38
+#: app/views/CWPView.class.php:40
 msgid "Widget Options"
 msgstr "Опции виджета"
 
 # @ cardozapolldomain
-#: app/views/CWPView.class.php:39 app/views/CWPViewCreatePoll.class.php:15
+#: app/views/CWPView.class.php:41 app/views/CWPViewCreatePoll.class.php:15
 msgid "Add New Poll"
 msgstr "Добавить новый опрос"
 
 # @ cardozapolldomain
-#: app/views/CWPView.class.php:40
+#: app/views/CWPView.class.php:42
 #: app/views/CWPViewCreateImagePoll.class.php:14
 msgid "Add New Image Poll"
 msgstr "Добавить новый графический опрос"
 
 # @ cardozapolldomain
-#: app/views/CWPView.class.php:41 app/views/CWPViewStats.class.php:6
+#: app/views/CWPView.class.php:43 app/views/CWPViewStats.class.php:6
 msgid "Poll Statistics"
 msgstr "Статистика опроса"
 
 # @ cardozapolldomain
-#: app/views/CWPView.class.php:42
+#: app/views/CWPView.class.php:44
 msgid "User Logs"
 msgstr "Пользовательский лог"
 
+#: app/views/CWPView.class.php:45
+msgid "Custom CSS"
+msgstr "Свой стиль (CSS)"
+
 # @ cardozapolldomain
-#: app/views/CWPView.class.php:70 app/views/CWPView.class.php:82
-#: app/views/CWPView.class.php:91 app/views/CWPView.class.php:100
-#: app/views/CWPView.class.php:109 app/views/CWPView.class.php:118
-#: app/views/CWPView.class.php:127
+#: app/views/CWPView.class.php:97 app/views/CWPView.class.php:109
+#: app/views/CWPView.class.php:118 app/views/CWPView.class.php:127
+#: app/views/CWPView.class.php:136 app/views/CWPView.class.php:145
+#: app/views/CWPView.class.php:154 app/views/CWPView.class.php:163
 msgid "Wordpress Poll"
 msgstr "Опрос Wordpress "
 
 # @ cardozapolldomain
-#: app/views/CWPView.class.php:71
+#: app/views/CWPView.class.php:98
 msgid "Mandatory fields"
 msgstr "Обязательные для заполнения поля"
 
@@ -262,6 +266,7 @@ msgstr "Конечная дата"
 # @ cardozapolldomain
 #: app/views/CWPViewCreateImagePoll.class.php:84
 #: app/views/CWPViewCreatePoll.class.php:84
+#: app/views/CWPViewCustomCSS.class.php:23
 #: app/views/CWPViewEditPoll.class.php:90
 #: app/views/CWPViewPollOptions.class.php:109
 #: app/views/CWPViewWidget.class.php:65
@@ -279,6 +284,10 @@ msgstr "Только один ответ"
 #: app/views/CWPViewEditPoll.class.php:64
 msgid "More than one answer"
 msgstr "Более чем один ответ"
+
+#: app/views/CWPViewCustomCSS.class.php:15
+msgid "Put your custom CSS code here"
+msgstr "Введите здесь CSS код"
 
 # @ cardozapolldomain
 #: app/views/CWPViewEditPoll.class.php:18

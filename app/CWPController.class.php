@@ -54,6 +54,7 @@ class CWPController {
       
     public function saveNewPoll(){
         
+        check_ajax_referer($this->nonceValue, 'nonce');
         $answers = array();
         $vars['name'] = htmlspecialchars(stripslashes($_POST['poll_name']));
         $vars['question'] = htmlspecialchars(stripslashes($_POST['poll_question']));
@@ -83,6 +84,7 @@ class CWPController {
     }
     
     public function deletePoll(){
+        check_ajax_referer($this->nonceValue, 'nonce');
         $poll = $this->cwpm->getPollByIDFromDB(htmlspecialchars(stripslashes($_POST['pollid'])));
         if(sizeof($poll[0])<1) return false;
         else $result = $this->cwpm->deletePollFromDB(htmlspecialchars(stripslashes($_POST['pollid'])));
@@ -128,10 +130,11 @@ class CWPController {
         $open_polls = array();
         $polls = $this->cwpm->getPollsArchiveFromDB($no_of_polls, $page_no);
         return $polls;
-        die();
     }
     
     public function editPoll(){
+        
+        check_ajax_referer($this->nonceValue, 'nonce');
         $poll = $this->cwpm->getPollByIDFromDB($_POST['pollid']);
         if(sizeof($poll[0])<1) return false;
         else $this->cwpv->viewEditPoll();
@@ -139,11 +142,14 @@ class CWPController {
     }
     
     public function getPollByID(){
+        
         $poll = $this->cwpm->getPollByIDFromDB($_POST['pollid']);
         return $poll;
     }
     
     public function updateAnswer(){
+        
+        check_ajax_referer($this->nonceValue, 'nonce');
         $this->cwpm->updatePollAnswerByID($_POST['answer'], $_POST['answer_id']);
         $poll = $this->cwpm->getPollByIDFromDB($_POST['pollid']);
         if(sizeof($poll[0])<1) return false;
@@ -152,6 +158,8 @@ class CWPController {
     }
     
     public function deleteAnswer(){
+        
+        check_ajax_referer($this->nonceValue, 'nonce');
         $this->cwpm->deletePollAnswerByID($_POST['answer_id']);
         $poll = $this->cwpm->getPollByIDFromDB($_POST['pollid']);
         if(sizeof($poll[0])<1) return false;
@@ -160,6 +168,8 @@ class CWPController {
     }
     
     public function addAnswer(){
+        
+        check_ajax_referer($this->nonceValue, 'nonce');
         $this->cwpm->addPollAnswerIntoDB($_POST['pollid'],$_POST['answer']);
         $poll = $this->cwpm->getPollByIDFromDB($_POST['pollid']);
         if(sizeof($poll[0])<1) return false;
@@ -168,6 +178,8 @@ class CWPController {
     }
     
     public function editPollSave(){
+        
+        check_ajax_referer($this->nonceValue, 'nonce');
         $vars = array();
         $vars['name'] = htmlspecialchars(stripslashes($_POST['poll_name']));
         $vars['question'] = htmlspecialchars(stripslashes($_POST['poll_question']));
@@ -301,6 +313,7 @@ class CWPController {
     }
     
     public function getPollStats($vars = null){
+        
         $poll_stats = $this->cwpm->pollStats();
         $current_time = time();
         $votes = array();
@@ -397,16 +410,19 @@ class CWPController {
     }
 	
     public function getPollLogged($pollid, $userid){
+        
         $status = $this->cwpm->getPollLoggedDetail($pollid, $userid);
         return $status;		
     }
     
     public function getPollIPLogged($pollid){
+        
         $status = $this->cwpm->getPollIPStatus($pollid);
         return $status;
     }
     
     public function getPollLogs(){
+        
         $pollid = $_POST['pollid'];
         $logs = $this->cwpm->getPollUserLogsByPollID($pollid);
         $available = '';
@@ -444,7 +460,6 @@ class CWPController {
             print '</table>';
         }
         if($available != 'yes') print '<p>'.__('No user logs found for this poll', 'cardozapolldomain').'</p>';
-        die();
     }
 }
 

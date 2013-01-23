@@ -122,6 +122,9 @@ if you have any queries post it at http://www.vinojcardoza.com/cardoza-wordpress
 
 == Change Log ==
 
+= Version 34.06 =
+* Russian translation and security improved.
+
 = Version 34.05 =
 * Ajax referer and nonce added to improve security (Recommended by Marcela Benetrix).
 
