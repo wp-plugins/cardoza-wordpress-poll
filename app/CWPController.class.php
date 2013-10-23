@@ -56,13 +56,13 @@ class CWPController {
         
         check_ajax_referer($this->nonceValue, 'nonce');
         $answers = array();
-        $vars['name'] = htmlspecialchars(stripslashes($_POST['poll_name']));
-        $vars['question'] = htmlspecialchars(stripslashes($_POST['poll_question']));
-        $vars['answer_type'] = $_POST['poll_answer_type'];
-        $vars['no_of_answers'] = htmlspecialchars(stripslashes($_POST['no_of_answers']));
-        $vars['s_date'] = $_POST['s_date'];
-        $vars['e_date'] = $_POST['e_date'];
-        $vars['poll_type'] = $_POST['poll_type'];
+        $vars['name'] = $this->inputSantitize($_POST['poll_name']);
+        $vars['question'] = $this->inputSantitize($_POST['poll_question']);
+        $vars['answer_type'] = $this->inputSantitize($_POST['poll_answer_type']);
+        $vars['no_of_answers'] = $this->inputSantitize($_POST['no_of_answers']);
+        $vars['s_date'] = $this->inputSantitize($_POST['s_date']);
+        $vars['e_date'] = $this->inputSantitize($_POST['e_date']);
+        $vars['poll_type'] = $this->inputSantitize($_POST['poll_type']);
         
         for($i=1;$i<=50;$i++) {
             if(!empty($_POST['answer'.$i])) array_push($answers, $_POST['answer'.$i]);
@@ -85,9 +85,9 @@ class CWPController {
     
     public function deletePoll(){
         check_ajax_referer($this->nonceValue, 'nonce');
-        $poll = $this->cwpm->getPollByIDFromDB(htmlspecialchars(stripslashes($_POST['pollid'])));
+        $poll = $this->cwpm->getPollByIDFromDB($this->inputSantitize($_POST['pollid']));
         if(sizeof($poll[0])<1) return false;
-        else $result = $this->cwpm->deletePollFromDB(htmlspecialchars(stripslashes($_POST['pollid'])));
+        else $result = $this->cwpm->deletePollFromDB($this->inputSantitize($_POST['pollid']));
         $this->refreshPollList();
     }
     
@@ -99,11 +99,11 @@ class CWPController {
     
     public function saveWidgetOptions(){
         
-        $vars['no_of_polls'] = htmlspecialchars(stripslashes($_POST['no_of_polls']));
-        $vars['poll_archive'] = htmlspecialchars(stripslashes($_POST['poll-archive']));
-        $vars['height'] = htmlspecialchars(stripslashes($_POST['widget_height']));
-        $vars['width'] = htmlspecialchars(stripslashes($_POST['widget_width']));
-        $vars['title'] = htmlspecialchars(stripslashes($_POST['widget_title']));
+        $vars['no_of_polls'] = $this->inputSantitize($_POST['no_of_polls']);
+        $vars['poll_archive'] = $this->inputSantitize($_POST['poll-archive']);
+        $vars['height'] = $this->inputSantitize($_POST['widget_height']);
+        $vars['width'] = $this->inputSantitize($_POST['widget_width']);
+        $vars['title'] = $this->inputSantitize($_POST['widget_title']);
         $this->cwpm->saveWidgetOptionsToDB($vars);
     }
     
@@ -128,14 +128,14 @@ class CWPController {
     public function retrieveArchivePoll($no_of_polls, $page_no = null){
         
         $open_polls = array();
-        $polls = $this->cwpm->getPollsArchiveFromDB($no_of_polls, $page_no);
+        $polls = $this->cwpm->getPollsArchiveFromDB($this->inputSantitize($no_of_polls), $this->inputSantitize($page_no));
         return $polls;
     }
     
     public function editPoll(){
         
         check_ajax_referer($this->nonceValue, 'nonce');
-        $poll = $this->cwpm->getPollByIDFromDB($_POST['pollid']);
+        $poll = $this->cwpm->getPollByIDFromDB($this->inputSantitize($_POST['pollid']));
         if(sizeof($poll[0])<1) return false;
         else $this->cwpv->viewEditPoll();
         die();
@@ -143,15 +143,15 @@ class CWPController {
     
     public function getPollByID(){
         
-        $poll = $this->cwpm->getPollByIDFromDB($_POST['pollid']);
+        $poll = $this->cwpm->getPollByIDFromDB($this->inputSantitize($_POST['pollid']));
         return $poll;
     }
     
     public function updateAnswer(){
         
         check_ajax_referer($this->nonceValue, 'nonce');
-        $this->cwpm->updatePollAnswerByID($_POST['answer'], $_POST['answer_id']);
-        $poll = $this->cwpm->getPollByIDFromDB($_POST['pollid']);
+        $this->cwpm->updatePollAnswerByID($this->inputSantitize($_POST['answer']), $this->inputSantitize($_POST['answer_id']));
+        $poll = $this->cwpm->getPollByIDFromDB($this->inputSantitize($_POST['pollid']));
         if(sizeof($poll[0])<1) return false;
         else $this->cwpv->viewEditPoll();
         die();
@@ -160,8 +160,8 @@ class CWPController {
     public function deleteAnswer(){
         
         check_ajax_referer($this->nonceValue, 'nonce');
-        $this->cwpm->deletePollAnswerByID($_POST['answer_id']);
-        $poll = $this->cwpm->getPollByIDFromDB($_POST['pollid']);
+        $this->cwpm->deletePollAnswerByID($this->inputSantitize($_POST['answer_id']));
+        $poll = $this->cwpm->getPollByIDFromDB($this->inputSantitize($_POST['pollid']));
         if(sizeof($poll[0])<1) return false;
         else $this->cwpv->viewEditPoll();
         die();
@@ -170,8 +170,8 @@ class CWPController {
     public function addAnswer(){
         
         check_ajax_referer($this->nonceValue, 'nonce');
-        $this->cwpm->addPollAnswerIntoDB($_POST['pollid'],$_POST['answer']);
-        $poll = $this->cwpm->getPollByIDFromDB($_POST['pollid']);
+        $this->cwpm->addPollAnswerIntoDB($this->inputSantitize($_POST['pollid']), $this->inputSantitize($_POST['answer']));
+        $poll = $this->cwpm->getPollByIDFromDB($this->inputSantitize($_POST['pollid']));
         if(sizeof($poll[0])<1) return false;
         else $this->cwpv->viewEditPoll();
         die();
@@ -181,53 +181,53 @@ class CWPController {
         
         check_ajax_referer($this->nonceValue, 'nonce');
         $vars = array();
-        $vars['name'] = htmlspecialchars(stripslashes($_POST['poll_name']));
-        $vars['question'] = htmlspecialchars(stripslashes($_POST['poll_question']));
-        $vars['answer_type'] = $_POST['poll_answer_type'];
-        $vars['no_of_answers'] = $_POST['no_of_answers'];
-        $vars['s_date'] = $_POST['s_date'];
-        $vars['e_date'] = $_POST['e_date'];
+        $vars['name'] = $this->inputSantitize($_POST['poll_name']);
+        $vars['question'] = $this->inputSantitize($_POST['poll_question']);
+        $vars['answer_type'] = $this->inputSantitize($_POST['poll_answer_type']);
+        $vars['no_of_answers'] = $this->inputSantitize($_POST['no_of_answers']);
+        $vars['s_date'] = $this->inputSantitize($_POST['s_date']);
+        $vars['e_date'] = $this->inputSantitize($_POST['e_date']);
        
-        $this->cwpm->saveChangesPollDB($vars, $_POST['pollid']);
+        $this->cwpm->saveChangesPollDB($vars, $this->inputSantitize($_POST['pollid']));
         die();
     }
     
     public function savePollOptions(){
         
-        $vars['archive_url'] = $_POST['archive_url'];
-        $vars['no_of_polls_to_display_archive'] = $_POST['no_of_polls_to_display_archive'];
-        $vars['poll_access'] = $_POST['poll_access'];
-        $vars['poll_lock'] = $_POST['poll_lock'];
-        $vars['poll_bar_color'] = $_POST['poll_bar_color'];
-        $vars['poll_bar_height'] = $_POST['poll_bar_height'];
-        $vars['poll_bg_color'] = $_POST['poll_bg_color'];
-        $vars['polls_to_display_archive'] = $_POST['polls_to_display_archive'];
+        $vars['archive_url'] = $this->inputSantitize($_POST['archive_url']);
+        $vars['no_of_polls_to_display_archive'] = $this->inputSantitize($_POST['no_of_polls_to_display_archive']);
+        $vars['poll_access'] = $this->inputSantitize($_POST['poll_access']);
+        $vars['poll_lock'] = $this->inputSantitize($_POST['poll_lock']);
+        $vars['poll_bar_color'] = $this->inputSantitize($_POST['poll_bar_color']);
+        $vars['poll_bar_height'] = $this->inputSantitize($_POST['poll_bar_height']);
+        $vars['poll_bg_color'] = ($_POST['poll_bg_color']);
+        $vars['polls_to_display_archive'] = $this->inputSantitize($_POST['polls_to_display_archive']);
         $this->cwpm->savePollOptionsToDB($vars);
     }
     
     public function getPollAnswers($pollid){
         
-        $answers = $this->cwpm->getPollAnswersFromDB($pollid);
+        $answers = $this->cwpm->getPollAnswersFromDB($this->inputSantitize($pollid));
         return $answers;
     }
     
     public function saveVote(){
         
         check_ajax_referer($this->nonceValue, 'nonce');
-        $pollid = $_POST['poll_id'];
-        $expire = $_POST['expiry'];
+        $pollid = $this->inputSantitize($_POST['poll_id']);
+        $expire = $this->inputSantitize($_POST['expiry']);
         $status = 0;
         $option_value = $this->cwpp_options();
         $vars['option_value'] = $option_value;
         $answerid = array();
-        if($_POST['answertype'] == 'one'){
+        if($this->inputSantitize($_POST['answertype']) == 'one'){
             if(isset($_POST[$pollid])){
-                $answerid[] = $_POST[$pollid];
+                $answerid[] = $this->inputSantitize($_POST[$pollid]);
                 $status = 1;
             }
             
         }
-        if($_POST['answertype'] == 'multiple'){
+        if($this->inputSantitize($_POST['answertype']) == 'multiple'){
             for($i=1; $i<=200; $i++){
                 if(isset($_POST['option'.$i])){
                     $answerid[] = $_POST['option'.$i];
@@ -279,7 +279,7 @@ class CWPController {
     public function viewPollResult(){
         
         check_ajax_referer($this->nonceValue, 'nonce');
-        $pollid = $_POST['poll_id'];
+        $pollid = $this->inputSantitize($_POST['poll_id']);
         $polls = $this->cwpm->getPollByIDFromDB($pollid);
         $answers = $this->cwpm->getPollAnswersFromDB($pollid);
         $option_value = $this->cwpp_options();
@@ -318,7 +318,7 @@ class CWPController {
         $current_time = time();
         $votes = array();
         $today = mktime(0,0,0,date('m'),date('d'),date('Y'));
-        if(isset($_POST['arguments'])) $vars['arguments'] = $_POST['arguments'];
+        if(isset($_POST['arguments'])) $vars['arguments'] = $this->inputSantitize($_POST['arguments']);
         if(empty($vars)){
             if(!empty($poll_stats)){
                 for($i=0;$i<7;$i++){
@@ -411,20 +411,20 @@ class CWPController {
 	
     public function getPollLogged($pollid, $userid){
         
-        $status = $this->cwpm->getPollLoggedDetail($pollid, $userid);
+        $status = $this->cwpm->getPollLoggedDetail($this->inputSantitize($pollid), $this->inputSantitize($userid));
         return $status;		
     }
     
     public function getPollIPLogged($pollid){
         
-        $status = $this->cwpm->getPollIPStatus($pollid);
+        $status = $this->cwpm->getPollIPStatus($this->inputSantitize($pollid));
         return $status;
     }
     
     public function getPollLogs(){
         
-        $pollid = $_POST['pollid'];
-        $logs = $this->cwpm->getPollUserLogsByPollID($pollid);
+        $pollid = $this->inputSantitize($_POST['pollid']);
+        $logs = $this->cwpm->getPollUserLogsByPollID($this->inputSantitize($pollid));
         $available = '';
         if(!empty($logs)){
         ?>
@@ -461,6 +461,12 @@ class CWPController {
         }
         if($available != 'yes') print '<p>'.__('No user logs found for this poll', 'cardozapolldomain').'</p>';
     }
+
+	public function inputSantitize($string){
+		$string = mysql_real_escape_string($string);
+		$string = strip_tags($string);
+		return $string;
+	}
 }
 
 ?>

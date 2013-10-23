@@ -58,27 +58,26 @@ function showPollForm($vars){
     if(empty($poll->no_of_answers)) $poll->no_of_answers = 100;
     ?>
     <div id="show-form<?php echo $poll->id;?>" class="show-form<?php echo $poll->id;?>">
-        
         <?php
         print '<table>';
         foreach($poll_answers as $answer){
             if($poll->answer_type == "one"){
-                    print '<tr><td valign="middle"><input type="radio" name="'.$poll->id.'" value="'.$answer->id.'" /></td>';
+                    print '<tr><td width="20" valign="middle"><input type="radio" name="'.$poll->id.'" value="'.$answer->id.'" /></td>';
                     if($poll->poll_type == 'image_poll') {
                         print '<td><img src="'.$answer->answer.'" width="100" alt="'.$answer->answer.'" /></td>';
                     }
                     else {
-                        print '<td>'.$answer->answer.'</td>';
+                        print '<td align="left">'.$answer->answer.'</td>';
                     }
                     print '</tr>';
             }
             if($poll->answer_type == "multiple"){
-                print '<tr><td valign="middle"><input type="checkbox" name="option'.$option.'" value="'.$answer->id.'" /></td>';
+                print '<tr><td width="20" valign="middle"><input type="checkbox" name="option'.$option.'" value="'.$answer->id.'" /></td>';
                 if($poll->poll_type == 'image_poll') {
                         print '<td><img src="'.$answer->answer.'" width="100" alt="'.$answer->answer.'"/></td>';
                     }
                     else {
-                        print '<td>'.$answer->answer.'</td>';
+                        print '<td align="left">'.$answer->answer.'</td>';
                     }
                 print '</tr>';
             }
