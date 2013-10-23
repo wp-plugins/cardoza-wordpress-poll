@@ -5,7 +5,7 @@ Plugin URI: http://www.vinojcardoza.com/cardoza-wordpress-poll
 Description: Wordpress Poll is completely ajax powered polling system. This poll plugin supports both single and multiple selection of answers.
 Version: 34.06
 Author: Vinoj Cardoza
-Author URI: http://www.vinojcardoza.com/about-me/
+Author URI: http://www.vinojcardoza.com/
 License: GPL2
 */
 define('CWP_PGN_DIR', plugin_dir_url(__FILE__));
