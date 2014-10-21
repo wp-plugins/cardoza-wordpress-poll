@@ -1,0 +1,409 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cardozapolldomain\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-07-27 11:09-0000\n"
+"PO-Revision-Date: 2014-09-16 19:05+0300\n"
+"Last-Translator: \n"
+"Language-Team: Vinoj Cardoza <vinoj.cardoza@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Generator: Poedit 1.6.7\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"Language: ar\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../cardozawppoll.php:186
+msgid "Sorry! No polls found in the archive for this page"
+msgstr "آسف! لا توجد في الأرشيف لهذه الصفحة استطلاعات الرأي"
+
+#: ../cardozawppoll.php:195 ../app/views/CWPViewManagePolls.class.php:57
+#: ../app/views/CWPViewUserLogs.class.php:39
+msgid "Open"
+msgstr "فتح"
+
+#: ../cardozawppoll.php:196 ../app/views/CWPViewManagePolls.class.php:58
+#: ../app/views/CWPViewUserLogs.class.php:40
+msgid "Closed"
+msgstr "مغلق"
+
+#: ../cardozawppoll.php:313 ../app/views/CWPViewManagePolls.class.php:37
+#: ../app/views/CWPViewManagePolls.class.php:62
+msgid "View Result"
+msgstr "عرض النتائج"
+
+#: ../cardozawppoll.php:320 ../cardozawppollFrontEndFunctions.php:72
+#: ../cardozawppollFrontEndFunctions.php:104
+msgid "Vote"
+msgstr "تصويت"
+
+#: ../cardozawppollFrontEndFunctions.php:21
+#: ../app/views/CWPViewManagePolls.class.php:72
+msgid "Total voters"
+msgstr "مجموع المصويتين"
+
+#: ../cardozawppollFrontEndFunctions.php:26 ../app/CWPController.class.php:241
+#: ../app/CWPController.class.php:272
+#: ../app/views/CWPViewManagePolls.class.php:36
+#: ../app/views/CWPViewUserLogs.class.php:18
+msgid "Total votes"
+msgstr "مجموع الأصوات"
+
+#: ../cardozawppollFrontEndFunctions.php:37 ../app/CWPController.class.php:249
+#: ../app/CWPController.class.php:279
+msgid " votes"
+msgstr "التصويتات"
+
+#: ../cardozawppollFrontEndFunctions.php:119
+#: ../cardozawppollFrontEndFunctions.php:120
+msgid "See all polls & results"
+msgstr "مشاهدة كل استطلاعات الرأي والنتائج"
+
+#: ../app/CWPController.class.php:308 ../app/views/CWPViewStats.class.php:26
+msgid "Last 7 days statistics"
+msgstr "إحصاءات اخر 7 ايام "
+
+#: ../app/CWPController.class.php:414
+msgid "User ID"
+msgstr "هوية المستخدم"
+
+#: ../app/CWPController.class.php:415
+msgid "User name"
+msgstr "أسم المستخدم"
+
+#: ../app/CWPController.class.php:416
+msgid "Polled time"
+msgstr "وقت التصويت"
+
+#: ../app/CWPController.class.php:417
+#: ../app/views/CWPViewPollOptions.class.php:48
+msgid "IP Address"
+msgstr "عنوان الIP"
+
+#: ../app/CWPController.class.php:418
+msgid "Answers"
+msgstr "الاجوبة"
+
+#: ../app/CWPController.class.php:429
+msgid "NULL"
+msgstr "فارغ"
+
+#: ../app/CWPController.class.php:442
+msgid "No user logs found for this poll"
+msgstr "لا يوجد سجل مستخدم لهذا التصويت"
+
+#: ../app/views/CWPView.class.php:36 ../app/views/CWPView.class.php:37
+msgid "Poll"
+msgstr "تصويت"
+
+#: ../app/views/CWPView.class.php:47
+msgid "Wordpress Poll"
+msgstr "تصويت وردبرس"
+
+#: ../app/views/CWPView.class.php:48
+msgid "Mandatory fields"
+msgstr "الحقول الإلزامية"
+
+#: ../app/views/CWPView.class.php:52
+msgid "Manage Polls"
+msgstr "إدارة التصويت"
+
+#: ../app/views/CWPView.class.php:57
+#: ../app/views/CWPViewCreatePoll.class.php:87
+msgid "Add New Poll"
+msgstr "إضافة تصويت جديد"
+
+#: ../app/views/CWPView.class.php:62
+msgid "Poll Options"
+msgstr "إختيارات التصويت"
+
+#: ../app/views/CWPView.class.php:67
+msgid "Widget Options"
+msgstr "إختيارات الودجت"
+
+#: ../app/views/CWPView.class.php:72 ../app/views/CWPViewStats.class.php:7
+msgid "Poll Statistics"
+msgstr "إحصائيات التصويت"
+
+#: ../app/views/CWPView.class.php:77
+msgid "User Logs"
+msgstr "سجلات المستخدم"
+
+#: ../app/views/CWPViewCreatePoll.class.php:14
+#: ../app/views/CWPViewEditPoll.class.php:29
+msgid "Poll Friendly Name"
+msgstr "أسم مألوف للتصويت"
+
+#: ../app/views/CWPViewCreatePoll.class.php:16
+#: ../app/views/CWPViewEditPoll.class.php:31
+msgid "Friendly name"
+msgstr "الاسم المألوف"
+
+#: ../app/views/CWPViewCreatePoll.class.php:22
+#: ../app/views/CWPViewEditPoll.class.php:36
+msgid "Poll Question"
+msgstr "أسئلة التصويت"
+
+#: ../app/views/CWPViewCreatePoll.class.php:24
+#: ../app/views/CWPViewManagePolls.class.php:31
+#: ../app/views/CWPViewUserLogs.class.php:13
+msgid "Question"
+msgstr "أسئلة"
+
+#: ../app/views/CWPViewCreatePoll.class.php:30
+#: ../app/views/CWPViewEditPoll.class.php:44
+msgid "Poll Answers"
+msgstr "أجوبة التصويت"
+
+#: ../app/views/CWPViewCreatePoll.class.php:33
+#: ../app/views/CWPViewCreatePoll.class.php:37
+msgid "Answer"
+msgstr "الاجوبة"
+
+#: ../app/views/CWPViewCreatePoll.class.php:47
+msgid "Add answer"
+msgstr "إضافة جواب"
+
+#: ../app/views/CWPViewCreatePoll.class.php:52
+msgid "Remove Answer"
+msgstr "حذف جواب"
+
+#: ../app/views/CWPViewCreatePoll.class.php:55
+#: ../app/views/CWPViewEditPoll.class.php:60
+msgid "Poll Answer type"
+msgstr "نوع أجوبة التصويت"
+
+#: ../app/views/CWPViewCreatePoll.class.php:57
+#: ../app/views/CWPViewEditPoll.class.php:62
+msgid "Allow users to select"
+msgstr "السماح للمستخدمين بالاختيار"
+
+#: ../app/views/CWPViewCreatePoll.class.php:62
+#: ../app/views/CWPViewEditPoll.class.php:66
+msgid "Only one answer"
+msgstr "جواب واحد فقط"
+
+#: ../app/views/CWPViewCreatePoll.class.php:63
+#: ../app/views/CWPViewEditPoll.class.php:67
+msgid "More than one answer"
+msgstr "أكثر من جواب واحد"
+
+#: ../app/views/CWPViewCreatePoll.class.php:67
+#: ../app/views/CWPViewEditPoll.class.php:71
+msgid "No of answers to allow"
+msgstr "عدد الأجوبة للسماح"
+
+#: ../app/views/CWPViewCreatePoll.class.php:72
+#: ../app/views/CWPViewEditPoll.class.php:76
+msgid "Poll Start/End Date"
+msgstr "يوم بداية/نهاية التصويت"
+
+#: ../app/views/CWPViewCreatePoll.class.php:74
+#: ../app/views/CWPViewEditPoll.class.php:78
+#: ../app/views/CWPViewManagePolls.class.php:33
+#: ../app/views/CWPViewUserLogs.class.php:15
+msgid "Start date"
+msgstr "يوم البداية"
+
+#: ../app/views/CWPViewCreatePoll.class.php:75
+#: ../app/views/CWPViewCreatePoll.class.php:78
+msgid "Format"
+msgstr "شكل"
+
+#: ../app/views/CWPViewCreatePoll.class.php:77
+#: ../app/views/CWPViewEditPoll.class.php:81
+#: ../app/views/CWPViewManagePolls.class.php:34
+#: ../app/views/CWPViewUserLogs.class.php:16
+msgid "End date"
+msgstr "يوم الانتهاء"
+
+#: ../app/views/CWPViewEditPoll.class.php:20
+#: ../app/views/CWPViewManagePolls.class.php:18
+msgid "Refresh Poll List"
+msgstr "تحديث قائمة التصويت"
+
+#: ../app/views/CWPViewEditPoll.class.php:23
+#: ../app/views/CWPViewManagePolls.class.php:21
+msgid "Edit a Poll"
+msgstr "تحرير تصويت"
+
+#: ../app/views/CWPViewEditPoll.class.php:26
+#: ../app/views/CWPViewManagePolls.class.php:24
+msgid "Delete a Poll"
+msgstr "حذف تصويت"
+
+#: ../app/views/CWPViewEditPoll.class.php:38
+#: ../app/views/CWPViewManagePolls.class.php:30
+#: ../app/views/CWPViewUserLogs.class.php:12
+msgid "Name"
+msgstr "الاسم"
+
+#: ../app/views/CWPViewEditPoll.class.php:52
+msgid "Edit"
+msgstr "تحرير"
+
+#: ../app/views/CWPViewEditPoll.class.php:53
+msgid "Delete"
+msgstr "حذف"
+
+#: ../app/views/CWPViewEditPoll.class.php:57
+msgid "Add more answers"
+msgstr "إضافة أجوبة أخرى"
+
+#: ../app/views/CWPViewEditPoll.class.php:92
+#: ../app/views/CWPViewWidget.class.php:68
+msgid "Save"
+msgstr "حفظ"
+
+#: ../app/views/CWPViewManagePolls.class.php:32
+#: ../app/views/CWPViewUserLogs.class.php:14
+msgid "Answer type"
+msgstr "نوع الإجابة"
+
+#: ../app/views/CWPViewManagePolls.class.php:35
+#: ../app/views/CWPViewUserLogs.class.php:17
+msgid "Status"
+msgstr "الحالة"
+
+#: ../app/views/CWPViewPollOptions.class.php:15
+msgid "Poll options"
+msgstr "خيارات التصويت"
+
+#: ../app/views/CWPViewPollOptions.class.php:18
+msgid "Who is allowed to vote?"
+msgstr "من يسمح له التصويت؟"
+
+#: ../app/views/CWPViewPollOptions.class.php:27
+msgid "Anyone can poll"
+msgstr "يمكن لأي شخص أن يصوت"
+
+#: ../app/views/CWPViewPollOptions.class.php:32
+msgid "Only logged in users can poll"
+msgstr "المستخدميين المسجليين فقط بامكانهم التويت"
+
+#: ../app/views/CWPViewPollOptions.class.php:36
+msgid "Lock Poll by"
+msgstr "قفل الإستطلاع بواسطة"
+
+#: ../app/views/CWPViewPollOptions.class.php:43
+msgid "Cookies"
+msgstr "Cookies"
+
+#: ../app/views/CWPViewPollOptions.class.php:52
+msgid "Poll style options"
+msgstr "خيارات نمط التصويت"
+
+#: ../app/views/CWPViewPollOptions.class.php:54
+msgid "Background colour"
+msgstr "لون الخلفية"
+
+#: ../app/views/CWPViewPollOptions.class.php:63
+msgid "Colour"
+msgstr "اللون"
+
+#: ../app/views/CWPViewPollOptions.class.php:72
+#: ../app/views/CWPViewWidget.class.php:56
+msgid "Height"
+msgstr "الارتفاع"
+
+#: ../app/views/CWPViewPollOptions.class.php:81
+msgid "Preview of the poll bar"
+msgstr "معاينة شريط التصويت"
+
+#: ../app/views/CWPViewPollOptions.class.php:86
+msgid "Poll archive options"
+msgstr "خيارات أرشيف التصويت"
+
+#: ../app/views/CWPViewPollOptions.class.php:88
+msgid "Polls to display in the older polls page"
+msgstr "ستطلاعات للعرض في الصفحة استطلاعات القديمة"
+
+#: ../app/views/CWPViewPollOptions.class.php:93
+msgid "Opened Polls Only"
+msgstr "التصويتات المفتوحة فقط"
+
+#: ../app/views/CWPViewPollOptions.class.php:94
+msgid "Closed Polls Only"
+msgstr "التصويتات المغلقة فقط"
+
+#: ../app/views/CWPViewPollOptions.class.php:95
+msgid "Opened and Closed Polls"
+msgstr "فتح وإغلاق التصويت"
+
+#: ../app/views/CWPViewPollOptions.class.php:98
+msgid "No of polls to display per page in the older polls"
+msgstr "لا يوجد اقتراعات لعرضها في كل صفحة في استطلاعات الرأي القديمة"
+
+#: ../app/views/CWPViewPollOptions.class.php:113
+msgid "Poll archive URL"
+msgstr "رابط أرشيف التصويت"
+
+#: ../app/views/CWPViewStats.class.php:27
+msgid "Last 15 days statistics"
+msgstr "إحصاءات آخر 15 يوم "
+
+#: ../app/views/CWPViewStats.class.php:28
+msgid "Last 30 days statistics"
+msgstr "إحصاءات آخر 30 يوم"
+
+#: ../app/views/CWPViewStats.class.php:69
+msgid ""
+"No data available to analyze. If you have installed or updated the plugin "
+"recently, poll statistics will not be available until someone votes after "
+"the installation or updation."
+msgstr ""
+"لا توجد بيانات متاحة للتحليل. إذا قمت بتثبيت أو تحديث البرنامج المساعد "
+"مؤخرا، وإحصاءات الاستطلاع لن تكون متاحة حتى يصوت شخص بعد التثبيت أو التحديث."
+
+#: ../app/views/CWPViewUserLogs.class.php:5
+msgid "This feature will show the list of users voted for a particular poll."
+msgstr "سوف تظهر هذه الميزة صوتت قائمة المستخدمين لاستطلاع للرأي معين."
+
+#: ../app/views/CWPViewUserLogs.class.php:6
+msgid ""
+"The results will be shown only when the logged in users has voted for the "
+"poll. (The answers will be visible only for the votes after 26.06.2012)"
+msgstr ""
+"سيتم عرض نتائج فقط عند دخوله في المستخدمين قد صوتوا لصالح الاستطلاع. "
+"(الأجوبة سوف تكون مرئية فقط للحصول على أصوات بعد 26.06.2012)"
+
+#: ../app/views/CWPViewUserLogs.class.php:7
+msgid "Poll User Logs"
+msgstr "سجلات مستخدم التصويت"
+
+#: ../app/views/CWPViewUserLogs.class.php:19
+#: ../app/views/CWPViewUserLogs.class.php:44
+msgid "View User Logs"
+msgstr "عرض سجلات المستخدم"
+
+#: ../app/views/CWPViewWidget.class.php:15
+msgid "Widget options"
+msgstr "خيارات الودجيت"
+
+#: ../app/views/CWPViewWidget.class.php:18
+msgid "Title"
+msgstr "العنوان"
+
+#: ../app/views/CWPViewWidget.class.php:24
+msgid "Display Older Polls Link"
+msgstr "عرض أقدم استطلاعات الرأي رابط"
+
+#: ../app/views/CWPViewWidget.class.php:30
+msgid "Yes"
+msgstr "نعم"
+
+#: ../app/views/CWPViewWidget.class.php:35
+msgid "No"
+msgstr "لا"
+
+#: ../app/views/CWPViewWidget.class.php:38
+msgid "Select the latest number of polls to be displayed"
+msgstr "حدد عدد آخر من استطلاعات الرأي ليتم عرضها"
+
+#: ../app/views/CWPViewWidget.class.php:49
+msgid "Width"
+msgstr "عرض"
