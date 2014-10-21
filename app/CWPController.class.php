@@ -463,7 +463,7 @@ class CWPController {
     }
 
 	public function inputSantitize($string){
-		$string = mysql_real_escape_string($string);
+		$string = esc_sql($string);
 		$string = strip_tags($string);
 		return $string;
 	}
