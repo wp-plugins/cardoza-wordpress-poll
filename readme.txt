@@ -3,7 +3,7 @@ Contributors: vinoj.cardoza
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=vinoj%2ecardoza%40gmail%2ecom&currency_code=GBP&lc=US&bn=PP%2dDonationsBF&charset=UTF%2d8
 Tags: poll, cardoza, vote, widget, booth, polls, polling, votes, voting
 Requires at least: 3.0
-Tested up to: 4.0
+Tested up to: 4.1.1
 Stable tag: trunk
 License: GPLv2 or later
 
@@ -122,6 +122,10 @@ That's it. Check your page or post now.
 if you have any queries post it at http://www.vinojcardoza.com/blog/cardoza-wordpress-poll
 
 == Change Log ==
+
+= Version 35.2 =
+* Tested compatibility with Wordpress 4.1.1.
+
 = Version 35.1 =
 * Arabic translation added (Translated by Naaser Mohammed and Ahmed Saif).
 * Security vulnerabilities removed (As suggested by Heikku Paananen).
